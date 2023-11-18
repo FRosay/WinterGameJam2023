@@ -3765,22 +3765,6 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 32,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "de06269a-4a64-4dbc-88a9-2b0ddf5d838c",
-      "width": 32,
-      "x": 1120,
-      "y": 448,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
       "depth": 0,
       "height": 32,
       "layer": "",
@@ -3869,22 +3853,6 @@
       "width": 32,
       "x": 224,
       "y": 192,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 32,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "33c68204-f215-4aa7-9a80-8c990dc5a416",
-      "width": 32,
-      "x": 32,
-      "y": 32,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -4257,6 +4225,37 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Spawner",
+      "persistentUuid": "a8f0cd21-170a-4033-89e4-00ca394dc2db",
+      "width": 0,
+      "x": 32,
+      "y": 32,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 32,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "f3679208-f14f-4d2c-acef-77018f0f58ae",
+      "width": 32,
+      "x": 1120,
+      "y": 448,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -4269,7 +4268,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.8635277700823956,
+    "zoomFactor": 0.4753585087126942,
     "windowMask": false
   }
 }

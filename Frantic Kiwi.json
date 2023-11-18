@@ -162,6 +162,24 @@
         "name": "tower-base2",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/bosses/boss1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\bosses\\boss1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_temp_spawner.png.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\temp_spawner.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
