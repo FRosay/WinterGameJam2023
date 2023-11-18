@@ -8,7 +8,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Init",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -74,6 +73,16 @@
                 "800",
                 "SceneWindowHeight()-80",
                 "\"HUD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "isHUD",
+                "True"
               ]
             }
           ],
@@ -305,6 +314,18 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BuildingPannel",
+                "",
+                "",
+                ""
+              ]
             }
           ],
           "actions": [],
@@ -483,6 +504,15 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "\"HUD\""
+              ]
             }
           ],
           "actions": [],
@@ -587,9 +617,93 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Level Up",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "isPhantom",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "PopUp",
+                "PopUp",
+                "0",
+                "0",
+                "\"HUD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "PopUp",
+                "Text",
+                "=",
+                "\"Level up\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "PopUp",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
     }
   ]
 }
