@@ -102,14 +102,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/phantom.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "phantom",
-        "smoothed": false,
-        "userAdded": true
-      {
-        "alwaysLoaded": false,
         "file": "assets/temp_base.png",
         "kind": "image",
         "metadata": "",
