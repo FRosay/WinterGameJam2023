@@ -66,7 +66,7 @@
       "folded": true,
       "name": "currency",
       "type": "number",
-      "value": 10
+      "value": 25
     },
     {
       "folded": true,
@@ -193,7 +193,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tower-base",
+                  "image": "tower-base2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -209,20 +209,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4,
-                        "y": 2
+                        "x": 1,
+                        "y": 0
                       },
                       {
-                        "x": 61,
-                        "y": 2
+                        "x": 30,
+                        "y": 0
                       },
                       {
-                        "x": 61,
-                        "y": 64
+                        "x": 30,
+                        "y": 32
                       },
                       {
-                        "x": 4,
-                        "y": 64
+                        "x": 1,
+                        "y": 32
                       }
                     ]
                   ]
@@ -260,7 +260,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tower-ice",
+                  "image": "tower-ice2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -276,20 +276,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 6,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 62,
+                        "x": 30,
                         "y": 0
                       },
                       {
-                        "x": 62,
-                        "y": 63
+                        "x": 30,
+                        "y": 32
                       },
                       {
-                        "x": 6,
-                        "y": 63
+                        "x": 3,
+                        "y": 32
                       }
                     ]
                   ]
@@ -496,6 +496,27 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "Price",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Price ?",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 64,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -548,6 +569,9 @@
       },
       {
         "objectName": "GridPart"
+      },
+      {
+        "objectName": "Price"
       }
     ]
   },
