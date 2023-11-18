@@ -8,6 +8,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -77,6 +78,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -132,6 +134,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -353,14 +356,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "ModVarScene"
                       },
                       "parameters": [
-                        "PopUp",
-                        "PopUp",
-                        "0",
-                        "0",
-                        "\"HUD\""
+                        "currency",
+                        "-",
+                        "TowerStats[BuildingChoice.name].price[0]"
                       ]
                     },
                     {
@@ -368,27 +369,41 @@
                         "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
-                        "PopUp",
+                        "CurrentCurrency",
                         "Text",
                         "=",
-                        "\"Construit\""
+                        "currency"
                       ]
-                    },
+                    }
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "PopUp",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "CreateByName"
+                          },
+                          "parameters": [
+                            "",
+                            "BuildingChoice",
+                            "BuildingChoice.ObjectName()",
+                            "BuildableTiles.X()",
+                            "BuildableTiles.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "=",
+                            "42"
+                          ]
+                        }
                       ]
                     }
                   ]
