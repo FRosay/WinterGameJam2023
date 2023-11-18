@@ -193,10 +193,10 @@
           "objectGroups": []
         },
         {
-          "fullName": "Damage closest target",
+          "fullName": "Attack Target",
           "functionType": "Action",
-          "name": "DamageClosestTarget",
-          "sentence": "Have _PARAM0_ damage the closest _PARAM2_ in range",
+          "name": "AttackTarget",
+          "sentence": "Have _PARAM0_ attack _PARAM2_ (projectile _PARAM3_ _PARAM4_)",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -215,48 +215,55 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  "conditions": [],
+                  "actions": [
                     {
                       "type": {
-                        "value": "PickNearest"
+                        "value": "CreateByName"
                       },
                       "parameters": [
-                        "Targets",
+                        "",
+                        "Projectile",
+                        "Object.Behavior::PropertyprojectileName()",
                         "Object.CenterX()",
                         "Object.CenterY()",
                         ""
                       ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
+                    },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "Targets",
-                            "Object",
-                            "Object.Behavior::Range()",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
-                          },
-                          "parameters": [
-                            "Targets",
-                            "EnemyHealth",
-                            "Object.Behavior::Damage()",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetDamage"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "Object.Behavior::Damage()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetSpeed"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "500",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetTargetId"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "Object.Behavior::GetClosestTargetId(Target)",
+                        ""
                       ]
                     }
                   ]
@@ -279,35 +286,45 @@
             },
             {
               "description": "",
-              "name": "Targets",
+              "name": "Target",
               "supplementaryInformation": "Sprite",
               "type": "objectList"
             },
             {
               "description": "",
-              "name": "EnemyHealth",
-              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "name": "Projectile",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "ProjectileBehaviour",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
               "type": "behavior"
             }
           ],
           "objectGroups": []
         },
         {
-          "fullName": "Damage farthest target",
-          "functionType": "Action",
-          "name": "DamageFarthestTarget",
-          "sentence": "Have _PARAM0_ damage the farthest _PARAM2_ in range",
+          "description": "Return the closest legal target for this Tower.",
+          "fullName": "Get closest target's id",
+          "functionType": "Expression",
+          "name": "GetClosestTargetId",
+          "private": true,
+          "sentence": "",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::PropertycanAttack"
+                    "value": "PickNearest"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior"
+                    "Target",
+                    "Object.CenterX()",
+                    "Object.CenterY()",
+                    ""
                   ]
                 }
               ],
@@ -321,43 +338,20 @@
                         "value": "Distance"
                       },
                       "parameters": [
-                        "Targets",
+                        "Target",
                         "Object",
                         "Object.Behavior::Range()",
                         ""
                       ]
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "PickNearest"
-                          },
-                          "parameters": [
-                            "Targets",
-                            "Object.CenterX()",
-                            "Object.CenterY()",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
-                          },
-                          "parameters": [
-                            "Targets",
-                            "EnemyHealth",
-                            "Object.Behavior::Damage()",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Target.Variable(customId)"
                       ]
                     }
                   ]
@@ -365,6 +359,9 @@
               ]
             }
           ],
+          "expressionType": {
+            "type": "expression"
+          },
           "parameters": [
             {
               "description": "Object",
@@ -380,15 +377,92 @@
             },
             {
               "description": "",
-              "name": "Targets",
+              "name": "Target",
               "supplementaryInformation": "Sprite",
               "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Return the farthest legal target for this Tower.",
+          "fullName": "Get farthest target's id",
+          "functionType": "Expression",
+          "name": "GetFarthestTargetId",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Target",
+                    "Object",
+                    "Object.Behavior::Range()",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PickNearest"
+                      },
+                      "parameters": [
+                        "Target",
+                        "Object.CenterX()",
+                        "Object.CenterY()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
+                      },
+                      "parameters": [
+                        "Target",
+                        "EnemyHealth",
+                        "Object.Behavior::Damage()",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
             },
             {
               "description": "",
-              "name": "EnemyHealth",
-              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
-              "type": "behavior"
+              "name": "Target",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
             }
           ],
           "objectGroups": []
@@ -983,7 +1057,7 @@
           "name": "range"
         },
         {
-          "value": "\"none\"",
+          "value": "none",
           "type": "String",
           "label": "effect",
           "description": "The keyword for this Tower's effect if it has any",
@@ -1031,6 +1105,666 @@
           "extraInformation": [],
           "hidden": true,
           "name": "canAttack"
+        },
+        {
+          "value": "",
+          "type": "String",
+          "label": "projectile name",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "projectileName"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    },
+    {
+      "description": "",
+      "fullName": "Projectile",
+      "name": "ProjectileBehaviour",
+      "objectType": "Sprite",
+      "eventsFunctions": [
+        {
+          "description": "the damage dealt of the object.",
+          "fullName": "damage dealt",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "Damage",
+          "sentence": "the damage dealt",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertydamage()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Damage",
+          "name": "SetDamage",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertydamage"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the speed of the object.",
+          "fullName": "speed",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "Speed",
+          "sentence": "the speed",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyspeed()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Speed",
+          "name": "SetSpeed",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertyspeed"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the target's id of the object.",
+          "fullName": "target's id",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "TargetId",
+          "sentence": "the target's id",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertytargetId()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "TargetId",
+          "name": "SetTargetId",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertytargetId"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "Function",
+          "sentence": "",
+          "events": [],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Has found target",
+          "functionType": "Condition",
+          "name": "HasFoundTarget",
+          "sentence": "_PARAM0_ has found it's target (among _PARAM2_)",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "projectileHasFoundTarget",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Target",
+                    "customId",
+                    "=",
+                    "Object.Behavior::TargetId()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Target",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "projectileHasFoundTarget",
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "projectileHasFoundTarget",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "projectileHasFoundTarget",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Target",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Find And Attack",
+          "functionType": "Action",
+          "name": "FindAndAttack",
+          "sentence": "Have _PARAM0_ find and attack _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::HasFoundTarget"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "Targets",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "customId",
+                        "=",
+                        "Object.Behavior::PropertytargetId()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "EnemyHealth",
+                        "Object.Behavior::Damage()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TowerBehaviour::ProjectileBehaviour::HasFoundTarget"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "Targets",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertytargetStillExists"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "no"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "customId",
+                        "=",
+                        "Object.Behavior::PropertytargetId()"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetPropertytargetStillExists"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceVers"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Targets",
+                        "Object.Behavior::Propertyspeed()",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "TowerBehaviour::ProjectileBehaviour::PropertytargetStillExists"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            },
+            {
+              "description": "All instances of Targets",
+              "name": "Targets",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "EnemyHealth",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "damage dealt",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "damage"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "unit": "PixelSpeed",
+          "label": "speed",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "speed"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "target's id",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "targetId"
+        },
+        {
+          "value": "true",
+          "type": "Boolean",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "targetStillExists"
         }
       ],
       "sharedPropertyDescriptors": []
