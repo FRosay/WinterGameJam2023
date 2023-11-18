@@ -581,6 +581,27 @@
                             "=",
                             "42"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "customId",
+                            "=",
+                            "nextCustomBuildingId"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "nextCustomBuildingId",
+                            "+",
+                            "1"
+                          ]
                         }
                       ]
                     }
@@ -665,6 +686,15 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "BuildingChoice"
+                  ]
+                },
                 {
                   "type": {
                     "value": "ObjectVariableAsBoolean"
@@ -862,7 +892,7 @@
                 "PopUp",
                 "LevelUp",
                 "BuildingChoice.X()",
-                "BuildingChoice.Y()-32",
+                "BuildingChoice.Y()-64",
                 "\"HUD\""
               ]
             }
@@ -877,7 +907,7 @@
                   },
                   "parameters": [
                     "TowerStats[BuildingChoice.name].price",
-                    "<",
+                    ">",
                     "BuildingChoice.TowerBehaviour::Level()"
                   ]
                 }
@@ -891,7 +921,18 @@
                     "LevelUp",
                     "Text",
                     "=",
-                    "\"PRICE: \"+TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                    "\"LVL \"+ToString(BuildingChoice.TowerBehaviour::Level())+\" -> \"+ToString(BuildingChoice.TowerBehaviour::Level()+1)+NewLine()+\"PRICE: \"+TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "LevelUp",
+                    "idOfBuildingLinked",
+                    "=",
+                    "BuildingChoice.customId"
                   ]
                 }
               ]
@@ -905,7 +946,7 @@
                   },
                   "parameters": [
                     "TowerStats[BuildingChoice.name].price",
-                    ">=",
+                    "<=",
                     "BuildingChoice.TowerBehaviour::Level()"
                   ]
                 }
@@ -920,6 +961,188 @@
                     "Text",
                     "=",
                     "\"Niveau max\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "LevelUp",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "customId",
+                "=",
+                "LevelUp.idOfBuildingLinked"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "BuildingChoice.customId",
+                "\"info\"",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildCount"
+                  },
+                  "parameters": [
+                    "TowerStats[BuildingChoice.name].price",
+                    ">",
+                    "BuildingChoice.TowerBehaviour::Level()"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "currency",
+                        "<",
+                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "PopUp",
+                        "PopUp",
+                        "0",
+                        "0",
+                        "\"HUD\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "PopUp",
+                        "Text",
+                        "=",
+                        "\"Pas assez de monnaie pour améliorer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "PopUp",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "currency",
+                        ">=",
+                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "LevelUp",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currency",
+                        "-",
+                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "CurrentCurrency",
+                        "Text",
+                        "=",
+                        "currency"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::TowerBehaviour::LevelUp"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "TowerBehaviour",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
