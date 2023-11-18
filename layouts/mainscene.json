@@ -43,9 +43,59 @@
     }
   ],
   "instances": [],
-  "objects": [],
+  "objects": [
+    {
+      "assetStoreId": "0c7f6f15c89710df7c76e732463366c1d2480d7064f132e655ada26b6fd594f8",
+      "height": 32,
+      "name": "Path",
+      "texture": "temp_path",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "94347ece65f425f4e0b5145757435f63f205e52807d05f0a100addff465846fa",
+      "height": 32,
+      "name": "Base",
+      "texture": "temp_base",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "0c7f6f15c89710df7c76e732463366c1d2480d7064f132e655ada26b6fd594f8",
+      "height": 32,
+      "name": "Grass",
+      "texture": "temp_grass2",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    }
+  ],
   "objectsFolderStructure": {
-    "folderName": "__ROOT"
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "folderName": "Tiles",
+        "children": [
+          {
+            "objectName": "Base"
+          },
+          {
+            "objectName": "Path"
+          },
+          {
+            "objectName": "Grass"
+          }
+        ]
+      }
+    ]
   },
   "events": [
     {
@@ -129,5 +179,18 @@
       "effects": []
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    }
+  ]
 }
