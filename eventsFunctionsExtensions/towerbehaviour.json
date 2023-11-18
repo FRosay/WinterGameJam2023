@@ -14,6 +14,1027 @@
   "authorIds": [],
   "dependencies": [],
   "eventsFunctions": [],
-  "eventsBasedBehaviors": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "Tower Behaviour",
+      "name": "TowerBehaviour",
+      "objectType": "Sprite",
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyattackPerSecond"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].attackPerSecond[Object.Behavior::Propertylevel()])"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetDamage"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].damage[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetEffect"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariableString(TowerStats[Object.VariableString(name)].effect)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetEffectDuration"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].effectDuration[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPrice"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyrange"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].range[Object.Behavior::Propertylevel()])"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Object",
+                    "\"timeSinceLastAttack\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPreEvents",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Object",
+                    "\"timeSinceLastAttack\"",
+                    ">=",
+                    "1/Object.Behavior::AttackPerSecond()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertycanAttack"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Damage closest target",
+          "functionType": "Action",
+          "name": "DamageClosestTarget",
+          "sentence": "Have _PARAM0_ damage the closest _PARAM2_ in range",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::PropertycanAttack"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PickNearest"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "Object.CenterX()",
+                        "Object.CenterY()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "Object",
+                            "Object.Behavior::Range()",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "EnemyHealth",
+                            "Object.Behavior::Damage()",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Targets",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "EnemyHealth",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Damage farthest target",
+          "functionType": "Action",
+          "name": "DamageFarthestTarget",
+          "sentence": "Have _PARAM0_ damage the farthest _PARAM2_ in range",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::PropertycanAttack"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Targets",
+                        "Object",
+                        "Object.Behavior::Range()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "PickNearest"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "Object.CenterX()",
+                            "Object.CenterY()",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "EnemyHealth",
+                            "Object.Behavior::Damage()",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Targets",
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "EnemyHealth",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Level up this tower",
+          "fullName": "Level up",
+          "functionType": "Action",
+          "name": "LevelUp",
+          "sentence": "Level up _PARAM0_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::Propertylevel"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertylevel"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the damage dealt by this object.",
+          "fullName": "damage dealt",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "Damage",
+          "sentence": "the damage",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertydamage()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Damage",
+          "name": "SetDamage",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertydamage"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the number of attacks per second of the object.",
+          "fullName": "attacks per second",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "AttackPerSecond",
+          "sentence": "the attacks per second",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyattackPerSecond()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "AttackPerSecond",
+          "name": "SetAttackPerSecond",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyattackPerSecond"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the effect of the object.",
+          "fullName": "effect",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "Effect",
+          "sentence": "the effect",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnString"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyeffect()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Effect",
+          "name": "SetEffect",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyeffect"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsString(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the object's effect duration.",
+          "fullName": "effect duration",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "EffectDuration",
+          "sentence": "the effect duration",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyeffectDuration()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "EffectDuration",
+          "name": "SetEffectDuration",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyeffectDuration"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the cost of the object.",
+          "fullName": "cost",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "Price",
+          "sentence": "the cost",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyprice()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Price",
+          "name": "SetPrice",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyprice"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the maximum range of the object.",
+          "fullName": "range",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "Range",
+          "sentence": "the range",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyrange()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Range",
+          "name": "SetRange",
+          "private": true,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyrange"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "damage dealt",
+          "description": "How much damage this tower deals",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "damage"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "attacks per second",
+          "description": "How many attacks per second this tower has",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "attackPerSecond"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "range",
+          "description": "The maximum range this tower has",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "range"
+        },
+        {
+          "value": "\"none\"",
+          "type": "String",
+          "label": "effect",
+          "description": "The keyword for this Tower's effect if it has any",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "effect"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "effect duration",
+          "description": "The duration of the effect of this tower, if it has any",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "effectDuration"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "cost",
+          "description": "The cost to build this Tower",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "price"
+        },
+        {
+          "value": "1",
+          "type": "Number",
+          "label": "level",
+          "description": "This tower's current level",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "level"
+        },
+        {
+          "value": "true",
+          "type": "Boolean",
+          "label": "can attack",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "canAttack"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    }
+  ],
   "eventsBasedObjects": []
 }
