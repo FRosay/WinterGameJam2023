@@ -1,0 +1,553 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "Tiles Generation",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggZD0iTTE0LDNINEMzLjQsMywzLDMuNCwzLDR2MTBjMCwwLjYsMC40LDEsMSwxaDEwYzAuNiwwLDEtMC40LDEtMVY0QzE1LDMuNCwxNC42LDMsMTQsM3oiLz4NCgk8cGF0aCBkPSJNMTQsMTdINGMtMC42LDAtMSwwLjQtMSwxdjEwYzAsMC42LDAuNCwxLDEsMWgxMGMwLjYsMCwxLTAuNCwxLTFWMThDMTUsMTcuNCwxNC42LDE3LDE0LDE3eiIvPg0KCTxwYXRoIGQ9Ik0yOCwzSDE4Yy0wLjYsMC0xLDAuNC0xLDF2MTBjMCwwLjYsMC40LDEsMSwxaDEwYzAuNiwwLDEtMC40LDEtMVY0QzI5LDMuNCwyOC42LDMsMjgsM3oiLz4NCgk8cGF0aCBkPSJNMjcsMjJoLTN2LTNjMC0wLjYtMC40LTEtMS0xcy0xLDAuNC0xLDF2M2gtM2MtMC42LDAtMSwwLjQtMSwxczAuNCwxLDEsMWgzdjNjMCwwLjYsMC40LDEsMSwxczEtMC40LDEtMXYtM2gzDQoJCWMwLjYsMCwxLTAuNCwxLTFTMjcuNiwyMiwyNywyMnoiLz4NCjwvZz4NCjwvc3ZnPg0K",
+  "name": "TilesGeneration",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Glyphster Pack/Master/SVG/Applications and Programming/75025980ff40dc4ba4de9e75ddde0a780c54422cb649b5f0e71b193c797df23d_Applications and Programming_app_apps_applications_tile_add.svg",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Generate the game grid, initializing the game tiles",
+      "fullName": "Generate Game Grid",
+      "functionType": "Action",
+      "name": "GenerateGameGrid",
+      "sentence": "Generate _PARAM1_ lines and _PARAM2_ columns of grid using _PARAM3_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initializing variables"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.y",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.x",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.boardWidth",
+                    "=",
+                    "numberOfLines"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.boardHeight",
+                    "=",
+                    "numberOfColumns"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.tileSize",
+                    "=",
+                    "32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.uniqueTileId",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Creating the grid (left to right and top to bottom) and assigning unique IDs to Tiles and Units "
+            },
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "Variable(BoardGeneration.boardHeight)",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Variable(BoardGeneration.boardWidth)",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Tile",
+                        "Variable(BoardGeneration.x)",
+                        "Variable(BoardGeneration.y)",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Tile",
+                        "customId",
+                        "=",
+                        "Variable(BoardGeneration.uniqueTileId)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "BoardGeneration.x",
+                            "+",
+                            "Variable(BoardGeneration.tileSize)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "BoardGeneration.uniqueTileId",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "BoardGeneration.y",
+                        "+",
+                        "Variable(BoardGeneration.tileSize)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "BoardGeneration.x",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Tile"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Tile",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "The number of lines to generate",
+          "name": "numberOfLines",
+          "type": "expression"
+        },
+        {
+          "description": "The number of columns to generate",
+          "name": "numberOfColumns",
+          "type": "expression"
+        },
+        {
+          "description": "A sprite representing the outline of a square to form the grid",
+          "name": "Tile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Fill the terrain at random",
+      "fullName": "Fill Terrain",
+      "functionType": "Action",
+      "name": "FillTerrain",
+      "sentence": "Fill terrain (size _PARAM1_ x _PARAM2_) with _PARAM4_, avoiding _PARAM3_ ",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initializing variables"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.y",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.x",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.boardWidth",
+                    "=",
+                    "numberOfLines"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.boardHeight",
+                    "=",
+                    "numberOfColumns"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "BoardGeneration.tileSize",
+                    "=",
+                    "32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BoardGeneration.fillTile",
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Creating the grid (left to right and top to bottom) and assigning unique IDs to Tiles and Units "
+            },
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "Variable(BoardGeneration.boardHeight)",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Variable(BoardGeneration.boardWidth)",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "AlreadyPlacedTiles",
+                            "=",
+                            "Variable(BoardGeneration.x)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "AlreadyPlacedTiles",
+                            "=",
+                            "Variable(BoardGeneration.y)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "BoardGeneration.fillTile",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "BoardGeneration.fillTile",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "TilesToPlace",
+                            "Variable(BoardGeneration.x)",
+                            "Variable(BoardGeneration.y)",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "TilesToPlace",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "BoardGeneration.x",
+                            "+",
+                            "Variable(BoardGeneration.tileSize)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "BoardGeneration.uniqueTileId",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "BoardGeneration.y",
+                        "+",
+                        "Variable(BoardGeneration.tileSize)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "BoardGeneration.x",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "The number of lines in the terrain",
+          "name": "numberOfLines",
+          "type": "expression"
+        },
+        {
+          "description": "The number of columns in the terrain",
+          "name": "numberOfColumns",
+          "type": "expression"
+        },
+        {
+          "description": "The already placed objects to not overwrite",
+          "name": "AlreadyPlacedTiles",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "The objects to place at random to fill the terrain",
+          "name": "TilesToPlace",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}
