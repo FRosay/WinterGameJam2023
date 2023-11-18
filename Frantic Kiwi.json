@@ -183,10 +183,10 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/buildings-panel.png",
+        "file": "assets/sprites/temp_sprites/image.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "buildings-panel",
+        "metadata": "",
+        "name": "assets\\sprites\\temp_sprites\\image.png",
         "smoothed": false,
         "userAdded": true
       }

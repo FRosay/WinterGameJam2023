@@ -60,28 +60,6 @@
         }
       ],
       "objectGroups": []
-    },
-    {
-      "fullName": "",
-      "functionType": "Action",
-      "name": "Function",
-      "sentence": "",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        }
-      ],
-      "parameters": [
-        {
-          "description": "",
-          "name": "Parameter",
-          "supplementaryInformation": "Sprite",
-          "type": "objectList"
-        }
-      ],
-      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": [

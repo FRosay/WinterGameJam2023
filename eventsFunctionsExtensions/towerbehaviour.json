@@ -1023,6 +1023,48 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "the current level of the object.",
+          "fullName": "level",
+          "functionType": "ExpressionAndCondition",
+          "group": "Tower Behaviour configuration",
+          "name": "Level",
+          "sentence": "the level",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertylevel()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [
