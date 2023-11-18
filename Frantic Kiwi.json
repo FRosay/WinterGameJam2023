@@ -293,6 +293,10 @@
                   "folded": true,
                   "type": "number",
                   "value": 2
+                },
+                {
+                  "type": "number",
+                  "value": 3
                 }
               ]
             },
@@ -398,7 +402,12 @@
                 },
                 {
                   "type": "number",
-                  "value": 2
+                  "value": 4
+                },
+                {
+                  "folded": true,
+                  "type": "number",
+                  "value": 6
                 }
               ]
             }

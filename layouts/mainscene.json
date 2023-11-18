@@ -82,6 +82,18 @@
       "name": "totalLife",
       "type": "number",
       "value": 25
+    },
+    {
+      "folded": true,
+      "name": "currentState",
+      "type": "string",
+      "value": "none"
+    },
+    {
+      "folded": true,
+      "name": "nextCustomBuildingId",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [],
@@ -180,6 +192,12 @@
           "name": "name",
           "type": "string",
           "value": "base"
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -260,6 +278,12 @@
           "name": "name",
           "type": "string",
           "value": "ice"
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -918,7 +942,14 @@
       "smoothed": true,
       "type": "TextObject::Text",
       "underlined": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "idOfBuildingLinked",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "string": "Text",
