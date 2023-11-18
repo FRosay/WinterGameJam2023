@@ -643,8 +643,8 @@
               },
               "parameters": [
                 "",
-                "41",
-                "61",
+                "42",
+                "62",
                 "InitialTiles",
                 "FillerTiles",
                 ""
@@ -696,7 +696,20 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "IceTower",
+            "Grass",
+            "",
+            "",
+            "yes"
+          ]
+        }
+      ],
       "actions": [
         {
           "type": {
