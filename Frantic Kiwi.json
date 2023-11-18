@@ -189,6 +189,15 @@
         "name": "assets\\sprites\\temp_sprites\\image.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/buildings-panel.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\buildings-panel.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
