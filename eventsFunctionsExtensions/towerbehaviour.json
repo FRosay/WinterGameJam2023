@@ -33,7 +33,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::Function"
+                    "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
                   },
                   "parameters": [
                     "Object",
@@ -166,6 +166,28 @@
                     },
                     {
                       "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "=",
+                        "10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetTargetId"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "Object.Behavior::GetClosestTargetId(Target)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "TowerBehaviour::ProjectileBehaviour::SetDamage"
                       },
                       "parameters": [
@@ -185,18 +207,6 @@
                         "ProjectileBehaviour",
                         "=",
                         "500",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TowerBehaviour::ProjectileBehaviour::SetTargetId"
-                      },
-                      "parameters": [
-                        "Projectile",
-                        "ProjectileBehaviour",
-                        "=",
-                        "Object.Behavior::GetClosestTargetId(Target)",
                         ""
                       ]
                     }
@@ -280,6 +290,16 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "ToString(Target.Variable(customId))",
+                        "",
+                        ""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "SetReturnNumber"
@@ -443,7 +463,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TowerBehaviour::TowerBehaviour::Function"
+                        "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
                       },
                       "parameters": [
                         "Object",
@@ -1021,7 +1041,7 @@
         {
           "fullName": "Update Tower Stats",
           "functionType": "Action",
-          "name": "Function",
+          "name": "UpdateStats",
           "sentence": "Update stats for _PARAM0_",
           "events": [
             {
@@ -1285,194 +1305,6 @@
               ]
             }
           ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "the speed of the object.",
-          "fullName": "speed",
-          "functionType": "ExpressionAndCondition",
-          "group": "Projectile configuration",
-          "name": "Speed",
-          "sentence": "the speed",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnNumber"
-                  },
-                  "parameters": [
-                    "Object.Behavior::Propertyspeed()"
-                  ]
-                }
-              ]
-            }
-          ],
-          "expressionType": {
-            "type": "expression"
-          },
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "",
-          "functionType": "ActionWithOperator",
-          "getterName": "Speed",
-          "name": "SetSpeed",
-          "sentence": "",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertyspeed"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GetArgumentAsNumber(\"Value\")"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "the target's id of the object.",
-          "fullName": "target's id",
-          "functionType": "ExpressionAndCondition",
-          "group": "Projectile configuration",
-          "name": "TargetId",
-          "sentence": "the target's id",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnNumber"
-                  },
-                  "parameters": [
-                    "Object.Behavior::PropertytargetId()"
-                  ]
-                }
-              ]
-            }
-          ],
-          "expressionType": {
-            "type": "expression"
-          },
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "",
-          "functionType": "ActionWithOperator",
-          "getterName": "TargetId",
-          "name": "SetTargetId",
-          "sentence": "",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertytargetId"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GetArgumentAsNumber(\"Value\")"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "",
-          "functionType": "Action",
-          "name": "Function",
-          "sentence": "",
-          "events": [],
           "parameters": [
             {
               "description": "Object",
@@ -1811,6 +1643,172 @@
               "description": "",
               "name": "EnemyHealth",
               "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the speed of the object.",
+          "fullName": "speed",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "Speed",
+          "sentence": "the speed",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyspeed()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Speed",
+          "name": "SetSpeed",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertyspeed"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the target's id of the object.",
+          "fullName": "target's id",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "TargetId",
+          "sentence": "the target's id",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertytargetId()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "TargetId",
+          "name": "SetTargetId",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertytargetId"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
               "type": "behavior"
             }
           ],

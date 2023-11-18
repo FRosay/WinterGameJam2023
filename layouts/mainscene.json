@@ -62,6 +62,36 @@
           "name": "Grass"
         }
       ]
+    },
+    {
+      "name": "Towers",
+      "objects": [
+        {
+          "name": "BaseTower"
+        },
+        {
+          "name": "IceTower"
+        }
+      ]
+    },
+    {
+      "name": "EnemySlimes",
+      "objects": [
+        {
+          "name": "CreepSlime"
+        },
+        {
+          "name": "Slime"
+        }
+      ]
+    },
+    {
+      "name": "Projectiles",
+      "objects": [
+        {
+          "name": "BaseProjectile"
+        }
+      ]
     }
   ],
   "variables": [
@@ -100,6 +130,12 @@
       "name": "currentlySpawnedSlimes",
       "type": "number",
       "value": 0
+    },
+    {
+      "folded": true,
+      "name": "enemiesCustomIds",
+      "type": "number",
+      "value": 1
     }
   ],
   "instances": [],
@@ -218,7 +254,8 @@
           "effectDuration": 0,
           "price": 0,
           "level": 1,
-          "canAttack": true
+          "canAttack": true,
+          "projectileName": "BaseProjectile"
         }
       ],
       "animations": [
@@ -304,7 +341,8 @@
           "effectDuration": 0,
           "price": 0,
           "level": 1,
-          "canAttack": true
+          "canAttack": true,
+          "projectileName": "BaseProjectile"
         }
       ],
       "animations": [
@@ -521,9 +559,9 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 0,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 0,
           "impassable": false
         }
       ]
@@ -539,9 +577,9 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 0,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 0,
           "impassable": false
         }
       ]
@@ -557,9 +595,9 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 1.5,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 1.5,
           "impassable": false
         }
       ]
@@ -789,9 +827,9 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 0,
           "name": "PathfindingObstacle",
           "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 0,
           "impassable": false
         }
       ]
@@ -813,10 +851,10 @@
           "Armor": 0
         },
         {
-          "acceleration": 300,
-          "maxSpeed": 75,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "acceleration": 300,
+          "maxSpeed": 75,
           "allowDiagonals": true,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
@@ -1072,7 +1110,16 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "ProjectileBehaviour",
+          "type": "TowerBehaviour::ProjectileBehaviour",
+          "damage": 0,
+          "speed": 0,
+          "targetId": 0,
+          "targetStillExists": true
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -1707,6 +1754,27 @@
             "+",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "CreepSlime",
+            "customId",
+            "=",
+            "Variable(enemiesCustomIds)"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "enemiesCustomIds",
+            "+",
+            "1"
+          ]
         }
       ],
       "events": [
@@ -1808,6 +1876,65 @@
           "parameters": [
             "",
             "\"spawner\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Towers",
+      "conditions": [
+        {
+          "type": {
+            "value": "Layer"
+          },
+          "parameters": [
+            "Towers",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "Towers",
+            "isPhantom",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+          },
+          "parameters": [
+            "Towers",
+            "TowerBehaviour",
+            "EnemySlimes",
+            "Projectiles",
+            "ProjectileBehaviour",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Projectiles",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TowerBehaviour::ProjectileBehaviour::FindAndAttack"
+          },
+          "parameters": [
+            "Projectiles",
+            "ProjectileBehaviour",
+            "EnemySlimes",
+            "EnemyHealth",
+            ""
           ]
         }
       ]
@@ -1950,6 +2077,10 @@
     {
       "name": "PathfindingObstacle",
       "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+    },
+    {
+      "name": "ProjectileBehaviour",
+      "type": "TowerBehaviour::ProjectileBehaviour"
     },
     {
       "name": "Resizable",
