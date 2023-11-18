@@ -273,7 +273,18 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "currentState",
+                "\"info\"",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -796,16 +807,43 @@
             },
             {
               "type": {
-                "value": "VarSceneTxt"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"none\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"none\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"leveling\""
+                  ]
+                }
               ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "LevelUp",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "ModVarSceneTxt"
@@ -827,16 +865,63 @@
                 "BuildingChoice.Y()-32",
                 "\"HUD\""
               ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildCount"
+                  },
+                  "parameters": [
+                    "TowerStats[BuildingChoice.name].price",
+                    "<",
+                    "BuildingChoice.TowerBehaviour::Level()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelUp",
+                    "Text",
+                    "=",
+                    "\"PRICE: \"+TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                  ]
+                }
+              ]
             },
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "LevelUp",
-                "Text",
-                "=",
-                "\"Level up\""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildCount"
+                  },
+                  "parameters": [
+                    "TowerStats[BuildingChoice.name].price",
+                    ">=",
+                    "BuildingChoice.TowerBehaviour::Level()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelUp",
+                    "Text",
+                    "=",
+                    "\"Niveau max\""
+                  ]
+                }
               ]
             }
           ]
