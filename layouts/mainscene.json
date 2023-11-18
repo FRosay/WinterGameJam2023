@@ -22,7 +22,26 @@
     "windowMask": false
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "currency",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "folded": true,
+      "name": "currentWave",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "folded": true,
+      "name": "totalLife",
+      "type": "number",
+      "value": 25
+    }
+  ],
   "instances": [],
   "objects": [],
   "objectsFolderStructure": {
