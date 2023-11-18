@@ -30,42 +30,60 @@
       "actions": [
         {
           "type": {
-            "value": "Create"
+            "value": "ModVarSceneTxt"
           },
           "parameters": [
-            "",
-            "PopUp",
-            "0",
-            "0",
-            "\"HUD\""
-          ]
-        },
-        {
-          "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-          },
-          "parameters": [
-            "PopUp",
-            "Text",
+            "buildingSelected",
             "=",
             "BuildingChoice.VariableString(name)"
           ]
         },
         {
           "type": {
-            "value": "Wait"
+            "value": "Create"
           },
           "parameters": [
-            "2"
+            "",
+            "BuildingPhantom",
+            "CursorX()",
+            "CursorY()",
+            "\"HUD\""
           ]
-        },
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "currency",
+                "<",
+                "TowerStats[\"base\"].price[0]"
+              ]
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
         {
           "type": {
-            "value": "Delete"
+            "value": "MettreXY"
           },
           "parameters": [
-            "PopUp",
-            ""
+            "BuildingPhantom",
+            "=",
+            "CursorX()",
+            "=",
+            "CursorY()"
           ]
         }
       ]

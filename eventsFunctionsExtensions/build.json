@@ -13,7 +13,40 @@
   "tags": [],
   "authorIds": [],
   "dependencies": [],
-  "eventsFunctions": [],
+  "eventsFunctions": [
+    {
+      "description": "Allow player to place a building on click",
+      "fullName": "Place a building",
+      "functionType": "Action",
+      "name": "placeBuilding",
+      "sentence": "Place _PARAM1_ tower thanks to currency _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "nameOfTower",
+          "type": "string"
+        },
+        {
+          "description": "",
+          "name": "currency",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
   "eventsBasedBehaviors": [],
   "eventsBasedObjects": []
 }

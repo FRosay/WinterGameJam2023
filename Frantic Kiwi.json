@@ -99,6 +99,15 @@
         "name": "currency",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/phantom.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "phantom",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
