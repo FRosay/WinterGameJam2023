@@ -51,6 +51,14 @@
           "name": "Path"
         }
       ]
+    },
+    {
+      "name": "BuildableTiles",
+      "objects": [
+        {
+          "name": "Grass"
+        }
+      ]
     }
   ],
   "variables": [

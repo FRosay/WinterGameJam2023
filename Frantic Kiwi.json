@@ -135,6 +135,15 @@
         "name": "NewSprite",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/phantom.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/phantom.png\",\"extension\":\".png\"}",
+        "name": "assets/phantom.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
