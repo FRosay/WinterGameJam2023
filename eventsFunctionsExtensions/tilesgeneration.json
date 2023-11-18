@@ -535,13 +535,13 @@
         {
           "description": "The already placed objects to not overwrite",
           "name": "AlreadyPlacedTiles",
-          "supplementaryInformation": "Sprite",
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
           "type": "objectList"
         },
         {
           "description": "The objects to place at random to fill the terrain",
           "name": "TilesToPlace",
-          "supplementaryInformation": "Sprite",
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
           "type": "objectList"
         }
       ],
