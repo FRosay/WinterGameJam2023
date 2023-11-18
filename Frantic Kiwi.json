@@ -66,281 +66,6 @@
     "resources": [
       {
         "alwaysLoaded": false,
-<<<<<<< HEAD
-        "file": "assets/tiled_Dirt1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Dirt1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/33bc3ce7c2b266c7584e7f0b120e4098a6c90e237e361d99323e02e1c8c50afc_tiled_Dirt1.png",
-          "name": "tiled_Dirt1.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Brick4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Brick4.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/5ac44054e7176a6af4aa0ad6f3b0fab91a318ac1a10d39186306a15c2a0e521b_tiled_Brick4.png",
-          "name": "tiled_Brick4.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Brick2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Brick2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/4aff911b77a74ec85d226e2b355e36132cc4c098f51ebdb68829f1cdf6114296_tiled_Brick2.png",
-          "name": "tiled_Brick2.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Brick3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Brick3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/821a1cde78a58eae605bc09ebb4b3d91b1d1bda569cea742ff74470a0068dc2e_tiled_Brick3.png",
-          "name": "tiled_Brick3.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Brick1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Brick1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/502a7d0567c2420c5ebe7934479d54bb4f0b394c8d01323bfe48f2161f87cced_tiled_Brick1.png",
-          "name": "tiled_Brick1.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Dirt2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Dirt2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/f74521b64a2f3730f55e66325920f92111dbbe1e43eee50566840fc2b82b0bcf_tiled_Dirt2.png",
-          "name": "tiled_Dirt2.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Dirt3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Dirt3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/4037ee066d9871d81b5a705e225517546bb5a5811dfdb64f9106a8f75ebb71c5_tiled_Dirt3.png",
-          "name": "tiled_Dirt3.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Dirt4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Dirt4.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/961824ae292894d8bdf79f07d880795211e4a33d4a297d9170c64c2593b73b07_tiled_Dirt4.png",
-          "name": "tiled_Dirt4.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/85be5683bde687f5ee621cb6af57e360aeb18d6f74b2a14db8eeb4cffe93251e_tiled_Grass1.png",
-          "name": "tiled_Grass1.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/56c74486b789657d72777e8c74bc5f720923d43f41a598636cc34c1bec5046b0_tiled_Grass2.png",
-          "name": "tiled_Grass2.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/94bc784b956cf6708b8af6182dd3f3f095ef177ac45d15026a538c1e2bab46bb_tiled_Grass3.png",
-          "name": "tiled_Grass3.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass4.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/2f5c03afe2af48a4ac33ad3dbf13565ffe260b9e539e390280f963d06bbd9587_tiled_Grass4.png",
-          "name": "tiled_Grass4.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Ground1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Ground1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/80d36287203659748c8c5fb3c075225705ebcaabd379cdde9f1a3c5b68ab7ab5_tiled_Ground1.png",
-          "name": "tiled_Ground1.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass8.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass8.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/3e76f78e35eb1f8a1f2dcb97e575c422af3c15c794f1df655ecaec568b1f63d4_tiled_Grass8.png",
-          "name": "tiled_Grass8.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass5.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/b6e9029f1fd48b677d55dda50e3dd47d5cff19b1635fe72be8f78599cc1dc5c0_tiled_Grass5.png",
-          "name": "tiled_Grass5.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass6.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/29a7eb193f4ef9e6fe49872fd3b3458f3587c8ee4b9f7c7a94b497c56e47257c_tiled_Grass6.png",
-          "name": "tiled_Grass6.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Ground2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Ground2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/e3dd02bd62d7567f06253716b7c9ffb4cb05bea70b89ed17d6700a1a0ac7dfd1_tiled_Ground2.png",
-          "name": "tiled_Ground2.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Grass7.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Grass7.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/490584f8c27e33df9b761fb334a7529c56ba733f29785c18f9fa65c5dab48bc9_tiled_Grass7.png",
-          "name": "tiled_Grass7.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Ground4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Ground4.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/4be9859cceef6c04f89a8d9b01040ed390c02c7f371626a7cfe0376e9ac53589_tiled_Ground4.png",
-          "name": "tiled_Ground4.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tiled_Ground3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "tiled_Ground3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Tileable Ground Textures/d78d8a615c6d4d6715034e4380188a3062d75caebc382527332e2be3dcfcaf05_tiled_Ground3.png",
-          "name": "tiled_Ground3.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/temp_grass.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "temp_grass",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/temp_path.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "temp_path",
-=======
         "file": "assets/life.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/life.png\"}",
@@ -354,43 +79,26 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "tower-base",
->>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-<<<<<<< HEAD
-        "file": "assets/temp_base.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "temp_base",
-=======
         "file": "assets/tower-ice.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "tower-ice",
->>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-<<<<<<< HEAD
-        "file": "assets/temp_grass2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "temp_grass2",
-        "smoothed": false,
-        "userAdded": true
-=======
         "file": "assets/currency.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "currency",
         "smoothed": false,
         "userAdded": false
->>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
       }
     ],
     "resourceFolders": []
@@ -620,15 +328,16 @@
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/projectutils",
-      "referenceTo": "/eventsFunctionsExtensions/tilesgeneration",
+      "referenceTo": "/eventsFunctionsExtensions/projectutils"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/build"
     }
   ],
   "externalLayouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/firstmap",
       "referenceTo": "/externalLayouts/hud"
     }
   ],
