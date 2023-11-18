@@ -144,6 +144,24 @@
         "name": "assets/phantom.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tower-ice2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "tower-ice2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tower-base2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "tower-base2",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -241,6 +259,25 @@
                   "value": 2
                 }
               ]
+            },
+            {
+              "name": "range",
+              "type": "array",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 64
+                },
+                {
+                  "folded": true,
+                  "type": "number",
+                  "value": 64
+                },
+                {
+                  "type": "number",
+                  "value": 80
+                }
+              ]
             }
           ]
         },
@@ -328,6 +365,26 @@
                   "value": 2
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "range",
+          "persistentUuid": "9b664298-6abd-4de0-b640-36e08305d0a8",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 64
+            },
+            {
+              "folded": true,
+              "type": "number",
+              "value": 64
+            },
+            {
+              "type": "number",
+              "value": 80
             }
           ]
         }
