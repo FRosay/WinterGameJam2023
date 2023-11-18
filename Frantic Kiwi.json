@@ -198,6 +198,78 @@
         "name": "assets\\buildings-panel.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/creep1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\creep1_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/creep1_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\creep1_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/tower1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\tower1_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/tower1_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\tower1_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tir1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tir1_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tir1_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tir1_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tir1_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tir1_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tir1_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tir1_4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

@@ -70,11 +70,10 @@
       "objectType": "Sprite",
       "eventsFunctions": [
         {
-          "description": "Damage the enemy for X",
-          "fullName": "Damage Enemy",
+          "fullName": "",
           "functionType": "Action",
-          "name": "TakeDamage",
-          "sentence": "Damage _PARAM0_ for _PARAM2_",
+          "name": "onCreated",
+          "sentence": "",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -82,13 +81,14 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentHitPoints"
                   },
                   "parameters": [
                     "Object",
-                    "Scale",
-                    "-",
-                    "damageDealt-Object.Behavior::PropertyArmor()"
+                    "Behavior",
+                    "=",
+                    "Object.Behavior::PropertyTotalHitPoints()",
+                    ""
                   ]
                 }
               ]
@@ -106,11 +106,6 @@
               "name": "Behavior",
               "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
               "type": "behavior"
-            },
-            {
-              "description": "How much damage the enemy is dealt",
-              "name": "damageDealt",
-              "type": "expression"
             }
           ],
           "objectGroups": []
@@ -212,6 +207,124 @@
               "description": "Behavior",
               "name": "Behavior",
               "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Damage the enemy for X",
+          "fullName": "Damage Enemy",
+          "functionType": "Action",
+          "name": "TakeDamage",
+          "sentence": "Damage _PARAM0_ for _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Scale",
+                    "-",
+                    "damageDealt-Object.Behavior::PropertyArmor()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            },
+            {
+              "description": "How much damage the enemy is dealt",
+              "name": "damageDealt",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Move towards objective",
+          "functionType": "Action",
+          "name": "MoveTowardsObjective",
+          "sentence": "Move _PARAM0_ _PARAM2_ towards it's objective",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::CurrentObjectiveX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "!=",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::CurrentObjectiveY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "!=",
+                    "0",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Parameter",
+                    "",
+                    "Object.Behavior::PropertyCurrentObjectiveX()",
+                    "Object.Behavior::PropertyCurrentObjectiveY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Parameter",
+              "supplementaryInformation": "PathfindingBehavior::PathfindingBehavior",
               "type": "behavior"
             }
           ],
@@ -382,6 +495,172 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "the x pos of objective of the object.",
+          "fullName": "x pos of objective",
+          "functionType": "ExpressionAndCondition",
+          "group": "EnemyHealth configuration",
+          "name": "CurrentObjectiveX",
+          "sentence": "the x pos of objective",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyCurrentObjectiveX()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "CurrentObjectiveX",
+          "name": "SetCurrentObjectiveX",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyCurrentObjectiveX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the y pos of objective of the object.",
+          "fullName": "y pos of objective",
+          "functionType": "ExpressionAndCondition",
+          "group": "EnemyHealth configuration",
+          "name": "CurrentObjectiveY",
+          "sentence": "the y pos of objective",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyCurrentObjectiveY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "CurrentObjectiveY",
+          "name": "SetCurrentObjectiveY",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyCurrentObjectiveY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [
@@ -414,6 +693,26 @@
           "extraInformation": [],
           "hidden": false,
           "name": "Armor"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "x pos of objective",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "CurrentObjectiveX"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "y pos of objective",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "CurrentObjectiveY"
         }
       ],
       "sharedPropertyDescriptors": []
