@@ -620,7 +620,10 @@
   "eventsFunctionsExtensions": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/projectutils",
+      "referenceTo": "/eventsFunctionsExtensions/projectutils"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/tilesgeneration",
       "referenceTo": "/eventsFunctionsExtensions/build"
     }

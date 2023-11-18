@@ -57,6 +57,7 @@
   "instances": [],
   "objects": [
     {
+<<<<<<< HEAD
       "assetStoreId": "0c7f6f15c89710df7c76e732463366c1d2480d7064f132e655ada26b6fd594f8",
       "height": 32,
       "name": "Path",
@@ -88,8 +89,7 @@
       "variables": [],
       "effects": [],
       "behaviors": []
-	},
-	{
+=======
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Life",
@@ -408,12 +408,14 @@
         "g": 0,
         "r": 0
       }
+>>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
       {
+<<<<<<< HEAD
         "folderName": "Tiles",
         "children": [
           {
@@ -426,8 +428,7 @@
             "objectName": "Grass"
           }
         ]
-	  },
-	  {
+=======
         "folderName": "Buildings",
         "children": [
           {
@@ -457,6 +458,7 @@
       },
       {
         "objectName": "CurrentCurrency"
+>>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
       }
     ]
   },
@@ -640,24 +642,32 @@
   ],
   "behaviorsSharedData": [
     {
+<<<<<<< HEAD
+=======
       "name": "Animation",
       "type": "AnimatableCapability::AnimatableBehavior"
     },
     {
+>>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
       "name": "Effect",
       "type": "EffectCapability::EffectBehavior"
     },
     {
+<<<<<<< HEAD
+=======
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
     },
     {
+>>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
       "name": "Opacity",
       "type": "OpacityCapability::OpacityBehavior"
     },
     {
       "name": "Resizable",
       "type": "ResizableCapability::ResizableBehavior"
+<<<<<<< HEAD
+=======
     },
     {
       "name": "Scale",
@@ -666,6 +676,7 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+>>>>>>> db0e115a22f6855948e4b68a959eb3fdd21af172
     }
   ]
 }
