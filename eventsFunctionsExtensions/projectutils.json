@@ -1,0 +1,19 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "ProjectUtils",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWF1dG8tZml4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcuNSw1LjZMNSw3TDYuNCw0LjVMNSwyTDcuNSwzLjRMMTAsMkw4LjYsNC41TDEwLDdMNy41LDUuNk0xOS41LDE1LjRMMjIsMTRMMjAuNiwxNi41TDIyLDE5TDE5LjUsMTcuNkwxNywxOUwxOC40LDE2LjVMMTcsMTRMMTkuNSwxNS40TTIyLDJMMjAuNiw0LjVMMjIsN0wxOS41LDUuNkwxNyw3TDE4LjQsNC41TDE3LDJMMTkuNSwzLjRMMjIsMk0xMy4zNCwxMi43OEwxNS43OCwxMC4zNEwxMy42Niw4LjIyTDExLjIyLDEwLjY2TDEzLjM0LDEyLjc4TTE0LjM3LDcuMjlMMTYuNzEsOS42M0MxNy4xLDEwIDE3LjEsMTAuNjUgMTYuNzEsMTEuMDRMNS4wNCwyMi43MUM0LjY1LDIzLjEgNCwyMy4xIDMuNjMsMjIuNzFMMS4yOSwyMC4zN0MwLjksMjAgMC45LDE5LjM1IDEuMjksMTguOTZMMTIuOTYsNy4yOUMxMy4zNSw2LjkgMTQsNi45IDE0LjM3LDcuMjlaIiAvPjwvc3ZnPg==",
+  "name": "ProjectUtils",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/5f05ce8afd2882cf2f778b213b0d0cd5385c2e431ed86c8656451e6308036421_auto-fix.svg",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}
