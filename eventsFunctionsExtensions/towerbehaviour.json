@@ -1,0 +1,19 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "Tower Behaviour",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXRvd2VyLWJlYWNoIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE3LDRWOEgxOFYxMEgxNy42NEwyMSwyM0gxOC45M0wxOC4zNywyMC44M0wxMiwxNy4xNUw1LjYzLDIwLjgzTDUuMDcsMjNIM0w2LjM2LDEwSDZWOEg3VjRINlYzTDE4LDFWNEgxN003LjI4LDE0LjQzTDYuMzMsMTguMTJMMTAsMTZMNy4yOCwxNC40M00xNS41NywxMEg4LjQzTDcuOCwxMi40MkwxMiwxNC44NUwxNi4yLDEyLjQyTDE1LjU3LDEwTTE3LjY3LDE4LjEyTDE2LjcyLDE0LjQzTDE0LDE2TDE3LjY3LDE4LjEyWiIgLz48L3N2Zz4=",
+  "name": "TowerBehaviour",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/50fe294a653bfb110c970328cfbae071b64a87c250b4addb3ba390657d2c54d7_tower-beach.svg",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

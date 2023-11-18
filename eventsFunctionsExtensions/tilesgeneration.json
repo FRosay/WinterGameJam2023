@@ -78,7 +78,7 @@
                   "parameters": [
                     "BoardGeneration.boardWidth",
                     "=",
-                    "numberOfLines"
+                    "numberOfColumns"
                   ]
                 },
                 {
@@ -88,7 +88,7 @@
                   "parameters": [
                     "BoardGeneration.boardHeight",
                     "=",
-                    "numberOfColumns"
+                    "numberOfLines"
                   ]
                 },
                 {
@@ -330,7 +330,7 @@
                   "parameters": [
                     "BoardGeneration.boardWidth",
                     "=",
-                    "numberOfLines"
+                    "numberOfColumns"
                   ]
                 },
                 {
@@ -340,7 +340,7 @@
                   "parameters": [
                     "BoardGeneration.boardHeight",
                     "=",
-                    "numberOfColumns"
+                    "numberOfLines"
                   ]
                 },
                 {
@@ -365,18 +365,6 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Creating the grid (left to right and top to bottom) and assigning unique IDs to Tiles and Units "
-            },
-            {
               "type": "BuiltinCommonInstructions::Repeat",
               "repeatExpression": "Variable(BoardGeneration.boardHeight)",
               "conditions": [],
@@ -386,7 +374,17 @@
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "Variable(BoardGeneration.boardWidth)",
                   "conditions": [],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BoardGeneration.fillTile",
+                        "True"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",

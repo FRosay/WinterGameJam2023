@@ -643,8 +643,8 @@
               },
               "parameters": [
                 "",
-                "50",
-                "50",
+                "41",
+                "61",
                 "InitialTiles",
                 "FillerTiles",
                 ""
@@ -656,8 +656,8 @@
               },
               "parameters": [
                 "",
-                "60",
-                "40",
+                "41",
+                "61",
                 "GridPart",
                 ""
               ]
