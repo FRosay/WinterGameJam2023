@@ -394,7 +394,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -413,17 +412,6 @@
             },
             {
               "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BuildableTiles",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "inverted": true,
                 "value": "SourisSurObjet"
               },
@@ -436,29 +424,52 @@
             },
             {
               "type": {
-                "inverted": true,
-                "value": "ProjectUtils::isCursorOnObject"
+                "value": "VarSceneTxt"
               },
               "parameters": [
-                "",
-                "BuildingChoice",
-                ""
+                "currentState",
+                "=",
+                "\"building\""
               ]
             }
           ],
           "actions": [],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Stucture like towers, barrel"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "SourisSurObjet"
                   },
                   "parameters": [
+                    "BuildableTiles",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ProjectUtils::isCursorOnObject"
+                  },
+                  "parameters": [
+                    "",
                     "BuildingChoice",
-                    "isPhantom",
-                    "True"
+                    ""
                   ]
                 }
               ],
@@ -614,9 +625,73 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Structure like new building tiles"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Path",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "BuildingChoice",
+                    "name",
+                    "=",
+                    "\"buildable\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Grass",
+                        "Path.X()",
+                        "Path.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Path",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -628,7 +703,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -801,6 +875,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Level Up",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
