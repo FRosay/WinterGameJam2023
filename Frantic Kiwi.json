@@ -180,6 +180,15 @@
         "name": "assets\\temp_spawner.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/buildings-panel.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "buildings-panel",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

@@ -27,6 +27,40 @@
           "actions": [
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "BuildingsPanel",
+                "500",
+                "SceneWindowHeight()-128",
+                "\"HUD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+              },
+              "parameters": [
+                "BuildingsPanel",
+                "Resizable",
+                "=",
+                "SceneWindowWidth()-500*2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetHeight"
+              },
+              "parameters": [
+                "BuildingsPanel",
+                "Resizable",
+                "=",
+                "128"
+              ]
+            },
+            {
+              "type": {
                 "value": "CreateByName"
               },
               "parameters": [
@@ -222,7 +256,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -247,12 +280,65 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "VarSceneTxt"
                   },
                   "parameters": [
-                    "BuildingChoice",
-                    "isPhantom",
-                    "True"
+                    "currentState",
+                    "=",
+                    "\"building\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GridPart"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "isPhantom",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"leveling\""
                   ]
                 }
               ],
@@ -262,8 +348,24 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "BuildingChoice",
+                    "LevelUp",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"none\""
                   ]
                 }
               ]
@@ -296,16 +398,6 @@
             },
             {
               "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "isPhantom",
-                "True"
-              ]
-            },
-            {
-              "type": {
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -321,9 +413,20 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "BuildingPannel",
+                "BuildingsPanel",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "ProjectUtils::isCursorOnObject"
+              },
+              "parameters": [
+                "",
+                "BuildingChoice",
                 ""
               ]
             }
@@ -332,7 +435,18 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "BuildingChoice",
+                    "isPhantom",
+                    "True"
+                  ]
+                }
+              ],
               "actions": [],
               "events": [
                 {
@@ -515,7 +629,27 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"building\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "LevelUp",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -639,16 +773,6 @@
             },
             {
               "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "isPhantom",
-                "False"
-              ]
-            },
-            {
-              "type": {
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -657,18 +781,50 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BuildingsPanel",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"none\""
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"leveling\""
+              ]
+            },
             {
               "type": {
                 "value": "Create"
               },
               "parameters": [
                 "PopUp",
-                "PopUp",
-                "0",
-                "0",
+                "LevelUp",
+                "BuildingChoice.X()",
+                "BuildingChoice.Y()-32",
                 "\"HUD\""
               ]
             },
@@ -677,27 +833,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "PopUp",
+                "LevelUp",
                 "Text",
                 "=",
                 "\"Level up\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "PopUp",
-                ""
               ]
             }
           ]
