@@ -93,6 +93,7 @@
           ],
           "events": [
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -133,21 +134,8 @@
               ]
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PickNearest"
-                  },
-                  "parameters": [
-                    "BossPathCheckPoint",
-                    "Slime.X()",
-                    "Slime.Y()",
-                    ""
-                  ]
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -157,7 +145,7 @@
                     "Slime",
                     "EnemyHealth",
                     "=",
-                    "BossPathCheckPoint.X()",
+                    "Base.X()",
                     ""
                   ]
                 },
@@ -169,7 +157,7 @@
                     "Slime",
                     "EnemyHealth",
                     "=",
-                    "BossPathCheckPoint.Y()",
+                    "Base.Y()",
                     ""
                   ]
                 },
@@ -202,6 +190,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -562,10 +551,20 @@
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "SetGlobalVariableAsBoolean"
               },
               "parameters": [
-                "Slime",
+                "isGameWon",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"FinaleScene\"",
                 ""
               ]
             }
