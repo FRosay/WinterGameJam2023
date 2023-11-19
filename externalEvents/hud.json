@@ -131,6 +131,50 @@
                 "SceneWindowHeight()-80",
                 "\"HUD\""
               ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "ReclaimBrush",
+                "Scale",
+                "*",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "Scale",
+                "*",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Life",
+                "Scale",
+                "*",
+                "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Currency",
+                "Scale",
+                "*",
+                "4"
+              ]
             }
           ],
           "events": [
@@ -563,11 +607,10 @@
           "actions": [
             {
               "type": {
-                "value": "DebuggerTools::ConsoleLog"
+                "value": "Delete"
               },
               "parameters": [
-                "currentState",
-                "\"info\"",
+                "RangeDisplay",
                 ""
               ]
             }
@@ -990,6 +1033,17 @@
                                 "+",
                                 "1"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "Scale",
+                                "*",
+                                "2"
+                              ]
                             }
                           ]
                         }
@@ -1040,7 +1094,7 @@
               },
               "parameters": [
                 "currency",
-                ">",
+                ">=",
                 "Variable(reclaimCost)"
               ]
             }
@@ -1315,6 +1369,17 @@
                         "BuildingChoice",
                         "=",
                         "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "Scale",
+                        "*",
+                        "2"
                       ]
                     }
                   ]
@@ -1856,9 +1921,9 @@
               "parameters": [
                 "",
                 "RangeDisplay",
-                "BuildingChoice.X()+16-BuildingChoice.TowerBehaviour::Range()/2",
-                "BuildingChoice.Y()+16-BuildingChoice.TowerBehaviour::Range()/2",
-                "\"HUD\""
+                "BuildingChoice.X()+16-BuildingChoice.TowerBehaviour::Range()",
+                "BuildingChoice.Y()+16-BuildingChoice.TowerBehaviour::Range()",
+                ""
               ]
             },
             {
@@ -1868,8 +1933,18 @@
               "parameters": [
                 "RangeDisplay",
                 "Resizable",
-                "BuildingChoice.TowerBehaviour::Range()",
-                "BuildingChoice.TowerBehaviour::Range()"
+                "BuildingChoice.TowerBehaviour::Range()*2",
+                "BuildingChoice.TowerBehaviour::Range()*2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "RangeDisplay",
+                "=",
+                "40"
               ]
             }
           ]

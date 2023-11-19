@@ -457,6 +457,222 @@
         "name": "range-display",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tiled sprites/herb/herb_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/sand/sand_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tiled sprites/sand/sand_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/hud/hud.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/tiled sprites/hud/hud.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/money_slime.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/money_slime.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/boss-path-check-point2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/boss-path-check-point2.png\"}",
+        "name": "boss-path-check-point2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/tower1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/towers/tower1_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_tileHerbe.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_tileHerbe.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-11.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-12.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-13.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-14.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/HUD_HP-16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/HUD/HUD_HP-16.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/towerFrost1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sprites/towers/towerFrost1_1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -515,7 +731,7 @@
               "folded": true,
               "name": "effect",
               "type": "string",
-              "value": "freeze"
+              "value": "none"
             },
             {
               "name": "effectDuration",
@@ -538,7 +754,7 @@
             {
               "name": "name",
               "type": "string",
-              "value": "Tour de base"
+              "value": "Slime"
             },
             {
               "name": "price",
@@ -625,7 +841,7 @@
               "folded": true,
               "name": "effect",
               "type": "string",
-              "value": "none"
+              "value": "freeze"
             },
             {
               "name": "effectDuration",
@@ -648,7 +864,7 @@
             {
               "name": "name",
               "type": "string",
-              "value": "Tour de base"
+              "value": "Slime de glace"
             },
             {
               "name": "price",
@@ -691,6 +907,16 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "AllEffects",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "freeze"
         }
       ]
     }

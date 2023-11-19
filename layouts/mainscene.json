@@ -152,13 +152,13 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "life",
+                  "image": "assets/sprites/HUD/HUD_HP-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -174,20 +174,560 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 10,
-                        "y": 10
+                        "x": 0,
+                        "y": 3
                       },
                       {
-                        "x": 51,
-                        "y": 10
+                        "x": 3,
+                        "y": 3
                       },
                       {
-                        "x": 51,
-                        "y": 58
+                        "x": 3,
+                        "y": 6
                       },
                       {
-                        "x": 10,
-                        "y": 58
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-7.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-8.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-9.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-10.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-11.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-12.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-13.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-14.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-15.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/sprites/HUD/HUD_HP-16.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 3,
+                        "y": 6
+                      },
+                      {
+                        "x": 0,
+                        "y": 6
                       }
                     ]
                   ]
@@ -214,9 +754,9 @@
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -267,7 +807,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "tower-base2",
+                  "image": "assets/sprites/towers/tower1_1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -283,20 +823,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 1,
+                        "x": 0,
                         "y": 0
                       },
                       {
-                        "x": 30,
+                        "x": 16,
                         "y": 0
                       },
                       {
-                        "x": 30,
-                        "y": 32
+                        "x": 16,
+                        "y": 16
                       },
                       {
-                        "x": 1,
-                        "y": 32
+                        "x": 0,
+                        "y": 16
                       }
                     ]
                   ]
@@ -354,7 +894,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\towers\\tower1_1.png",
+                  "image": "assets/sprites/towers/towerFrost1_1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -484,7 +1024,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "currency",
+                  "image": "assets/sprites/HUD/money_slime.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -504,16 +1044,16 @@
                         "y": 4
                       },
                       {
-                        "x": 63,
+                        "x": 12,
                         "y": 4
                       },
                       {
-                        "x": 63,
-                        "y": 61
+                        "x": 12,
+                        "y": 12
                       },
                       {
                         "x": 4,
-                        "y": 61
+                        "y": 12
                       }
                     ]
                   ]
@@ -540,16 +1080,16 @@
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
       "assetStoreId": "",
       "height": 32,
       "name": "Path",
-      "texture": "assets\\temp_path.png",
+      "texture": "assets/tiled sprites/sand/sand_1.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -567,7 +1107,7 @@
       "assetStoreId": "",
       "height": 32,
       "name": "Grass",
-      "texture": "assets\\temp_grass.png",
+      "texture": "assets/tiled sprites/herb/herb_1.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -658,9 +1198,9 @@
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -1013,7 +1553,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\buildings-panel.png",
+                  "image": "assets/tiled sprites/hud/hud.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1284,11 +1824,11 @@
       "string": "Coût ?",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 20,
+      "characterSize": 32,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -1312,7 +1852,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "reclaim-brush",
+                  "image": "assets/sprites/HUD/HUD_tileHerbe.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1328,20 +1868,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 3,
-                        "y": 2
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 64,
-                        "y": 2
+                        "x": 32,
+                        "y": 0
                       },
                       {
-                        "x": 64,
-                        "y": 60
+                        "x": 32,
+                        "y": 32
                       },
                       {
-                        "x": 3,
-                        "y": 60
+                        "x": 0,
+                        "y": 32
                       }
                     ]
                   ]
@@ -1368,9 +1908,9 @@
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -1394,7 +1934,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "boss-path-check-point",
+                  "image": "boss-path-check-point2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1410,20 +1950,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 9,
-                        "y": 4
+                        "x": 11,
+                        "y": 11
                       },
                       {
-                        "x": 57,
-                        "y": 4
+                        "x": 21,
+                        "y": 11
                       },
                       {
-                        "x": 57,
-                        "y": 55
+                        "x": 21,
+                        "y": 21
                       },
                       {
-                        "x": 9,
-                        "y": 55
+                        "x": 11,
+                        "y": 21
                       }
                     ]
                   ]
@@ -2094,6 +2634,66 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "HUDBackground",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/tiled sprites/hud/hud.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2187,6 +2787,9 @@
       },
       {
         "objectName": "RangeDisplay"
+      },
+      {
+        "objectName": "HUDBackground"
       }
     ]
   },

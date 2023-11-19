@@ -115,8 +115,8 @@
                   "parameters": [
                     "",
                     "BossPathCheckPoint",
-                    "Random(SceneWindowWidth())",
-                    "Random(SceneWindowHeight())",
+                    "Random(61*32)",
+                    "Random(41*32)",
                     ""
                   ]
                 },
@@ -127,8 +127,8 @@
                   "parameters": [
                     "",
                     "BossPathCheckPoint",
-                    "Random(SceneWindowWidth())",
-                    "Random(SceneWindowHeight())",
+                    "Random(61*32)",
+                    "Random(41*32)",
                     ""
                   ]
                 },
@@ -311,6 +311,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Remove",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
