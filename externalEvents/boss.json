@@ -43,7 +43,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Create",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -89,17 +88,6 @@
                 "Slime",
                 "=",
                 "10"
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Slime",
-                "Opacity",
-                "=",
-                "125"
               ]
             }
           ],

@@ -869,180 +869,218 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
+                        "value": "AjoutObjConcern"
                       },
                       "parameters": [
-                        "currency",
-                        "<",
-                        "TowerStats[BuildingChoice.name].price[0]"
+                        "",
+                        "BuildingChoice"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "isPhantom",
+                        "True"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "DebuggerTools::ConsoleLog"
                       },
                       "parameters": [
-                        "PopUp",
-                        "PopUp",
-                        "0",
-                        "0",
-                        "\"HUD\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "PopUp",
-                        "Text",
-                        "=",
-                        "\"Pas assez de thunass pour \"+BuildingChoice.name"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "PopUp",
+                        "BuildingChoice.ObjectName()",
+                        "\"info\"",
                         ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "currency",
-                        ">=",
-                        "TowerStats[BuildingChoice.name].price[0]"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "currency",
-                        "-",
-                        "TowerStats[BuildingChoice.name].price[0]"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "CurrentCurrency",
-                        "Text",
-                        "=",
-                        "currency"
                       ]
                     }
                   ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "currency",
+                            "<",
+                            "TowerStats[BuildingChoice.name].price[0]"
+                          ]
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
-                            "value": "CreateByName"
+                            "value": "Create"
                           },
                           "parameters": [
-                            "",
-                            "BuildingChoice",
-                            "BuildingChoice.ObjectName()",
-                            "BuildableTiles.X()",
-                            "BuildableTiles.Y()",
+                            "PopUp",
+                            "PopUp",
+                            "0",
+                            "0",
+                            "\"HUD\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "PopUp",
+                            "Text",
+                            "=",
+                            "\"Pas assez de thunass pour \"+BuildingChoice.name"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "PopUp",
                             ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "currency",
+                            ">=",
+                            "TowerStats[BuildingChoice.name].price[0]"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "currency",
+                            "-",
+                            "TowerStats[BuildingChoice.name].price[0]"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "CurrentCurrency",
+                            "Text",
+                            "=",
+                            "currency"
                           ]
                         }
                       ],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PosX"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "=",
-                                "BuildableTiles.X()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PosY"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "=",
-                                "BuildableTiles.Y()"
-                              ]
-                            }
-                          ],
+                          "conditions": [],
                           "actions": [
                             {
                               "type": {
-                                "value": "ChangePlan"
+                                "value": "CreateByName"
                               },
                               "parameters": [
+                                "",
                                 "BuildingChoice",
-                                "=",
-                                "42"
+                                "BuildingChoice.ObjectName()",
+                                "BuildableTiles.X()",
+                                "BuildableTiles.Y()",
+                                ""
                               ]
-                            },
+                            }
+                          ],
+                          "events": [
                             {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "customId",
-                                "=",
-                                "nextCustomBuildingId"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "nextCustomBuildingId",
-                                "+",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ScalableCapability::ScalableBehavior::SetValue"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "Scale",
-                                "*",
-                                "2"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosX"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "BuildableTiles.X()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "BuildableTiles.Y()"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "42"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "customId",
+                                    "=",
+                                    "nextCustomBuildingId"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "nextCustomBuildingId",
+                                    "+",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "Scale",
+                                    "*",
+                                    "2"
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -1466,7 +1504,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Level Up",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1564,7 +1601,17 @@
                 "LevelUp",
                 "BuildingChoice.X()",
                 "BuildingChoice.Y()-64",
-                "\"HUD\""
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "LevelUp",
+                "=",
+                "41"
               ]
             },
             {
@@ -1576,6 +1623,15 @@
                 "idOfBuildingLinked",
                 "=",
                 "BuildingChoice.customId"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "LevelUp",
+                "\"255;255;255\""
               ]
             }
           ],
