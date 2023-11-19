@@ -1,6 +1,26 @@
 {
-  "associatedLayout": "",
+  "associatedLayout": "MainScene",
   "lastChangeTimeStamp": 0,
   "name": "Debug",
-  "events": []
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "DragCameraWithPointer::DragCameraWithPointer"
+          },
+          "parameters": [
+            "",
+            "0",
+            "",
+            "\"both\"",
+            "Middle",
+            ""
+          ]
+        }
+      ]
+    }
+  ]
 }

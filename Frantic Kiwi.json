@@ -989,11 +989,11 @@
                 },
                 {
                   "type": "number",
-                  "value": 1
+                  "value": 0.75
                 },
                 {
                   "type": "number",
-                  "value": 2
+                  "value": 1
                 }
               ]
             },
@@ -1007,11 +1007,11 @@
                 },
                 {
                   "type": "number",
-                  "value": 1
+                  "value": 2
                 },
                 {
                   "type": "number",
-                  "value": 30
+                  "value": 3
                 }
               ]
             },
@@ -1095,15 +1095,15 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 1
+                  "value": 0.4
                 },
                 {
                   "type": "number",
-                  "value": 3
+                  "value": 0.6
                 },
                 {
                   "type": "number",
-                  "value": 5
+                  "value": 0.8
                 }
               ]
             },
@@ -1137,15 +1137,15 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 0
+                  "value": 0.5
                 },
                 {
                   "type": "number",
-                  "value": 0
+                  "value": 1
                 },
                 {
                   "type": "number",
-                  "value": 0
+                  "value": 2
                 }
               ]
             },
@@ -1258,6 +1258,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/navmeshpathfinding"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/dragcamerawithpointer"

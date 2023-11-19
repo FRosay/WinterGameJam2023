@@ -625,14 +625,14 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PathfindingBehavior::SetDestination"
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
                   },
                   "parameters": [
                     "Object",
                     "Parameter",
-                    "",
                     "Object.Behavior::PropertyCurrentObjectiveX()",
-                    "Object.Behavior::PropertyCurrentObjectiveY()"
+                    "Object.Behavior::PropertyCurrentObjectiveY()",
+                    ""
                   ]
                 }
               ]
@@ -654,7 +654,7 @@
             {
               "description": "",
               "name": "Parameter",
-              "supplementaryInformation": "PathfindingBehavior::PathfindingBehavior",
+              "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
               "type": "behavior"
             }
           ],

@@ -1094,14 +1094,7 @@
       "width": 32,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 0,
-          "impassable": false
-        }
-      ]
+      "behaviors": []
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -1197,25 +1190,22 @@
         {
           "name": "EnemyHealth",
           "type": "SimpleEnemyBehaviour::EnemyHealth",
-          "TotalHitPoints": 10,
+          "TotalHitPoints": 50,
           "CurrentHitPoints": 0,
-          "Armor": 0
+          "Armor": 0,
+          "CurrentSpeed": 25,
+          "InitialSpeed": 25
         },
         {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 16,
-          "cellWidth": 16,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 200,
-          "rotateObject": false,
-          "smoothingMaxCellGap": 1
+          "name": "NavMeshPathfindingBehavior",
+          "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+          "Acceleration": 100,
+          "MaxSpeed": 25,
+          "AngularMaxSpeed": 180,
+          "RotateObject": false,
+          "AngleOffset": 0,
+          "CollisionShape": "Bounding disk",
+          "ExtraBorder": 0
         }
       ],
       "animations": [
@@ -1233,8 +1223,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 48,
+                    "y": 48
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1281,8 +1271,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 48,
+                    "y": 48
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1326,14 +1316,7 @@
       "width": 32,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 0,
-          "impassable": false
-        }
-      ]
+      "behaviors": []
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -1349,23 +1332,20 @@
           "type": "SimpleEnemyBehaviour::EnemyHealth",
           "TotalHitPoints": 10,
           "CurrentHitPoints": 0,
-          "Armor": 0
+          "Armor": 0,
+          "InitialSpeed": 35,
+          "CurrentSpeed": 35
         },
         {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 300,
-          "maxSpeed": 75,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 16,
-          "cellWidth": 16,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "rotateObject": false,
-          "smoothingMaxCellGap": 1
+          "name": "NavMeshPathfindingBehavior",
+          "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+          "Acceleration": 120,
+          "MaxSpeed": 35,
+          "AngularMaxSpeed": 180,
+          "RotateObject": false,
+          "AngleOffset": 0,
+          "CollisionShape": "Bounding disk",
+          "ExtraBorder": 0
         }
       ],
       "animations": [
@@ -1383,8 +1363,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 8,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1431,8 +1411,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 8,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1479,8 +1459,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 8,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -2685,7 +2665,12 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "NavMeshPathfindingObstacleBehavior",
+          "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "center-1",
@@ -4218,14 +4203,7 @@
       "width": 32,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 0,
-          "impassable": false
-        }
-      ]
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -4542,25 +4520,6 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "DragCameraWithPointer::DragCameraWithPointer"
-          },
-          "parameters": [
-            "",
-            "0",
-            "",
-            "\"both\"",
-            "Right",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
@@ -4702,6 +4661,13 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "EnemyWaves"
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
@@ -4987,16 +4953,23 @@
       "type": "FlippableCapability::FlippableBehavior"
     },
     {
+      "name": "NavMeshPathfindingBehavior",
+      "type": "NavMeshPathfinding::NavMeshPathfindingBehavior"
+    },
+    {
+      "name": "NavMeshPathfindingObstacleBehavior",
+      "type": "NavMeshPathfinding::NavMeshPathfindingObstacleBehavior",
+      "Viewpoint": "Top-Down",
+      "CellSize": 10,
+      "AreaLeftBound": 0,
+      "AreaTopBound": 0,
+      "AreaRightBound": 0,
+      "AreaBottomBound": 0,
+      "IsometricRatio": 0
+    },
+    {
       "name": "Opacity",
       "type": "OpacityCapability::OpacityBehavior"
-    },
-    {
-      "name": "Pathfinding",
-      "type": "PathfindingBehavior::PathfindingBehavior"
-    },
-    {
-      "name": "PathfindingObstacle",
-      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
     },
     {
       "name": "ProjectileBehaviour",

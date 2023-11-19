@@ -38,7 +38,7 @@
             "",
             "\"spawner\"",
             ">",
-            "1"
+            "2"
           ]
         },
         {
@@ -66,8 +66,8 @@
           "parameters": [
             "",
             "CreepSlime",
-            "Spawner.X()",
-            "Spawner.Y()",
+            "Spawner.CenterX()",
+            "Spawner.CenterY()",
             ""
           ]
         },
@@ -89,7 +89,7 @@
             "CreepSlime",
             "EnemyHealth",
             "=",
-            "1820",
+            "Base.CenterX()",
             ""
           ]
         },
@@ -101,7 +101,19 @@
             "CreepSlime",
             "EnemyHealth",
             "=",
-            "1024",
+            "Base.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+          },
+          "parameters": [
+            "CreepSlime",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
             ""
           ]
         },
@@ -149,6 +161,12 @@
         }
       ],
       "events": [
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -200,6 +218,74 @@
       "actions": [
         {
           "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Slime",
+            "Spawner.CenterX()",
+            "Spawner.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetSize"
+          },
+          "parameters": [
+            "Slime",
+            "Resizable",
+            "64",
+            "64"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Slime",
+            "=",
+            "10"
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
+          },
+          "parameters": [
+            "Slime",
+            "EnemyHealth",
+            "=",
+            "Base.X()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
+          },
+          "parameters": [
+            "Slime",
+            "EnemyHealth",
+            "=",
+            "Base.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
+          },
+          "parameters": [
+            "Slime",
+            "EnemyHealth",
+            "Pathfinding",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "ResetTimer"
           },
           "parameters": [
@@ -221,6 +307,17 @@
             "\"nextWaveTimer\"",
             ">",
             "5"
+          ]
+        },
+        {
+          "type": {
+            "value": "SceneInstancesCount"
+          },
+          "parameters": [
+            "",
+            "Slime",
+            "<=",
+            "0"
           ]
         },
         {
@@ -269,6 +366,15 @@
           "parameters": [
             "",
             "\"spawner\""
+          ]
+        },
+        {
+          "type": {
+            "value": "RemoveTimer"
+          },
+          "parameters": [
+            "",
+            "\"nextWaveTimer\""
           ]
         }
       ]
