@@ -782,6 +782,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1470,7 +1471,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Level Up",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1812,63 +1812,98 @@
                       "parameters": [
                         "BuildingChoice",
                         "TowerBehaviour",
+                        "TowerFX",
                         ""
                       ]
                     }
                   ],
                   "events": [
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "TowerBehaviour::TowerBehaviour::Level"
-                          },
-                          "parameters": [
-                            "BuildingChoice",
-                            "TowerBehaviour",
-                            "=",
-                            "2",
-                            ""
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "value": "ChangeColor"
+                            "value": "CreateByName"
                           },
                           "parameters": [
-                            "BuildingChoice",
-                            "\"248;231;28\""
+                            "",
+                            "TowerFX",
+                            "BuildingChoice.ObjectName()+\"FX\"",
+                            "BuildingChoice.X()",
+                            "BuildingChoice.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "TowerFX",
+                            "=",
+                            "43"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "DebuggerTools::ConsoleLog"
+                          },
+                          "parameters": [
+                            "ToString(SceneInstancesCount(TowerFX))",
+                            "\"info\"",
+                            ""
                           ]
                         }
                       ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "TowerBehaviour::TowerBehaviour::Level"
-                          },
-                          "parameters": [
-                            "BuildingChoice",
-                            "TowerBehaviour",
-                            "=",
-                            "3",
-                            ""
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "value": "ChangeColor"
+                            "value": "CreateByName"
                           },
                           "parameters": [
-                            "BuildingChoice",
-                            "\"184;233;134\""
+                            "",
+                            "TowerFX",
+                            "BuildingChoice.ObjectName()+\"FX\"",
+                            "10",
+                            "10",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "TowerFX",
+                            "=",
+                            "43"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TowerFX",
+                            "Scale",
+                            "*",
+                            "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "DebuggerTools::ConsoleLog"
+                          },
+                          "parameters": [
+                            "ToString(SceneInstancesCount(TowerFX))",
+                            "\"info\"",
+                            ""
                           ]
                         }
                       ]
@@ -1887,6 +1922,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Range tower",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

@@ -92,6 +92,17 @@
           "name": "IceProjectile"
         }
       ]
+    },
+    {
+      "name": "TowerFX",
+      "objects": [
+        {
+          "name": "IceTowerFX"
+        },
+        {
+          "name": "BaseTowerFX"
+        }
+      ]
     }
   ],
   "variables": [
@@ -3612,7 +3623,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -4665,17 +4676,6 @@
                 "Text",
                 "=",
                 "ToString(totalLife)"
-              ]
-            },
-            {
-              "type": {
-                "value": "ZoomCamera"
-              },
-              "parameters": [
-                "",
-                "1.2",
-                "",
-                ""
               ]
             }
           ]
