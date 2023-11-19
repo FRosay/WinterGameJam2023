@@ -210,7 +210,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Value ?",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -664,7 +664,7 @@
       }
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Slime",
       "type": "Sprite",
@@ -723,20 +723,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 7
+                        "x": 24.5,
+                        "y": 20.5
                       },
                       {
-                        "x": 96,
-                        "y": 7
+                        "x": 73,
+                        "y": 19
                       },
                       {
-                        "x": 96,
-                        "y": 96
+                        "x": 82.5,
+                        "y": 75
                       },
                       {
-                        "x": 0,
-                        "y": 96
+                        "x": 13,
+                        "y": 76
                       }
                     ]
                   ]
@@ -771,20 +771,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 7
+                        "x": 24.5,
+                        "y": 20.5
                       },
                       {
-                        "x": 96,
-                        "y": 7
+                        "x": 73,
+                        "y": 19
                       },
                       {
-                        "x": 96,
-                        "y": 96
+                        "x": 82.5,
+                        "y": 75
                       },
                       {
-                        "x": 0,
-                        "y": 96
+                        "x": 13,
+                        "y": 76
                       }
                     ]
                   ]
@@ -2033,6 +2033,67 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RangeDisplay",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "range-display",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "range-display",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2123,6 +2184,9 @@
       },
       {
         "objectName": "BossPathCheckPoint"
+      },
+      {
+        "objectName": "RangeDisplay"
       }
     ]
   },

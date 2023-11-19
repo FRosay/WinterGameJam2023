@@ -217,6 +217,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -931,36 +932,65 @@
                             "BuildableTiles.Y()",
                             ""
                           ]
-                        },
+                        }
+                      ],
+                      "events": [
                         {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "BuildingChoice",
-                            "=",
-                            "42"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "BuildingChoice",
-                            "customId",
-                            "=",
-                            "nextCustomBuildingId"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "nextCustomBuildingId",
-                            "+",
-                            "1"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "BuildableTiles.X()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "BuildableTiles.Y()"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "42"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "customId",
+                                "=",
+                                "nextCustomBuildingId"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "nextCustomBuildingId",
+                                "+",
+                                "1"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -1708,6 +1738,64 @@
                         ""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::TowerBehaviour::Level"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "TowerBehaviour",
+                            "=",
+                            "2",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "\"248;231;28\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::TowerBehaviour::Level"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "TowerBehaviour",
+                            "=",
+                            "3",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "\"184;233;134\""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -1722,6 +1810,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Range tower",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1753,13 +1842,22 @@
           "actions": [
             {
               "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "RangeDisplay",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
                 "",
                 "RangeDisplay",
-                "BuildingChoice.X()+16",
-                "BuildingChoice.Y()+16",
+                "BuildingChoice.X()+16-BuildingChoice.TowerBehaviour::Range()/2",
+                "BuildingChoice.Y()+16-BuildingChoice.TowerBehaviour::Range()/2",
                 "\"HUD\""
               ]
             },
