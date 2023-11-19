@@ -184,6 +184,16 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currency",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Delete"
                       },
                       "parameters": [
