@@ -2,5 +2,589 @@
   "associatedLayout": "MainScene",
   "lastChangeTimeStamp": 0,
   "name": "Boss",
-  "events": []
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "wavesWithBoss",
+            "=",
+            "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "zero",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Create",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "zero",
+                "=",
+                "mod(currentWave, Variable(wavesWithBoss))"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Slime",
+                "0",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Slime",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Slime",
+                "Opacity",
+                "=",
+                "125"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    "Random(SceneWindowWidth())",
+                    "Random(SceneWindowHeight())",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    "Random(SceneWindowWidth())",
+                    "Random(SceneWindowHeight())",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "BossPathCheckPoint",
+                    "=",
+                    "10"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PickNearest"
+                  },
+                  "parameters": [
+                    "BossPathCheckPoint",
+                    "Slime.X()",
+                    "Slime.Y()",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "BossPathCheckPoint.X()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "BossPathCheckPoint.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "Pathfinding",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Move",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "",
+                "Slime",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickNearest"
+                  },
+                  "parameters": [
+                    "BossPathCheckPoint",
+                    "Slime.X()",
+                    "Slime.Y()",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceVersPos"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "BossPathCheckPoint.X()",
+                    "BossPathCheckPoint.Y()",
+                    "125",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceVersPos"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "Base.X()",
+                    "Base.Y()",
+                    "125",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Remove",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Slime",
+                "BossPathCheckPoint",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BossPathCheckPoint",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PickNearest"
+                  },
+                  "parameters": [
+                    "BossPathCheckPoint",
+                    "Slime.X()",
+                    "Slime.Y()",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "BossPathCheckPoint.X()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "BossPathCheckPoint.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "Pathfinding",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "BossPathCheckPoint",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "Base.X()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "=",
+                    "Base.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
+                  },
+                  "parameters": [
+                    "Slime",
+                    "EnemyHealth",
+                    "Pathfinding",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Slime",
+                "Grass",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Grass",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Path",
+                    "Grass.X()",
+                    "Grass.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Grass",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Slime",
+                "BuildingChoice",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BuildingChoice",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Slime",
+                "Base",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Slime",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
 }
