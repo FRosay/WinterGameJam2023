@@ -270,6 +270,15 @@
         "name": "assets\\sprites\\projectile\\tir1_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/reclaim-brush.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "reclaim-brush",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

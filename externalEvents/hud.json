@@ -119,6 +119,18 @@
                 "isHUD",
                 "True"
               ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "ReclaimBrush",
+                "960",
+                "SceneWindowHeight()-80",
+                "\"HUD\""
+              ]
             }
           ],
           "events": [
@@ -188,6 +200,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -263,8 +276,49 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ReclaimCost",
+                "=",
+                "CursorX()+16",
+                "=",
+                "CursorY()+16"
+              ]
+            }
+          ],
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "\"HUD\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "=",
+                    "CursorX()+16",
+                    "=",
+                    "CursorY()+16"
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -288,7 +342,7 @@
                   "parameters": [
                     "reclaimCost",
                     "=",
-                    "0"
+                    "4"
                   ]
                 }
               ],
@@ -324,7 +378,7 @@
                       },
                       "parameters": [
                         "reclaimCost",
-                        "+",
+                        "-",
                         "1"
                       ]
                     }
@@ -361,7 +415,7 @@
                       },
                       "parameters": [
                         "reclaimCost",
-                        "+",
+                        "-",
                         "1"
                       ]
                     }
@@ -398,7 +452,7 @@
                       },
                       "parameters": [
                         "reclaimCost",
-                        "+",
+                        "-",
                         "1"
                       ]
                     }
@@ -435,7 +489,7 @@
                       },
                       "parameters": [
                         "reclaimCost",
-                        "+",
+                        "-",
                         "1"
                       ]
                     }
@@ -470,6 +524,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -897,6 +952,155 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"reclaim-path\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Path",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "currency",
+                ">",
+                "Variable(reclaimCost)"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "currency",
+                "-",
+                "Variable(reclaimCost)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CurrentCurrency",
+                "Text",
+                "=",
+                "currency"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "ReclaimCost",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"none\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "GridPart"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "\"HUD\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Grass",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grass",
+                    "Path.X()",
+                    "Path.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Path",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "parameters": []
@@ -906,6 +1110,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1124,6 +1329,18 @@
               "parameters": [
                 "GridPart",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "ReclaimCost",
+                "CursorX()+16",
+                "CursorY()+16",
+                "\"HUD\""
               ]
             }
           ]
