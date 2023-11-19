@@ -225,11 +225,11 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                    "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyCurrentHitPoints"
                   },
                   "parameters": [
                     "Object",
-                    "Scale",
+                    "Behavior",
                     "-",
                     "damageDealt-Object.Behavior::PropertyArmor()"
                   ]
