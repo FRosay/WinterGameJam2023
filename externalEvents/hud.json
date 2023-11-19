@@ -8,6 +8,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Init",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -216,7 +217,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -279,6 +279,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1709,6 +1710,68 @@
                     }
                   ]
                 }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Range tower",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "BuildingChoice",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "RangeDisplay",
+                "BuildingChoice.X()+16",
+                "BuildingChoice.Y()+16",
+                "\"HUD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetSize"
+              },
+              "parameters": [
+                "RangeDisplay",
+                "Resizable",
+                "BuildingChoice.TowerBehaviour::Range()",
+                "BuildingChoice.TowerBehaviour::Range()"
               ]
             }
           ]
