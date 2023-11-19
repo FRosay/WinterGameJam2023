@@ -448,6 +448,15 @@
         "name": "assets\\sprites\\bosses\\boss_final.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/range-display.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "range-display",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -556,16 +565,16 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 64
+                  "value": 128
                 },
                 {
                   "folded": true,
                   "type": "number",
-                  "value": 64
+                  "value": 192
                 },
                 {
                   "type": "number",
-                  "value": 80
+                  "value": 256
                 }
               ]
             }
@@ -668,16 +677,16 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 64
+                  "value": 128
                 },
                 {
                   "folded": true,
                   "type": "number",
-                  "value": 64
+                  "value": 194
                 },
                 {
                   "type": "number",
-                  "value": 80
+                  "value": 256
                 }
               ]
             }
