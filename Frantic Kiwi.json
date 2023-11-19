@@ -295,6 +295,159 @@
         "metadata": "",
         "name": "assets\\fonts\\Minecraft.ttf",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_11.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_12.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_13.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_14.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/base/base_16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\base\\base_16.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/bosses/boss_final.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\bosses\\boss_final.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
