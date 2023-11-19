@@ -279,6 +279,15 @@
         "name": "reclaim-brush",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/boss-path-check-point.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "boss-path-check-point",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -555,6 +564,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/hud"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/boss"
     }
   ],
   "eventsFunctionsExtensions": [
