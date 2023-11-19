@@ -361,6 +361,18 @@
                         "Object",
                         "\"timeSinceLastAttack\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/songs/projectile-fire.mp3",
+                        "",
+                        "",
+                        ""
+                      ]
                     }
                   ]
                 }

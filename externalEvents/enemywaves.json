@@ -119,17 +119,6 @@
         },
         {
           "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
-          },
-          "parameters": [
-            "CreepSlime",
-            "EnemyHealth",
-            "Pathfinding",
-            ""
-          ]
-        },
-        {
-          "type": {
             "value": "ModVarScene"
           },
           "parameters": [
@@ -161,12 +150,6 @@
         }
       ],
       "events": [
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -275,12 +258,13 @@
         },
         {
           "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::MoveTowardsObjective"
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
           },
           "parameters": [
             "Slime",
-            "EnemyHealth",
-            "Pathfinding",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
             ""
           ]
         },
@@ -356,7 +340,7 @@
             "Wave",
             "Text",
             "=",
-            "\"Vague : \"+currentWave"
+            "\"Vague : \"+ToString(currentWave)+\"/5\""
           ]
         },
         {
@@ -375,6 +359,44 @@
           "parameters": [
             "",
             "\"nextWaveTimer\""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "currentWave",
+                "=",
+                "5"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "isGameWon",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"FinaleScene\"",
+                ""
+              ]
+            }
           ]
         }
       ]
