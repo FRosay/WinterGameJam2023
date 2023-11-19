@@ -331,6 +331,30 @@
                     },
                     {
                       "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetEffect"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "Object.Behavior::Effect()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::ProjectileBehaviour::SetEffectDuration"
+                      },
+                      "parameters": [
+                        "Projectile",
+                        "ProjectileBehaviour",
+                        "=",
+                        "Object.Behavior::EffectDuration()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
@@ -1340,14 +1364,50 @@
                         "Object.Behavior::Damage()",
                         ""
                       ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "GlobalVariableChildExists"
+                          },
+                          "parameters": [
+                            "AllEffects",
+                            "Object.Behavior::Effect()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::AddEffect"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "EnemyHealth",
+                            "Object.Behavior::Effect()",
+                            "Object.Behavior::EffectDuration()",
+                            ""
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Object",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Object",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -1866,6 +1926,172 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "description": "the effect of the object.",
+          "fullName": "effect",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "Effect",
+          "sentence": "the effect",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnString"
+                  },
+                  "parameters": [
+                    "Object.Behavior::Propertyeffect()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Effect",
+          "name": "SetEffect",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertyeffect"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsString(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the effect duration of the object.",
+          "fullName": "effect duration",
+          "functionType": "ExpressionAndCondition",
+          "group": "Projectile configuration",
+          "name": "EffectDuration",
+          "sentence": "the effect duration",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyeffectDuration()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "EffectDuration",
+          "name": "SetEffectDuration",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::ProjectileBehaviour::SetPropertyeffectDuration"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::ProjectileBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "propertyDescriptors": [
@@ -1876,7 +2102,7 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "damage"
         },
         {
@@ -1887,7 +2113,7 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "speed"
         },
         {
@@ -1897,7 +2123,7 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "targetId"
         },
         {
@@ -1907,8 +2133,29 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "targetStillExists"
+        },
+        {
+          "value": "",
+          "type": "String",
+          "label": "effect",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "effect"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "unit": "Second",
+          "label": "effect duration",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "effectDuration"
         }
       ],
       "sharedPropertyDescriptors": []

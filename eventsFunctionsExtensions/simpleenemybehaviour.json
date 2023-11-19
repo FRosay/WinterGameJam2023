@@ -194,6 +194,131 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Object",
+                    "tmpIndexValue",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                  "iterableVariableName": "Object.CurrentEffects",
+                  "valueIteratorVariableName": "tmpEffect",
+                  "keyIteratorVariableName": "",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "VariableString(tmpEffect.effectName)",
+                            ">",
+                            "Variable(tmpEffect.effectDuration)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::ApplyEffect"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "VariableString(tmpEffect.effectName)",
+                            "yes",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RemoveObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "VariableString(tmpEffect.effectName)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectVariableRemoveAt"
+                          },
+                          "parameters": [
+                            "Object",
+                            "CurrentEffects",
+                            "Object.Variable(tmpIndexValue)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "Object",
+                            "VariableString(tmpEffect.effectName)",
+                            "<",
+                            "Variable(tmpEffect.effectDuration)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::ApplyEffect"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "VariableString(tmpEffect.effectName)",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "tmpIndexValue",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "parameters": [
@@ -208,6 +333,201 @@
               "name": "Behavior",
               "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
               "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Add an effect by name to this enemy",
+          "fullName": "Add Effect",
+          "functionType": "Action",
+          "name": "AddEffect",
+          "sentence": "Add effect _PARAM2_ to _PARAM0_ for _PARAM3_ seconds",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildExists"
+                  },
+                  "parameters": [
+                    "AllEffects",
+                    "EffectToApply"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Object",
+                    "tmpEffect.effectName",
+                    "=",
+                    "EffectToApply"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Object",
+                    "tmpEffect.effectDuration",
+                    "=",
+                    "DurationOfEffect"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Object.tmpEffect.effectName"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariablePush"
+                  },
+                  "parameters": [
+                    "Object",
+                    "CurrentEffects",
+                    "tmpEffect"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "EffectToApply",
+              "type": "string"
+            },
+            {
+              "description": "Duration in seconds",
+              "name": "DurationOfEffect",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "ApplyEffect",
+          "sentence": "Apply effect _PARAM2_ to _PARAM0_ (or undo it: _PARAM3_)",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(Effect)",
+                    "=",
+                    "\"freeze\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"ReverseEffect\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyInitialSpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Behavior::PropertyCurrentSpeed() - (Object.Behavior::PropertyCurrentSpeed() * 0.2)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"ReverseEffect\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyInitialSpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Behavior::PropertyInitialSpeed()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Effect",
+              "type": "string"
+            },
+            {
+              "description": "",
+              "name": "ReverseEffect",
+              "type": "yesorno"
             }
           ],
           "objectGroups": []
@@ -713,6 +1033,28 @@
           "extraInformation": [],
           "hidden": true,
           "name": "CurrentObjectiveY"
+        },
+        {
+          "value": "50",
+          "type": "Number",
+          "unit": "PixelSpeed",
+          "label": "initial speed",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "InitialSpeed"
+        },
+        {
+          "value": "50",
+          "type": "Number",
+          "unit": "PixelSpeed",
+          "label": "current speed",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "CurrentSpeed"
         }
       ],
       "sharedPropertyDescriptors": []
