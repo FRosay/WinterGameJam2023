@@ -127,6 +127,105 @@
           "objectGroups": []
         },
         {
+          "fullName": "Update Tower Stats",
+          "functionType": "Action",
+          "name": "UpdateStats",
+          "sentence": "Update stats for _PARAM0_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyattackPerSecond"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].attackPerSecond[Object.Behavior::Propertylevel()])"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetDamage"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].damage[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetEffect"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariableString(TowerStats[Object.VariableString(name)].effect)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetEffectDuration"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].effectDuration[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPrice"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Propertylevel()])",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyrange"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].range[Object.Behavior::Propertylevel()])"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
           "fullName": "Attack Target",
           "functionType": "Action",
           "name": "AttackTarget",
@@ -206,8 +305,27 @@
                         "Projectile",
                         "ProjectileBehaviour",
                         "=",
-                        "500",
+                        "50",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::TowerBehaviour::SetPropertycanAttack"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"timeSinceLastAttack\""
                       ]
                     }
                   ]
@@ -290,16 +408,6 @@
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "DebuggerTools::ConsoleLog"
-                      },
-                      "parameters": [
-                        "ToString(Target.Variable(customId))",
-                        "",
-                        ""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "SetReturnNumber"
@@ -1022,105 +1130,6 @@
           "expressionType": {
             "type": "expression"
           },
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "Update Tower Stats",
-          "functionType": "Action",
-          "name": "UpdateStats",
-          "sentence": "Update stats for _PARAM0_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyattackPerSecond"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].attackPerSecond[Object.Behavior::Propertylevel()])"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetDamage"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].damage[Object.Behavior::Propertylevel()])",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetEffect"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariableString(TowerStats[Object.VariableString(name)].effect)",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetEffectDuration"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].effectDuration[Object.Behavior::Propertylevel()])",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetPrice"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Propertylevel()])",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetPropertyrange"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].range[Object.Behavior::Propertylevel()])"
-                  ]
-                }
-              ]
-            }
-          ],
           "parameters": [
             {
               "description": "Object",

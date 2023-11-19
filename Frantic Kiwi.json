@@ -507,26 +507,26 @@
                   "value": 6
                 }
               ]
-            }
-          ]
-        },
-        {
-          "name": "range",
-          "persistentUuid": "9b664298-6abd-4de0-b640-36e08305d0a8",
-          "type": "array",
-          "children": [
-            {
-              "type": "number",
-              "value": 64
             },
             {
-              "folded": true,
-              "type": "number",
-              "value": 64
-            },
-            {
-              "type": "number",
-              "value": 80
+              "name": "range",
+              "persistentUuid": "9b664298-6abd-4de0-b640-36e08305d0a8",
+              "type": "array",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 64
+                },
+                {
+                  "folded": true,
+                  "type": "number",
+                  "value": 64
+                },
+                {
+                  "type": "number",
+                  "value": 80
+                }
+              ]
             }
           ]
         }
