@@ -66,102 +66,12 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/life.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/life.png\"}",
-        "name": "life",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tower-base.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "tower-base",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tower-ice.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "tower-ice",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/currency.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "currency",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/temp_base.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\temp_base.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/temp_path.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\temp_path.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/temp_grass.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\temp_grass.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/NewSprite.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite.png\"}",
         "name": "NewSprite",
         "smoothed": false,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/phantom.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"assets/phantom.png\",\"extension\":\".png\"}",
-        "name": "assets/phantom.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tower-ice2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "tower-ice2",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/tower-base2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "tower-base2",
-        "smoothed": false,
-        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -187,15 +97,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\sprites\\temp_sprites\\image.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/buildings-panel.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\buildings-panel.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -270,24 +171,6 @@
         "name": "assets\\sprites\\projectile\\tir1_4.png",
         "smoothed": false,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/reclaim-brush.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "reclaim-brush",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/boss-path-check-point.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "boss-path-check-point",
-        "smoothed": false,
-        "userAdded": false
       },
       {
         "file": "assets/fonts/Minecraft.ttf",
@@ -673,6 +556,411 @@
         "name": "assets/sprites/towers/towerFrost1_1.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_11.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_12.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/herb_13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\herb_13.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx11.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx12.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx13.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx14.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/fx/towerFrost2-fx16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\fx\\towerFrost2-fx16.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx11.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx12.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx13.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx14.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/towerNormal2-fx16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx16.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

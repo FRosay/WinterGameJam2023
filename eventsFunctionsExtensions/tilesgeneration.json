@@ -539,7 +539,7 @@
         {
           "description": "The objects to place at random to fill the terrain",
           "name": "TilesToPlace",
-          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "supplementaryInformation": "Sprite",
           "type": "objectList"
         }
       ],
