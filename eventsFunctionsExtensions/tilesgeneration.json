@@ -458,6 +458,25 @@
                             "1"
                           ]
                         }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TilesGeneration::NameOfGrass"
+                              },
+                              "parameters": [
+                                "",
+                                "TilesToPlace",
+                                "AlreadyPlacedTiles",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     },
                     {
@@ -540,6 +559,374 @@
           "description": "The objects to place at random to fill the terrain",
           "name": "TilesToPlace",
           "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Choose the correct name of the animation for the grass",
+      "fullName": "Name of Grass tile",
+      "functionType": "Action",
+      "name": "NameOfGrass",
+      "sentence": "Take grass _PARAM1_ and tiles around: _PARAM2_ to change animation name",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X()-32"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grass",
+                "Animation",
+                "=",
+                "\"border-left\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X()+32"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grass",
+                "Animation",
+                "=",
+                "\"border-right\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()-32"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grass",
+                "Animation",
+                "=",
+                "\"border-top\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.X()+32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "Animation",
+                    "=",
+                    "\"border-top-right\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.X()-32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "Animation",
+                    "=",
+                    "\"border-top-left\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()+32"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grass",
+                "Animation",
+                "=",
+                "\"border-bot\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.X()+32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "Animation",
+                    "=",
+                    "\"border-bot-right\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.X()-32"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "Grass.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "Animation",
+                    "=",
+                    "\"border-bot-left\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Grass",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "Path",
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
           "type": "objectList"
         }
       ],
