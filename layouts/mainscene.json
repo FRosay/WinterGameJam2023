@@ -87,6 +87,9 @@
       "objects": [
         {
           "name": "BaseProjectile"
+        },
+        {
+          "name": "IceProjectile"
         }
       ]
     }
@@ -96,7 +99,7 @@
       "folded": true,
       "name": "currency",
       "type": "number",
-      "value": 25
+      "value": 10
     },
     {
       "folded": true,
@@ -1204,7 +1207,7 @@
           "AngularMaxSpeed": 180,
           "RotateObject": false,
           "AngleOffset": 0,
-          "CollisionShape": "Bounding disk",
+          "CollisionShape": "Dot at center",
           "ExtraBorder": 0
         }
       ],
@@ -4204,6 +4207,231 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "IceProjectile",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "ProjectileBehaviour",
+          "type": "TowerBehaviour::ProjectileBehaviour",
+          "damage": 0,
+          "speed": 0,
+          "targetId": 0,
+          "targetStillExists": true
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.5,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\projectile\\tirFrost1_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "death",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\projectile\\tirFrost1_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\projectile\\tirFrost1_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\projectile\\tirFrost1_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\projectile\\tirFrost1_5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 0
+                      },
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 0,
+                        "y": 4
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -4259,6 +4487,9 @@
         "children": [
           {
             "objectName": "BaseProjectile"
+          },
+          {
+            "objectName": "IceProjectile"
           }
         ]
       },
@@ -4438,33 +4669,67 @@
             },
             {
               "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "CurrentCurrency",
-                "Text",
-                "=",
-                "ToString(currency)"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "CentreCamera"
+                "value": "ZoomCamera"
               },
               "parameters": [
                 "",
-                "Center",
-                "",
+                "1.2",
                 "",
                 ""
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "CentreCamera"
+          },
+          "parameters": [
+            "",
+            "Center",
+            "",
+            "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::CompareStrings"
+          },
+          "parameters": [
+            "ToString(currency)",
+            "!=",
+            "CurrentCurrency.Text::Value()"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "CurrentCurrency",
+            "Text",
+            "=",
+            "ToString(currency)"
           ]
         }
       ]
@@ -4693,18 +4958,66 @@
           ]
         }
       ],
-      "actions": [
+      "actions": [],
+      "events": [
         {
-          "type": {
-            "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
-          },
-          "parameters": [
-            "Towers",
-            "TowerBehaviour",
-            "EnemySlimes",
-            "BaseProjectile",
-            "ProjectileBehaviour",
-            ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "Towers.ObjectName()",
+                "=",
+                "\"BaseTower\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+              },
+              "parameters": [
+                "Towers",
+                "TowerBehaviour",
+                "EnemySlimes",
+                "BaseProjectile",
+                "ProjectileBehaviour",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "Towers.ObjectName()",
+                "=",
+                "\"IceTower\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+              },
+              "parameters": [
+                "Towers",
+                "TowerBehaviour",
+                "EnemySlimes",
+                "IceProjectile",
+                "ProjectileBehaviour",
+                ""
+              ]
+            }
           ]
         }
       ]
@@ -4723,6 +5036,47 @@
             "ProjectileBehaviour",
             "EnemySlimes",
             "EnemyHealth",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "EnemySlimes",
+      "conditions": [
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::ResetPathfinding"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "EnemyHealth",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "EnemyHealth",
+            "no",
             ""
           ]
         }

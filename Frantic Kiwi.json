@@ -1011,6 +1011,51 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tirFrost1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tirFrost1_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tirFrost1_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tirFrost1_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tirFrost1_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tirFrost1_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tirFrost1_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tirFrost1_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/projectile/tirFrost1_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\projectile\\tirFrost1_5.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1119,16 +1164,16 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 128
+                  "value": 64
                 },
                 {
                   "folded": true,
                   "type": "number",
-                  "value": 192
+                  "value": 96
                 },
                 {
                   "type": "number",
-                  "value": 256
+                  "value": 128
                 }
               ]
             }
@@ -1231,16 +1276,16 @@
               "children": [
                 {
                   "type": "number",
-                  "value": 128
+                  "value": 64
                 },
                 {
                   "folded": true,
                   "type": "number",
-                  "value": 194
+                  "value": 64
                 },
                 {
                   "type": "number",
-                  "value": 256
+                  "value": 96
                 }
               ]
             }
@@ -1250,9 +1295,10 @@
     },
     {
       "name": "AllEffects",
-      "type": "array",
+      "type": "structure",
       "children": [
         {
+          "name": "freeze",
           "type": "string",
           "value": "freeze"
         }
