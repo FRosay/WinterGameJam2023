@@ -61,6 +61,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "Wave",
+      "persistentUuid": "d7c67232-40b0-41ed-b168-f3b0adf09491",
+      "width": 0,
+      "x": 672,
+      "y": 10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
