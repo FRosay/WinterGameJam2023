@@ -457,7 +457,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Text from PopUp",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -539,7 +539,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Value ?",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -675,7 +675,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Price ?",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -1093,7 +1093,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Text",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
@@ -1303,7 +1303,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Coût ?",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 20,
       "color": {
@@ -1385,7 +1385,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Current wave",
-      "font": "",
+      "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
       "characterSize": 64,
       "color": {
@@ -1727,6 +1727,13 @@
         "includeConfig": 0
       },
       "target": "HUD"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Boss"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",

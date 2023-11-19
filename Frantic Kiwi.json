@@ -288,6 +288,13 @@
         "name": "boss-path-check-point",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/fonts/Minecraft.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets\\fonts\\Minecraft.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
