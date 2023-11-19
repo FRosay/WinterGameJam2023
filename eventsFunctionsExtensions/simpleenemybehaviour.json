@@ -90,6 +90,18 @@
                     "Object.Behavior::PropertyTotalHitPoints()",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets/songs/spawn.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -198,6 +210,18 @@
                       },
                       "parameters": [
                         "Object",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets/songs/hit-slime.mp3",
+                        "",
+                        "",
                         ""
                       ]
                     }

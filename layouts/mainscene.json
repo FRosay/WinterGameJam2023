@@ -4783,6 +4783,18 @@
                 "=",
                 "totalLife"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/songs/hit-life.mp3",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         }

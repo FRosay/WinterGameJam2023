@@ -782,7 +782,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1078,7 +1077,7 @@
                                     "BuildingChoice",
                                     "Scale",
                                     "*",
-                                    "2"
+                                    "1"
                                   ]
                                 }
                               ]

@@ -1,6 +1,34 @@
 {
-  "associatedLayout": "",
+  "associatedLayout": "MainMenu",
   "lastChangeTimeStamp": 0,
   "name": "Music",
-  "events": []
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlayMusic"
+          },
+          "parameters": [
+            "",
+            "assets/music/base-slime-adventure.mp3",
+            "yes",
+            "",
+            ""
+          ]
+        }
+      ]
+    }
+  ]
 }
