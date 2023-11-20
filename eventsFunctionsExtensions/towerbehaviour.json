@@ -368,7 +368,7 @@
                       },
                       "parameters": [
                         "",
-                        "assets/songs/projectile-fire.mp3",
+                        "assets\\sounds\\base_projectile.mp3",
                         "",
                         "",
                         ""

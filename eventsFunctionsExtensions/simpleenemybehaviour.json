@@ -97,7 +97,7 @@
                   },
                   "parameters": [
                     "",
-                    "assets/songs/spawn.mp3",
+                    "assets\\sounds\\enemy_spawn.mp3",
                     "",
                     "",
                     ""
@@ -219,7 +219,7 @@
                       },
                       "parameters": [
                         "",
-                        "assets/songs/hit-slime.mp3",
+                        "assets\\sounds\\slime_death.mp3",
                         "",
                         "",
                         ""

@@ -21,6 +21,30 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "p"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "DebuggerTools::Pause"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ]
     }
   ]
 }

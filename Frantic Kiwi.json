@@ -973,46 +973,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/songs/hit-slime.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "assets/songs/hit-slime.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/songs/hit-life.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "assets/songs/hit-life.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/songs/spawn.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "assets/songs/spawn.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/songs/projectile-fire.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "assets/songs/projectile-fire.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
         "alwaysLoaded": false,
         "file": "assets/sprites/projectile/tirFrost1_1.png",
         "kind": "image",
@@ -1072,6 +1032,55 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\sprites\\HUD\\sound\\son_OFF_sombre.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/base_projectile.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\base_projectile.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/slime_death.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\slime_death.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/enemy_spawn.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\enemy_spawn.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/life_loss.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\life_loss.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/GhostSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "GhostSprite",
         "smoothed": false,
         "userAdded": true
       }

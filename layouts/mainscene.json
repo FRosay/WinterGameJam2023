@@ -4551,6 +4551,48 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "GhostSprite",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "GhostSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "GhostSprite",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -4677,6 +4719,9 @@
       },
       {
         "objectName": "SoundControl"
+      },
+      {
+        "objectName": "GhostSprite"
       }
     ]
   },
@@ -4725,7 +4770,7 @@
           "parameters": [
             "",
             "=",
-            "70"
+            "50"
           ]
         }
       ],
@@ -5273,7 +5318,7 @@
               },
               "parameters": [
                 "",
-                "assets/songs/hit-life.mp3",
+                "assets\\sounds\\life_loss.mp3",
                 "",
                 "",
                 ""
