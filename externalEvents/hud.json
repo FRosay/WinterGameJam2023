@@ -1860,7 +1860,19 @@
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "customId",
+                            "=",
+                            "LevelUp.idOfBuildingLinked"
+                          ]
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
@@ -1870,9 +1882,9 @@
                             "",
                             "TowerFX",
                             "BuildingChoice.ObjectName()+\"FX\"",
-                            "10",
-                            "10",
-                            ""
+                            "BuildingChoice.X()",
+                            "BuildingChoice.Y()",
+                            "\"Enemies\""
                           ]
                         },
                         {
@@ -1894,16 +1906,6 @@
                             "Scale",
                             "*",
                             "2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "DebuggerTools::ConsoleLog"
-                          },
-                          "parameters": [
-                            "ToString(SceneInstancesCount(TowerFX))",
-                            "\"info\"",
-                            ""
                           ]
                         }
                       ]

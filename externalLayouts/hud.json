@@ -126,6 +126,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "SoundControl",
+      "persistentUuid": "a60d903b-58da-4265-9b39-786896ad84db",
+      "width": 0,
+      "x": 53,
+      "y": 966,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {

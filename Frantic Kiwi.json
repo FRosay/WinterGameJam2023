@@ -1056,6 +1056,24 @@
         "name": "assets\\sprites\\projectile\\tirFrost1_5.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/sound/son_ON_sombre.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\sound\\son_ON_sombre.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/sound/son_OFF_sombre.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\sound\\son_OFF_sombre.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1067,6 +1085,7 @@
   "objectsGroups": [],
   "variables": [
     {
+      "folded": true,
       "name": "TowerStats",
       "type": "structure",
       "children": [
@@ -1292,6 +1311,12 @@
           ]
         }
       ]
+    },
+    {
+      "folded": true,
+      "name": "disableSound",
+      "type": "boolean",
+      "value": false
     },
     {
       "name": "AllEffects",
