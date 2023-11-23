@@ -133,19 +133,7 @@
                     {
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "Grass",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "Grass",
-                            "GhostSprite",
-                            "64",
-                            ""
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
@@ -159,6 +147,24 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "Grass",
+                            "GhostSprite",
+                            "128",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": []
                     }
                   ]
                 },

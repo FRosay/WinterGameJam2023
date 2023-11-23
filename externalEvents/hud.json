@@ -261,11 +261,39 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Grass",
+                "isPreview",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Grass",
+                "=",
+                "CursorX()+8",
+                "=",
+                "CursorY()+8"
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -586,7 +614,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -734,11 +761,12 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "Layer"
+                        "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Grass",
-                        "\"HUD\""
+                        "isPreview",
+                        "True"
                       ]
                     }
                   ],
@@ -782,7 +810,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -875,23 +902,33 @@
                         "",
                         "BuildingChoice"
                       ]
-                    },
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "Building::deletePreviewBuilding"
                       },
                       "parameters": [
+                        "",
                         "BuildingChoice",
-                        "isPhantom",
-                        "True"
+                        ""
                       ]
                     }
                   ],
-                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "BuildingChoice"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "VarScene"
@@ -1217,7 +1254,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1437,7 +1473,27 @@
                 "Grass",
                 "CursorX()+16",
                 "CursorY()+16",
-                "\"HUD\""
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Grass",
+                "isPreview",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Grass",
+                "=",
+                "500"
               ]
             },
             {
@@ -1458,7 +1514,27 @@
                 "ReclaimCost",
                 "CursorX()+16",
                 "CursorY()+16",
-                "\"HUD\""
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "ReclaimCost",
+                "=",
+                "500"
+              ]
+            },
+            {
+              "type": {
+                "value": "Building::deletePreviewBuilding"
+              },
+              "parameters": [
+                "",
+                "BuildingChoice",
+                ""
               ]
             }
           ]
@@ -1471,6 +1547,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Level Up",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
