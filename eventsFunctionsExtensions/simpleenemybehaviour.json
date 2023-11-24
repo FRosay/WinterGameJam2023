@@ -201,7 +201,7 @@
                       "parameters": [
                         "currency",
                         "+",
-                        "1"
+                        "Object.Variable(valueOnKill)"
                       ]
                     },
                     {

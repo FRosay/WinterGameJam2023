@@ -80,91 +80,59 @@
                     "Grass.Y()",
                     ""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "GhostSprite",
-                    "Grass.X()",
-                    "Grass.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Grass",
-                    ""
-                  ]
                 }
               ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::SetColor"
+                      },
+                      "parameters": [
+                        "Path",
+                        "\"255;193;70\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "AjoutObjConcern"
+                        "value": "CollisionNP"
                       },
                       "parameters": [
+                        "Grass",
+                        "BuildingChoice",
                         "",
-                        "Grass"
+                        "",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "isPhantom",
+                        "False"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "DebuggerTools::ConsoleLog"
+                        "value": "Delete"
                       },
                       "parameters": [
-                        "\"-----------\"",
-                        "",
+                        "BuildingChoice",
                         ""
                       ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "Grass",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TilesGeneration::NameOfGrass"
-                          },
-                          "parameters": [
-                            "",
-                            "Grass",
-                            "Path",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Distance"
-                          },
-                          "parameters": [
-                            "Grass",
-                            "GhostSprite",
-                            "128",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": []
                     }
                   ]
                 },
@@ -177,7 +145,42 @@
                         "value": "Delete"
                       },
                       "parameters": [
-                        "GhostSprite",
+                        "Grass",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Grass"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Grass",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TilesGeneration::NameOfGrass"
+                      },
+                      "parameters": [
+                        "",
+                        "Grass",
+                        "Path",
                         ""
                       ]
                     }
@@ -188,6 +191,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {

@@ -572,6 +572,7 @@
       "sentence": "Take grass _PARAM1_ and tiles around: _PARAM2_ to change animation name",
       "events": [
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [

@@ -1198,7 +1198,14 @@
       "name": "Slime",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "valueOnKill",
+          "type": "number",
+          "value": 10
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -1338,7 +1345,20 @@
       "name": "CreepSlime",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "valueOnKill",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -4802,6 +4822,34 @@
                 "17",
                 "GridPart",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "HUDBackground",
+                "Opacity",
+                "=",
+                "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "BuildingsPanel",
+                "Opacity",
+                "=",
+                "200"
               ]
             }
           ]

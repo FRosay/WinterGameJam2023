@@ -629,6 +629,12 @@
                 "",
                 "Escape"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -673,21 +679,21 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "AjoutObjConcern"
                       },
                       "parameters": [
-                        "BuildingChoice",
-                        "isPhantom",
-                        "True"
+                        "",
+                        "BuildingChoice"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "Building::deletePreviewBuilding"
                       },
                       "parameters": [
+                        "",
                         "BuildingChoice",
                         ""
                       ]
@@ -828,62 +834,29 @@
             },
             {
               "type": {
-                "inverted": true,
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "BuildingsPanel",
+                "BuildableTiles",
                 "",
                 "",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"building\""
               ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Stucture like towers, barrel"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BuildableTiles",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "inverted": true,
-                    "value": "ProjectUtils::isCursorOnObject"
+                    "value": "ProjectUtils::isSelectedTileOccupied"
                   },
                   "parameters": [
                     "",
+                    "BuildableTiles",
                     "BuildingChoice",
                     ""
                   ]
@@ -902,33 +875,23 @@
                         "",
                         "BuildingChoice"
                       ]
-                    }
-                  ],
-                  "actions": [
+                    },
                     {
                       "type": {
-                        "value": "Building::deletePreviewBuilding"
+                        "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "",
                         "BuildingChoice",
-                        ""
+                        "isPhantom",
+                        "True"
                       ]
                     }
                   ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "BuildingChoice"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "VarScene"
@@ -961,7 +924,7 @@
                             "PopUp",
                             "Text",
                             "=",
-                            "\"Pas assez de thunass pour \"+BuildingChoice.name"
+                            "\"Pas assez de thunass pour \" + BuildingChoice.name"
                           ]
                         },
                         {
@@ -1007,95 +970,88 @@
                             "-",
                             "TowerStats[BuildingChoice.name].price[0]"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "CreateByName"
+                          },
+                          "parameters": [
+                            "",
+                            "BuildingChoice",
+                            "BuildingChoice.ObjectName()",
+                            "BuildableTiles.CenterX()",
+                            "BuildableTiles.CenterY()",
+                            ""
+                          ]
                         }
                       ],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
+                          "conditions": [
                             {
                               "type": {
-                                "value": "CreateByName"
+                                "value": "PosX"
                               },
                               "parameters": [
-                                "",
                                 "BuildingChoice",
-                                "BuildingChoice.ObjectName()",
-                                "BuildableTiles.X()",
-                                "BuildableTiles.Y()",
-                                ""
+                                "=",
+                                "BuildableTiles.CenterX()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "BuildableTiles.CenterY()"
                               ]
                             }
                           ],
-                          "events": [
+                          "actions": [
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "PosX"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "BuildableTiles.X()"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PosY"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "BuildableTiles.Y()"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "42"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ModVarObjet"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "customId",
-                                    "=",
-                                    "nextCustomBuildingId"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "nextCustomBuildingId",
-                                    "+",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "Scale",
-                                    "*",
-                                    "2"
-                                  ]
-                                }
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "42"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "customId",
+                                "=",
+                                "nextCustomBuildingId"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "nextCustomBuildingId",
+                                "+",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "BuildingChoice",
+                                "=",
+                                "BuildableTiles.CenterX()-BuildingChoice.Width()/2",
+                                "=",
+                                "BuildableTiles.CenterY()-BuildingChoice.Height()/2"
                               ]
                             }
                           ]
@@ -1360,8 +1316,8 @@
                     "",
                     "BuildingChoice",
                     "BuildingChoice.ObjectName()",
-                    "0",
-                    "0",
+                    "-1000",
+                    "-1000",
                     ""
                   ]
                 }
@@ -1377,7 +1333,7 @@
                       "parameters": [
                         "BuildingChoice",
                         "=",
-                        "0"
+                        "-1000"
                       ]
                     },
                     {
@@ -1387,7 +1343,7 @@
                       "parameters": [
                         "BuildingChoice",
                         "=",
-                        "0"
+                        "-1000"
                       ]
                     }
                   ],
@@ -2001,7 +1957,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Range tower",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2047,8 +2002,8 @@
               "parameters": [
                 "",
                 "RangeDisplay",
-                "BuildingChoice.X()+16-BuildingChoice.TowerBehaviour::Range()",
-                "BuildingChoice.Y()+16-BuildingChoice.TowerBehaviour::Range()",
+                "BuildingChoice.X()-BuildingChoice.TowerBehaviour::Range()",
+                "BuildingChoice.Y()-BuildingChoice.TowerBehaviour::Range()",
                 ""
               ]
             },
@@ -2071,6 +2026,18 @@
                 "RangeDisplay",
                 "=",
                 "40"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "RangeDisplay",
+                "=",
+                "BuildingChoice.CenterX()-BuildingChoice.TowerBehaviour::Range()",
+                "=",
+                "BuildingChoice.CenterY()-BuildingChoice.TowerBehaviour::Range()"
               ]
             }
           ]
