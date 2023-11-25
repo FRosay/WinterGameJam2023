@@ -5325,7 +5325,7 @@
           "parameters": [
             "",
             "=",
-            "0"
+            "50"
           ]
         }
       ],
@@ -5451,13 +5451,35 @@
           "actions": [
             {
               "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                "value": "ProjectUtils::updateHUDText"
               },
               "parameters": [
+                "",
+                "CurrentCurrency",
+                "\"Currency\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ProjectUtils::updateHUDText"
+              },
+              "parameters": [
+                "",
                 "CurrentLife",
-                "Text",
-                "=",
-                "ToString(totalLife)"
+                "\"Life\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ProjectUtils::updateHUDText"
+              },
+              "parameters": [
+                "",
+                "Wave",
+                "\"Wave\"",
+                ""
               ]
             }
           ]
@@ -5487,13 +5509,81 @@
       "actions": [
         {
           "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+            "value": "ProjectUtils::updateHUDText"
           },
           "parameters": [
+            "",
             "CurrentCurrency",
-            "Text",
-            "=",
-            "ToString(currency)"
+            "\"Currency\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::CompareStrings"
+          },
+          "parameters": [
+            "ToString(totalLife)",
+            "!=",
+            "CurrentLife.Text::Value()"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ProjectUtils::updateHUDText"
+          },
+          "parameters": [
+            "",
+            "CurrentLife",
+            "\"Life\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::CompareStrings"
+          },
+          "parameters": [
+            "ToString(currentWave)",
+            "!=",
+            "Wave.Text::Value()"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ProjectUtils::updateHUDText"
+          },
+          "parameters": [
+            "",
+            "Wave",
+            "\"Wave\"",
+            ""
           ]
         }
       ]
@@ -5539,48 +5629,6 @@
         "includeConfig": 0
       },
       "target": "Boss"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyPressed"
-          },
-          "parameters": [
-            "",
-            "o"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "EnemySlimes",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "NavMeshPathfindingBehavior",
-                "Base.CenterX()",
-                "Base.CenterY()",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5857,7 +5905,7 @@
                 "value": "CollisionNP"
               },
               "parameters": [
-                "EnemySlimes",
+                "CreepSlime",
                 "Base",
                 "",
                 "",
@@ -5871,7 +5919,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "EnemySlimes",
+                "CreepSlime",
                 ""
               ]
             },
@@ -5883,17 +5931,6 @@
                 "totalLife",
                 "-",
                 "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "CurrentLife",
-                "Text",
-                "=",
-                "totalLife"
               ]
             },
             {

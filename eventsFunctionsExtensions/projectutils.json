@@ -271,22 +271,89 @@
       "objectGroups": []
     },
     {
-      "description": "Update the current wave text to reflect the actual wave",
-      "fullName": "Update Current Wave Text",
+      "description": "Update a HUD text among a selection",
+      "fullName": "Update HUD Text",
       "functionType": "Action",
-      "name": "updateCurrentWaveText",
-      "sentence": "Update _PARAM1_ text",
+      "name": "updateHUDText",
+      "sentence": "Update _PARAM1_ text (_PARAM2_)",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "whichText",
+                "=",
+                "\"Currency\""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "currentWaveText",
+                "textToUpdate",
+                "Text",
+                "=",
+                "ToString(Variable(currency))"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "whichText",
+                "=",
+                "\"Life\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "textToUpdate",
+                "Text",
+                "=",
+                "ToString(Variable(totalLife))"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "whichText",
+                "=",
+                "\"Wave\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "textToUpdate",
                 "Text",
                 "=",
                 "\"Vague : \"+ToString(Variable(currentWave))+\"/5\""
@@ -298,9 +365,15 @@
       "parameters": [
         {
           "description": "",
-          "name": "currentWaveText",
+          "name": "textToUpdate",
           "supplementaryInformation": "TextObject::Text",
           "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "whichText",
+          "supplementaryInformation": "[\"Currency\",\"Life\",\"Wave\"]",
+          "type": "stringWithSelector"
         }
       ],
       "objectGroups": []

@@ -24,16 +24,6 @@
             "",
             "\"spawner\""
           ]
-        },
-        {
-          "type": {
-            "value": "ProjectUtils::updateCurrentWaveText"
-          },
-          "parameters": [
-            "",
-            "Wave",
-            ""
-          ]
         }
       ]
     },
@@ -389,16 +379,6 @@
             "currentWave",
             "+",
             "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "ProjectUtils::updateCurrentWaveText"
-          },
-          "parameters": [
-            "",
-            "Wave",
-            ""
           ]
         },
         {
