@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.3645833333333333,
+    "zoomFactor": 0.3526904934771225,
     "windowMask": false
   },
   "objectsGroups": [
@@ -168,7 +168,7 @@
             {
               "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.15,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -766,7 +766,7 @@
       "string": "Value ?",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 64,
+      "characterSize": 48,
       "color": {
         "b": 255,
         "g": 255,
@@ -1092,7 +1092,7 @@
       "string": "Value ?",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 64,
+      "characterSize": 48,
       "color": {
         "b": 255,
         "g": 255,
@@ -1106,7 +1106,14 @@
       "texture": "assets/tiled sprites/sand/sand_1.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "initialPath",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": []
     },
@@ -1388,17 +1395,17 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\creeps\\creep1_1.png",
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8,
-                    "y": 8
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1409,20 +1416,272 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 3,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 0
+                        "x": 19,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 19,
+                        "y": 19
                       },
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front7.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front8.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
                       }
                     ]
                   ]
@@ -1436,17 +1695,17 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\creeps\\creep1_2.png",
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8,
-                    "y": 8
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1457,20 +1716,272 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 3,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 0
+                        "x": 19,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 19,
+                        "y": 19
                       },
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag5.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag6.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag7.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag8.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
                       }
                     ]
                   ]
@@ -1505,20 +2016,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 3,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 0
+                        "x": 19,
+                        "y": 3
                       },
                       {
-                        "x": 16,
-                        "y": 16
+                        "x": 19,
+                        "y": 19
                       },
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 3,
+                        "y": 19
                       }
                     ]
                   ]
@@ -4613,6 +5124,27 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "StaticText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "-",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 48,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -4742,6 +5274,9 @@
       },
       {
         "objectName": "GhostSprite"
+      },
+      {
+        "objectName": "StaticText"
       }
     ]
   },
@@ -4765,7 +5300,7 @@
           },
           "parameters": [
             "",
-            "\"HUD\"",
+            "\"FirstMap\"",
             "",
             "",
             ""
@@ -4777,7 +5312,7 @@
           },
           "parameters": [
             "",
-            "\"FirstMap\"",
+            "\"HUD\"",
             "",
             "",
             ""
@@ -4864,6 +5399,31 @@
               },
               "parameters": [
                 "",
+                "Path"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Path",
+                "initialPath",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
                 "GridPart"
               ]
             },
@@ -4900,24 +5460,6 @@
                 "ToString(totalLife)"
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "CentreCamera"
-          },
-          "parameters": [
-            "",
-            "Center",
-            "",
-            "",
-            ""
           ]
         }
       ]
@@ -4961,13 +5503,6 @@
       "include": {
         "includeConfig": 0
       },
-      "target": "Debug"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Link",
-      "include": {
-        "includeConfig": 0
-      },
       "target": "Camera"
     },
     {
@@ -5004,6 +5539,48 @@
         "includeConfig": 0
       },
       "target": "Boss"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "o"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "EnemySlimes",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "NavMeshPathfindingBehavior",
+                "Base.CenterX()",
+                "Base.CenterY()",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -5258,47 +5835,6 @@
             "ProjectileBehaviour",
             "EnemySlimes",
             "EnemyHealth",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "EnemySlimes",
-      "conditions": [
-        {
-          "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::ResetPathfinding"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "EnemyHealth",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "NavMeshPathfindingBehavior",
-            "Base.CenterX()",
-            "Base.CenterY()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "EnemyHealth",
-            "no",
             ""
           ]
         }

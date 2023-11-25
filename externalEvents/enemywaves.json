@@ -24,6 +24,65 @@
             "",
             "\"spawner\""
           ]
+        },
+        {
+          "type": {
+            "value": "ProjectUtils::updateCurrentWaveText"
+          },
+          "parameters": [
+            "",
+            "Wave",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "EnemySlimes",
+      "conditions": [
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::ResetPathfinding"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "EnemyHealth",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "EnemyHealth",
+                "no",
+                ""
+              ]
+            }
+          ]
         }
       ]
     },
@@ -334,13 +393,12 @@
         },
         {
           "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+            "value": "ProjectUtils::updateCurrentWaveText"
           },
           "parameters": [
+            "",
             "Wave",
-            "Text",
-            "=",
-            "\"Vague : \"+ToString(currentWave)+\"/5\""
+            ""
           ]
         },
         {

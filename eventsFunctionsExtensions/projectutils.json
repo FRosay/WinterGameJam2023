@@ -269,6 +269,41 @@
         }
       ],
       "objectGroups": []
+    },
+    {
+      "description": "Update the current wave text to reflect the actual wave",
+      "fullName": "Update Current Wave Text",
+      "functionType": "Action",
+      "name": "updateCurrentWaveText",
+      "sentence": "Update _PARAM1_ text",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "currentWaveText",
+                "Text",
+                "=",
+                "\"Vague : \"+ToString(Variable(currentWave))+\"/5\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "currentWaveText",
+          "supplementaryInformation": "TextObject::Text",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": [],

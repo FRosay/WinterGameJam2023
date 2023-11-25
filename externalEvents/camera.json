@@ -1,6 +1,45 @@
 {
-  "associatedLayout": "",
+  "associatedLayout": "MainScene",
   "lastChangeTimeStamp": 0,
   "name": "Camera",
-  "events": []
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "CentreCamera"
+          },
+          "parameters": [
+            "",
+            "Center",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ZoomCamera"
+          },
+          "parameters": [
+            "",
+            "1.25",
+            "",
+            ""
+          ]
+        }
+      ]
+    }
+  ]
 }

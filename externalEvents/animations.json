@@ -1,6 +1,280 @@
 {
-  "associatedLayout": "",
+  "associatedLayout": "MainScene",
   "lastChangeTimeStamp": 0,
   "name": "Animations",
-  "events": []
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "CreepSlime",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "CreepSlime",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "0",
+                    "25",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"orthogonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "45",
+                    "20",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"diagonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "90",
+                    "25",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"orthogonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "135",
+                    "20",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"diagonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "180",
+                    "25",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"orthogonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "225",
+                    "20",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"diagonal\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::MovementAngleIsAround"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "NavMeshPathfindingBehavior",
+                    "270",
+                    "40",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "CreepSlime",
+                    "Animation",
+                    "=",
+                    "\"orthogonal\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
 }

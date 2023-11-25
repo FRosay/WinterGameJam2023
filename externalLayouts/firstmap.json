@@ -16,7 +16,14 @@
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialPath",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
@@ -32,7 +39,14 @@
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialPath",
+          "type": "boolean",
+          "value": true
+        }
+      ]
     },
     {
       "angle": 0,
@@ -80,7 +94,14 @@
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialPath",
+          "type": "boolean",
+          "value": false
+        }
+      ]
     },
     {
       "angle": 0,
@@ -415,7 +436,14 @@
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialPath",
+          "type": "boolean",
+          "value": false
+        }
+      ]
     },
     {
       "angle": 0,
@@ -1275,7 +1303,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.089175118621004,
+    "zoomFactor": 0.5079575118131751,
     "windowMask": false
   }
 }

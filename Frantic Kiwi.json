@@ -1083,6 +1083,150 @@
         "name": "GhostSprite",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_orthogonal/creepNormal1_front8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_orthogonal\\creepNormal1_front8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/animations/moving_diagonal/creepNormal1_diag8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag8.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1356,10 +1500,6 @@
   "externalEvents": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/debug"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/camera"
     },
     {
@@ -1391,10 +1531,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/navmeshpathfinding"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/dragcamerawithpointer"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
