@@ -99,6 +99,18 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Une tour est présente sur la case"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -127,26 +139,50 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "ModVarObjet"
                       },
                       "parameters": [
                         "BuildingChoice",
-                        ""
+                        "lastBossPushBackAngle",
+                        "=",
+                        "Slime.NavMeshPathfindingBehavior::MovementAngle()"
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
+                  ],
+                  "events": [
                     {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Grass",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::pushbackTowerFromBoss"
+                          },
+                          "parameters": [
+                            "",
+                            "BuildingChoice",
+                            "Tween",
+                            "Grass",
+                            "BuildingChoice.Variable(lastBossPushBackAngle)",
+                            "NavMeshPathfindingBehavior",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Grass",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -192,6 +228,110 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "ObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "BuildingChoice",
+            "isPhantom",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "Towers",
+            "isPhantom",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PosX"
+          },
+          "parameters": [
+            "BuildingChoice",
+            "=",
+            "Towers.X()"
+          ]
+        },
+        {
+          "type": {
+            "value": "PosY"
+          },
+          "parameters": [
+            "BuildingChoice",
+            "=",
+            "Towers.Y()"
+          ]
+        },
+        {
+          "type": {
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "BuildingChoice",
+            "customId",
+            "!=",
+            "Towers.customId"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TowerBehaviour::pushbackTowerFromBoss"
+          },
+          "parameters": [
+            "",
+            "BuildingChoice",
+            "Tween",
+            "Grass",
+            "BuildingChoice.Variable(lastBossPushBackAngle)",
+            "NavMeshPathfindingBehavior",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "BuildingChoice",
+                "Grass",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BuildingChoice",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -147,6 +147,22 @@
       "name": "enemiesCustomIds",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "BossPushback",
+      "type": "structure",
+      "children": [
+        {
+          "name": "newTowerXPos",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "newTowerYPos",
+          "type": "number",
+          "value": 0
+        }
+      ]
     }
   ],
   "instances": [],

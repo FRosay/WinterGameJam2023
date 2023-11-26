@@ -13,7 +13,310 @@
   "tags": [],
   "authorIds": [],
   "dependencies": [],
-  "eventsFunctions": [],
+  "eventsFunctions": [
+    {
+      "description": "Pushback Tower after boss collision",
+      "fullName": "Pushback Tower",
+      "functionType": "Action",
+      "name": "pushbackTowerFromBoss",
+      "sentence": "Push _PARAM1_ _PARAM2_ (on tile _PARAM3_) after collision with _PARAM4_ _PARAM5_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss se dirige vers la droite"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "bossPushBackAngle",
+                        ">=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "bossPushBackAngle",
+                        "<",
+                        "45"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "bossPushBackAngle",
+                        ">=",
+                        "315"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "bossPushBackAngle",
+                        "<=",
+                        "360"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "towerToPush",
+                "towerTween",
+                "\"bossPushback\" + towerToPush.VariableString(customId)",
+                "towerToPush.X()+originalTile.Width()",
+                "towerToPush.Y()",
+                "\"easeInQuad\"",
+                "0.25",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss se dirige vers le bas"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                ">=",
+                "45"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                "<",
+                "135"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "towerToPush",
+                "towerTween",
+                "\"bossPushback\" + towerToPush.VariableString(customId)",
+                "towerToPush.X()",
+                "towerToPush.Y()+originalTile.Height()",
+                "\"easeInQuad\"",
+                "0.25",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss se dirige vers la gauche"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                ">=",
+                "135"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                "<",
+                "225"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "towerToPush",
+                "towerTween",
+                "\"bossPushback\" + towerToPush.VariableString(customId)",
+                "towerToPush.X()-originalTile.Width()",
+                "towerToPush.Y()",
+                "\"easeInQuad\"",
+                "0.25",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss se dirige vers le haut\n"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                ">=",
+                "225"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "bossPushBackAngle",
+                "<",
+                "315"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+              },
+              "parameters": [
+                "towerToPush",
+                "towerTween",
+                "\"bossPushback\" + towerToPush.VariableString(customId)",
+                "towerToPush.X()",
+                "towerToPush.Y()-originalTile.Height()",
+                "\"easeInQuad\"",
+                "0.25",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "towerToPush",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "towerTween",
+          "supplementaryInformation": "Tween::TweenBehavior",
+          "type": "behavior"
+        },
+        {
+          "description": "originalTile",
+          "name": "originalTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "bossAngleOfMovement",
+          "name": "bossPushBackAngle",
+          "supplementaryInformation": "Sprite",
+          "type": "expression"
+        },
+        {
+          "description": "",
+          "name": "BossPathfinding",
+          "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
+          "type": "behavior"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
   "eventsBasedBehaviors": [
     {
       "description": "",
@@ -110,6 +413,28 @@
               ]
             }
           ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPostEvents",
+          "sentence": "",
+          "events": [],
           "parameters": [
             {
               "description": "Object",
