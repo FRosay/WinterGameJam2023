@@ -1235,7 +1235,7 @@
           "description": "How much damage this tower deals",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "damage"
         },
         {
@@ -1245,7 +1245,7 @@
           "description": "How many attacks per second this tower has",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "attackPerSecond"
         },
         {
@@ -1255,7 +1255,7 @@
           "description": "The maximum range this tower has",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "range"
         },
         {
@@ -1265,7 +1265,7 @@
           "description": "The keyword for this Tower's effect if it has any",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "effect"
         },
         {
@@ -1275,7 +1275,7 @@
           "description": "The duration of the effect of this tower, if it has any",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "effectDuration"
         },
         {
@@ -1285,7 +1285,7 @@
           "description": "The cost to build this Tower",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
+          "hidden": true,
           "name": "price"
         },
         {

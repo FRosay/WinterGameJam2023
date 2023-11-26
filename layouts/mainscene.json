@@ -807,6 +807,10 @@
           "level": 1,
           "canAttack": true,
           "projectileName": "BaseProjectile"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "animations": [
@@ -894,6 +898,10 @@
           "level": 1,
           "canAttack": true,
           "projectileName": "BaseProjectile"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "animations": [
@@ -6151,6 +6159,10 @@
     {
       "name": "TowerBehaviour",
       "type": "TowerBehaviour::TowerBehaviour"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }

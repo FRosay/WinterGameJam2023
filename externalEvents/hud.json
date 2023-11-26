@@ -806,7 +806,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -964,14 +963,77 @@
                         },
                         {
                           "type": {
-                            "value": "CreateByName"
+                            "value": "ChangePlan"
                           },
                           "parameters": [
-                            "",
                             "BuildingChoice",
-                            "BuildingChoice.ObjectName()",
-                            "BuildableTiles.CenterX()",
-                            "BuildableTiles.CenterY()",
+                            "=",
+                            "42"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "customId",
+                            "=",
+                            "nextCustomBuildingId"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "nextCustomBuildingId",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "isPhantom",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeLayer"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "Scale",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "Tween",
+                            "\"towerPlacement\"",
+                            "BuildableTiles.CenterX()-BuildingChoice.Width()/2",
+                            "BuildableTiles.CenterY()-BuildingChoice.Height()/2",
+                            "\"easeInQuad\"",
+                            "0.25",
                             ""
                           ]
                         }
@@ -979,70 +1041,79 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PosX"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "=",
-                                "BuildableTiles.CenterX()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PosY"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "=",
-                                "BuildableTiles.CenterY()"
-                              ]
-                            }
-                          ],
+                          "conditions": [],
                           "actions": [
                             {
                               "type": {
-                                "value": "ChangePlan"
+                                "value": "CreateByName"
                               },
                               "parameters": [
+                                "",
                                 "BuildingChoice",
-                                "=",
-                                "42"
+                                "BuildingChoice.ObjectName()",
+                                "-1000",
+                                "-1000",
+                                ""
                               ]
-                            },
+                            }
+                          ],
+                          "events": [
                             {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "customId",
-                                "=",
-                                "nextCustomBuildingId"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "nextCustomBuildingId",
-                                "+",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreXY"
-                              },
-                              "parameters": [
-                                "BuildingChoice",
-                                "=",
-                                "BuildableTiles.CenterX()-BuildingChoice.Width()/2",
-                                "=",
-                                "BuildableTiles.CenterY()-BuildingChoice.Height()/2"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosX"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "-1000"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "-1000"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "isPhantom",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "=",
+                                    "100"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                                  },
+                                  "parameters": [
+                                    "BuildingChoice",
+                                    "Scale",
+                                    "*",
+                                    "2"
+                                  ]
+                                }
                               ]
                             }
                           ]
