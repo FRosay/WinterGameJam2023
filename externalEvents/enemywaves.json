@@ -22,6 +22,42 @@
           },
           "parameters": [
             "",
+            "\"firstSpawn\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"firstSpawn\"",
+            ">",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "RemoveTimer"
+          },
+          "parameters": [
+            "",
+            "\"firstSpawn\""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
             "\"spawner\""
           ]
         }

@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 190,
   "disableInputWhenNotFocused": true,
   "mangledName": "MainScene",
   "name": "MainScene",
-  "r": 209,
+  "r": 217,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 243,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
@@ -2477,67 +2477,6 @@
         "g": 255,
         "r": 255
       }
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
-      "name": "BossPathCheckPoint",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
-        {
-          "name": "boss-path-check-point",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "boss-path-check-point2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 11,
-                        "y": 11
-                      },
-                      {
-                        "x": 21,
-                        "y": 11
-                      },
-                      {
-                        "x": 21,
-                        "y": 21
-                      },
-                      {
-                        "x": 11,
-                        "y": 21
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -5382,13 +5321,16 @@
             "objectName": "HUDBackground"
           },
           {
-            "objectName": "Wave"
+            "objectName": "BuildingsPanel"
           },
           {
             "objectName": "ReclaimBrush"
           },
           {
-            "objectName": "BuildingsPanel"
+            "objectName": "SoundControl"
+          },
+          {
+            "objectName": "Wave"
           },
           {
             "objectName": "CurrentCurrency"
@@ -5412,12 +5354,6 @@
       },
       {
         "objectName": "ReclaimCost"
-      },
-      {
-        "objectName": "BossPathCheckPoint"
-      },
-      {
-        "objectName": "SoundControl"
       },
       {
         "objectName": "GhostSprite"
@@ -5794,6 +5730,40 @@
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Numpad2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "NavMeshPathfindingBehavior",
+                "Base.CenterX()",
+                "Base.CenterY()",
+                ""
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
