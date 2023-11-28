@@ -825,6 +825,16 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "DebuggerTools::ConsoleLog"
+                              },
+                              "parameters": [
+                                "\"hmm\"",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "TileSystem::TileBehavior::SetIsOccupied"
                               },
                               "parameters": [
@@ -832,6 +842,16 @@
                                 "TileBehavior",
                                 "",
                                 ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "LinkedObjects::LinkObjects"
+                              },
+                              "parameters": [
+                                "",
+                                "BuildingChoice",
+                                "GridTiles"
                               ]
                             }
                           ]
