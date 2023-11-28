@@ -46,9 +46,6 @@
       "objects": [
         {
           "name": "Path"
-        },
-        {
-          "name": "Spawner"
         }
       ]
     },
@@ -101,6 +98,25 @@
         },
         {
           "name": "BaseTowerFX"
+        }
+      ]
+    },
+    {
+      "name": "GridTiles",
+      "objects": [
+        {
+          "name": "GridPart"
+        }
+      ]
+    },
+    {
+      "name": "NonGridTiles",
+      "objects": [
+        {
+          "name": "Path"
+        },
+        {
+          "name": "Grass"
         }
       ]
     }
@@ -1138,24 +1154,6 @@
       }
     },
     {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Path",
-      "texture": "assets/tiled sprites/sand/sand_1.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [
-        {
-          "folded": true,
-          "name": "initialPath",
-          "type": "boolean",
-          "value": false
-        }
-      ],
-      "effects": [],
-      "behaviors": []
-    },
-    {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "GridPart",
@@ -1163,7 +1161,13 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "TileBehavior",
+          "type": "TileSystem::TileBehavior",
+          "isOccupied": false
+        }
+      ],
       "animations": [
         {
           "name": "NewSprite",
@@ -1434,7 +1438,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.1,
+              "timeBetweenFrames": 0.075,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -1734,7 +1738,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.1,
+              "timeBetweenFrames": 0.075,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -5188,6 +5192,66 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Path",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\tiled sprites\\sand\\sand_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -5399,6 +5463,7 @@
                 "15",
                 "17",
                 "GridPart",
+                "NonGridTiles",
                 ""
               ]
             }
@@ -5475,15 +5540,22 @@
                 "value": "Cache"
               },
               "parameters": [
-                "GridPart"
+                "Spawner"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
             {
               "type": {
                 "value": "Cache"
               },
               "parameters": [
-                "Spawner"
+                "GridPart"
               ]
             }
           ]
@@ -5632,6 +5704,160 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Numpad0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "GridTiles",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "TileSystem::TileBehavior::IsOccupied"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "TileBehavior",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    "GridTiles.X()",
+                    "GridTiles.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "\"1\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Scale",
+                    "=",
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "=",
+                    "10"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "TileSystem::TileBehavior::IsOccupied"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "TileBehavior",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    "GridTiles.X()",
+                    "GridTiles.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "\"0\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Scale",
+                    "=",
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "=",
+                    "10"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -5674,6 +5900,7 @@
       "target": "Boss"
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -5746,6 +5973,7 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -6190,6 +6418,10 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "TileBehavior",
+      "type": "TileSystem::TileBehavior"
     },
     {
       "name": "TowerBehaviour",

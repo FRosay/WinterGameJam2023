@@ -19,7 +19,7 @@
       "fullName": "Pushback Tower",
       "functionType": "Action",
       "name": "pushbackTowerFromBoss",
-      "sentence": "Push _PARAM1_ _PARAM2_ (on tile _PARAM3_) after collision with _PARAM4_ _PARAM5_",
+      "sentence": "Push _PARAM1_ _PARAM2_ (on tile _PARAM3_ _PARAM4_) after collision from angle _PARAM5_",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -302,16 +302,16 @@
           "type": "objectList"
         },
         {
+          "description": "",
+          "name": "tileBehavior",
+          "supplementaryInformation": "TileSystem::TileBehavior",
+          "type": "behavior"
+        },
+        {
           "description": "bossAngleOfMovement",
           "name": "bossPushBackAngle",
           "supplementaryInformation": "Sprite",
           "type": "expression"
-        },
-        {
-          "description": "",
-          "name": "BossPathfinding",
-          "supplementaryInformation": "NavMeshPathfinding::NavMeshPathfindingBehavior",
-          "type": "behavior"
         }
       ],
       "objectGroups": []
@@ -1688,6 +1688,12 @@
                         "=",
                         "Object.Behavior::PropertytargetId()"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [

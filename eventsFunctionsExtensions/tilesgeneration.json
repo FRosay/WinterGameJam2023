@@ -19,7 +19,7 @@
       "fullName": "Generate Game Grid",
       "functionType": "Action",
       "name": "GenerateGameGrid",
-      "sentence": "Generate _PARAM1_ lines and _PARAM2_ columns of grid using _PARAM3_",
+      "sentence": "Generate a _PARAM1_ x _PARAM2_ grid of _PARAM3_, linking it to _PARAM4_",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -134,7 +134,17 @@
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "Variable(BoardGeneration.boardWidth)",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "NonGridTiles"
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -147,20 +157,77 @@
                         "Variable(BoardGeneration.y)",
                         "\"\""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Tile",
-                        "customId",
-                        "=",
-                        "Variable(BoardGeneration.uniqueTileId)"
-                      ]
                     }
                   ],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "=",
+                            "Variable(BoardGeneration.x)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "=",
+                            "Variable(BoardGeneration.y)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "NonGridTiles",
+                            "=",
+                            "Variable(BoardGeneration.x)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "NonGridTiles",
+                            "=",
+                            "Variable(BoardGeneration.y)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Tile",
+                            "customId",
+                            "=",
+                            "Variable(BoardGeneration.uniqueTileId)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Tile",
+                            "NonGridTiles"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
@@ -238,7 +305,7 @@
                   "parameters": [
                     "Tile",
                     "=",
-                    "1"
+                    "10"
                   ]
                 }
               ]
@@ -260,6 +327,12 @@
         {
           "description": "A sprite representing the outline of a square to form the grid",
           "name": "Tile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "All Non-Grid Tiles on the map",
+          "name": "NonGridTiles",
           "supplementaryInformation": "Sprite",
           "type": "objectList"
         }
@@ -534,6 +607,32 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "TilesToPlace"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "TilesToPlace",
+                    "=",
+                    "5"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -552,7 +651,7 @@
         {
           "description": "The already placed objects to not overwrite",
           "name": "AlreadyPlacedTiles",
-          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "supplementaryInformation": "Sprite",
           "type": "objectList"
         },
         {
@@ -569,55 +668,8 @@
       "fullName": "Name of Grass tile",
       "functionType": "Action",
       "name": "NameOfGrass",
-      "sentence": "Take grass _PARAM1_ and tiles around: _PARAM2_ to change animation name",
+      "sentence": "Change _PARAM1_'s animation depending on _PARAM2_ around it",
       "events": [
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "ToString(Path.X())",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "ToString(Path.Y())",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "ToString(Grass.X())",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "ToString(Grass.Y())",
-                "",
-                ""
-              ]
-            }
-          ]
-        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -973,7 +1025,7 @@
         {
           "description": "",
           "name": "Path",
-          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "supplementaryInformation": "Sprite",
           "type": "objectList"
         }
       ],

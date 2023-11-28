@@ -155,7 +155,7 @@
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
-                "isHoveredTileOccupied",
+                "isSelectedTileOccupied",
                 "False"
               ]
             }
@@ -199,7 +199,7 @@
                     "value": "SetSceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "isHoveredTileOccupied",
+                    "isSelectedTileOccupied",
                     "True"
                   ]
                 }
@@ -215,7 +215,7 @@
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
-                "isHoveredTileOccupied",
+                "isSelectedTileOccupied",
                 "="
               ]
             }
@@ -239,7 +239,7 @@
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
-                "isHoveredTileOccupied",
+                "isSelectedTileOccupied",
                 "True"
               ]
             }

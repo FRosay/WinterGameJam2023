@@ -9,248 +9,6 @@
       "colorR": 74,
       "creationTime": 0,
       "folded": true,
-      "name": "Init",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "BuildingsPanel",
-                "500",
-                "SceneWindowHeight()-128",
-                "\"HUD\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResizableCapability::ResizableBehavior::SetWidth"
-              },
-              "parameters": [
-                "BuildingsPanel",
-                "Resizable",
-                "=",
-                "SceneWindowWidth()-500*2"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResizableCapability::ResizableBehavior::SetHeight"
-              },
-              "parameters": [
-                "BuildingsPanel",
-                "Resizable",
-                "=",
-                "128"
-              ]
-            },
-            {
-              "type": {
-                "value": "CreateByName"
-              },
-              "parameters": [
-                "",
-                "BuildingChoice",
-                "\"BaseTower\"",
-                "640",
-                "SceneWindowHeight()-120",
-                "\"HUD\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Price",
-                "640",
-                "SceneWindowHeight()-80",
-                "\"HUD\""
-              ]
-            },
-            {
-              "type": {
-                "value": "CreateByName"
-              },
-              "parameters": [
-                "",
-                "BuildingChoice",
-                "\"IceTower\"",
-                "800",
-                "SceneWindowHeight()-120",
-                "\"HUD\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Price",
-                "800",
-                "SceneWindowHeight()-80",
-                "\"HUD\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "isHUD",
-                "True"
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "ReclaimBrush",
-                "960",
-                "SceneWindowHeight()-80",
-                "\"HUD\""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "ReclaimBrush",
-                    "Scale",
-                    "*",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "Scale",
-                    "*",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Life",
-                    "Scale",
-                    "*",
-                    "8"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Currency",
-                    "Scale",
-                    "*",
-                    "4"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Price",
-                    "=",
-                    "640"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Price",
-                    "Text",
-                    "=",
-                    "TowerStats[\"base\"].price[0]"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Price",
-                    "=",
-                    "800"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Price",
-                    "Text",
-                    "=",
-                    "TowerStats[\"ice\"].price[0]"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -604,6 +362,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1041,6 +800,44 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "GridTiles",
+                                "=",
+                                "BuildableTiles.X()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "GridTiles",
+                                "=",
+                                "BuildableTiles.Y()"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TileSystem::TileBehavior::SetIsOccupied"
+                              },
+                              "parameters": [
+                                "GridTiles",
+                                "TileBehavior",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
                             {
@@ -1282,6 +1079,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2065,6 +1863,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Range tower",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

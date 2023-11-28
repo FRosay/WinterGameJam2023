@@ -1227,6 +1227,15 @@
         "name": "assets\\sprites\\creeps\\animations\\moving_diagonal\\creepNormal1_diag8.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/sand/sand_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\sand\\sand_1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1551,6 +1560,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/towerbehaviour"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/tilesystem"
     }
   ],
   "externalLayouts": [
