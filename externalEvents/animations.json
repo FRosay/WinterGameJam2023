@@ -8,6 +8,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "CreepSlime",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -25,6 +26,169 @@
                 "CreepSlime.NavMeshPathfindingBehavior::MovementAngle()-90",
                 "999",
                 ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Base",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "Base",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween2"
+                  },
+                  "parameters": [
+                    "Base",
+                    "Tween",
+                    "\"baseBounceFirst\"",
+                    "4.5",
+                    "4.5",
+                    "\"easeInQuad\"",
+                    "0.6",
+                    "",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "Base",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Base",
+                    "Tween",
+                    "\"baseBounceFirst\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween2"
+                  },
+                  "parameters": [
+                    "Base",
+                    "Tween",
+                    "\"baseBounceSecond\"",
+                    "3.8",
+                    "3.8",
+                    "\"easeOutQuad\"",
+                    "2",
+                    "",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Base",
+                    "Tween",
+                    "\"baseBounceSecond\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.75"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween2"
+                  },
+                  "parameters": [
+                    "Base",
+                    "Tween",
+                    "\"baseBounceFirst\"",
+                    "4.5",
+                    "4.5",
+                    "\"easeInQuad\"",
+                    "0.6",
+                    "",
+                    "yes"
+                  ]
+                }
               ]
             }
           ]
