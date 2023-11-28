@@ -58,7 +58,7 @@
       "name": "Wave",
       "persistentUuid": "d7c67232-40b0-41ed-b168-f3b0adf09491",
       "width": 0,
-      "x": 677,
+      "x": 824,
       "y": 20,
       "zOrder": 7,
       "numberProperties": [],
@@ -90,7 +90,7 @@
       "name": "HUDBackground",
       "persistentUuid": "66a43cae-bccb-48c9-b1bf-cbafe8307a71",
       "width": 397,
-      "x": 651,
+      "x": 799,
       "y": 16,
       "zOrder": 4,
       "numberProperties": [],
@@ -105,8 +105,8 @@
       "name": "SoundControl",
       "persistentUuid": "a60d903b-58da-4265-9b39-786896ad84db",
       "width": 0,
-      "x": 56,
-      "y": 37,
+      "x": 51,
+      "y": 39,
       "zOrder": 25,
       "numberProperties": [],
       "stringProperties": [],
@@ -393,7 +393,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.44485159988866746,
+    "zoomFactor": 0.43034038022076765,
     "windowMask": false
   }
 }

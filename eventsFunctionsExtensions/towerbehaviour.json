@@ -1696,19 +1696,7 @@
                       "parameters": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
-                      },
-                      "parameters": [
-                        "Targets",
-                        "EnemyHealth",
-                        "Object.Behavior::Damage()",
-                        ""
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -1733,6 +1721,23 @@
                             "EnemyHealth",
                             "Object.Behavior::Effect()",
                             "Object.Behavior::EffectDuration()",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
+                          },
+                          "parameters": [
+                            "Targets",
+                            "EnemyHealth",
+                            "Object.Behavior::Damage()",
                             ""
                           ]
                         }

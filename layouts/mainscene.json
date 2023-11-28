@@ -1422,6 +1422,12 @@
           "name": "customId",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "CurrentEffects",
+          "type": "structure",
+          "children": []
         }
       ],
       "effects": [],
@@ -6454,6 +6460,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Final Scene",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

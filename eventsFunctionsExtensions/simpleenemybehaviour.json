@@ -230,6 +230,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -243,9 +244,42 @@
                     "=",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "ToString(Object.VariableChildCount(CurrentEffects))",
+                    "",
+                    ""
+                  ]
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Object.VariableChildCount(CurrentEffects)",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableChildCount"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.CurrentEffects",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": []
+                },
                 {
                   "type": "BuiltinCommonInstructions::ForEachChildVariable",
                   "iterableVariableName": "Object.CurrentEffects",
@@ -398,7 +432,7 @@
                   },
                   "parameters": [
                     "Object",
-                    "tmpEffect.effectName",
+                    "CurrentEffects[EffectToApply].effectName",
                     "=",
                     "EffectToApply"
                   ]
@@ -409,7 +443,7 @@
                   },
                   "parameters": [
                     "Object",
-                    "tmpEffect.effectDuration",
+                    "CurrentEffects[EffectToApply].effectDuration",
                     "=",
                     "DurationOfEffect"
                   ]
@@ -420,17 +454,7 @@
                   },
                   "parameters": [
                     "Object",
-                    "Object.tmpEffect.effectName"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariablePush"
-                  },
-                  "parameters": [
-                    "Object",
-                    "CurrentEffects",
-                    "tmpEffect"
+                    "EffectToApply"
                   ]
                 }
               ]
@@ -483,18 +507,7 @@
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"ding\"",
-                    "",
-                    ""
-                  ]
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
