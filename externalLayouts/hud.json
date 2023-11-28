@@ -89,7 +89,7 @@
       "layer": "HUD",
       "name": "HUDBackground",
       "persistentUuid": "66a43cae-bccb-48c9-b1bf-cbafe8307a71",
-      "width": 382,
+      "width": 397,
       "x": 651,
       "y": 16,
       "zOrder": 4,
@@ -393,7 +393,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.34118560234734685,
+    "zoomFactor": 0.47535850871269575,
     "windowMask": false
   }
 }

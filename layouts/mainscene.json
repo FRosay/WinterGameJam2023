@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7315786463753006,
+    "zoomFactor": 0.4303403802207653,
     "windowMask": false
   },
   "objectsGroups": [
@@ -181,7 +181,23 @@
       ]
     }
   ],
-  "instances": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "GridMask",
+      "persistentUuid": "2800d765-c890-4084-b3cc-f0f1f0f34c8b",
+      "width": 0,
+      "x": 0,
+      "y": -64,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
   "objects": [
     {
       "adaptCollisionMaskAutomatically": true,
@@ -1438,7 +1454,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.075,
+              "timeBetweenFrames": 0.045,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -1738,7 +1754,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.075,
+              "timeBetweenFrames": 0.045,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -5252,6 +5268,30 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "GridMask",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "outlineColor": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true,
+      "antialiasing": "none"
     }
   ],
   "objectsFolderStructure": {
@@ -5384,6 +5424,9 @@
       },
       {
         "objectName": "StaticText"
+      },
+      {
+        "objectName": "GridMask"
       }
     ]
   },
@@ -5432,7 +5475,7 @@
           "parameters": [
             "",
             "=",
-            "50"
+            "45"
           ]
         }
       ],
@@ -5540,14 +5583,6 @@
                 "value": "Cache"
               },
               "parameters": [
-                "GridPart"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
                 "Spawner"
               ]
             }
@@ -5590,6 +5625,59 @@
                 ""
               ]
             }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SpriteMasking::MaskWithShapePainter"
+              },
+              "parameters": [
+                "",
+                "GridPart",
+                "GridMask",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "initialPath"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "drawGridMask",
+            "True"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PrimitiveDrawing::Circle"
+          },
+          "parameters": [
+            "GridMask",
+            "MouseX()",
+            "MouseY()+65",
+            "80"
           ]
         }
       ]
@@ -5701,6 +5789,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Debug",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -5774,6 +5863,8 @@
           ]
         },
         {
+          "disabled": true,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5941,6 +6032,8 @@
           ]
         },
         {
+          "disabled": true,
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "GridTiles",
           "conditions": [
@@ -6063,6 +6156,8 @@
       "target": "Boss"
     },
     {
+      "disabled": true,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -6135,6 +6230,8 @@
       ]
     },
     {
+      "disabled": true,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {

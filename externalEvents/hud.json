@@ -362,7 +362,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Escape",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -372,11 +371,28 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyReleased"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "",
-                "Escape"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Escape"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Right\""
+                  ]
+                }
               ]
             },
             {
@@ -412,16 +428,7 @@
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "GridPart"
-                  ]
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -494,14 +501,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "GridPart"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -551,6 +550,15 @@
                     "currentState",
                     "=",
                     "\"none\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "drawGridMask",
+                    "initialPath"
                   ]
                 }
               ]
@@ -1079,7 +1087,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1274,6 +1281,15 @@
                         "*",
                         "2"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "drawGridMask",
+                        "True"
+                      ]
                     }
                   ]
                 }
@@ -1397,6 +1413,15 @@
                 "",
                 "BuildingChoice",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "True"
               ]
             }
           ]
