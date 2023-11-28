@@ -21,34 +21,6 @@
               },
               "parameters": [
                 "Slime",
-                "BossPathCheckPoint",
-                "",
-                "",
-                "yes"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "BossPathCheckPoint",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Slime",
                 "Grass",
                 "",
                 "",
@@ -70,13 +42,22 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                    "value": "PosX"
                   },
                   "parameters": [
-                    "",
                     "GridTiles",
-                    "Grass",
-                    ""
+                    "=",
+                    "Grass.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "=",
+                    "Grass.Y()"
                   ]
                 }
               ],
@@ -127,13 +108,22 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                        "value": "PosX"
                       },
                       "parameters": [
-                        "",
                         "BuildingChoice",
-                        "GridTiles",
-                        ""
+                        "=",
+                        "GridTiles.X()+8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "=",
+                        "GridTiles.Y()+8"
                       ]
                     }
                   ],
@@ -174,6 +164,16 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "isPushbacked",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "TowerBehaviour::pushbackTowerFromBoss"
                           },
                           "parameters": [
@@ -184,16 +184,6 @@
                             "TileBehavior",
                             "BuildingChoice.Variable(lastBossPushBackAngle)",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "LinkedObjects::RemoveLinkBetween"
-                          },
-                          "parameters": [
-                            "",
-                            "BuildingChoice",
-                            "GridTiles"
                           ]
                         },
                         {
@@ -269,171 +259,6 @@
       "parameters": []
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "Tween::HasFinished"
-          },
-          "parameters": [
-            "BuildingChoice",
-            "Tween",
-            "\"bossPushback\" + BuildingChoice.VariableString(customId)"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PickNearest"
-              },
-              "parameters": [
-                "GridTiles",
-                "BuildingChoice.X()",
-                "BuildingChoice.Y()",
-                "270"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "tmpIsTileOccupied",
-                ""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "TileSystem::TileBehavior::IsOccupied"
-                  },
-                  "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::pushbackTowerFromBoss"
-                  },
-                  "parameters": [
-                    "",
-                    "BuildingChoice",
-                    "Tween",
-                    "GridTiles",
-                    "TileBehavior",
-                    "BuildingChoice.Variable(lastBossPushBackAngle)",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "tmpIsTileOccupied",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"yes\"",
-                    "",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TileSystem::TileBehavior::IsOccupied"
-                  },
-                  "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "tmpIsTileOccupied",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"no\"",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TileSystem::TileBehavior::SetIsOccupied"
-                  },
-                  "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "BuildingChoice",
-                    "GridTiles"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "BuildingChoice",
       "conditions": [
@@ -455,39 +280,24 @@
           "conditions": [
             {
               "type": {
-                "value": "Raycast"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "GridTiles",
-                "BuildingChoice.X()",
-                "BuildingChoice.Y()",
-                "270",
-                "5",
-                "",
-                "",
-                ""
+                "BuildingChoice",
+                "isPushbacked",
+                "True"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "\"GridTiles: \" + ToString(PickedInstancesCount(GridTiles))",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "SetObjectVariableAsBoolean"
               },
               "parameters": [
                 "BuildingChoice",
-                "tmpIsTileOccupied",
-                ""
+                "tmpIsDestroyed",
+                "False"
               ]
             }
           ],
@@ -497,38 +307,43 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "TileSystem::TileBehavior::IsOccupied"
+                    "value": "PosX"
                   },
                   "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    ""
+                    "Path",
+                    "=",
+                    "BuildingChoice.X()-8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "Path",
+                    "=",
+                    "BuildingChoice.Y()-8"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "TowerBehaviour::pushbackTowerFromBoss"
-                  },
-                  "parameters": [
-                    "",
-                    "BuildingChoice",
-                    "Tween",
-                    "GridTiles",
-                    "TileBehavior",
-                    "BuildingChoice.Variable(lastBossPushBackAngle)",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "BuildingChoice",
-                    "tmpIsTileOccupied",
+                    "tmpIsDestroyed",
                     "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "BuildingChoice",
+                    ""
                   ]
                 }
               ]
@@ -538,18 +353,39 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "TileSystem::TileBehavior::IsOccupied"
+                    "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
+                    "BuildingChoice",
+                    "tmpIsDestroyed",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "ObjectVariableAsBoolean"
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "=",
+                    "BuildingChoice.X()-8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "=",
+                    "BuildingChoice.Y()-8"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "BuildingChoice",
@@ -558,64 +394,110 @@
                   ]
                 }
               ],
-              "actions": [
+              "events": [
                 {
-                  "type": {
-                    "value": "TileSystem::TileBehavior::SetIsOccupied"
-                  },
-                  "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    "",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TileSystem::TileBehavior::IsOccupied"
+                      },
+                      "parameters": [
+                        "GridTiles",
+                        "TileBehavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::pushbackTowerFromBoss"
+                      },
+                      "parameters": [
+                        "",
+                        "BuildingChoice",
+                        "Tween",
+                        "GridTiles",
+                        "TileBehavior",
+                        "BuildingChoice.Variable(lastBossPushBackAngle)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "tmpIsTileOccupied",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TileSystem::TileBehavior::SetIsOccupied"
+                      },
+                      "parameters": [
+                        "GridTiles",
+                        "TileBehavior",
+                        "",
+                        ""
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "LinkedObjects::LinkObjects"
-                  },
-                  "parameters": [
-                    "",
-                    "BuildingChoice",
-                    "GridTiles"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "TileSystem::TileBehavior::IsOccupied"
+                      },
+                      "parameters": [
+                        "GridTiles",
+                        "TileBehavior",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "tmpIsTileOccupied",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "isPushbacked",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TileSystem::TileBehavior::SetIsOccupied"
+                      },
+                      "parameters": [
+                        "GridTiles",
+                        "TileBehavior",
+                        "",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "DebuggerTools::ConsoleLog"
-          },
-          "parameters": [
-            "\"GridTiles: \" + ToString(PickedInstancesCount(GridTiles))",
-            "",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Delete"
-          },
-          "parameters": [
-            "GridTiles",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "DebuggerTools::Pause"
-          },
-          "parameters": [
-            ""
           ]
         }
       ]

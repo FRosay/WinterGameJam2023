@@ -825,16 +825,6 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "DebuggerTools::ConsoleLog"
-                              },
-                              "parameters": [
-                                "\"hmm\"",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "TileSystem::TileBehavior::SetIsOccupied"
                               },
                               "parameters": [
@@ -842,16 +832,6 @@
                                 "TileBehavior",
                                 "",
                                 ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "LinkedObjects::LinkObjects"
-                              },
-                              "parameters": [
-                                "",
-                                "BuildingChoice",
-                                "GridTiles"
                               ]
                             }
                           ]
@@ -1965,6 +1945,17 @@
                 "BuildingChoice.CenterX()-BuildingChoice.TowerBehaviour::Range()",
                 "=",
                 "BuildingChoice.CenterY()-BuildingChoice.TowerBehaviour::Range()"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "RangeDisplay",
+                "Opacity",
+                "=",
+                "180"
               ]
             }
           ]

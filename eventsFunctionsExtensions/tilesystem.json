@@ -52,31 +52,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TileSystem::TileBehavior::PropertyisOccupied"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnBoolean"
-                  },
-                  "parameters": [
-                    "False"
-                  ]
-                }
-              ]
             }
           ],
           "parameters": [
