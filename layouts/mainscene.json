@@ -130,12 +130,6 @@
     },
     {
       "folded": true,
-      "name": "currentWave",
-      "type": "number",
-      "value": 1
-    },
-    {
-      "folded": true,
       "name": "totalLife",
       "type": "number",
       "value": 25
@@ -149,12 +143,6 @@
     {
       "folded": true,
       "name": "nextCustomBuildingId",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "currentlySpawnedSlimes",
       "type": "number",
       "value": 0
     },
@@ -175,6 +163,22 @@
         },
         {
           "name": "newTowerYPos",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "WavesSettings",
+      "type": "structure",
+      "children": [
+        {
+          "name": "currentWave",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "currentlySpawnedSlimes",
           "type": "number",
           "value": 0
         }
@@ -1435,7 +1439,7 @@
         {
           "name": "EnemyHealth",
           "type": "SimpleEnemyBehaviour::EnemyHealth",
-          "TotalHitPoints": 10,
+          "TotalHitPoints": 6,
           "CurrentHitPoints": 0,
           "Armor": 0,
           "InitialSpeed": 50,
@@ -5719,7 +5723,7 @@
             "value": "BuiltinCommonInstructions::CompareStrings"
           },
           "parameters": [
-            "ToString(currentWave)",
+            "ToString(WavesSettings.currentWave)",
             "!=",
             "Wave.Text::Value()"
           ]
@@ -6712,10 +6716,12 @@
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
               },
               "parameters": [
                 "CreepSlime",
+                "EnemyHealth",
+                "999",
                 ""
               ]
             },
@@ -6751,7 +6757,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Final Scene",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",

@@ -1238,6 +1238,7 @@
   "objectsGroups": [],
   "variables": [
     {
+      "folded": true,
       "name": "TowerStats",
       "type": "structure",
       "children": [
@@ -1459,6 +1460,133 @@
                   "value": 96
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EnemyWaves",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "CreepSlime",
+              "type": "number",
+              "value": 5
+            },
+            {
+              "folded": true,
+              "name": "bossHP",
+              "type": "number",
+              "value": 50
+            },
+            {
+              "folded": true,
+              "name": "timeBetweenSpawns",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "CreepSlime",
+              "type": "string",
+              "value": "11"
+            },
+            {
+              "folded": true,
+              "name": "bossHP",
+              "persistentUuid": "63aa0868-7648-48e7-8c06-813161cbbe85",
+              "type": "number",
+              "value": 100
+            },
+            {
+              "folded": true,
+              "name": "timeBetweenSpawns",
+              "persistentUuid": "e5d92dc5-de8c-430d-a83d-a5577ea86d96",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "CreepSlime",
+              "type": "string",
+              "value": "18"
+            },
+            {
+              "folded": true,
+              "name": "bossHP",
+              "persistentUuid": "0dcc81c3-11ef-497b-b18b-3d4ce6dbb68b",
+              "type": "number",
+              "value": 150
+            },
+            {
+              "folded": true,
+              "name": "timeBetweenSpawns",
+              "persistentUuid": "4f67f0da-a0dd-4e03-b9d3-d30d5b2c80d9",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "CreepSlime",
+              "type": "string",
+              "value": "26"
+            },
+            {
+              "folded": true,
+              "name": "bossHP",
+              "persistentUuid": "fff52f3e-cfec-4a65-a75a-ba24d040ce30",
+              "type": "number",
+              "value": 200
+            },
+            {
+              "folded": true,
+              "name": "timeBetweenSpawns",
+              "persistentUuid": "327fed60-4d57-4e2c-a87b-173c0792b27e",
+              "type": "number",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "CreepSlime",
+              "type": "string",
+              "value": "35"
+            },
+            {
+              "folded": true,
+              "name": "bossHP",
+              "persistentUuid": "1522d9c7-a3c9-45cc-88f9-051db2c23879",
+              "type": "number",
+              "value": 250
+            },
+            {
+              "folded": true,
+              "name": "timeBetweenSpawns",
+              "persistentUuid": "d128c40f-794b-4e5d-b06f-bc4fe2cd805c",
+              "type": "number",
+              "value": 2
             }
           ]
         }

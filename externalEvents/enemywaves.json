@@ -64,6 +64,18 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Quand la vitesse d'un slime doit changer, il faut relancer son pathfinding pour prendre en compte la modification\n"
+    },
+    {
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "EnemySlimes",
       "conditions": [
@@ -117,6 +129,18 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Creep spawn"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -127,7 +151,7 @@
             "",
             "\"spawner\"",
             ">",
-            "2"
+            "EnemyWaves[WavesSettings.currentWave-1].timeBetweenSpawns"
           ]
         },
         {
@@ -135,9 +159,9 @@
             "value": "VarScene"
           },
           "parameters": [
-            "currentlySpawnedSlimes",
+            "WavesSettings.currentlySpawnedSlimes",
             "<",
-            "(Variable(currentWave)*5)"
+            "EnemyWaves[WavesSettings.currentWave-1].CreepSlime"
           ]
         },
         {
@@ -172,30 +196,6 @@
         },
         {
           "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
-          },
-          "parameters": [
-            "CreepSlime",
-            "EnemyHealth",
-            "=",
-            "Base.CenterX()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
-          },
-          "parameters": [
-            "CreepSlime",
-            "EnemyHealth",
-            "=",
-            "Base.CenterY()",
-            ""
-          ]
-        },
-        {
-          "type": {
             "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
           },
           "parameters": [
@@ -211,7 +211,7 @@
             "value": "ModVarScene"
           },
           "parameters": [
-            "currentlySpawnedSlimes",
+            "WavesSettings.currentlySpawnedSlimes",
             "+",
             "1"
           ]
@@ -236,25 +236,29 @@
             "+",
             "1"
           ]
-        }
-      ],
-      "events": [
+        },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"spawner\""
-              ]
-            }
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"spawner\""
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Boss spawn"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -264,9 +268,9 @@
             "value": "VarScene"
           },
           "parameters": [
-            "currentlySpawnedSlimes",
+            "WavesSettings.currentlySpawnedSlimes",
             ">=",
-            "(Variable(currentWave)*5)"
+            "EnemyWaves[WavesSettings.currentWave].CreepSlime"
           ]
         },
         {
@@ -319,30 +323,6 @@
             "Slime",
             "=",
             "10"
-          ]
-        },
-        {
-          "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveX"
-          },
-          "parameters": [
-            "Slime",
-            "EnemyHealth",
-            "=",
-            "Base.X()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentObjectiveY"
-          },
-          "parameters": [
-            "Slime",
-            "EnemyHealth",
-            "=",
-            "Base.Y()",
-            ""
           ]
         },
         {
@@ -406,7 +386,7 @@
             "value": "ModVarScene"
           },
           "parameters": [
-            "currentlySpawnedSlimes",
+            "WavesSettings.currentlySpawnedSlimes",
             "=",
             "0"
           ]
@@ -416,7 +396,7 @@
             "value": "ModVarScene"
           },
           "parameters": [
-            "currentWave",
+            "WavesSettings.currentWave",
             "+",
             "1"
           ]
@@ -449,7 +429,7 @@
                 "value": "VarScene"
               },
               "parameters": [
-                "currentWave",
+                "WavesSettings.currentWave",
                 "=",
                 "5"
               ]

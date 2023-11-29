@@ -356,7 +356,7 @@
                 "textToUpdate",
                 "Text",
                 "=",
-                "\"Vague : \"+ToString(Variable(currentWave))+\"/5\""
+                "\"Vague : \"+ToString(Variable(WavesSettings.currentWave))+\"/5\""
               ]
             }
           ]
