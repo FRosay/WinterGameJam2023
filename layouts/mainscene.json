@@ -1285,8 +1285,8 @@
         {
           "name": "NavMeshPathfindingBehavior",
           "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
-          "Acceleration": 100,
-          "MaxSpeed": 25,
+          "Acceleration": 250,
+          "MaxSpeed": 40,
           "AngularMaxSpeed": 180,
           "RotateObject": false,
           "AngleOffset": 0,
@@ -1444,8 +1444,8 @@
         {
           "name": "NavMeshPathfindingBehavior",
           "type": "NavMeshPathfinding::NavMeshPathfindingBehavior",
-          "Acceleration": 120,
-          "MaxSpeed": 35,
+          "Acceleration": 250,
+          "MaxSpeed": 50,
           "AngularMaxSpeed": 180,
           "RotateObject": false,
           "AngleOffset": 0,

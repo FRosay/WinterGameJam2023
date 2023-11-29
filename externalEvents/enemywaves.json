@@ -81,6 +81,18 @@
       "actions": [
         {
           "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetMaxSpeed"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "NavMeshPathfindingBehavior",
+            "=",
+            "EnemySlimes.EnemyHealth::CurrentSpeed()",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
           },
           "parameters": [
@@ -90,24 +102,16 @@
             "Base.CenterY()",
             ""
           ]
-        }
-      ],
-      "events": [
+        },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "EnemyHealth",
-                "no",
-                ""
-              ]
-            }
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "EnemyHealth",
+            "no",
+            ""
           ]
         }
       ]

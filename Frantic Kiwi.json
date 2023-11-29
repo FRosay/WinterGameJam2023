@@ -1481,6 +1481,17 @@
           "value": "freeze"
         }
       ]
+    },
+    {
+      "name": "AllEffectsArray",
+      "type": "array",
+      "children": [
+        {
+          "folded": true,
+          "type": "string",
+          "value": "freeze"
+        }
+      ]
     }
   ],
   "layouts": [
