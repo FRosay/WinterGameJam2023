@@ -58,7 +58,7 @@
       "name": "Wave",
       "persistentUuid": "d7c67232-40b0-41ed-b168-f3b0adf09491",
       "width": 0,
-      "x": 824,
+      "x": 804,
       "y": 20,
       "zOrder": 7,
       "numberProperties": [],
@@ -90,7 +90,7 @@
       "name": "HUDBackground",
       "persistentUuid": "66a43cae-bccb-48c9-b1bf-cbafe8307a71",
       "width": 397,
-      "x": 799,
+      "x": 779,
       "y": 16,
       "zOrder": 4,
       "numberProperties": [],
@@ -121,8 +121,8 @@
       "name": "Currency",
       "persistentUuid": "08100a84-4340-46d6-983d-7f249fe6e0a3",
       "width": 48,
-      "x": 135,
-      "y": 835,
+      "x": 146,
+      "y": 833,
       "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
@@ -136,7 +136,7 @@
       "name": "StaticText",
       "persistentUuid": "2aed7a9d-f988-47f7-aa97-a7fc391345fe",
       "width": 0,
-      "x": 141,
+      "x": 146,
       "y": 966,
       "zOrder": 29,
       "numberProperties": [],
@@ -200,40 +200,8 @@
       "name": "Currency",
       "persistentUuid": "82603c5b-ac8c-4865-a7c3-72e888f11308",
       "width": 48,
-      "x": 103,
+      "x": 105,
       "y": 974,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 48,
-      "layer": "HUD",
-      "name": "Currency",
-      "persistentUuid": "cb9998ed-e951-4244-b0c0-d2c9ffbe5f91",
-      "width": 48,
-      "x": 164,
-      "y": 988,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 48,
-      "layer": "HUD",
-      "name": "Currency",
-      "persistentUuid": "3bb2720d-b737-4037-b298-a597085411fc",
-      "width": 48,
-      "x": 153,
-      "y": 906,
       "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
@@ -259,15 +227,20 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 48,
+      "height": 60,
       "layer": "HUD",
       "name": "Currency",
       "persistentUuid": "9b90525f-48a6-41a8-948c-f570e184a059",
-      "width": 48,
-      "x": 164,
-      "y": 960,
+      "width": 60,
+      "x": 162,
+      "y": 967,
       "zOrder": 6,
-      "numberProperties": [],
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
       "stringProperties": [],
       "initialVariables": []
     },
@@ -275,63 +248,20 @@
       "angle": 0,
       "customSize": true,
       "depth": 0,
-      "height": 48,
-      "layer": "HUD",
-      "name": "Currency",
-      "persistentUuid": "781cb565-f66b-404e-9f3f-8e90b460d50c",
-      "width": 48,
-      "x": 148,
-      "y": 974,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 48,
-      "layer": "HUD",
-      "name": "Currency",
-      "persistentUuid": "50843b04-5bf4-4fd4-ac10-d4a43eed3207",
-      "width": 48,
-      "x": 180,
-      "y": 974,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 48,
-      "layer": "HUD",
-      "name": "Currency",
-      "persistentUuid": "452ef433-3788-4b18-afc9-0f3149bb9751",
-      "width": 48,
-      "x": 121,
-      "y": 906,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 48,
+      "height": 42,
       "layer": "HUD",
       "name": "Currency",
       "persistentUuid": "6bb77da1-cf55-4c17-be60-59f7ab5950f5",
-      "width": 48,
-      "x": 137,
-      "y": 892,
+      "width": 60,
+      "x": 140,
+      "y": 903,
       "zOrder": 6,
-      "numberProperties": [],
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
       "stringProperties": [],
       "initialVariables": []
     },
@@ -381,6 +311,254 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 126,
+      "layer": "HUD",
+      "name": "Play",
+      "persistentUuid": "9f75e4ea-8189-479e-b0ef-e33e055a2641",
+      "width": 80,
+      "x": 1795,
+      "y": 33,
+      "zOrder": 31,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "StaticText",
+      "persistentUuid": "0d8574a1-9306-4486-a072-a0f556176dc1",
+      "width": 0,
+      "x": 1479,
+      "y": 210,
+      "zOrder": 32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Console de test :"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "46893560-5b3a-4d00-ba75-47a2df83e250",
+      "width": 0,
+      "x": 1465,
+      "y": 540,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerPrice"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Prix : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "f435fc77-cda5-4429-8170-0a52d2898400",
+      "width": 0,
+      "x": 1705,
+      "y": 270,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "selectedTowerName"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Tour à modifier : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "215aa743-cf5f-4642-aef1-a2448948e3ed",
+      "width": 0,
+      "x": 1465,
+      "y": 400,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerAttackSpeed"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Vitesse d'attaque : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "c0b66626-8819-4d59-961d-de44487d359c",
+      "width": 0,
+      "x": 1465,
+      "y": 470,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerRange"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Portée : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "f2db047d-c640-4413-8a56-5740d33bd628",
+      "width": 0,
+      "x": 1465,
+      "y": 330,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerDamage"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Dégâts : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "TestingText",
+      "persistentUuid": "b7c5f514-22f8-4faa-a9f2-e9c715050e51",
+      "width": 0,
+      "x": 1440,
+      "y": 270,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "selectedTowerLevel"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Niveau à modifier : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
     }
   ],
   "editionSettings": {
@@ -393,7 +571,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.43034038022076765,
+    "zoomFactor": 0.4027225833325934,
     "windowMask": false
   }
 }

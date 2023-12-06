@@ -82,11 +82,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ChangeColor"
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
                         "Path",
-                        "\"255;193;70\""
+                        "Animation",
+                        "=",
+                        "\"constructible\""
                       ]
                     }
                   ]
