@@ -105,18 +105,6 @@
         },
         {
           "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "NavMeshPathfindingBehavior",
-            "Base.CenterX()",
-            "Base.CenterY()",
-            ""
-          ]
-        },
-        {
-          "type": {
             "value": "SimpleEnemyBehaviour::EnemyHealth::SetResetPathfinding"
           },
           "parameters": [
@@ -270,7 +258,7 @@
           "parameters": [
             "WavesSettings.currentlySpawnedSlimes",
             ">=",
-            "EnemyWaves[WavesSettings.currentWave].CreepSlime"
+            "EnemyWaves[WavesSettings.currentWave-1].CreepSlime"
           ]
         },
         {

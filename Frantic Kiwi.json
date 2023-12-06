@@ -7,22 +7,22 @@
     "revision": 0
   },
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
+    "adaptGameResolutionAtRuntime": false,
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
-    "orientation": "default",
-    "packageName": "com.example.gamename",
+    "orientation": "portrait",
+    "packageName": "com.project.kiwi.slimetd",
     "pixelsRounding": true,
     "projectUuid": "74ffaff3-026d-4bb0-97d7-52e92f2c271a",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "useExternalSourceFiles": false,
-    "version": "1.0.0",
-    "name": "Frantic Kiwi",
+    "version": "0.1.0",
+    "name": "Slime TD",
     "description": "",
-    "author": "",
+    "author": "NotAKiwi",
     "windowWidth": 1920,
     "windowHeight": 1080,
     "latestCompilationDirectory": "",
@@ -43,12 +43,12 @@
       "progressBarMaxWidth": 200,
       "progressBarMinWidth": 40,
       "progressBarWidthPercent": 30,
-      "showGDevelopSplash": true,
+      "showGDevelopSplash": false,
       "showProgressBar": true
     },
     "watermark": {
       "placement": "bottom-left",
-      "showWatermark": true
+      "showWatermark": false
     },
     "authorIds": [],
     "authorUsernames": [],
@@ -801,150 +801,6 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx2.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx3.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx4.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx5.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx6.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx7.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx7.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx8.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx8.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx9.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx9.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx10.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx10.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx11.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx11.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx12.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx12.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx13.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx13.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx14.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx14.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx15.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx15.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/Base/towerNormal2-fx16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\Base\\towerNormal2-fx16.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/music/base-slime-adventure.mp3",
         "kind": "audio",
         "metadata": "",
@@ -1249,6 +1105,150 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/c693a024a868728da3e9e91c9d23513306582bda6ba10191afc24d6c5667dd5e_Explosion3.png",
           "name": "Explosion3.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx11.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx12.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx13.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx14.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/fx/towerNormal2-fx16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\fx\\towerNormal2-fx16.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
