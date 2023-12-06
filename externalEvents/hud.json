@@ -804,6 +804,25 @@
                             "0.25",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeColor"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "\"255;255;255\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
+                          },
+                          "parameters": [
+                            "BuildingChoice",
+                            "TowerBehaviour",
+                            ""
+                          ]
                         }
                       ],
                       "events": [

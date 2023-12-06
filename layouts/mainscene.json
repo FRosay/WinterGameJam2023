@@ -189,6 +189,16 @@
       "type": "structure",
       "children": [
         {
+          "name": "doNext",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "refreshTestDisplay",
+          "type": "boolean",
+          "value": true
+        },
+        {
           "folded": true,
           "name": "selectedTowerLevel",
           "type": "number",
@@ -198,6 +208,12 @@
           "name": "selectedTowerName",
           "type": "string",
           "value": "base"
+        },
+        {
+          "folded": true,
+          "name": "selectedWaveNumber",
+          "type": "number",
+          "value": 0
         }
       ]
     }
@@ -1583,20 +1599,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 24.5,
-                        "y": 20.5
+                        "x": 20,
+                        "y": 14
                       },
                       {
-                        "x": 73,
-                        "y": 19
+                        "x": 77.5,
+                        "y": 14
                       },
                       {
-                        "x": 82.5,
-                        "y": 75
+                        "x": 88,
+                        "y": 80.5
                       },
                       {
-                        "x": 13,
-                        "y": 76
+                        "x": 8.5,
+                        "y": 82
                       }
                     ]
                   ]
@@ -1631,20 +1647,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 24.5,
-                        "y": 20.5
+                        "x": 20,
+                        "y": 14
                       },
                       {
-                        "x": 73,
-                        "y": 19
+                        "x": 77.5,
+                        "y": 14
                       },
                       {
-                        "x": 82.5,
-                        "y": 75
+                        "x": 88,
+                        "y": 80.5
                       },
                       {
-                        "x": 13,
-                        "y": 76
+                        "x": 8.5,
+                        "y": 82
                       }
                     ]
                   ]
@@ -5728,6 +5744,69 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "assetStoreId": "f23eb31ad33dd63f1937c8745105316ca530c28513c64b68a665975503c852a6",
+      "name": "ApplyAllButton",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "LeftPadding": 16,
+        "RightPadding": 16,
+        "PressedLabelOffsetY": 6,
+        "BottomPadding": 24,
+        "TopPadding": 20,
+        "HoveredFadeOutDuration": 0.25
+      },
+      "childrenContent": {
+        "Hovered": {
+          "bottomMargin": 22,
+          "height": 64,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "White Square Decorated Button_Hovered.png",
+          "tiled": true,
+          "topMargin": 16,
+          "width": 192
+        },
+        "Idle": {
+          "bottomMargin": 22,
+          "height": 64,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "White Square Decorated Button_Idle.png",
+          "tiled": true,
+          "topMargin": 16,
+          "width": 192
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "Appliquer a toutes les tours",
+          "font": "assets\\fonts\\Minecraft.ttf",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        "Pressed": {
+          "bottomMargin": 16,
+          "height": 64,
+          "leftMargin": 16,
+          "rightMargin": 16,
+          "texture": "White Square Decorated Button_Pressed.png",
+          "tiled": true,
+          "topMargin": 22,
+          "width": 192
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -5866,6 +5945,9 @@
       },
       {
         "objectName": "Heart"
+      },
+      {
+        "objectName": "ApplyAllButton"
       }
     ]
   },
@@ -6660,6 +6742,22 @@
       "isLightingLayer": false,
       "isLocked": false,
       "name": "HUD",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "TestLayer",
       "renderingType": "",
       "visibility": true,
       "cameras": [],

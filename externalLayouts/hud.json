@@ -131,17 +131,30 @@
     {
       "angle": 0,
       "customSize": false,
-      "height": 0,
+      "height": 48,
       "layer": "HUD",
       "name": "StaticText",
       "persistentUuid": "2aed7a9d-f988-47f7-aa97-a7fc391345fe",
-      "width": 0,
-      "x": 146,
+      "width": 16,
+      "x": 145,
       "y": 966,
       "zOrder": 29,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 48
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "-"
+        }
+      ]
     },
     {
       "angle": 0,
@@ -274,7 +287,7 @@
       "name": "BaseTower",
       "persistentUuid": "2bdd0d70-42b9-4c98-97df-1d36b291b960",
       "width": 32,
-      "x": 75,
+      "x": 65,
       "y": 841,
       "zOrder": 27,
       "numberProperties": [],
@@ -290,7 +303,7 @@
       "name": "IceTower",
       "persistentUuid": "575f30fd-1905-462c-863d-61662534bf91",
       "width": 32,
-      "x": 75,
+      "x": 65,
       "y": 909,
       "zOrder": 26,
       "numberProperties": [],
@@ -305,7 +318,7 @@
       "name": "ReclaimBrush",
       "persistentUuid": "759b871b-ca25-4c73-a657-3bb2ec4a6fa1",
       "width": 0,
-      "x": 74,
+      "x": 65,
       "y": 980,
       "zOrder": 28,
       "numberProperties": [],
@@ -332,12 +345,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "StaticText",
       "persistentUuid": "0d8574a1-9306-4486-a072-a0f556176dc1",
       "width": 0,
       "x": 1479,
-      "y": 210,
+      "y": 170,
       "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
@@ -360,12 +373,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "46893560-5b3a-4d00-ba75-47a2df83e250",
       "width": 0,
       "x": 1465,
-      "y": 540,
+      "y": 485,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -394,12 +407,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "f435fc77-cda5-4429-8170-0a52d2898400",
       "width": 0,
-      "x": 1705,
-      "y": 270,
+      "x": 1465,
+      "y": 683,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -408,13 +421,13 @@
           "folded": true,
           "name": "customId",
           "type": "string",
-          "value": "selectedTowerName"
+          "value": "selectedWaveNumber"
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Tour à modifier : "
+          "value": "Vague à modifier : "
         },
         {
           "folded": true,
@@ -428,12 +441,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "215aa743-cf5f-4642-aef1-a2448948e3ed",
       "width": 0,
       "x": 1465,
-      "y": 400,
+      "y": 355,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -462,12 +475,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "c0b66626-8819-4d59-961d-de44487d359c",
       "width": 0,
       "x": 1465,
-      "y": 470,
+      "y": 420,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -496,12 +509,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "f2db047d-c640-4413-8a56-5740d33bd628",
       "width": 0,
       "x": 1465,
-      "y": 330,
+      "y": 290,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -530,12 +543,12 @@
       "angle": 0,
       "customSize": false,
       "height": 0,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "TestingText",
       "persistentUuid": "b7c5f514-22f8-4faa-a9f2-e9c715050e51",
       "width": 0,
-      "x": 1440,
-      "y": 270,
+      "x": 1670,
+      "y": 230,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -559,6 +572,123 @@
           "value": 20
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "ApplyAllButton",
+      "persistentUuid": "e40d2e4f-ee32-437d-89b5-acd4babc587e",
+      "width": 0,
+      "x": 1560,
+      "y": 570,
+      "zOrder": 34,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "da36707a-0bf2-424b-b20b-9fd2a635b868",
+      "width": 0,
+      "x": 1440,
+      "y": 230,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "selectedTowerName"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Tour à modifier : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "17947f10-e0e4-4d1c-b6c8-9f9005ca3bfe",
+      "width": 0,
+      "x": 1465,
+      "y": 738,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "bossHP"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "PVs du boss : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "12afccfa-eba6-4da0-b29a-2fd58c226d50",
+      "width": 0,
+      "x": 1465,
+      "y": 793,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "creepsInWave"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Nombre de creeps dans la vague : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
     }
   ],
   "editionSettings": {
@@ -571,7 +701,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4027225833325934,
+    "zoomFactor": 0.5250860067782537,
     "windowMask": false
   }
 }
