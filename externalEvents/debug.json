@@ -1083,6 +1083,35 @@
                     "TestingText",
                     "customId",
                     "=",
+                    "\"creepSpawnDelay\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "TestingText",
+                    "Text",
+                    "=",
+                    "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "TestingText",
+                    "customId",
+                    "=",
                     "\"creepsHP\""
                   ]
                 }
@@ -1889,6 +1918,34 @@
                     "TestingText",
                     "customId",
                     "=",
+                    "\"creepSpawnDelay\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "TestingText",
+                    "customId",
+                    "=",
                     "\"creepsHP\""
                   ]
                 }
@@ -1936,18 +1993,7 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "",
-                    "=",
-                    ""
-                  ]
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -2646,6 +2692,34 @@
                   },
                   "parameters": [
                     "EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "TestingText",
+                    "customId",
+                    "=",
+                    "\"creepSpawnDelay\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
                     "-",
                     "1"
                   ]

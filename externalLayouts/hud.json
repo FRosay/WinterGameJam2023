@@ -665,7 +665,7 @@
       "persistentUuid": "12afccfa-eba6-4da0-b29a-2fd58c226d50",
       "width": 0,
       "x": 1450,
-      "y": 900,
+      "y": 960,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -674,13 +674,13 @@
           "folded": true,
           "name": "customId",
           "type": "string",
-          "value": "creepsInWave"
+          "value": "creepSpawnDelay"
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Nombre de creeps dans la vague : "
+          "value": "Délai entre chaque ennemi : "
         },
         {
           "folded": true,
@@ -919,6 +919,40 @@
           "name": "initialText",
           "type": "string",
           "value": "multiplié par la vitesse) : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "af66955b-da5b-4552-9a57-27f9f8d55c47",
+      "width": 0,
+      "x": 1450,
+      "y": 900,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "creepsInWave"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Nombre de creeps dans la vague : "
         },
         {
           "folded": true,
