@@ -672,6 +672,21 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
@@ -704,6 +719,15 @@
                 "Animation",
                 "=",
                 "\"border-left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "False"
               ]
             }
           ]
@@ -743,10 +767,20 @@
                 "=",
                 "\"border-right\""
               ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "False"
+              ]
             }
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -780,6 +814,15 @@
                 "Animation",
                 "=",
                 "\"border-top\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "False"
               ]
             }
           ],
@@ -881,6 +924,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -914,6 +958,15 @@
                 "Animation",
                 "=",
                 "\"border-bot\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "False"
               ]
             }
           ],
@@ -1010,6 +1063,43 @@
                     "\"border-bot-left\""
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isCenter",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "grassCenterRng",
+                "=",
+                "RandomInRange(1, 5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grass",
+                "Animation",
+                "=",
+                "\"center-\" + ToString(Variable(grassCenterRng))"
               ]
             }
           ]

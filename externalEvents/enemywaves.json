@@ -177,6 +177,30 @@
         },
         {
           "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetMaxSpeed"
+          },
+          "parameters": [
+            "CreepSlime",
+            "NavMeshPathfindingBehavior",
+            "=",
+            "EnemyStats.CreepSlime.moveSpeed",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentHitPoints"
+          },
+          "parameters": [
+            "CreepSlime",
+            "EnemyHealth",
+            "=",
+            "EnemyStats.CreepSlime.HP",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "ModVarScene"
           },
           "parameters": [

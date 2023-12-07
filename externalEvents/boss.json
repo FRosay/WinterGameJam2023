@@ -231,6 +231,15 @@
                     "",
                     "Grass"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
                 }
               ],
               "actions": [],

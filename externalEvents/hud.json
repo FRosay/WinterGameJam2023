@@ -362,8 +362,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
-      "name": "Escape",
+      "name": "De-select",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -1050,11 +1049,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "Layer"
+                    "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "Grass",
-                    "\"HUD\""
+                    "isPreview",
+                    "True"
                   ]
                 }
               ],
@@ -1093,6 +1093,50 @@
                   "parameters": [
                     "Path",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Grass"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Path"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Grass",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TilesGeneration::NameOfGrass"
+                      },
+                      "parameters": [
+                        "",
+                        "Grass",
+                        "Path",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
