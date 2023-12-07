@@ -532,7 +532,7 @@
                         "Object",
                         "Behavior",
                         "=",
-                        "Object.Behavior::PropertyCurrentSpeed() - (Object.Behavior::PropertyCurrentSpeed() * 0.3)"
+                        "Object.Behavior::PropertyCurrentSpeed() - (Object.Behavior::PropertyCurrentSpeed() * GlobalVariable(AllEffects.freezeStrength))"
                       ]
                     },
                     {

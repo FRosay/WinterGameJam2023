@@ -314,6 +314,30 @@
             "",
             "\"nextWaveTimer\""
           ]
+        },
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetMaxSpeed"
+          },
+          "parameters": [
+            "Slime",
+            "NavMeshPathfindingBehavior",
+            "=",
+            "EnemyWaves[WavesSettings.currentWave-1].bossSpeed",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentHitPoints"
+          },
+          "parameters": [
+            "Slime",
+            "EnemyHealth",
+            "=",
+            "EnemyWaves[WavesSettings.currentWave-1].bossHP",
+            ""
+          ]
         }
       ]
     },

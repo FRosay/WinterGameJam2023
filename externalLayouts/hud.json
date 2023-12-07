@@ -334,8 +334,8 @@
       "name": "Play",
       "persistentUuid": "9f75e4ea-8189-479e-b0ef-e33e055a2641",
       "width": 80,
-      "x": 1795,
-      "y": 33,
+      "x": 1805,
+      "y": 25,
       "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
@@ -349,8 +349,8 @@
       "name": "StaticText",
       "persistentUuid": "0d8574a1-9306-4486-a072-a0f556176dc1",
       "width": 0,
-      "x": 1479,
-      "y": 170,
+      "x": 1464,
+      "y": 155,
       "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
@@ -377,8 +377,8 @@
       "name": "TestingText",
       "persistentUuid": "46893560-5b3a-4d00-ba75-47a2df83e250",
       "width": 0,
-      "x": 1465,
-      "y": 485,
+      "x": 1655,
+      "y": 270,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -387,13 +387,13 @@
           "folded": true,
           "name": "customId",
           "type": "string",
-          "value": "towerPrice"
+          "value": "towerEffectDuration"
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Prix : "
+          "value": "Durée de l'effet : "
         },
         {
           "folded": true,
@@ -411,8 +411,8 @@
       "name": "TestingText",
       "persistentUuid": "f435fc77-cda5-4429-8170-0a52d2898400",
       "width": 0,
-      "x": 1465,
-      "y": 683,
+      "x": 1655,
+      "y": 670,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -421,13 +421,13 @@
           "folded": true,
           "name": "customId",
           "type": "string",
-          "value": "selectedWaveNumber"
+          "value": "creepsMoveSpeed"
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Vague à modifier : "
+          "value": "Vitesse des creeps : "
         },
         {
           "folded": true,
@@ -445,8 +445,8 @@
       "name": "TestingText",
       "persistentUuid": "215aa743-cf5f-4642-aef1-a2448948e3ed",
       "width": 0,
-      "x": 1465,
-      "y": 355,
+      "x": 1655,
+      "y": 325,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -479,8 +479,8 @@
       "name": "TestingText",
       "persistentUuid": "c0b66626-8819-4d59-961d-de44487d359c",
       "width": 0,
-      "x": 1465,
-      "y": 420,
+      "x": 1425,
+      "y": 380,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -513,8 +513,8 @@
       "name": "TestingText",
       "persistentUuid": "f2db047d-c640-4413-8a56-5740d33bd628",
       "width": 0,
-      "x": 1465,
-      "y": 290,
+      "x": 1425,
+      "y": 325,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -547,8 +547,8 @@
       "name": "TestingText",
       "persistentUuid": "b7c5f514-22f8-4faa-a9f2-e9c715050e51",
       "width": 0,
-      "x": 1670,
-      "y": 230,
+      "x": 1655,
+      "y": 215,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -581,8 +581,8 @@
       "name": "ApplyAllButton",
       "persistentUuid": "e40d2e4f-ee32-437d-89b5-acd4babc587e",
       "width": 0,
-      "x": 1560,
-      "y": 570,
+      "x": 1478,
+      "y": 525,
       "zOrder": 34,
       "numberProperties": [],
       "stringProperties": [],
@@ -596,8 +596,8 @@
       "name": "TestingText",
       "persistentUuid": "da36707a-0bf2-424b-b20b-9fd2a635b868",
       "width": 0,
-      "x": 1440,
-      "y": 230,
+      "x": 1425,
+      "y": 215,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -630,8 +630,110 @@
       "name": "TestingText",
       "persistentUuid": "17947f10-e0e4-4d1c-b6c8-9f9005ca3bfe",
       "width": 0,
-      "x": 1465,
-      "y": 738,
+      "x": 1655,
+      "y": 840,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "bossSpeed"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Vitesse du boss : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "12afccfa-eba6-4da0-b29a-2fd58c226d50",
+      "width": 0,
+      "x": 1450,
+      "y": 900,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "creepsInWave"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Nombre de creeps dans la vague : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "38d5cac0-5ecf-4b71-a47b-1875ba06a17c",
+      "width": 0,
+      "x": 1450,
+      "y": 780,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "selectedWaveNumber"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Vague à modifier : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "0e848c0e-3d6f-4dcf-96e7-64dfc9e2accb",
+      "width": 0,
+      "x": 1425,
+      "y": 840,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -662,10 +764,10 @@
       "height": 0,
       "layer": "TestLayer",
       "name": "TestingText",
-      "persistentUuid": "12afccfa-eba6-4da0-b29a-2fd58c226d50",
+      "persistentUuid": "d52724e3-bf24-4453-aa19-1a792cdbb512",
       "width": 0,
-      "x": 1465,
-      "y": 793,
+      "x": 1425,
+      "y": 670,
       "zOrder": 33,
       "numberProperties": [],
       "stringProperties": [],
@@ -674,13 +776,149 @@
           "folded": true,
           "name": "customId",
           "type": "string",
-          "value": "creepsInWave"
+          "value": "creepsHP"
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Nombre de creeps dans la vague : "
+          "value": "HP des creeps : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "7cd148d5-e0b1-4aa6-8d81-d482e9a06962",
+      "width": 0,
+      "x": 1470,
+      "y": 430,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "freezeEffectStrengthBonusText"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Force du slow (on retire ce nombre"
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "d2f1ebc2-cc40-47af-93ff-d64156fb28f1",
+      "width": 0,
+      "x": 1425,
+      "y": 270,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerEffect"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Effet de la tour : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "0ab6c6c0-8f57-4a49-aa9f-d83e508b8ff9",
+      "width": 0,
+      "x": 1655,
+      "y": 380,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "towerPrice"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Prix : "
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "TestingText",
+      "persistentUuid": "eb48b4fb-6258-47b2-8e3a-b2fa5e30ab84",
+      "width": 0,
+      "x": 1500,
+      "y": 460,
+      "zOrder": 33,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "freezeEffectStrength"
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "multiplié par la vitesse) : "
         },
         {
           "folded": true,

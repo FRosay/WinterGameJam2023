@@ -1369,7 +1369,6 @@
   "objectsGroups": [],
   "variables": [
     {
-      "folded": true,
       "name": "TowerStats",
       "type": "structure",
       "children": [
@@ -1576,6 +1575,11 @@
               "value": 50
             },
             {
+              "name": "bossSpeed",
+              "type": "number",
+              "value": 40
+            },
+            {
               "folded": true,
               "name": "timeBetweenSpawns",
               "type": "number",
@@ -1597,6 +1601,12 @@
               "persistentUuid": "63aa0868-7648-48e7-8c06-813161cbbe85",
               "type": "number",
               "value": 100
+            },
+            {
+              "name": "bossSpeed",
+              "persistentUuid": "3bc8450f-c08c-49d0-84f2-ffd1e86c512c",
+              "type": "number",
+              "value": 40
             },
             {
               "folded": true,
@@ -1621,6 +1631,12 @@
               "persistentUuid": "0dcc81c3-11ef-497b-b18b-3d4ce6dbb68b",
               "type": "number",
               "value": 150
+            },
+            {
+              "name": "bossSpeed",
+              "persistentUuid": "08091e42-04f2-4ca6-8805-fbc513cb7115",
+              "type": "number",
+              "value": 40
             },
             {
               "folded": true,
@@ -1648,6 +1664,12 @@
               "value": 200
             },
             {
+              "name": "bossSpeed",
+              "persistentUuid": "db2718ba-1d3a-44de-ba19-8d0a2a538792",
+              "type": "number",
+              "value": 40
+            },
+            {
               "folded": true,
               "name": "timeBetweenSpawns",
               "persistentUuid": "327fed60-4d57-4e2c-a87b-173c0792b27e",
@@ -1671,6 +1693,12 @@
               "persistentUuid": "1522d9c7-a3c9-45cc-88f9-051db2c23879",
               "type": "number",
               "value": 250
+            },
+            {
+              "name": "bossSpeed",
+              "persistentUuid": "514bc58e-54c2-41f1-94e0-51f36b01012c",
+              "type": "number",
+              "value": 40
             },
             {
               "folded": true,
@@ -1703,23 +1731,6 @@
               "value": 50
             }
           ]
-        },
-        {
-          "name": "Slime",
-          "type": "structure",
-          "children": [
-            {
-              "folded": true,
-              "name": "HP",
-              "type": "number",
-              "value": 50
-            },
-            {
-              "name": "moveSpeed",
-              "type": "number",
-              "value": 40
-            }
-          ]
         }
       ]
     },
@@ -1730,7 +1741,6 @@
       "value": false
     },
     {
-      "folded": true,
       "name": "AllEffects",
       "type": "structure",
       "children": [
@@ -1738,11 +1748,15 @@
           "name": "freeze",
           "type": "string",
           "value": "freeze"
+        },
+        {
+          "name": "freezeStrength",
+          "type": "number",
+          "value": 0.3
         }
       ]
     },
     {
-      "folded": true,
       "name": "AllEffectsArray",
       "type": "array",
       "children": [
