@@ -6110,6 +6110,14 @@
               "parameters": [
                 "Spawner"
               ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Center"
+              ]
             }
           ]
         },
