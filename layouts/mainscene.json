@@ -3494,7 +3494,20 @@
       "name": "Grass",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "centerAnimationNumber",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "folded": true,
+          "name": "isPreview",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -6226,6 +6239,24 @@
                 "Base.CenterX()",
                 "Base.CenterY()",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Grass",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Grass",
+                "centerAnimationNumber",
+                "=",
+                "RandomInRange(1, 5)"
               ]
             }
           ]

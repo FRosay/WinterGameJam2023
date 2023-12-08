@@ -565,16 +565,6 @@
                             "+",
                             "Variable(BoardGeneration.tileSize)"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "BoardGeneration.uniqueTileId",
-                            "+",
-                            "1"
-                          ]
                         }
                       ]
                     }
@@ -1083,23 +1073,13 @@
           "actions": [
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "grassCenterRng",
-                "=",
-                "RandomInRange(1, 5)"
-              ]
-            },
-            {
-              "type": {
                 "value": "AnimatableCapability::AnimatableBehavior::SetName"
               },
               "parameters": [
                 "Grass",
                 "Animation",
                 "=",
-                "\"center-\" + ToString(Variable(grassCenterRng))"
+                "\"center-\" + ToString(Grass.Variable(centerAnimationNumber))"
               ]
             }
           ]
