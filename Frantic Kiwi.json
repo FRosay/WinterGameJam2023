@@ -1358,6 +1358,69 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/7423149de6e486ac885567761bef3236bcdb8414d05cb0920ae7aedffdec85f9_mononoki-Regular.ttf",
           "name": "mononoki-Regular.ttf"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_14.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_15.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_16.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_17.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_17.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_18.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_18.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_19.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_19.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled sprites/herb/tile_herb_20.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled sprites\\herb\\tile_herb_20.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
