@@ -430,28 +430,6 @@
           "objectGroups": []
         },
         {
-          "fullName": "",
-          "functionType": "Action",
-          "name": "doStepPostEvents",
-          "sentence": "",
-          "events": [],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
           "fullName": "Update Tower Stats",
           "functionType": "Action",
           "name": "UpdateStats",
@@ -689,13 +667,14 @@
                     },
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\sounds\\base_projectile.mp3",
+                        "1",
                         "",
-                        "",
+                        "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)",
                         ""
                       ]
                     }

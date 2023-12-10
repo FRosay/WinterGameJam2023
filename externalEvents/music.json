@@ -18,13 +18,14 @@
       "actions": [
         {
           "type": {
-            "value": "PlayMusic"
+            "value": "PlayMusicCanal"
           },
           "parameters": [
             "",
             "assets/music/base-slime-adventure.mp3",
+            "1",
             "yes",
-            "",
+            "GlobalSettings.VolumeSettings.musicVolume",
             ""
           ]
         }

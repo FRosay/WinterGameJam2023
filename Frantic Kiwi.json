@@ -1421,6 +1421,63 @@
         "name": "assets\\tiled sprites\\herb\\tile_herb_20.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/sound/son_ON_clair.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\sound\\son_ON_clair.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/sound/son_OFF_clair.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\sound\\son_OFF_clair.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Square White Slider Border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/324e5f522f6242e9f93090e75ddc38427c3a6c42e8236dbf0ed541bd85cf7221_Square White Slider Border.png",
+          "name": "Square White Slider Border.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Square White Slider Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/47bc684198cd25b3ec74b0e72c2e2c7abb1b6736bd9f4b78a943c663e83118bf_Square White Slider Fill Bar.png",
+          "name": "Square White Slider Fill Bar.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Square White Slider Thumb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Thumb.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/848f861767e7ce4581dba9e122ee7bafeaca57987655cebe1f78ab31d1300f0f_Square White Slider Thumb.png",
+          "name": "Square White Slider Thumb.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -1799,12 +1856,6 @@
       ]
     },
     {
-      "folded": true,
-      "name": "disableSound",
-      "type": "boolean",
-      "value": false
-    },
-    {
       "name": "AllEffects",
       "type": "structure",
       "children": [
@@ -1828,6 +1879,58 @@
           "folded": true,
           "type": "string",
           "value": "freeze"
+        }
+      ]
+    },
+    {
+      "name": "GlobalSettings",
+      "type": "structure",
+      "children": [
+        {
+          "name": "VolumeSettings",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "applyVolumeSettings",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "folded": true,
+              "name": "musicVolume",
+              "persistentUuid": "e2a1629e-2e18-4d55-92b7-4e6f1c46c201",
+              "type": "number",
+              "value": 75
+            },
+            {
+              "name": "musicVolumePreMute",
+              "type": "number",
+              "value": 75
+            },
+            {
+              "name": "muteMusic",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "folded": true,
+              "name": "muteSound",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "folded": true,
+              "name": "soundVolume",
+              "type": "number",
+              "value": 75
+            },
+            {
+              "name": "soundVolumePreMute",
+              "type": "number",
+              "value": 75
+            }
+          ]
         }
       ]
     }
@@ -1881,6 +1984,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/panelspriteslider"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritebutton"

@@ -99,18 +99,26 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 48,
       "layer": "HUD",
       "name": "SoundControl",
       "persistentUuid": "a60d903b-58da-4265-9b39-786896ad84db",
-      "width": 0,
-      "x": 51,
-      "y": 39,
+      "width": 48,
+      "x": 405,
+      "y": 117,
       "zOrder": 25,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "soundMuteButton"
+        }
+      ]
     },
     {
       "angle": 0,
@@ -189,7 +197,7 @@
       "initialVariables": []
     },
     {
-      "angle": 0,
+      "angle": 270,
       "customSize": true,
       "depth": 0,
       "height": 40,
@@ -349,23 +357,29 @@
       "name": "StaticText",
       "persistentUuid": "0d8574a1-9306-4486-a072-a0f556176dc1",
       "width": 0,
-      "x": 1464,
-      "y": 155,
+      "x": 20,
+      "y": 65,
       "zOrder": 32,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
         {
           "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "musicSliderText"
+        },
+        {
+          "folded": true,
           "name": "initialSize",
           "type": "number",
-          "value": 30
+          "value": 20
         },
         {
           "folded": true,
           "name": "initialText",
           "type": "string",
-          "value": "Console de test :"
+          "value": "Musiques :"
         }
       ]
     },
@@ -961,6 +975,157 @@
           "value": 20
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "VolumeSlider",
+      "persistentUuid": "d6aa0caf-586b-4f80-908b-a960ea89e29e",
+      "width": 0,
+      "x": 130,
+      "y": 65,
+      "zOrder": 35,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "musicSlider"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "VolumeSlider",
+      "persistentUuid": "9133afec-29e0-450a-99ca-be87e3ea9047",
+      "width": 0,
+      "x": 130,
+      "y": 130,
+      "zOrder": 35,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "soundSlider"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "StaticText",
+      "persistentUuid": "b0551d5a-628e-4a55-8db6-5077fe9ade8c",
+      "width": 0,
+      "x": 1464,
+      "y": 155,
+      "zOrder": 32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 30
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Console de test :"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "TestLayer",
+      "name": "StaticText",
+      "persistentUuid": "536e7ce7-d6b4-431b-84ea-cb7f40996b31",
+      "width": 0,
+      "x": 20,
+      "y": 130,
+      "zOrder": 32,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "soundSliderText"
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 20
+        },
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": "Sons :"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "SoundControl",
+      "persistentUuid": "2ed470c5-2b82-4e9d-a71c-a1b8f4724a20",
+      "width": 0,
+      "x": 15,
+      "y": 15,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "mainButton"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 48,
+      "layer": "HUD",
+      "name": "SoundControl",
+      "persistentUuid": "63a4f56c-f30b-483a-8d09-0d4a32dd207c",
+      "width": 48,
+      "x": 405,
+      "y": 55,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "musicMuteButton"
+        }
+      ]
     }
   ],
   "editionSettings": {
@@ -973,7 +1138,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5250860067782537,
+    "zoomFactor": 1.243683698838018,
     "windowMask": false
   }
 }

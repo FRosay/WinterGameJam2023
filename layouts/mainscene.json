@@ -1,13 +1,13 @@
 {
-  "b": 190,
+  "b": 50,
   "disableInputWhenNotFocused": true,
   "mangledName": "MainScene",
   "name": "MainScene",
-  "r": 217,
+  "r": 45,
   "standardSortMethod": true,
-  "stopSoundsOnStartup": true,
+  "stopSoundsOnStartup": false,
   "title": "",
-  "v": 243,
+  "v": 45,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.4163025217733327,
+    "zoomFactor": 0.4303403802207654,
     "windowMask": false
   },
   "objectsGroups": [
@@ -5616,9 +5616,27 @@
       "name": "SoundControl",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isShrinked",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "on",
@@ -5630,7 +5648,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\HUD\\sound\\son_ON_sombre.png",
+                  "image": "assets\\sprites\\HUD\\sound\\son_ON_clair.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5646,20 +5664,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8,
-                        "y": 8
+                        "x": 12,
+                        "y": 12
                       },
                       {
-                        "x": 56,
-                        "y": 8
+                        "x": 84,
+                        "y": 12
                       },
                       {
-                        "x": 56,
-                        "y": 56
+                        "x": 84,
+                        "y": 84
                       },
                       {
-                        "x": 8,
-                        "y": 56
+                        "x": 12,
+                        "y": 84
                       }
                     ]
                   ]
@@ -5678,7 +5696,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\HUD\\sound\\son_OFF_sombre.png",
+                  "image": "assets\\sprites\\HUD\\sound\\son_OFF_clair.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5694,20 +5712,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 8,
-                        "y": 8
+                        "x": 12,
+                        "y": 12
                       },
                       {
-                        "x": 56,
-                        "y": 8
+                        "x": 84,
+                        "y": 12
                       },
                       {
-                        "x": 56,
-                        "y": 56
+                        "x": 84,
+                        "y": 84
                       },
                       {
-                        "x": 8,
-                        "y": 56
+                        "x": 12,
+                        "y": 84
                       }
                     ]
                   ]
@@ -5738,18 +5756,29 @@
           "name": "initialSize",
           "type": "number",
           "value": 25
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "string": "-",
       "font": "",
       "textAlignment": "left",
       "characterSize": 48,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -6089,9 +6118,9 @@
       "textAlignment": "left",
       "characterSize": 48,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -6154,6 +6183,80 @@
           "tiled": true,
           "topMargin": 22,
           "width": 192
+        }
+      }
+    },
+    {
+      "assetStoreId": "bfeeb465a4a164b560a2215e3ff9e78e66123af43cbf7ef1f22d56fca4271c80",
+      "name": "VolumeSlider",
+      "type": "PanelSpriteSlider::PanelSpriteSlider",
+      "variables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "BarTopPadding": 5,
+        "BarLeftPadding": 6,
+        "BarRightPadding": 6,
+        "BarBottomPadding": 5,
+        "LabelMargin": 6
+      },
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 4,
+          "height": 28,
+          "leftMargin": 2,
+          "rightMargin": 2,
+          "texture": "Square White Slider Border.png",
+          "tiled": false,
+          "topMargin": 4,
+          "width": 265
+        },
+        "FillBar": {
+          "bottomMargin": 2,
+          "height": 16,
+          "leftMargin": 0,
+          "rightMargin": 0,
+          "texture": "Square White Slider Fill Bar.png",
+          "tiled": false,
+          "topMargin": 0,
+          "width": 16
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "It displays the value when it changes.",
+          "font": "",
+          "textAlignment": "",
+          "characterSize": 20,
+          "color": {
+            "b": 221,
+            "g": 221,
+            "r": 221
+          }
+        },
+        "Thumb": {
+          "bottomMargin": 2,
+          "height": 36,
+          "leftMargin": 1,
+          "rightMargin": 1,
+          "texture": "Square White Slider Thumb.png",
+          "tiled": false,
+          "topMargin": 2,
+          "width": 22
         }
       }
     }
@@ -6258,6 +6361,9 @@
             "objectName": "SoundControl"
           },
           {
+            "objectName": "VolumeSlider"
+          },
+          {
             "objectName": "Wave"
           },
           {
@@ -6345,7 +6451,7 @@
           "parameters": [
             "",
             "=",
-            "45"
+            "75"
           ]
         }
       ],
@@ -6629,6 +6735,48 @@
                 "Path"
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"showVolumeSlider\"",
+            ">=",
+            "0.50"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "VolumeSlider",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "RemoveTimer"
+          },
+          "parameters": [
+            "",
+            "\"showVolumeSlider\""
           ]
         }
       ]
@@ -6974,13 +7122,14 @@
             },
             {
               "type": {
-                "value": "PlaySound"
+                "value": "PlaySoundCanal"
               },
               "parameters": [
                 "",
                 "assets\\sounds\\life_loss.mp3",
+                "1",
                 "",
-                "",
+                "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)",
                 ""
               ]
             }
