@@ -1892,19 +1892,8 @@
           "children": [
             {
               "folded": true,
-              "name": "applyVolumeSettings",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "folded": true,
               "name": "musicVolume",
               "persistentUuid": "e2a1629e-2e18-4d55-92b7-4e6f1c46c201",
-              "type": "number",
-              "value": 75
-            },
-            {
-              "name": "musicVolumePreMute",
               "type": "number",
               "value": 75
             },
@@ -1922,11 +1911,6 @@
             {
               "folded": true,
               "name": "soundVolume",
-              "type": "number",
-              "value": 75
-            },
-            {
-              "name": "soundVolumePreMute",
               "type": "number",
               "value": 75
             }
@@ -1960,7 +1944,7 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/sound"
+      "referenceTo": "/externalEvents/volume"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -2027,6 +2011,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/tilesystem"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/projectvolume"
     }
   ],
   "externalLayouts": [

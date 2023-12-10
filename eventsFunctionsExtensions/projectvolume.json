@@ -1,0 +1,816 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "ProjectVolume",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCjwvc3R5bGU+DQo8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxMCwyMSAzLDIxIDMsMTEgMTAsMTEgIi8+DQo8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxMCwxMSAyMCwzLjggMjAsMjguMiAxMCwyMSAiLz4NCjxnPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yNi40LDIyYzEuNi0xLjUsMi42LTMuNiwyLjYtNmMwLTIuNC0xLTQuNS0yLjYtNiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0LDE4LjZjMC43LTAuNywxLjItMS42LDEuMi0yLjZzLTAuNC0yLTEuMi0yLjYiLz4NCjwvZz4NCjwvc3ZnPg0K",
+  "name": "ProjectVolume",
+  "previewIconUrl": "https://asset-resources.gdevelop.io/public-resources/Icons/Line Hero Pack/Master/SVG/Computers and Hardware/597b9270a7850f1d4ded32ff19a533f0d332b321ca9723bf789979f3e64fedbb_Computers and Hardware_speaker_audio_sound_loud.svg",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Apply the current sound or music volume (or both)",
+      "fullName": "Apply sound / music",
+      "functionType": "Action",
+      "name": "applySoundOrMusic",
+      "sentence": "Apply the current _PARAM1_ volume to the game",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"sound\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "ToString(GlobalVariable(GlobalSettings.VolumeSettings.muteSound))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "ToString(GlobalVariable(GlobalSettings.VolumeSettings.muteSound))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVolumeSoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"music\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteMusic",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteMusic",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "=",
+                    "GlobalVariable(GlobalSettings.VolumeSettings.musicVolume)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"sound & music\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ProjectVolume::applySoundOrMusic"
+              },
+              "parameters": [
+                "",
+                "\"sound\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ProjectVolume::applySoundOrMusic"
+              },
+              "parameters": [
+                "",
+                "\"music\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "soundOrMusic",
+          "supplementaryInformation": "[\"sound\",\"music\",\"sound & music\"]",
+          "type": "stringWithSelector"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Mute or unmute the sound or music volume (or both)",
+      "fullName": "Mute or unmute sound / music",
+      "functionType": "Action",
+      "name": "muteSoundOrMusic",
+      "sentence": "_PARAM1_ the _PARAM2_ of the game (toggle off _PARAM3_)",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Mute sound"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"sound\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"soundMuteButton\""
+                  ]
+                }
+              ],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"muteOrUnmute\"",
+                    "=",
+                    "\"Mute\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "Animation",
+                    "=",
+                    "\"off\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"muteSound\"",
+                    "\"yes\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"muteOrUnmute\"",
+                    "=",
+                    "\"Unmute\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "Animation",
+                    "=",
+                    "\"on\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DeleteGroupFichier"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"muteSound\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Mute music"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"music\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"musicMuteButton\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareArgumentAsString"
+                      },
+                      "parameters": [
+                        "\"muteOrUnmute\"",
+                        "=",
+                        "\"Mute\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "Animation",
+                        "=",
+                        "\"off\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteMusic",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EcrireFichierTxt"
+                      },
+                      "parameters": [
+                        "\"VolumeSettings\"",
+                        "\"muteMusic\"",
+                        "\"yes\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareArgumentAsString"
+                      },
+                      "parameters": [
+                        "\"muteOrUnmute\"",
+                        "=",
+                        "\"Unmute\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "Animation",
+                        "=",
+                        "\"on\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteMusic",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "DeleteGroupFichier"
+                      },
+                      "parameters": [
+                        "\"VolumeSettings\"",
+                        "\"muteMusic\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Mute both"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"sound & music\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"muteOrUnmute\"",
+                    "=",
+                    "\"Mute\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Mute\"",
+                    "\"sound\"",
+                    "SoundControl",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Mute\"",
+                    "\"music\"",
+                    "SoundControl",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareArgumentAsString"
+                  },
+                  "parameters": [
+                    "\"muteOrUnmute\"",
+                    "=",
+                    "\"Unmute\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Unmute\"",
+                    "\"sound\"",
+                    "SoundControl",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Unmute\"",
+                    "\"music\"",
+                    "SoundControl",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "muteOrUnmute",
+          "supplementaryInformation": "[\"Mute\",\"Unmute\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "description": "",
+          "name": "soundOrMusic",
+          "supplementaryInformation": "[\"sound\",\"music\",\"sound & music\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "description": "The SoundControl sprite(s) to toggle off",
+          "name": "SoundControl",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Get the current sound or music volume",
+      "fullName": "Get sound / music volume",
+      "functionType": "Expression",
+      "name": "getSoundOrMusicVolume",
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"sound\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareArgumentAsString"
+              },
+              "parameters": [
+                "\"soundOrMusic\"",
+                "=",
+                "\"music\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteMusic",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteMusic",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "GlobalVariable(GlobalSettings.VolumeSettings.musicVolume)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "expressionType": {
+        "type": "expression"
+      },
+      "parameters": [
+        {
+          "description": "",
+          "name": "soundOrMusic",
+          "supplementaryInformation": "[\"sound\",\"music\"]",
+          "type": "stringWithSelector"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

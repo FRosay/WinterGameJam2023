@@ -100,7 +100,7 @@
                     "assets\\sounds\\enemy_spawn.mp3",
                     "1",
                     "",
-                    "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)",
+                    "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                     ""
                   ]
                 }

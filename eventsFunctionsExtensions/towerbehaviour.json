@@ -674,7 +674,7 @@
                         "assets\\sounds\\base_projectile.mp3",
                         "1",
                         "",
-                        "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)",
+                        "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                         ""
                       ]
                     }

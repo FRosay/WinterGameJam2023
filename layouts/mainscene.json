@@ -216,6 +216,23 @@
           "value": 0
         }
       ]
+    },
+    {
+      "name": "TmpVolume",
+      "type": "structure",
+      "children": [
+        {
+          "name": "tmpMusicVolume",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "tmpSoundVolume",
+          "type": "number",
+          "value": 0
+        }
+      ]
     }
   ],
   "instances": [
@@ -6678,18 +6695,6 @@
                 "drawGridMask",
                 "initialPath"
               ]
-            },
-            {
-              "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-              },
-              "parameters": [
-                "CreepSlime",
-                "NavMeshPathfindingBehavior",
-                "Base.CenterX()",
-                "Base.CenterY()",
-                ""
-              ]
             }
           ]
         },
@@ -6929,14 +6934,14 @@
       "include": {
         "includeConfig": 0
       },
-      "target": "Music"
+      "target": "Volume"
     },
     {
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
       },
-      "target": "Sound"
+      "target": "Music"
     },
     {
       "type": "BuiltinCommonInstructions::Link",
@@ -7129,7 +7134,7 @@
                 "assets\\sounds\\life_loss.mp3",
                 "1",
                 "",
-                "GlobalVariable(GlobalSettings.VolumeSettings.soundVolume)",
+                "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                 ""
               ]
             }
