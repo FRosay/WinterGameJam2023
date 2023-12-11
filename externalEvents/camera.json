@@ -18,23 +18,23 @@
       "actions": [
         {
           "type": {
-            "value": "CentreCamera"
+            "value": "ZoomCamera"
           },
           "parameters": [
             "",
-            "Center",
-            "",
+            "1.50",
             "",
             ""
           ]
         },
         {
           "type": {
-            "value": "ZoomCamera"
+            "value": "CentreCamera"
           },
           "parameters": [
             "",
-            "1.50",
+            "Center",
+            "",
             "",
             ""
           ]

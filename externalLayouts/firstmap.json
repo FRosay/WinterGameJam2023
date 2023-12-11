@@ -10,7 +10,7 @@
       "name": "Spawner",
       "persistentUuid": "a8f0cd21-170a-4033-89e4-00ca394dc2db",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 416,
       "zOrder": 3,
       "numberProperties": [],
@@ -42,7 +42,7 @@
       "persistentUuid": "3203dac7-7afb-47a2-83e7-6fd10a494567",
       "width": 0,
       "x": 288,
-      "y": 256,
+      "y": 245,
       "zOrder": -4,
       "numberProperties": [],
       "stringProperties": [],
@@ -87,7 +87,7 @@
       "name": "Path",
       "persistentUuid": "82dfb437-9ce0-403e-a46b-3958bd3b300a",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 448,
       "zOrder": 0,
       "numberProperties": [],
@@ -102,7 +102,7 @@
       "name": "Path",
       "persistentUuid": "9ce21553-5781-47b6-87cf-ffc8c0fcc018",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 544,
       "zOrder": 0,
       "numberProperties": [],
@@ -162,7 +162,7 @@
       "name": "Path",
       "persistentUuid": "28892812-0c1f-4a76-bbb9-5f53e053bf82",
       "width": 0,
-      "x": 416,
+      "x": 448,
       "y": 416,
       "zOrder": 0,
       "numberProperties": [],
@@ -192,7 +192,7 @@
       "name": "Path",
       "persistentUuid": "0a7046e3-729c-4b42-aef5-cb35e6ba26fd",
       "width": 0,
-      "x": 480,
+      "x": 512,
       "y": 416,
       "zOrder": 0,
       "numberProperties": [],
@@ -207,7 +207,7 @@
       "name": "Path",
       "persistentUuid": "0b27301c-2390-4257-961d-85bf3b30d2bd",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 416,
       "zOrder": 0,
       "numberProperties": [],
@@ -297,7 +297,7 @@
       "name": "Path",
       "persistentUuid": "1738deac-7066-40a3-840c-a189cf5e28d3",
       "width": 0,
-      "x": 544,
+      "x": 576,
       "y": 544,
       "zOrder": 0,
       "numberProperties": [],
@@ -843,1634 +843,6 @@
       "height": 0,
       "layer": "",
       "name": "Path",
-      "persistentUuid": "5da1c14e-79dd-499f-a85d-5c2039a284b8",
-      "width": 0,
-      "x": -64,
-      "y": 512,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "e69a1b42-c5cc-4f1a-bb66-aee078cc1cb8",
-      "width": 0,
-      "x": -64,
-      "y": 480,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "bc52cbe5-5e80-4667-90f4-ae98586440cf",
-      "width": 0,
-      "x": -64,
-      "y": 448,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "d4a09d97-ee28-485e-b2a9-601522e4e2d3",
-      "width": 0,
-      "x": -64,
-      "y": 352,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "956462ea-ba01-471e-9501-ee4b14aed413",
-      "width": 0,
-      "x": -64,
-      "y": 384,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "0cf22678-f159-407a-9426-9d9d5de84d2f",
-      "width": 0,
-      "x": -64,
-      "y": 416,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "1f1854b3-ad21-4579-953b-ac7a4253598d",
-      "width": 0,
-      "x": -64,
-      "y": 64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "fc4a6f5d-1118-4bdb-a2bb-4a8ec3d69b8c",
-      "width": 0,
-      "x": -64,
-      "y": 0,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "9c03949b-7db4-4e46-98da-647c4a818dba",
-      "width": 0,
-      "x": -64,
-      "y": 32,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "76c6722b-c6d0-411c-ab07-4e8c1aface19",
-      "width": 0,
-      "x": -64,
-      "y": 192,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "4752275d-60a2-4723-9659-879fdb68e9c9",
-      "width": 0,
-      "x": -64,
-      "y": 96,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "c5ed174b-af72-4791-a1ea-73eae2c4c5e5",
-      "width": 0,
-      "x": -64,
-      "y": 128,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "3932290a-8e7c-41fa-905f-5d566f32c002",
-      "width": 0,
-      "x": -64,
-      "y": 160,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "42d8a147-f8b2-4f73-b7af-ca47d5c6a63f",
-      "width": 0,
-      "x": -64,
-      "y": 320,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "78fe2b09-fab8-402a-96a0-02b14a06c39f",
-      "width": 0,
-      "x": -64,
-      "y": 224,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "5f757bc7-26f3-433c-a15d-ac9c9b36cab5",
-      "width": 0,
-      "x": -64,
-      "y": 256,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "0aa6140a-b137-463d-8298-4d4967bc2c04",
-      "width": 0,
-      "x": -64,
-      "y": 288,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "30f464cf-85bd-4194-a94d-baf3ec62a22c",
-      "width": 0,
-      "x": 448,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "1a82c81d-decc-4158-a660-e630d4356448",
-      "width": 0,
-      "x": 480,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "2dcca61c-57b4-4259-b5dc-c3cc63781082",
-      "width": 0,
-      "x": 416,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "9ace3eb4-14dd-4166-bac0-ed059d78e0b7",
-      "width": 0,
-      "x": 352,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "655500d4-ccf2-4b93-acfc-2ec6481ec81c",
-      "width": 0,
-      "x": 384,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "e9227d2f-eabf-48d9-8848-d36321a105c4",
-      "width": 0,
-      "x": 128,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "d30f1ab4-be58-465d-b309-cb40bbcaabcf",
-      "width": 0,
-      "x": 64,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "e0184d40-9dd7-48ca-b00f-cd4943b8d895",
-      "width": 0,
-      "x": 96,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "2618864f-d9c0-4d74-bb73-d67ce97a911a",
-      "width": 0,
-      "x": 32,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "98e7a881-823b-4b0b-9da5-500c1c4bd575",
-      "width": 0,
-      "x": 0,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "72edd98e-404d-4bfe-b7fa-056f6beb2dc1",
-      "width": 0,
-      "x": 320,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "7b4d2c70-c0c9-4c7b-bd8a-c50d7c0f38a9",
-      "width": 0,
-      "x": 256,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "7b4c575b-c32f-44d8-b3ac-e1e78a946691",
-      "width": 0,
-      "x": 288,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "20c47fe4-af58-4c4e-89af-dfd03e250a10",
-      "width": 0,
-      "x": 224,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "a7f424d0-72ad-4888-8a49-9b8480b82bea",
-      "width": 0,
-      "x": 160,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "51a4156f-6f8c-4e57-9222-6447015737a9",
-      "width": 0,
-      "x": 192,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "5b98ca61-f7b4-42fd-a8b7-a0cf175742b1",
-      "width": 0,
-      "x": 512,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "5c36a5e3-8f8d-49cb-9f04-67851723117c",
-      "width": 0,
-      "x": 544,
-      "y": 576,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "34165098-a406-419b-93ed-e934f70aafcb",
-      "width": 0,
-      "x": -64,
-      "y": 544,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "151b889e-680d-4e17-acbc-672d3ec7b391",
-      "width": 0,
-      "x": 608,
-      "y": 352,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "3d4999a5-688b-4c15-a649-49aa02287aba",
-      "width": 0,
-      "x": 608,
-      "y": 384,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "a8c956ba-0a02-4e25-adb1-96b867d2b31b",
-      "width": 0,
-      "x": 608,
-      "y": 64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "7c2513d1-eb5f-4b70-bf66-f042a02fc1f2",
-      "width": 0,
-      "x": 608,
-      "y": 0,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "0a91a499-ddc1-4b91-8bbb-58b0ea3b4f9f",
-      "width": 0,
-      "x": 608,
-      "y": 32,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "6bad50e4-c086-4950-a6eb-894f18ddd0d1",
-      "width": 0,
-      "x": 608,
-      "y": 192,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "595596a1-0d0a-4443-8c7d-4a2a7f52b130",
-      "width": 0,
-      "x": 608,
-      "y": 96,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "2b3f9a47-b168-4f99-8229-0dc51dada30d",
-      "width": 0,
-      "x": 608,
-      "y": 128,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "c326194d-2887-4757-9786-0748ccf09b08",
-      "width": 0,
-      "x": 608,
-      "y": 160,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "6655f128-a35c-48c1-b6c6-c3394c86d801",
-      "width": 0,
-      "x": 608,
-      "y": 320,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "742dc5d4-9743-4d37-adf8-8c2cf06b96c4",
-      "width": 0,
-      "x": 608,
-      "y": 224,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "eb008305-5ce3-4bf7-88c5-6be7c2a70be8",
-      "width": 0,
-      "x": 608,
-      "y": 256,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "ecd1e34f-526a-4633-9af7-01343cfff0f2",
-      "width": 0,
-      "x": 608,
-      "y": 288,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "a07f1a4d-96d3-46b2-ac5e-01d331126141",
-      "width": 0,
-      "x": 608,
-      "y": 448,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "9e9b3ef9-1b7b-43a9-8fc0-6116a2965ea3",
-      "width": 0,
-      "x": 608,
-      "y": 416,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "887db798-1647-469b-add3-da9c90d3bc9b",
-      "width": 0,
-      "x": 608,
-      "y": 512,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "9ce04a69-92d1-4e45-b3e7-91c11420894d",
-      "width": 0,
-      "x": 608,
-      "y": 480,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "ae9ce588-b666-4a2e-880f-95435095aa60",
-      "width": 0,
-      "x": 608,
-      "y": 544,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "2325c489-524c-4e4e-a6e3-95f156e9b2bf",
-      "width": 0,
-      "x": 448,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "67c26415-63a7-42d5-91ef-4b6ae090ac1d",
-      "width": 0,
-      "x": 480,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "49cb38cf-2cd5-4119-980d-a822771d6d1a",
-      "width": 0,
-      "x": 416,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "6593b4fb-dfb2-4ed4-bb4a-6e7a31b79808",
-      "width": 0,
-      "x": 352,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "21d38574-478a-4c05-b778-26de89cece21",
-      "width": 0,
-      "x": 384,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "1b4c6200-1340-49df-bd52-37a73fc20517",
-      "width": 0,
-      "x": 128,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "4c267795-c800-4c10-8644-78c5a4d7333c",
-      "width": 0,
-      "x": 64,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "b56434be-40a5-43d0-81f0-ef05bcb844d5",
-      "width": 0,
-      "x": 96,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "5efba45e-f7de-4dc7-a057-104490e90d69",
-      "width": 0,
-      "x": 32,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "846f469e-6fa4-44e6-af0d-66a4ac85c652",
-      "width": 0,
-      "x": 0,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "cffb4a01-0f7a-4c30-b42d-45507490a719",
-      "width": 0,
-      "x": 320,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "5debabef-e482-4d64-8282-4002b614faf9",
-      "width": 0,
-      "x": 256,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "65f6b7a6-5616-46a6-9eef-79f4dc5ca6c0",
-      "width": 0,
-      "x": 288,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "3031988a-5fa5-4bda-872b-6d309919a167",
-      "width": 0,
-      "x": 224,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "770ec35e-30d4-46d7-a944-372f09d49a46",
-      "width": 0,
-      "x": 160,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "a6920357-0df8-41d3-9873-7b9e25bd762c",
-      "width": 0,
-      "x": 192,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "18ceafc6-822d-404f-9770-79e62c2b6515",
-      "width": 0,
-      "x": 512,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "671b34c3-704d-4594-9cf6-03e6670db097",
-      "width": 0,
-      "x": 544,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "97dd7d78-f5bb-4ce1-abfc-79d72b3fc349",
-      "width": 0,
-      "x": -32,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "d2786ef3-e5f0-406c-9abf-4377142fc5c2",
-      "width": 0,
-      "x": 576,
-      "y": -64,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "initiallyHidden",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
       "persistentUuid": "f0c10f74-de5f-49de-9d79-acc098c64316",
       "width": 0,
       "x": -32,
@@ -2579,21 +951,6 @@
       "persistentUuid": "10ac02af-9ccf-44c6-bb86-3346696dc8c0",
       "width": 0,
       "x": 288,
-      "y": 96,
-      "zOrder": 0,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "Path",
-      "persistentUuid": "79158032-e670-44ae-9f4c-ce5925b88dee",
-      "width": 0,
-      "x": 96,
       "y": 96,
       "zOrder": 0,
       "numberProperties": [],
@@ -3073,7 +1430,7 @@
       "name": "Path",
       "persistentUuid": "e53b80b8-d991-4b20-bdd2-04d3979aefb9",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 384,
       "zOrder": 0,
       "numberProperties": [],
@@ -3088,7 +1445,7 @@
       "name": "Path",
       "persistentUuid": "32dc69ad-1f50-4896-96f5-2199055761ae",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 192,
       "zOrder": 0,
       "numberProperties": [],
@@ -3103,7 +1460,7 @@
       "name": "Path",
       "persistentUuid": "df7d65a1-44d3-46b1-9344-fc62d7358226",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 224,
       "zOrder": 0,
       "numberProperties": [],
@@ -3118,7 +1475,7 @@
       "name": "Path",
       "persistentUuid": "c249396c-8cdd-4386-95f8-99de41410fae",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 128,
       "zOrder": 0,
       "numberProperties": [],
@@ -3133,7 +1490,7 @@
       "name": "Path",
       "persistentUuid": "a7d64ff5-e3b3-4a44-86cc-fc9e83046e4d",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 160,
       "zOrder": 0,
       "numberProperties": [],
@@ -3148,7 +1505,7 @@
       "name": "Path",
       "persistentUuid": "a6bc5eef-988a-4e58-8735-f2169a0255f6",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 320,
       "zOrder": 0,
       "numberProperties": [],
@@ -3163,7 +1520,7 @@
       "name": "Path",
       "persistentUuid": "63a565b0-f226-4f52-977a-99bb3f0429c4",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 352,
       "zOrder": 0,
       "numberProperties": [],
@@ -3178,7 +1535,7 @@
       "name": "Path",
       "persistentUuid": "f4963422-c27f-461e-812d-c4ac09aa2b12",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 256,
       "zOrder": 0,
       "numberProperties": [],
@@ -3193,7 +1550,7 @@
       "name": "Path",
       "persistentUuid": "55dca6bb-3891-4dd4-b22a-9549c0be43e7",
       "width": 0,
-      "x": 448,
+      "x": 480,
       "y": 288,
       "zOrder": 0,
       "numberProperties": [],
@@ -3208,7 +1565,7 @@
       "name": "Path",
       "persistentUuid": "fa6a9f2b-8f65-4877-b541-989a6df7dd13",
       "width": 0,
-      "x": 448,
+      "x": 96,
       "y": 96,
       "zOrder": 0,
       "numberProperties": [],
@@ -3328,7 +1685,7 @@
       "name": "Path",
       "persistentUuid": "6ba0a593-bd1c-4bf4-9405-8d593bdb3f31",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 512,
       "zOrder": 0,
       "numberProperties": [],
@@ -3343,7 +1700,7 @@
       "name": "Path",
       "persistentUuid": "76fc6346-7d9e-4975-81e5-5b0e75f82575",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 96,
       "zOrder": 0,
       "numberProperties": [],
@@ -3358,7 +1715,7 @@
       "name": "Path",
       "persistentUuid": "a9139f25-ee6b-45a9-b661-6ae9436b4e9e",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 128,
       "zOrder": 0,
       "numberProperties": [],
@@ -3373,8 +1730,8 @@
       "name": "Path",
       "persistentUuid": "be5a815f-9338-4ca7-899f-a32b0bf8916f",
       "width": 0,
-      "x": 576,
-      "y": 32,
+      "x": 608,
+      "y": -32,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -3388,7 +1745,7 @@
       "name": "Path",
       "persistentUuid": "3575f4c3-da5c-400e-9a55-49689209d90f",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 64,
       "zOrder": 0,
       "numberProperties": [],
@@ -3403,7 +1760,7 @@
       "name": "Path",
       "persistentUuid": "791d0be4-010a-454b-92b6-73837cbf6205",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 384,
       "zOrder": 0,
       "numberProperties": [],
@@ -3418,7 +1775,7 @@
       "name": "Path",
       "persistentUuid": "1f501f0d-05ad-43a5-8add-846b5c0bc1f8",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 480,
       "zOrder": 0,
       "numberProperties": [],
@@ -3433,7 +1790,7 @@
       "name": "Path",
       "persistentUuid": "cb25405f-8087-4974-974f-e184774b6b48",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 320,
       "zOrder": 0,
       "numberProperties": [],
@@ -3448,7 +1805,7 @@
       "name": "Path",
       "persistentUuid": "82a30e9f-6b96-4513-834f-0024cb3953d1",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 352,
       "zOrder": 0,
       "numberProperties": [],
@@ -3463,7 +1820,7 @@
       "name": "Path",
       "persistentUuid": "12e98863-ed0c-4942-aa21-97dc8f0043f0",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 0,
       "zOrder": 0,
       "numberProperties": [],
@@ -3478,7 +1835,7 @@
       "name": "Path",
       "persistentUuid": "1ba62229-a2aa-4217-99a0-2747487add62",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 288,
       "zOrder": 0,
       "numberProperties": [],
@@ -3493,7 +1850,7 @@
       "name": "Path",
       "persistentUuid": "b4d55182-1a3e-40b5-a7c1-f8b610d17aa4",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 224,
       "zOrder": 0,
       "numberProperties": [],
@@ -3508,7 +1865,7 @@
       "name": "Path",
       "persistentUuid": "221befa0-7623-4b64-8146-150387acc9a3",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 256,
       "zOrder": 0,
       "numberProperties": [],
@@ -3523,7 +1880,7 @@
       "name": "Path",
       "persistentUuid": "7477eea4-0cbb-4daa-a255-aa8528382930",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 160,
       "zOrder": 0,
       "numberProperties": [],
@@ -3538,7 +1895,7 @@
       "name": "Path",
       "persistentUuid": "3efd2d04-f6cf-4758-8a3a-e0173db8aa6a",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 192,
       "zOrder": 0,
       "numberProperties": [],
@@ -3553,7 +1910,7 @@
       "name": "Path",
       "persistentUuid": "a3a9da54-068e-40b8-ab90-ab917bdf7356",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 448,
       "zOrder": 0,
       "numberProperties": [],
@@ -3568,8 +1925,68 @@
       "name": "Path",
       "persistentUuid": "eec28cf6-052d-427f-ba41-e246723ef8cf",
       "width": 0,
-      "x": 576,
+      "x": 608,
       "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "eeb8c243-044c-411e-b38e-2693accf53ef",
+      "width": 0,
+      "x": 448,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "49757399-17fd-47ff-92f5-d74cbc73982c",
+      "width": 0,
+      "x": 480,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "291ebb1f-4179-4e4d-8c57-d6049788f1a3",
+      "width": 0,
+      "x": 544,
+      "y": 544,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "1aac618b-6e45-497b-96b4-056a3c9f4241",
+      "width": 0,
+      "x": 608,
+      "y": 32,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -3586,7 +2003,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9538618542089559,
+    "zoomFactor": 0.8353591827059936,
     "windowMask": false
   }
 }

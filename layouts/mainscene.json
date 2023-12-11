@@ -128,6 +128,12 @@
         },
         {
           "name": "Play"
+        },
+        {
+          "name": "Plus"
+        },
+        {
+          "name": "Minus"
         }
       ]
     }
@@ -204,7 +210,6 @@
       ]
     },
     {
-      "folded": true,
       "name": "Debug",
       "type": "structure",
       "children": [
@@ -234,6 +239,12 @@
           "name": "selectedWaveNumber",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "showTest",
+          "type": "boolean",
+          "value": false
         }
       ]
     },
@@ -256,6 +267,7 @@
       ]
     },
     {
+      "folded": true,
       "name": "TmpGeneration",
       "type": "structure",
       "children": [
@@ -3016,10 +3028,10 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Current wave",
+      "string": "Vague 1/5",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 64,
+      "characterSize": 52,
       "color": {
         "b": 255,
         "g": 255,
@@ -5903,7 +5915,7 @@
             "thickness": 3
           },
           "stringParameters": {
-            "color": "74;74;74"
+            "color": "90;90;90"
           },
           "booleanParameters": {}
         }
@@ -6291,7 +6303,7 @@
             "thickness": 3
           },
           "stringParameters": {
-            "color": "74;74;74"
+            "color": "90;90;90"
           },
           "booleanParameters": {}
         }
@@ -6458,7 +6470,12 @@
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "string": "-",
       "font": "",
       "textAlignment": "left",
@@ -6475,7 +6492,12 @@
       "type": "PanelSpriteButton::PanelSpriteButton",
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "content": {
         "LeftPadding": 16,
         "RightPadding": 16,
@@ -6605,6 +6627,179 @@
           "width": 22
         }
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "b1347e83abcf7487e2d10a4e2089ec9624d4b1951de9cc005904aba0e2b2712b",
+      "name": "Plus",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "90;90;90"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Plus.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 6
+                      },
+                      {
+                        "x": 6,
+                        "y": 0
+                      },
+                      {
+                        "x": 8,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 6
+                      },
+                      {
+                        "x": 14,
+                        "y": 8
+                      },
+                      {
+                        "x": 8,
+                        "y": 14
+                      },
+                      {
+                        "x": 6,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 8
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "b1347e83abcf7487e2d10a4e2089ec9624d4b1951de9cc005904aba0e2b2712b",
+      "name": "Minus",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "90;90;90"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "assets\\Minus",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Minus.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 5
+                      },
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -6721,6 +6916,23 @@
         ]
       },
       {
+        "folderName": "Testing",
+        "children": [
+          {
+            "objectName": "ApplyAllButton"
+          },
+          {
+            "objectName": "TestingText"
+          },
+          {
+            "objectName": "Plus"
+          },
+          {
+            "objectName": "Minus"
+          }
+        ]
+      },
+      {
         "objectName": "PopUp"
       },
       {
@@ -6739,16 +6951,10 @@
         "objectName": "StaticText"
       },
       {
-        "objectName": "TestingText"
-      },
-      {
         "objectName": "GridMask"
       },
       {
         "objectName": "Heart"
-      },
-      {
-        "objectName": "ApplyAllButton"
       }
     ]
   },
@@ -6813,7 +7019,7 @@
               "parameters": [
                 "",
                 "17",
-                "18",
+                "19",
                 "InitialTiles",
                 "FillerTiles",
                 ""
@@ -6825,8 +7031,8 @@
               },
               "parameters": [
                 "",
-                "15",
-                "17",
+                "16",
+                "18",
                 "GridPart",
                 "NonGridTiles",
                 ""
@@ -6880,7 +7086,7 @@
                 "Currency",
                 "Opacity",
                 "=",
-                "75"
+                "50"
               ]
             }
           ]
@@ -7006,6 +7212,18 @@
                 "drawGridMask",
                 "initialPath"
               ]
+            },
+            {
+              "type": {
+                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+              },
+              "parameters": [
+                "CreepSlime",
+                "NavMeshPathfindingBehavior",
+                "Base.CenterX()",
+                "Base.CenterY()",
+                ""
+              ]
             }
           ]
         },
@@ -7023,32 +7241,6 @@
                 "centerAnimationNumber",
                 "=",
                 "RandomInRange(1, 5)"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "Path",
-          "conditions": [
-            {
-              "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Path",
-                "initiallyHidden",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "Path"
               ]
             }
           ]

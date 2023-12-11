@@ -61,7 +61,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Start Scene / Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -164,6 +163,39 @@
                 "TestingText",
                 "=",
                 "TestingText.initialSize"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "HUDBackground",
+                    "Wave",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Wave",
+                    "=",
+                    "HUDBackground.CenterX() - Wave.Width() / 2",
+                    "=",
+                    "HUDBackground.Y()"
+                  ]
+                }
               ]
             }
           ]

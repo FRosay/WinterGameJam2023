@@ -1505,6 +1505,28 @@
         "name": "assets\\sprites\\HUD\\currency\\currency_3_4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Plus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Plus.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/5eec26c282183f173dbe20c511a7eca37a87f90fec57286b1894f7c713ea8f3e_Plus.png",
+          "name": "Plus.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Minus.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/Minus.png\",\"extension\":\".png\"}",
+        "name": "assets\\Minus.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
