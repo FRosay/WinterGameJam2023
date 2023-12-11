@@ -242,6 +242,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -276,9 +277,41 @@
                     "TmpVolume.tmpSoundVolume"
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "customId",
+                        "=",
+                        "\"soundSlider\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "=",
+                        "TmpVolume.tmpSoundVolume",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -311,6 +344,37 @@
                     "GlobalSettings.VolumeSettings.musicVolume",
                     "=",
                     "TmpVolume.tmpMusicVolume"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "customId",
+                        "=",
+                        "\"musicSlider\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "=",
+                        "TmpVolume.tmpSoundVolume",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]

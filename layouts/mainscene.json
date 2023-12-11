@@ -119,6 +119,17 @@
           "name": "Grass"
         }
       ]
+    },
+    {
+      "name": "Interactibles",
+      "objects": [
+        {
+          "name": "SoundControl"
+        },
+        {
+          "name": "Play"
+        }
+      ]
     }
   ],
   "variables": [
@@ -5628,7 +5639,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "SoundControl",
       "type": "Sprite",
@@ -5647,7 +5658,20 @@
           "value": ""
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "74;74;74"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [
         {
           "name": "Tween",
@@ -5681,20 +5705,28 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 12,
-                        "y": 12
+                        "x": 10,
+                        "y": 34
                       },
                       {
-                        "x": 84,
-                        "y": 12
+                        "x": 48,
+                        "y": 14
                       },
                       {
-                        "x": 84,
-                        "y": 84
+                        "x": 86.5,
+                        "y": 9
                       },
                       {
-                        "x": 12,
-                        "y": 84
+                        "x": 86.5,
+                        "y": 87
+                      },
+                      {
+                        "x": 48,
+                        "y": 82
+                      },
+                      {
+                        "x": 10,
+                        "y": 63
                       }
                     ]
                   ]
@@ -5729,20 +5761,36 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 12,
-                        "y": 12
+                        "x": 10,
+                        "y": 34
                       },
                       {
-                        "x": 84,
-                        "y": 12
+                        "x": 48,
+                        "y": 14
                       },
                       {
-                        "x": 84,
-                        "y": 84
+                        "x": 86.5,
+                        "y": 9
                       },
                       {
-                        "x": 12,
-                        "y": 84
+                        "x": 93.5,
+                        "y": 30.5
+                      },
+                      {
+                        "x": 93.5,
+                        "y": 59.5
+                      },
+                      {
+                        "x": 86.5,
+                        "y": 87
+                      },
+                      {
+                        "x": 48,
+                        "y": 82
+                      },
+                      {
+                        "x": 10,
+                        "y": 63
                       }
                     ]
                   ]
@@ -5992,13 +6040,26 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "a91bd2c6b404ce8cca5a560ef2fa99a3ee4eabc186b575d55858b0e61399ff0c",
       "name": "Play",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "74;74;74"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "animations": [
         {
@@ -6028,19 +6089,35 @@
                     [
                       {
                         "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
                         "y": 0
                       },
                       {
                         "x": 8,
-                        "y": 0
+                        "y": 6
                       },
                       {
                         "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      },
+                      {
+                        "x": 1,
                         "y": 14
                       },
                       {
                         "x": 0,
-                        "y": 14
+                        "y": 13
                       }
                     ]
                   ]
@@ -6077,19 +6154,35 @@
                     [
                       {
                         "x": 0,
+                        "y": 1
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 2,
                         "y": 0
                       },
                       {
                         "x": 8,
-                        "y": 0
+                        "y": 6
                       },
                       {
                         "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 2,
+                        "y": 14
+                      },
+                      {
+                        "x": 1,
                         "y": 14
                       },
                       {
                         "x": 0,
-                        "y": 14
+                        "y": 13
                       }
                     ]
                   ]
@@ -6699,6 +6792,23 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "Interactibles",
+                "Effect",
+                "\"Effect\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Grass",
           "conditions": [],
@@ -6740,6 +6850,65 @@
                 "Path"
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "Interactibles",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "Interactibles",
+            "Effect",
+            "\"Effect\"",
+            "yes"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "Interactibles",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "Interactibles",
+            "Effect",
+            "\"Effect\"",
+            "no"
           ]
         }
       ]
