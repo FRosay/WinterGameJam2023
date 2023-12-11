@@ -141,6 +141,12 @@
     },
     {
       "folded": true,
+      "name": "currencyInQuarters",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
       "name": "totalLife",
       "type": "number",
       "value": 25
@@ -1144,7 +1150,14 @@
       "name": "Currency",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
+        }
+      ],
       "effects": [
         {
           "effectType": "Glow",
@@ -1402,6 +1415,153 @@
               ]
             }
           ]
+        },
+        {
+          "name": "quarter_1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\HUD\\currency\\currency_1_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 12
+                      },
+                      {
+                        "x": 4,
+                        "y": 12
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "quarter_2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\HUD\\currency\\currency_2_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 12
+                      },
+                      {
+                        "x": 4,
+                        "y": 12
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "quarter_3",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\HUD\\currency\\currency_3_4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 4
+                      },
+                      {
+                        "x": 12,
+                        "y": 12
+                      },
+                      {
+                        "x": 4,
+                        "y": 12
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1572,9 +1732,21 @@
       "variables": [
         {
           "folded": true,
-          "name": "valueOnKill",
+          "name": "valueInQuarters",
           "type": "number",
-          "value": 10
+          "value": 11
+        },
+        {
+          "folded": true,
+          "name": "hasLinkedText",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "CurrentEffects",
+          "type": "structure",
+          "children": []
         }
       ],
       "effects": [],
@@ -1719,7 +1891,7 @@
       "variables": [
         {
           "folded": true,
-          "name": "valueOnKill",
+          "name": "valueInQuarters",
           "type": "number",
           "value": 1
         },
@@ -1734,6 +1906,12 @@
           "name": "CurrentEffects",
           "type": "structure",
           "children": []
+        },
+        {
+          "folded": true,
+          "name": "hasLinkedText",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -6127,7 +6305,7 @@
           ]
         },
         {
-          "name": "off",
+          "name": "disabled",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -6600,7 +6778,19 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Currency",
+                "customId",
+                "=",
+                "\"mainCurrency\""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -6622,6 +6812,57 @@
                 "Opacity",
                 "=",
                 "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Currency",
+                "Opacity",
+                "=",
+                "75"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Currency",
+                "customId",
+                "=",
+                "\"quartersCurrency\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Currency",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "Currency",
+                "Effect",
+                "\"Effect\"",
+                ""
               ]
             }
           ]
@@ -6679,87 +6920,6 @@
           "actions": [
             {
               "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "CurrentCurrency",
-                "\"Currency\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "CurrentLife",
-                "\"Life\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "Wave",
-                "\"Wave\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "StaticText",
-                "Text",
-                "=",
-                "StaticText.initialText"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::Text::SetFontSize"
-              },
-              "parameters": [
-                "StaticText",
-                "=",
-                "StaticText.initialSize"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "TestingText",
-                "Text",
-                "=",
-                "TestingText.initialText"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::Text::SetFontSize"
-              },
-              "parameters": [
-                "TestingText",
-                "=",
-                "TestingText.initialSize"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
                 "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
@@ -6787,23 +6947,6 @@
               "parameters": [
                 "drawGridMask",
                 "initialPath"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "EffectCapability::EffectBehavior::EnableEffect"
-              },
-              "parameters": [
-                "Interactibles",
-                "Effect",
-                "\"Effect\"",
-                "no"
               ]
             }
           ]
@@ -6855,243 +6998,6 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SourisSurObjet"
-          },
-          "parameters": [
-            "Interactibles",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "Interactibles",
-            "Effect",
-            "\"Effect\"",
-            "yes"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": true,
-            "value": "SourisSurObjet"
-          },
-          "parameters": [
-            "Interactibles",
-            "",
-            "",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "EffectCapability::EffectBehavior::EnableEffect"
-          },
-          "parameters": [
-            "Interactibles",
-            "Effect",
-            "\"Effect\"",
-            "no"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "CompareTimer"
-          },
-          "parameters": [
-            "",
-            "\"showVolumeSlider\"",
-            ">=",
-            "0.50"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "Montre"
-          },
-          "parameters": [
-            "VolumeSlider",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "RemoveTimer"
-          },
-          "parameters": [
-            "",
-            "\"showVolumeSlider\""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "drawGridMask",
-            "True"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PrimitiveDrawing::Circle"
-          },
-          "parameters": [
-            "GridMask",
-            "MouseX()",
-            "MouseY()+65",
-            "80"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::CompareStrings"
-          },
-          "parameters": [
-            "ToString(currency)",
-            "!=",
-            "CurrentCurrency.Text::Value()"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ProjectUtils::updateHUDText"
-          },
-          "parameters": [
-            "",
-            "CurrentCurrency",
-            "\"Currency\"",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::CompareStrings"
-          },
-          "parameters": [
-            "ToString(totalLife)",
-            "!=",
-            "CurrentLife.Text::Value()"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ProjectUtils::updateHUDText"
-          },
-          "parameters": [
-            "",
-            "CurrentLife",
-            "\"Life\"",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::CompareStrings"
-          },
-          "parameters": [
-            "ToString(WavesSettings.currentWave)",
-            "!=",
-            "Wave.Text::Value()"
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ProjectUtils::updateHUDText"
-          },
-          "parameters": [
-            "",
-            "Wave",
-            "\"Wave\"",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Link",
-      "include": {
-        "includeConfig": 0
-      },
-      "target": "Debug"
-    },
-    {
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -7139,6 +7045,318 @@
         "includeConfig": 0
       },
       "target": "EnemyWaves"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Debug"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "drawGridMask",
+            "True"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PrimitiveDrawing::Circle"
+          },
+          "parameters": [
+            "GridMask",
+            "MouseX()",
+            "MouseY()+65",
+            "80"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "EnemySlimes",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "SetObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "hasLinkedText",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "Heart",
+                "EnemySlimes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "StaticText",
+                "EnemySlimes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "hasLinkedText",
+                "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "StaticText",
+                "Text",
+                "=",
+                "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "StaticText",
+                "=",
+                "EnemySlimes.X() - 5",
+                "=",
+                "EnemySlimes.Y() - StaticText.Height()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Heart",
+                "=",
+                "EnemySlimes.X() + StaticText.Width()",
+                "=",
+                "EnemySlimes.Y() - StaticText.Height()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "EnemySlimes",
+                    "Animation",
+                    "=",
+                    "\"death\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectUtils::updateCurrency"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemySlimes.valueInQuarters",
+                    "Currency",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "EnemySlimes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Heart",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\sounds\\slime_death.mp3",
+                    "1",
+                    "",
+                    "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "hasLinkedText",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "StaticText",
+                "GridTiles.X()",
+                "GridTiles.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "StaticText",
+                "EnemySlimes"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "StaticText",
+                "Text",
+                "=",
+                "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "StaticText",
+                "Scale",
+                "=",
+                "0.20"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "StaticText",
+                "=",
+                "500"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Heart",
+                "GridTiles.X()",
+                "GridTiles.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Heart",
+                "EnemySlimes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Heart",
+                "Scale",
+                "=",
+                "0.25"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Heart",
+                "=",
+                "500"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
@@ -7246,139 +7464,6 @@
           ]
         }
       ]
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Enemy reaches the end",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "CreepSlime",
-                "Base",
-                "",
-                "",
-                "yes"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SimpleEnemyBehaviour::EnemyHealth::TakeDamage"
-              },
-              "parameters": [
-                "CreepSlime",
-                "EnemyHealth",
-                "999",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "totalLife",
-                "-",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlaySoundCanal"
-              },
-              "parameters": [
-                "",
-                "assets\\sounds\\life_loss.mp3",
-                "1",
-                "",
-                "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
-                ""
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Final Scene",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "totalLife",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Slime",
-                    "Base",
-                    "",
-                    "",
-                    "yes"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetGlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "isGameWon",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"FinaleScene\"",
-                ""
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
     }
   ],
   "layers": [

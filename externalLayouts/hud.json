@@ -240,9 +240,21 @@
       "x": 62,
       "y": 754,
       "zOrder": 6,
-      "numberProperties": [],
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "quartersCurrency"
+        }
+      ]
     },
     {
       "angle": 0,
@@ -1124,6 +1136,29 @@
           "name": "customId",
           "type": "string",
           "value": "musicMuteButton"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 48,
+      "layer": "HUD",
+      "name": "Currency",
+      "persistentUuid": "4b2f3898-76b5-4a8b-97f7-10f007216a41",
+      "width": 48,
+      "x": 62,
+      "y": 754,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "mainCurrency"
         }
       ]
     }
