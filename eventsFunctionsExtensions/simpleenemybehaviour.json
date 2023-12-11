@@ -162,6 +162,58 @@
                     "\"death\""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"138;138;138\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::SetCurrentSpeed"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "0",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SimpleEnemyBehaviour::EnemyHealth::SetPropertyResetPathfinding"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\sounds\\slime_death.mp3",
+                        "1",
+                        "",
+                        "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -1290,6 +1342,28 @@
               ]
             }
           ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onDestroy",
+          "sentence": "",
+          "events": [],
           "parameters": [
             {
               "description": "Object",

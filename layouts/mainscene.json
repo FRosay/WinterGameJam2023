@@ -2544,7 +2544,7 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -2552,8 +2552,44 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8,
-                    "y": 8
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 3
+                      },
+                      {
+                        "x": 19,
+                        "y": 19
+                      },
+                      {
+                        "x": 3,
+                        "y": 19
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep1_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -7081,6 +7117,7 @@
       ]
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "EnemySlimes",
       "conditions": [],
@@ -7133,41 +7170,6 @@
                 "hasLinkedText",
                 "True"
               ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "StaticText",
-                "Text",
-                "=",
-                "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "StaticText",
-                "=",
-                "EnemySlimes.X() - 5",
-                "=",
-                "EnemySlimes.Y() - StaticText.Height()"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Heart",
-                "=",
-                "EnemySlimes.X() + StaticText.Width()",
-                "=",
-                "EnemySlimes.Y() - StaticText.Height()"
-              ]
             }
           ],
           "events": [
@@ -7189,26 +7191,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ProjectUtils::updateCurrency"
-                  },
-                  "parameters": [
-                    "",
-                    "EnemySlimes.valueInQuarters",
-                    "Currency",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "EnemySlimes",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -7224,18 +7206,58 @@
                     "StaticText",
                     ""
                   ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "EnemySlimes",
+                    "Animation",
+                    "!=",
+                    "\"death\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
+                  ]
                 },
                 {
                   "type": {
-                    "value": "PlaySoundCanal"
+                    "value": "MettreXY"
                   },
                   "parameters": [
-                    "",
-                    "assets\\sounds\\slime_death.mp3",
-                    "1",
-                    "",
-                    "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
-                    ""
+                    "StaticText",
+                    "=",
+                    "EnemySlimes.X() - 5",
+                    "=",
+                    "EnemySlimes.Y() - StaticText.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "=",
+                    "EnemySlimes.X() + StaticText.Width()",
+                    "=",
+                    "EnemySlimes.Y() - StaticText.Height()"
                   ]
                 }
               ]
@@ -7243,6 +7265,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7254,104 +7277,190 @@
                 "hasLinkedText",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "Animation",
+                "!=",
+                "\"death\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    "-99999",
+                    "-99999",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    "EnemySlimes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Scale",
+                    "=",
+                    "0.20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "=",
+                    "500"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Heart",
+                    "-99999",
+                    "-99999",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Heart",
+                    "EnemySlimes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "Scale",
+                    "=",
+                    "0.25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "=",
+                    "500"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::Name"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "Animation",
+            "=",
+            "\"death\""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "Animation"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "Create"
+                "value": "Delete"
               },
               "parameters": [
-                "",
-                "StaticText",
-                "GridTiles.X()",
-                "GridTiles.Y()",
+                "EnemySlimes",
                 ""
               ]
             },
             {
               "type": {
-                "value": "LinkedObjects::LinkObjects"
+                "value": "ProjectUtils::updateCurrency"
               },
               "parameters": [
                 "",
-                "StaticText",
-                "EnemySlimes"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "StaticText",
-                "Text",
-                "=",
-                "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
-              ]
-            },
-            {
-              "type": {
-                "value": "ScalableCapability::ScalableBehavior::SetValue"
-              },
-              "parameters": [
-                "StaticText",
-                "Scale",
-                "=",
-                "0.20"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "StaticText",
-                "=",
-                "500"
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Heart",
-                "GridTiles.X()",
-                "GridTiles.Y()",
+                "EnemySlimes.valueInQuarters",
+                "Currency",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "LinkedObjects::LinkObjects"
-              },
-              "parameters": [
-                "",
-                "Heart",
-                "EnemySlimes"
-              ]
-            },
-            {
-              "type": {
-                "value": "ScalableCapability::ScalableBehavior::SetValue"
-              },
-              "parameters": [
-                "Heart",
-                "Scale",
-                "=",
-                "0.25"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "Heart",
-                "=",
-                "500"
               ]
             }
           ]
@@ -7379,6 +7488,17 @@
             "Towers",
             "isPhantom",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::Name"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "Animation",
+            "!=",
+            "\"death\""
           ]
         }
       ],
