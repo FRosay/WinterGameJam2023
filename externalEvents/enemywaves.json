@@ -45,6 +45,36 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::IsMoving"
+          },
+          "parameters": [
+            "CreepSlime",
+            "NavMeshPathfindingBehavior",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,

@@ -8,11 +8,27 @@
       "conditions": [
         {
           "type": {
-            "value": "DepartScene"
+            "value": "MouseButtonReleased"
           },
           "parameters": [
+            "",
+            "Left"
+          ]
+        },
+        {
+          "type": {
+            "value": "GlobalVariableAsBoolean"
+          },
+          "parameters": [
+            "GlobalSettings.VolumeSettings.musicIsPlaying",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
         }
       ],
       "actions": [
@@ -27,6 +43,15 @@
             "yes",
             "ProjectVolume::getSoundOrMusicVolume(\"music\")",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetGlobalVariableAsBoolean"
+          },
+          "parameters": [
+            "GlobalSettings.VolumeSettings.musicIsPlaying",
+            "True"
           ]
         }
       ]

@@ -53,16 +53,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "ToString(GlobalVariable(GlobalSettings.VolumeSettings.muteSound))",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "ModVolumeSoundCanal"
                   },
                   "parameters": [
@@ -88,16 +78,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "ToString(GlobalVariable(GlobalSettings.VolumeSettings.muteSound))",
-                    "",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "ModVolumeSoundCanal"
@@ -253,6 +233,7 @@
           "comment": "Mute sound"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -393,6 +374,7 @@
           "comment": "Mute music"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -535,6 +517,7 @@
           "comment": "Mute both"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {

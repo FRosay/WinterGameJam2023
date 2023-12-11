@@ -251,7 +251,7 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TilesGeneration::NameOfGrass"
+                        "value": "TilesGeneration::ChangeGrassSprite"
                       },
                       "parameters": [
                         "",

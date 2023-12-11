@@ -539,7 +539,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "TilesGeneration::NameOfGrass"
+                                "value": "TilesGeneration::ChangeGrassSprite"
                               },
                               "parameters": [
                                 "",
@@ -657,7 +657,7 @@
       "description": "Choose the correct name of the animation for the grass",
       "fullName": "Name of Grass tile",
       "functionType": "Action",
-      "name": "NameOfGrass",
+      "name": "ChangeGrassSprite",
       "sentence": "Change _PARAM1_'s animation depending on _PARAM2_ around it",
       "events": [
         {
@@ -666,111 +666,29 @@
           "actions": [
             {
               "type": {
-                "value": "SetSceneVariableAsBoolean"
+                "value": "ModVarSceneTxt"
               },
               "parameters": [
-                "isCenter",
-                "True"
+                "TmpGeneration.tmpGrassAnimName",
+                "=",
+                "\"border\""
               ]
             }
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "Path",
-                "=",
-                "Grass.X()-32"
-              ]
-            },
-            {
-              "type": {
-                "value": "PosY"
-              },
-              "parameters": [
-                "Path",
-                "=",
-                "Grass.Y()"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Grass",
-                "Animation",
-                "=",
-                "\"border-left\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isCenter",
-                "False"
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Check Top"
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "Path",
-                "=",
-                "Grass.X()+32"
-              ]
-            },
-            {
-              "type": {
-                "value": "PosY"
-              },
-              "parameters": [
-                "Path",
-                "=",
-                "Grass.Y()"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Grass",
-                "Animation",
-                "=",
-                "\"border-right\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isCenter",
-                "False"
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -790,131 +708,134 @@
               "parameters": [
                 "Path",
                 "=",
-                "Grass.Y()-32"
+                "Grass.Y() - 32"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                "value": "ModVarSceneTxt"
               },
               "parameters": [
-                "Grass",
-                "Animation",
-                "=",
-                "\"border-top\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isCenter",
-                "False"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "Path"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.X()+32"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.Y()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "Animation",
-                    "=",
-                    "\"border-top-right\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "Path"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.X()-32"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.Y()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "Animation",
-                    "=",
-                    "\"border-top-left\""
-                  ]
-                }
+                "TmpGeneration.tmpGrassAnimName",
+                "+",
+                "\"_top\""
               ]
             }
           ]
         },
         {
-          "folded": true,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Check Left"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X() - 32"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "TmpGeneration.tmpGrassAnimName",
+                "+",
+                "\"_left\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Check Right"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosX"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.X() + 32"
+              ]
+            },
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Path",
+                "=",
+                "Grass.Y()"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "TmpGeneration.tmpGrassAnimName",
+                "+",
+                "\"_right\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Check Bot"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -934,125 +855,19 @@
               "parameters": [
                 "Path",
                 "=",
-                "Grass.Y()+32"
+                "Grass.Y() + 32"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                "value": "ModVarSceneTxt"
               },
               "parameters": [
-                "Grass",
-                "Animation",
-                "=",
-                "\"border-bot\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "isCenter",
-                "False"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "Path"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.X()+32"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.Y()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "Animation",
-                    "=",
-                    "\"border-bot-right\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "Path"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.X()-32"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "Path",
-                    "=",
-                    "Grass.Y()"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "Animation",
-                    "=",
-                    "\"border-bot-left\""
-                  ]
-                }
+                "TmpGeneration.tmpGrassAnimName",
+                "+",
+                "\"_bot\""
               ]
             }
           ]
@@ -1062,14 +877,31 @@
           "conditions": [
             {
               "type": {
-                "value": "SceneVariableAsBoolean"
+                "value": "VarSceneTxt"
               },
               "parameters": [
-                "isCenter",
-                "True"
+                "TmpGeneration.tmpGrassAnimName",
+                "=",
+                "\"border\""
               ]
             }
           ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "TmpGeneration.tmpGrassAnimName",
+                "=",
+                "\"center_\" + ToString(Grass.Variable(centerAnimationNumber))"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -1079,7 +911,7 @@
                 "Grass",
                 "Animation",
                 "=",
-                "\"center-\" + ToString(Grass.Variable(centerAnimationNumber))"
+                "VariableString(TmpGeneration.tmpGrassAnimName)"
               ]
             }
           ]

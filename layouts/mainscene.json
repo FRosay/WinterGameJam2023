@@ -170,6 +170,7 @@
       "value": 1
     },
     {
+      "folded": true,
       "name": "BossPushback",
       "type": "structure",
       "children": [
@@ -186,6 +187,7 @@
       ]
     },
     {
+      "folded": true,
       "name": "WavesSettings",
       "type": "structure",
       "children": [
@@ -202,6 +204,7 @@
       ]
     },
     {
+      "folded": true,
       "name": "Debug",
       "type": "structure",
       "children": [
@@ -235,6 +238,7 @@
       ]
     },
     {
+      "folded": true,
       "name": "TmpVolume",
       "type": "structure",
       "children": [
@@ -248,6 +252,24 @@
           "name": "tmpSoundVolume",
           "type": "number",
           "value": 0
+        }
+      ]
+    },
+    {
+      "name": "TmpGeneration",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "tmpGrassAnimName",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "folded": true,
+          "name": "tmpTileSize",
+          "type": "number",
+          "value": 32
         }
       ]
     }
@@ -1787,8 +1809,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 48,
-                    "y": 48
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1835,8 +1857,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 48,
-                    "y": 48
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -3759,7 +3781,7 @@
       ],
       "animations": [
         {
-          "name": "center-1",
+          "name": "center_1",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3807,7 +3829,7 @@
           ]
         },
         {
-          "name": "center-2",
+          "name": "center_2",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3855,7 +3877,7 @@
           ]
         },
         {
-          "name": "center-3",
+          "name": "center_3",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3903,7 +3925,7 @@
           ]
         },
         {
-          "name": "center-4",
+          "name": "center_4",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3951,7 +3973,7 @@
           ]
         },
         {
-          "name": "center-5",
+          "name": "center_5",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -3999,7 +4021,7 @@
           ]
         },
         {
-          "name": "border-top-left",
+          "name": "border_top_left",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4047,7 +4069,7 @@
           ]
         },
         {
-          "name": "border-top",
+          "name": "border_top",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4095,7 +4117,7 @@
           ]
         },
         {
-          "name": "border-top-right",
+          "name": "border_top_right",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4143,7 +4165,7 @@
           ]
         },
         {
-          "name": "border-left",
+          "name": "border_left",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4191,7 +4213,7 @@
           ]
         },
         {
-          "name": "border-right",
+          "name": "border_right",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4239,7 +4261,7 @@
           ]
         },
         {
-          "name": "border-bot-left",
+          "name": "border_left_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4287,7 +4309,7 @@
           ]
         },
         {
-          "name": "border-bot",
+          "name": "border_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4335,7 +4357,7 @@
           ]
         },
         {
-          "name": "border-bot-right",
+          "name": "border_right_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4383,7 +4405,7 @@
           ]
         },
         {
-          "name": "border-left-top-right",
+          "name": "border_top_left_right",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4431,7 +4453,7 @@
           ]
         },
         {
-          "name": "border-bot-left-top",
+          "name": "border_top_left_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4479,7 +4501,7 @@
           ]
         },
         {
-          "name": "border-top-right-bot",
+          "name": "border_top_right_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4527,7 +4549,7 @@
           ]
         },
         {
-          "name": "border-right-bot-left",
+          "name": "border_left_right_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4575,7 +4597,7 @@
           ]
         },
         {
-          "name": "border-top-bot",
+          "name": "border_top_bot",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4623,7 +4645,7 @@
           ]
         },
         {
-          "name": "border-left-right",
+          "name": "border_left_right",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4671,7 +4693,7 @@
           ]
         },
         {
-          "name": "border-full",
+          "name": "border_top_left_right_bot",
           "useMultipleDirections": false,
           "directions": [
             {

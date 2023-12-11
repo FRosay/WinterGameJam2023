@@ -1919,6 +1919,12 @@
           "children": [
             {
               "folded": true,
+              "name": "musicIsPlaying",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "folded": true,
               "name": "musicVolume",
               "persistentUuid": "e2a1629e-2e18-4d55-92b7-4e6f1c46c201",
               "type": "number",
