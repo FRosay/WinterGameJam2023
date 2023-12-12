@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 50,
   "disableInputWhenNotFocused": true,
   "mangledName": "MainMenu",
   "name": "MainMenu",
-  "r": 209,
+  "r": 45,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 45,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9538618542089515,
+    "zoomFactor": 0.5610952083582074,
     "windowMask": false
   },
   "objectsGroups": [],

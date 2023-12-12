@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 50,
   "disableInputWhenNotFocused": true,
   "mangledName": "FinaleScene",
   "name": "FinaleScene",
-  "r": 209,
+  "r": 45,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 45,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
