@@ -1972,6 +1972,11 @@
           ]
         }
       ]
+    },
+    {
+      "name": "isGameWon",
+      "type": "boolean",
+      "value": true
     }
   ],
   "layouts": [
