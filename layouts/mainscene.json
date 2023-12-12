@@ -6831,6 +6831,51 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TimerTest",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "initialText",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "folded": true,
+          "name": "initialSize",
+          "type": "number",
+          "value": 25
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "0",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 48,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -6980,6 +7025,9 @@
       },
       {
         "objectName": "StaticText"
+      },
+      {
+        "objectName": "TimerTest"
       },
       {
         "objectName": "GridMask"
@@ -7362,7 +7410,6 @@
       ]
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "EnemySlimes",
       "conditions": [],
@@ -7644,6 +7691,23 @@
                     "500"
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "TimerTest",
+                "Text",
+                "=",
+                "ToString(EnemySlimes.ObjectTimerElapsedTime(\"freeze\"))"
               ]
             }
           ]
