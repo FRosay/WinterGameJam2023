@@ -429,24 +429,6 @@
               "actions": [],
               "events": [
                 {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Object",
-                        "CurrentEffects[EffectToApply].effectName",
-                        "=",
-                        "EffectToApply"
-                      ]
-                    }
-                  ],
-                  "actions": []
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {

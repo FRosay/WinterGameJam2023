@@ -7291,18 +7291,6 @@
                 "drawGridMask",
                 "initialPath"
               ]
-            },
-            {
-              "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-              },
-              "parameters": [
-                "CreepSlime",
-                "NavMeshPathfindingBehavior",
-                "Base.CenterX()",
-                "Base.CenterY()",
-                ""
-              ]
             }
           ]
         },

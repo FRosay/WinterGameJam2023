@@ -1547,6 +1547,78 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis8.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
