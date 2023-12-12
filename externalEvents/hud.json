@@ -61,6 +61,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Start Scene / Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1025,6 +1026,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1115,41 +1117,12 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "Create"
+                            "value": "ProjectUtils::createPopupOnCursor"
                           },
                           "parameters": [
+                            "",
                             "PopUp",
-                            "PopUp",
-                            "0",
-                            "0",
-                            "\"HUD\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "PopUp",
-                            "Text",
-                            "=",
-                            "\"Pas assez de thunass pour \" + BuildingChoice.name"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Wait"
-                          },
-                          "parameters": [
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "PopUp",
+                            "\"Pas assez de monnaie\"",
                             ""
                           ]
                         }
@@ -1272,6 +1245,19 @@
                           "parameters": [
                             "BuildingChoice",
                             "TowerBehaviour",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "towerBuildEffect",
+                            "1",
+                            "",
+                            "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                             ""
                           ]
                         }
@@ -1807,6 +1793,16 @@
                         "drawGridMask",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "gridMaskRadius",
+                        "=",
+                        "BuildingChoice.TowerBehaviour::Range()"
+                      ]
                     }
                   ]
                 }
@@ -1957,6 +1953,18 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Select tower to level up"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1973,7 +1981,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "BuildingChoice",
+                "Towers",
                 "",
                 "",
                 ""
@@ -1981,14 +1989,21 @@
             },
             {
               "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
+                "value": "Layer"
               },
               "parameters": [
-                "BuildingsPanel",
-                "",
-                "",
+                "Towers",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Towers",
+                "isPhantom",
+                "False"
               ]
             },
             {
@@ -2018,6 +2033,12 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -2047,8 +2068,8 @@
               "parameters": [
                 "PopUp",
                 "LevelUp",
-                "BuildingChoice.X()",
-                "BuildingChoice.Y()-64",
+                "Towers.X()",
+                "Towers.Y()-64",
                 ""
               ]
             },
@@ -2059,18 +2080,17 @@
               "parameters": [
                 "LevelUp",
                 "=",
-                "41"
+                "1000"
               ]
             },
             {
               "type": {
-                "value": "ModVarObjet"
+                "value": "LinkedObjects::LinkObjects"
               },
               "parameters": [
-                "LevelUp",
-                "idOfBuildingLinked",
-                "=",
-                "BuildingChoice.customId"
+                "",
+                "Towers",
+                "LevelUp"
               ]
             },
             {
@@ -2092,9 +2112,9 @@
                     "value": "GlobalVariableChildCount"
                   },
                   "parameters": [
-                    "TowerStats[BuildingChoice.name].price",
+                    "TowerStats[Towers.name].price",
                     ">",
-                    "BuildingChoice.TowerBehaviour::Level()"
+                    "Towers.TowerBehaviour::Level()"
                   ]
                 }
               ],
@@ -2107,7 +2127,7 @@
                     "LevelUp",
                     "Text",
                     "=",
-                    "\"LVL \"+ToString(BuildingChoice.TowerBehaviour::Level())+\" -> \"+ToString(BuildingChoice.TowerBehaviour::Level()+1)+NewLine()+\"PRICE: \"+TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                    "\"LVL \" + ToString(Towers.TowerBehaviour::Level()) + \" -> \" + ToString(Towers.TowerBehaviour::Level()+1) + NewLine() + \"PRICE: \" + TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()-1]"
                   ]
                 }
               ]
@@ -2120,9 +2140,9 @@
                     "value": "GlobalVariableChildCount"
                   },
                   "parameters": [
-                    "TowerStats[BuildingChoice.name].price",
+                    "TowerStats[Towers.name].price",
                     "<=",
-                    "BuildingChoice.TowerBehaviour::Level()"
+                    "Towers.TowerBehaviour::Level()"
                   ]
                 }
               ],
@@ -2141,6 +2161,18 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Level up the selected tower"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -2167,13 +2199,13 @@
             },
             {
               "type": {
-                "value": "VarObjet"
+                "value": "LinkedObjects::PickObjectsLinkedTo"
               },
               "parameters": [
-                "BuildingChoice",
-                "customId",
-                "=",
-                "LevelUp.idOfBuildingLinked"
+                "",
+                "Towers",
+                "LevelUp",
+                ""
               ]
             }
           ],
@@ -2187,9 +2219,9 @@
                     "value": "GlobalVariableChildCount"
                   },
                   "parameters": [
-                    "TowerStats[BuildingChoice.name].price",
+                    "TowerStats[Towers.name].price",
                     ">",
-                    "BuildingChoice.TowerBehaviour::Level()"
+                    "Towers.TowerBehaviour::Level()"
                   ]
                 }
               ],
@@ -2205,48 +2237,19 @@
                       "parameters": [
                         "currency",
                         "<",
-                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                        "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "ProjectUtils::createPopupOnCursor"
                       },
                       "parameters": [
+                        "",
                         "PopUp",
-                        "PopUp",
-                        "0",
-                        "0",
-                        "\"HUD\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "PopUp",
-                        "Text",
-                        "=",
-                        "\"Pas assez de monnaie pour améliorer\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Wait"
-                      },
-                      "parameters": [
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "PopUp",
+                        "\"Pas assez de monnaie\"",
                         ""
                       ]
                     }
@@ -2262,20 +2265,11 @@
                       "parameters": [
                         "currency",
                         ">=",
-                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                        "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
                       ]
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "LevelUp",
-                        ""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "ModVarScene"
@@ -2283,7 +2277,7 @@
                       "parameters": [
                         "currency",
                         "-",
-                        "TowerStats[BuildingChoice.name].price[BuildingChoice.TowerBehaviour::Level()]"
+                        "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
                       ]
                     },
                     {
@@ -2296,61 +2290,34 @@
                         "TowerFX",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "towerLevelUp",
+                        "1",
+                        "",
+                        "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
-                    {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "CreateByName"
-                          },
-                          "parameters": [
-                            "",
-                            "TowerFX",
-                            "BuildingChoice.ObjectName()+\"FX\"",
-                            "BuildingChoice.X()",
-                            "BuildingChoice.Y()",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "TowerFX",
-                            "=",
-                            "43"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "DebuggerTools::ConsoleLog"
-                          },
-                          "parameters": [
-                            "ToString(SceneInstancesCount(TowerFX))",
-                            "\"info\"",
-                            ""
-                          ]
-                        }
-                      ]
-                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "VarObjet"
+                            "value": "LinkedObjects::PickObjectsLinkedTo"
                           },
                           "parameters": [
-                            "BuildingChoice",
-                            "customId",
-                            "=",
-                            "LevelUp.idOfBuildingLinked"
+                            "",
+                            "Towers",
+                            "LevelUp",
+                            ""
                           ]
                         }
                       ],
@@ -2362,10 +2329,22 @@
                           "parameters": [
                             "",
                             "TowerFX",
-                            "BuildingChoice.ObjectName()+\"FX\"",
-                            "BuildingChoice.X()",
-                            "BuildingChoice.Y()",
-                            "\"Enemies\""
+                            "Towers.ObjectName()+\"FX\"",
+                            "Towers.CenterX()",
+                            "Towers.CenterY()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "TowerFX",
+                            "-",
+                            "TowerFX.Width() / 2",
+                            "-",
+                            "TowerFX.Height() / 2"
                           ]
                         },
                         {
@@ -2375,20 +2354,34 @@
                           "parameters": [
                             "TowerFX",
                             "=",
-                            "43"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "TowerFX",
-                            "Scale",
-                            "*",
-                            "2"
+                            "100"
                           ]
                         }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::RemoveLinkBetween"
+                      },
+                      "parameters": [
+                        "",
+                        "Towers",
+                        "LevelUp"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "LevelUp",
+                        ""
                       ]
                     }
                   ]
@@ -2405,8 +2398,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
-      "name": "Range tower",
+      "name": "Tower Range",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -2429,7 +2421,7 @@
                 "value": "Layer"
               },
               "parameters": [
-                "BuildingChoice",
+                "Towers",
                 ""
               ]
             }
@@ -2446,58 +2438,14 @@
             },
             {
               "type": {
-                "value": "Create"
+                "value": "ProjectUtils::createTowerRangeDisplay"
               },
               "parameters": [
                 "",
                 "RangeDisplay",
-                "BuildingChoice.X()-BuildingChoice.TowerBehaviour::Range()",
-                "BuildingChoice.Y()-BuildingChoice.TowerBehaviour::Range()",
+                "Towers",
+                "",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResizableCapability::ResizableBehavior::SetSize"
-              },
-              "parameters": [
-                "RangeDisplay",
-                "Resizable",
-                "BuildingChoice.TowerBehaviour::Range()*2",
-                "BuildingChoice.TowerBehaviour::Range()*2"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "RangeDisplay",
-                "=",
-                "40"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "RangeDisplay",
-                "=",
-                "BuildingChoice.CenterX()-BuildingChoice.TowerBehaviour::Range()",
-                "=",
-                "BuildingChoice.CenterY()-BuildingChoice.TowerBehaviour::Range()"
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "RangeDisplay",
-                "Opacity",
-                "=",
-                "180"
               ]
             }
           ]

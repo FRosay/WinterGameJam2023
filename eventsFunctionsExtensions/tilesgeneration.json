@@ -520,16 +520,6 @@
                             "Variable(BoardGeneration.y)",
                             "\"\""
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "TilesToPlace",
-                            "=",
-                            "1"
-                          ]
                         }
                       ],
                       "events": [
@@ -619,7 +609,7 @@
                   "parameters": [
                     "TilesToPlace",
                     "=",
-                    "5"
+                    "0"
                   ]
                 }
               ]

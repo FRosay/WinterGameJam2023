@@ -284,6 +284,18 @@
           "value": 32
         }
       ]
+    },
+    {
+      "folded": true,
+      "name": "gridMaskRadius",
+      "type": "number",
+      "value": 80
+    },
+    {
+      "folded": true,
+      "name": "drawGridMask",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -1167,11 +1179,23 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "TextFadeOutBehavior",
+          "type": "ProjectUtils::TextFadeOutBehavior",
+          "timeBeforeFading": 0.1,
+          "fadingSpeed": "medium"
+        },
+        {
+          "name": "TextFloatUp",
+          "type": "ProjectUtils::TextFloatUp",
+          "floatingSpeed": "medium"
+        }
+      ],
       "string": "Text from PopUp",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 64,
+      "characterSize": 24,
       "color": {
         "b": 0,
         "g": 0,
@@ -3651,7 +3675,14 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "FadeOutBehavior",
+          "type": "ProjectUtils::SpriteFadeOutBehavior",
+          "timeBeforeFading": 0.2,
+          "fadingSpeed": "medium"
+        }
+      ],
       "animations": [
         {
           "name": "range-display",
@@ -4770,7 +4801,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.6,
+              "timeBetweenFrames": 0.2,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
@@ -5066,7 +5097,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.125,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -6222,7 +6253,7 @@
         "g": 0,
         "r": 0
       },
-      "absoluteCoordinates": false,
+      "absoluteCoordinates": true,
       "clearBetweenFrames": true,
       "antialiasing": "none"
     },
@@ -7323,9 +7354,9 @@
           },
           "parameters": [
             "GridMask",
-            "MouseX()",
-            "MouseY()+65",
-            "80"
+            "CursorX()",
+            "CursorY()",
+            "gridMaskRadius"
           ]
         }
       ]
@@ -7907,6 +7938,10 @@
       "type": "SimpleEnemyBehaviour::EnemyHealth"
     },
     {
+      "name": "FadeOutBehavior",
+      "type": "ProjectUtils::SpriteFadeOutBehavior"
+    },
+    {
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
     },
@@ -7944,6 +7979,14 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "TextFadeOutBehavior",
+      "type": "ProjectUtils::TextFadeOutBehavior"
+    },
+    {
+      "name": "TextFloatUp",
+      "type": "ProjectUtils::TextFloatUp"
     },
     {
       "name": "TileBehavior",
