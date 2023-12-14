@@ -956,6 +956,12 @@
           "name": "customId",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "isPreview",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -1047,6 +1053,12 @@
           "name": "customId",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "isPreview",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -5940,7 +5952,7 @@
       "effects": [
         {
           "effectType": "Outline",
-          "name": "Effect",
+          "name": "InteractionOutline",
           "doubleParameters": {
             "padding": 0,
             "thickness": 3
@@ -6328,7 +6340,7 @@
       "effects": [
         {
           "effectType": "Outline",
-          "name": "Effect",
+          "name": "InteractionOutline",
           "doubleParameters": {
             "padding": 0,
             "thickness": 3
@@ -6669,7 +6681,7 @@
       "effects": [
         {
           "effectType": "Outline",
-          "name": "Effect",
+          "name": "InteractionOutline",
           "doubleParameters": {
             "padding": 0,
             "thickness": 3
@@ -6763,7 +6775,7 @@
       "effects": [
         {
           "effectType": "Outline",
-          "name": "Effect",
+          "name": "InteractionOutline",
           "doubleParameters": {
             "padding": 0,
             "thickness": 3

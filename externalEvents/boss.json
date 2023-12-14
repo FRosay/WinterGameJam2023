@@ -152,7 +152,7 @@
                           },
                           "parameters": [
                             "BuildingChoice",
-                            "isPhantom",
+                            "isPreview",
                             "False"
                           ]
                         },

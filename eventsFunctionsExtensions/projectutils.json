@@ -66,16 +66,6 @@
                     "isCursorOnObject",
                     "True"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "\"COLLISION\"",
-                    "\"info\"",
-                    ""
-                  ]
                 }
               ]
             }
@@ -188,7 +178,7 @@
                   },
                   "parameters": [
                     "tower",
-                    "isPhantom",
+                    "isPreview",
                     ""
                   ]
                 }
@@ -282,6 +272,106 @@
           "conditions": [
             {
               "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "whichText",
+                    "=",
+                    "\"Currency\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "ToString(Variable(currency))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "whichText",
+                    "=",
+                    "\"Life\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "ToString(Variable(totalLife))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "whichText",
+                    "=",
+                    "\"Wave\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "\"Vague \"+ToString(Variable(WavesSettings.currentWave))+\"/5\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::CompareStrings"
               },
               "parameters": [
@@ -291,16 +381,40 @@
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "textToUpdate",
-                "Text",
-                "=",
-                "ToString(Variable(currency))"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "ToString(Variable(currency))",
+                    "!=",
+                    "textToUpdate.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "ToString(Variable(currency))"
+                  ]
+                }
               ]
             }
           ]
@@ -319,16 +433,40 @@
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "textToUpdate",
-                "Text",
-                "=",
-                "ToString(Variable(totalLife))"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "ToString(Variable(totalLife))",
+                    "!=",
+                    "textToUpdate.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "ToString(Variable(totalLife))"
+                  ]
+                }
               ]
             }
           ]
@@ -347,16 +485,40 @@
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "textToUpdate",
-                "Text",
-                "=",
-                "\"Vague \"+ToString(Variable(WavesSettings.currentWave))+\"/5\""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "ToString(Variable(WavesSettings.currentWave))",
+                    "!=",
+                    "textToUpdate.Text::Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "textToUpdate",
+                    "Text",
+                    "=",
+                    "\"Vague \"+ToString(Variable(WavesSettings.currentWave))+\"/5\""
+                  ]
+                }
               ]
             }
           ]
@@ -374,6 +536,51 @@
           "name": "whichText",
           "supplementaryInformation": "[\"Currency\",\"Life\",\"Wave\"]",
           "type": "stringWithSelector"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Initialize the selected text(s)",
+      "fullName": "Initialize Text(s)",
+      "functionType": "Action",
+      "name": "initializeText",
+      "sentence": "Initialize _PARAM1_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "textToInitialize",
+                "Text",
+                "=",
+                "textToInitialize.VariableString(initialText)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::Text::SetFontSize"
+              },
+              "parameters": [
+                "textToInitialize",
+                "=",
+                "textToInitialize.Variable(initialSize)"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "textToInitialize",
+          "supplementaryInformation": "TextObject::Text",
+          "type": "objectList"
         }
       ],
       "objectGroups": []

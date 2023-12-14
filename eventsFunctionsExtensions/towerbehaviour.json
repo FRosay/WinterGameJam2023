@@ -835,8 +835,20 @@
           "fullName": "Level up",
           "functionType": "Action",
           "name": "LevelUp",
-          "sentence": "Level up _PARAM0_",
+          "sentence": "Level up _PARAM0_ (_PARAM1_)",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "/!\\ Important de retirer l'argent avant d'augmenter le niveau /!\\"
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -855,6 +867,16 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "currency",
+                    "-",
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Level()])"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "TowerBehaviour::TowerBehaviour::SetPropertylevel"
                   },
                   "parameters": [
@@ -862,6 +884,19 @@
                     "Behavior",
                     "+",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "towerLevelUp",
+                    "1",
+                    "",
+                    "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                    ""
                   ]
                 }
               ],

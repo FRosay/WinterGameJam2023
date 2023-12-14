@@ -61,7 +61,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Start Scene / Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -90,6 +89,70 @@
               ]
             }
           ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectUtils::initializeText"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ProjectUtils::initializeText"
+                  },
+                  "parameters": [
+                    "",
+                    "TestingText",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "HUDBackground",
+                    "Wave",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Wave",
+                    "=",
+                    "HUDBackground.CenterX() - Wave.Width() / 2",
+                    "=",
+                    "HUDBackground.Y()"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -122,81 +185,6 @@
                 "Wave",
                 "\"Wave\"",
                 ""
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "StaticText",
-                "Text",
-                "=",
-                "StaticText.initialText"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::Text::SetFontSize"
-              },
-              "parameters": [
-                "StaticText",
-                "=",
-                "StaticText.initialSize"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "TestingText",
-                "Text",
-                "=",
-                "TestingText.initialText"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::Text::SetFontSize"
-              },
-              "parameters": [
-                "TestingText",
-                "=",
-                "TestingText.initialSize"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "HUDBackground",
-                    "Wave",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Wave",
-                    "=",
-                    "HUDBackground.CenterX() - Wave.Width() / 2",
-                    "=",
-                    "HUDBackground.Y()"
-                  ]
-                }
               ]
             }
           ]
@@ -244,108 +232,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "ToString(WavesSettings.currentWave)",
-                "!=",
-                "Wave.Text::Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "Wave",
-                "\"Wave\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "ToString(totalLife)",
-                "!=",
-                "CurrentLife.Text::Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "CurrentLife",
-                "\"Life\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "ToString(currency)",
-                "!=",
-                "CurrentCurrency.Text::Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ProjectUtils::updateHUDText"
-              },
-              "parameters": [
-                "",
-                "CurrentCurrency",
-                "\"Currency\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -377,7 +263,7 @@
               "parameters": [
                 "Interactibles",
                 "Effect",
-                "\"Effect\"",
+                "\"InteractionOutline\"",
                 "no"
               ]
             }
@@ -417,7 +303,7 @@
               "parameters": [
                 "Interactibles",
                 "Effect",
-                "\"Effect\"",
+                "\"InteractionOutline\"",
                 "yes"
               ]
             }
@@ -447,7 +333,7 @@
               "parameters": [
                 "Interactibles",
                 "Effect",
-                "\"Effect\"",
+                "\"InteractionOutline\"",
                 "no"
               ]
             }
@@ -503,7 +389,7 @@
               },
               "parameters": [
                 "BuildingChoice",
-                "isPhantom",
+                "isPreview",
                 "True"
               ]
             }
@@ -1093,7 +979,7 @@
                       },
                       "parameters": [
                         "BuildingChoice",
-                        "isPhantom",
+                        "isPreview",
                         "True"
                       ]
                     }
@@ -1190,7 +1076,7 @@
                           },
                           "parameters": [
                             "BuildingChoice",
-                            "isPhantom",
+                            "isPreview",
                             ""
                           ]
                         },
@@ -1351,7 +1237,7 @@
                                   },
                                   "parameters": [
                                     "BuildingChoice",
-                                    "isPhantom",
+                                    "isPreview",
                                     "True"
                                   ]
                                 },
@@ -1667,7 +1553,7 @@
                   },
                   "parameters": [
                     "BuildingChoice",
-                    "isPhantom",
+                    "isPreview",
                     "True"
                   ]
                 }
@@ -1760,7 +1646,7 @@
                       },
                       "parameters": [
                         "BuildingChoice",
-                        "isPhantom",
+                        "isPreview",
                         "True"
                       ]
                     },
@@ -1947,7 +1833,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Level Up",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2002,7 +1887,7 @@
               },
               "parameters": [
                 "Towers",
-                "isPhantom",
+                "isPreview",
                 "False"
               ]
             },
@@ -2272,35 +2157,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "currency",
-                        "-",
-                        "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "TowerBehaviour::TowerBehaviour::LevelUp"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "TowerBehaviour",
                         "TowerFX",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySoundCanal"
-                      },
-                      "parameters": [
-                        "",
-                        "towerLevelUp",
-                        "1",
-                        "",
-                        "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                         ""
                       ]
                     }
@@ -2308,19 +2170,7 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "LinkedObjects::PickObjectsLinkedTo"
-                          },
-                          "parameters": [
-                            "",
-                            "Towers",
-                            "LevelUp",
-                            ""
-                          ]
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
@@ -2367,16 +2217,6 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "LinkedObjects::RemoveLinkBetween"
-                      },
-                      "parameters": [
-                        "",
-                        "Towers",
-                        "LevelUp"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "Delete"
                       },
                       "parameters": [
@@ -2410,7 +2250,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "BuildingChoice",
+                "Towers",
                 "",
                 "",
                 ""
