@@ -315,6 +315,389 @@
         }
       ],
       "objectGroups": []
+    },
+    {
+      "description": "Create the level up text for a tower",
+      "fullName": "Create Level Up Text",
+      "functionType": "Action",
+      "name": "createLevelUpText",
+      "sentence": "Create _PARAM1_ for _PARAM2_ (_PARAM3_)",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "LevelUp",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"leveling\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "PopUp",
+                "LevelUp",
+                "Tower.X()",
+                "Tower.Y()-64",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "LevelUp",
+                "=",
+                "1000"
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Tower",
+                "LevelUp"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "LevelUp",
+                "\"255;255;255\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildCount"
+                  },
+                  "parameters": [
+                    "TowerStats[Tower.VariableString(name)].price",
+                    ">",
+                    "Tower.TowerBehaviour::Level()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelUp",
+                    "Text",
+                    "=",
+                    "\"LVL \" + ToString(Tower.TowerBehaviour::Level()) + \" -> \" + ToString(Tower.TowerBehaviour::Level()+1) + NewLine() + \"PRICE: \" + ToString(GlobalVariable(TowerStats[Tower.VariableString(name)].price[Tower.TowerBehaviour::Level()-1]))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableChildCount"
+                  },
+                  "parameters": [
+                    "TowerStats[Tower.VariableString(name)].price",
+                    "<=",
+                    "Tower.TowerBehaviour::Level()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelUp",
+                    "Text",
+                    "=",
+                    "\"Niveau max\""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "LevelUp",
+          "supplementaryInformation": "TextObject::Text",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "Tower",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "TowerBehaviour",
+          "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
+          "type": "behavior"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Place (build) a tower on a tile",
+      "fullName": "Place (build) a tower",
+      "functionType": "Action",
+      "name": "placeTower",
+      "sentence": "Place _PARAM1_ (_PARAM2_) on _PARAM3_ / _PARAM4_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "currency",
+                ">=",
+                "GlobalVariable(TowerStats[Tower.VariableString(name)].price[0])"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "towerBuildEffect",
+                "1",
+                "",
+                "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "currency",
+                    "-",
+                    "GlobalVariable(TowerStats[Tower.VariableString(name)].price[0])"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "customId",
+                    "=",
+                    "Variable(nextCustomBuildingId)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextCustomBuildingId",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "isPreview",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "=",
+                    "42"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "Scale",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Tower",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "TowerBehaviour",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "TowerTween",
+                    "\"towerPlacementPosition\"",
+                    "BuildableTile.CenterX()-Tower.Width()/2",
+                    "BuildableTile.CenterY()-Tower.Height()/2",
+                    "\"easeInQuad\"",
+                    "0.25",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "=",
+                    "BuildableTile.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "=",
+                    "BuildableTile.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TileSystem::TileBehavior::SetIsOccupied"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "TileBehavior",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "description": "The Tower to place / build",
+          "name": "Tower",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "The Tween Behavior of the Tower",
+          "name": "TowerTween",
+          "supplementaryInformation": "Tween::TweenBehavior",
+          "type": "behavior"
+        },
+        {
+          "description": "The BuildableTile underneath",
+          "name": "BuildableTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "The GridTile underneath",
+          "name": "GridTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": [
@@ -872,18 +1255,7 @@
                   "parameters": [
                     "currency",
                     "-",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Level()])"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::SetPropertylevel"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "+",
-                    "1"
+                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Level()-1])"
                   ]
                 },
                 {
@@ -901,6 +1273,23 @@
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::TowerBehaviour::SetPropertylevel"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
