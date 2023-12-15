@@ -140,6 +140,9 @@
         },
         {
           "name": "FullscreenControl"
+        },
+        {
+          "name": "TowerMenuText"
         }
       ]
     }
@@ -322,7 +325,22 @@
       "width": 0,
       "x": 0,
       "y": -64,
-      "zOrder": 1,
+      "zOrder": 10000,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "MainPainter",
+      "persistentUuid": "8a07a364-6b8e-4d3c-aa0e-00bd7ab2bd72",
+      "width": 0,
+      "x": 64,
+      "y": -64,
+      "zOrder": 99,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -975,6 +993,12 @@
           "name": "isPreview",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "isMoving",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -1072,6 +1096,12 @@
           "name": "isPreview",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "isMoving",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -1107,54 +1137,6 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "assets/sprites/towers/towerFrost1_1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 16,
-                        "y": 0
-                      },
-                      {
-                        "x": 16,
-                        "y": 16
-                      },
-                      {
-                        "x": 0,
-                        "y": 16
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "diagonal",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets\\sprites\\towers\\tower1_2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2771,7 +2753,7 @@
       "assetStoreId": "",
       "bold": false,
       "italic": false,
-      "name": "LevelUp",
+      "name": "TowerMenuText",
       "smoothed": true,
       "type": "TextObject::Text",
       "underlined": false,
@@ -2781,18 +2763,43 @@
           "name": "idOfBuildingLinked",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "folded": true,
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
         }
       ],
-      "effects": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "InteractionOutline",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "90;90;90"
+          },
+          "booleanParameters": {}
+        }
+      ],
       "behaviors": [],
       "string": "Text",
       "font": "assets\\fonts\\Minecraft.ttf",
       "textAlignment": "left",
-      "characterSize": 20,
+      "characterSize": 14,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -6656,6 +6663,12 @@
           "name": "customId",
           "type": "string",
           "value": ""
+        },
+        {
+          "folded": true,
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [
@@ -6968,12 +6981,12 @@
       "effects": [],
       "behaviors": [],
       "fillOpacity": 255,
-      "outlineSize": 1,
+      "outlineSize": 3,
       "outlineOpacity": 255,
       "fillColor": {
-        "b": 255,
-        "g": 255,
-        "r": 255
+        "b": 0,
+        "g": 0,
+        "r": 0
       },
       "outlineColor": {
         "b": 0,
@@ -7051,7 +7064,14 @@
       "name": "Play",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [
         {
           "effectType": "Outline",
@@ -7248,7 +7268,13 @@
       "assetStoreId": "f23eb31ad33dd63f1937c8745105316ca530c28513c64b68a665975503c852a6",
       "name": "ApplyAllButton",
       "type": "PanelSpriteButton::PanelSpriteButton",
-      "variables": [],
+      "variables": [
+        {
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -7392,7 +7418,14 @@
       "name": "Plus",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [
         {
           "effectType": "Outline",
@@ -7486,7 +7519,14 @@
       "name": "Minus",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "isInteractionDisabled",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [
         {
           "effectType": "Outline",
@@ -7684,6 +7724,30 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "MainPainter",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 2,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "outlineColor": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none"
     }
   ],
   "objectsFolderStructure": {
@@ -7829,7 +7893,7 @@
         "objectName": "Price"
       },
       {
-        "objectName": "LevelUp"
+        "objectName": "TowerMenuText"
       },
       {
         "objectName": "ReclaimCostText"
@@ -7839,6 +7903,9 @@
       },
       {
         "objectName": "GridMask"
+      },
+      {
+        "objectName": "MainPainter"
       },
       {
         "objectName": "Heart"
@@ -8066,43 +8133,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "GridPart",
-                "Opacity",
-                "=",
-                "120"
-              ]
-            },
-            {
-              "type": {
-                "value": "SpriteMasking::MaskWithShapePainter"
-              },
-              "parameters": [
-                "",
-                "GridPart",
-                "GridMask",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "drawGridMask",
-                "initialPath"
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Grass",
           "conditions": [],
@@ -8155,6 +8185,13 @@
       "include": {
         "includeConfig": 0
       },
+      "target": "Towers"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
       "target": "Boss"
     },
     {
@@ -8170,33 +8207,6 @@
         "includeConfig": 0
       },
       "target": "Debug"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "drawGridMask",
-            "True"
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "PrimitiveDrawing::Circle"
-          },
-          "parameters": [
-            "GridMask",
-            "CursorX()",
-            "CursorY()",
-            "gridMaskRadius"
-          ]
-        }
-      ]
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
@@ -8556,124 +8566,6 @@
                 ""
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Towers",
-      "conditions": [
-        {
-          "type": {
-            "value": "Layer"
-          },
-          "parameters": [
-            "Towers",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ObjectVariableAsBoolean"
-          },
-          "parameters": [
-            "Towers",
-            "isPreview",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimatableCapability::AnimatableBehavior::Name"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "Animation",
-            "!=",
-            "\"death\""
-          ]
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "Towers.ObjectName()",
-                "=",
-                "\"BaseTower\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
-              },
-              "parameters": [
-                "Towers",
-                "TowerBehaviour",
-                "EnemySlimes",
-                "BaseProjectile",
-                "ProjectileBehaviour",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "Towers.ObjectName()",
-                "=",
-                "\"IceTower\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
-              },
-              "parameters": [
-                "Towers",
-                "TowerBehaviour",
-                "EnemySlimes",
-                "IceProjectile",
-                "ProjectileBehaviour",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Projectiles",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TowerBehaviour::ProjectileBehaviour::FindAndAttack"
-          },
-          "parameters": [
-            "Projectiles",
-            "ProjectileBehaviour",
-            "EnemySlimes",
-            "EnemyHealth",
-            ""
           ]
         }
       ]

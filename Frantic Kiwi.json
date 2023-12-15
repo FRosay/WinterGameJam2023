@@ -2201,19 +2201,7 @@
   "objectsFolderStructure": {
     "folderName": "__ROOT"
   },
-  "objectsGroups": [
-    {
-      "name": "Group2",
-      "objects": [
-        {
-          "name": "NewSprite"
-        },
-        {
-          "name": "NewSprite2"
-        }
-      ]
-    }
-  ],
+  "objectsGroups": [],
   "variables": [
     {
       "folded": true,
@@ -2713,6 +2701,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/building"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/towers"
     }
   ],
   "eventsFunctionsExtensions": [
@@ -2723,10 +2715,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritebutton"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/tiledunitsbar"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

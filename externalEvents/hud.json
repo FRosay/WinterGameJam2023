@@ -4,6 +4,7 @@
   "name": "HUD",
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -138,6 +139,16 @@
             "=",
             "\"disabled\""
           ]
+        },
+        {
+          "type": {
+            "value": "SetObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "Play",
+            "isInteractionDisabled",
+            "True"
+          ]
         }
       ]
     },
@@ -146,6 +157,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -271,13 +283,12 @@
             },
             {
               "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Interactibles",
-                "Animation",
-                "!=",
-                "\"disabled\""
+                "isInteractionDisabled",
+                "False"
               ]
             }
           ],
@@ -446,7 +457,7 @@
                 "value": "Delete"
               },
               "parameters": [
-                "LevelUp",
+                "TowerMenuText",
                 ""
               ]
             },

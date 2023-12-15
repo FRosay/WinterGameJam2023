@@ -1,0 +1,928 @@
+{
+  "associatedLayout": "MainScene",
+  "lastChangeTimeStamp": 0,
+  "name": "Towers",
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Towers",
+      "conditions": [
+        {
+          "type": {
+            "value": "Layer"
+          },
+          "parameters": [
+            "Towers",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ObjectVariableAsBoolean"
+          },
+          "parameters": [
+            "Towers",
+            "isPreview",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::Name"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "Animation",
+            "!=",
+            "\"death\""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "Towers.ObjectName()",
+                "=",
+                "\"BaseTower\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+              },
+              "parameters": [
+                "Towers",
+                "TowerBehaviour",
+                "EnemySlimes",
+                "BaseProjectile",
+                "ProjectileBehaviour",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareStrings"
+              },
+              "parameters": [
+                "Towers.ObjectName()",
+                "=",
+                "\"IceTower\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+              },
+              "parameters": [
+                "Towers",
+                "TowerBehaviour",
+                "EnemySlimes",
+                "IceProjectile",
+                "ProjectileBehaviour",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Projectiles",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TowerBehaviour::ProjectileBehaviour::FindAndAttack"
+          },
+          "parameters": [
+            "Projectiles",
+            "ProjectileBehaviour",
+            "EnemySlimes",
+            "EnemyHealth",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Tower Range",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SpriteMasking::MaskWithShapePainter"
+              },
+              "parameters": [
+                "",
+                "GridPart",
+                "GridMask",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "GridPart",
+                "Opacity",
+                "=",
+                "120"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "initialPath"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::Circle"
+              },
+              "parameters": [
+                "GridMask",
+                "CursorX()",
+                "CursorY()",
+                "gridMaskRadius"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Tower Movement",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"towerMovement\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "TowerMenuText",
+                "customId",
+                "=",
+                "\"move\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"towerMovement\"",
+                    ">=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "TowerMenuText",
+                    "isInteractionDisabled",
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"towerMovement\"",
+                    "<",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "TowerMenuText",
+                    "isInteractionDisabled",
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Towers",
+                "isMoving",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "initialPath"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Grass",
+                    "",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "DistanceBetweenPositions(Towers.CenterX(), Towers.CenterY(), Grass.CenterX(), Grass.CenterY())",
+                    "<",
+                    "110"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "drawGridMask",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "MainPainter",
+                    "=",
+                    "Towers.ZOrder()-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::BeginFillPath"
+                  },
+                  "parameters": [
+                    "MainPainter",
+                    "Towers.CenterX()",
+                    "Towers.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::PathLineTo"
+                  },
+                  "parameters": [
+                    "MainPainter",
+                    "Grass.CenterX()",
+                    "Grass.CenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::EndFillPath"
+                  },
+                  "parameters": [
+                    "MainPainter"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "Towers",
+                        "Tween",
+                        "\"moveTower\" + ToString(Towers.customId)",
+                        "Grass.CenterX() - Towers.Width() / 2",
+                        "Grass.CenterY() - Towers.Height() / 2",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Towers",
+                        "isMoving",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"towerMovement\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Escape"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Right\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Towers",
+                "isMoving",
+                "False"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Tower Menu Creation & Actions",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "TowerMenuText",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Level up the selected tower"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TowerMenuText",
+                        "customId",
+                        "=",
+                        "\"levelup\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Towers",
+                        "TowerMenuText",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "GlobalVariableChildCount"
+                          },
+                          "parameters": [
+                            "TowerStats[Towers.name].price",
+                            ">",
+                            "Towers.TowerBehaviour::Level()"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "currency",
+                                "<",
+                                "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ProjectUtils::createPopupOnCursor"
+                              },
+                              "parameters": [
+                                "",
+                                "PopUp",
+                                "\"Pas assez de monnaie\"",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "currency",
+                                ">=",
+                                "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TowerBehaviour::TowerBehaviour::LevelUp"
+                              },
+                              "parameters": [
+                                "Towers",
+                                "TowerBehaviour",
+                                "TowerFX",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "CreateByName"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "TowerFX",
+                                    "Towers.ObjectName()+\"FX\"",
+                                    "Towers.CenterX()",
+                                    "Towers.CenterY()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreXY"
+                                  },
+                                  "parameters": [
+                                    "TowerFX",
+                                    "-",
+                                    "TowerFX.Width() / 2",
+                                    "-",
+                                    "TowerFX.Height() / 2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "TowerFX",
+                                    "=",
+                                    "100"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Move the selected tower"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TowerMenuText",
+                        "customId",
+                        "=",
+                        "\"move\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Towers",
+                        "isInteractionDisabled",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Towers",
+                        "TowerMenuText",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Towers",
+                        "isMoving",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "TowerMenuText"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "TowerMenuText",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Open the tower's menu"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Towers",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "Towers",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Towers",
+                    "isPreview",
+                    "False"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "currentState",
+                        "=",
+                        "\"none\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "currentState",
+                        "=",
+                        "\"leveling\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::createMenuText"
+                  },
+                  "parameters": [
+                    "",
+                    "Towers",
+                    "TowerBehaviour",
+                    "TowerMenuText",
+                    "Effect",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}

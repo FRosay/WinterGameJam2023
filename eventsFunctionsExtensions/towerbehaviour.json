@@ -317,25 +317,43 @@
       "objectGroups": []
     },
     {
-      "description": "Create the level up text for a tower",
-      "fullName": "Create Level Up Text",
+      "description": "Create the menu text for a tower",
+      "fullName": "Create Menu Text",
       "functionType": "Action",
-      "name": "createLevelUpText",
-      "sentence": "Create _PARAM1_ for _PARAM2_ (_PARAM3_)",
+      "name": "createMenuText",
+      "sentence": "Create the menu for _PARAM1_ (_PARAM2_) with _PARAM3_",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "MenuText",
+                "Tower",
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
                 "value": "Delete"
               },
               "parameters": [
-                "LevelUp",
+                "MenuText",
                 ""
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
             {
               "type": {
                 "value": "ModVarSceneTxt"
@@ -352,9 +370,9 @@
               },
               "parameters": [
                 "PopUp",
-                "LevelUp",
+                "MenuText",
                 "Tower.X()",
-                "Tower.Y()-64",
+                "Tower.Y() - MenuText.Height() - 5",
                 ""
               ]
             },
@@ -363,9 +381,9 @@
                 "value": "ChangePlan"
               },
               "parameters": [
-                "LevelUp",
+                "MenuText",
                 "=",
-                "1000"
+                "100"
               ]
             },
             {
@@ -375,16 +393,18 @@
               "parameters": [
                 "",
                 "Tower",
-                "LevelUp"
+                "MenuText"
               ]
             },
             {
               "type": {
-                "value": "TextObject::ChangeColor"
+                "value": "ModVarObjetTxt"
               },
               "parameters": [
-                "LevelUp",
-                "\"255;255;255\""
+                "MenuText",
+                "customId",
+                "=",
+                "\"levelup\""
               ]
             }
           ],
@@ -409,10 +429,10 @@
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
-                    "LevelUp",
+                    "MenuText",
                     "Text",
                     "=",
-                    "\"LVL \" + ToString(Tower.TowerBehaviour::Level()) + \" -> \" + ToString(Tower.TowerBehaviour::Level()+1) + NewLine() + \"PRICE: \" + ToString(GlobalVariable(TowerStats[Tower.VariableString(name)].price[Tower.TowerBehaviour::Level()-1]))"
+                    "\"LVL \" + ToString(Tower.TowerBehaviour::Level()) + \" -> \" + ToString(Tower.TowerBehaviour::Level() + 1) + NewLine() + \"PRICE: \" + ToString(GlobalVariable(TowerStats[Tower.VariableString(name)].price[Tower.TowerBehaviour::Level() - 1]))"
                   ]
                 }
               ]
@@ -437,10 +457,136 @@
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
-                    "LevelUp",
+                    "MenuText",
                     "Text",
                     "=",
-                    "\"Niveau max\""
+                    "\"Niveau maximum atteint\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MenuText",
+                    "isInteractionDisabled",
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "MenuText",
+                    "=",
+                    "Tower.Y() - MenuText.Height()"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "PopUp",
+                "MenuText",
+                "Tower.X()",
+                "Tower.Y() + Tower.Height() + MenuText.Height()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "MenuText",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "MenuText",
+                "Text",
+                "=",
+                "\"Déplacer la tour\""
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "Tower",
+                "MenuText"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "MenuText",
+                "customId",
+                "=",
+                "\"move\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "MenuText",
+                "=",
+                "Tower.Y() + 5"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"towerMovement\"",
+                    "<",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "MenuText",
+                    "isInteractionDisabled",
+                    "True"
                   ]
                 }
               ]
@@ -450,22 +596,22 @@
       ],
       "parameters": [
         {
-          "description": "",
-          "name": "LevelUp",
-          "supplementaryInformation": "TextObject::Text",
-          "type": "objectList"
-        },
-        {
-          "description": "",
+          "description": "The selected Tower",
           "name": "Tower",
           "supplementaryInformation": "Sprite",
           "type": "objectList"
         },
         {
-          "description": "",
+          "description": "The selected Tower's Behavior",
           "name": "TowerBehaviour",
           "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
           "type": "behavior"
+        },
+        {
+          "description": "The TowerMenuText Object",
+          "name": "MenuText",
+          "supplementaryInformation": "TextObject::Text",
+          "type": "objectList"
         }
       ],
       "objectGroups": []
