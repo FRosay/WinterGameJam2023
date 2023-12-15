@@ -15,28 +15,231 @@
   "dependencies": [],
   "eventsFunctions": [
     {
-      "description": "Allow player to place a building on click",
-      "fullName": "Place a building",
+      "description": "Place (build) a tower on a tile",
+      "fullName": "Place (build) a tower",
       "functionType": "Action",
-      "name": "placeBuilding",
-      "sentence": "Place _PARAM1_ tower thanks to currency _PARAM2_",
+      "group": "Building",
+      "name": "placeTower",
+      "sentence": "Place (build) _PARAM1_ (_PARAM2_) on _PARAM3_ / _PARAM4_",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "currency",
+                ">=",
+                "GlobalVariable(TowerStats[Tower.VariableString(name)].price[0])"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "towerBuildEffect",
+                "1",
+                "",
+                "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "currency",
+                    "-",
+                    "GlobalVariable(TowerStats[Tower.VariableString(name)].price[0])"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "customId",
+                    "=",
+                    "Variable(nextCustomBuildingId)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextCustomBuildingId",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "isPreview",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "=",
+                    "42"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "Scale",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Tower",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "TowerBehaviour",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                  },
+                  "parameters": [
+                    "Tower",
+                    "TowerTween",
+                    "\"towerPlacementPosition\"",
+                    "BuildableTile.CenterX()-Tower.Width()/2",
+                    "BuildableTile.CenterY()-Tower.Height()/2",
+                    "\"easeInQuad\"",
+                    "0.25",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "=",
+                    "BuildableTile.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "=",
+                    "BuildableTile.Y()"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TileSystem::TileBehavior::SetIsOccupied"
+                  },
+                  "parameters": [
+                    "GridTile",
+                    "TileBehavior",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "parameters": [
         {
-          "description": "",
-          "name": "nameOfTower",
-          "type": "string"
+          "description": "The Tower to place / build",
+          "name": "Tower",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
         },
         {
-          "description": "",
-          "name": "currency",
-          "type": "expression"
+          "description": "The Tween Behavior of the Tower",
+          "name": "TowerTween",
+          "supplementaryInformation": "Tween::TweenBehavior",
+          "type": "behavior"
+        },
+        {
+          "description": "The BuildableTile underneath",
+          "name": "BuildableTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "The GridTile underneath",
+          "name": "GridTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
         }
       ],
       "objectGroups": []
@@ -44,6 +247,7 @@
     {
       "fullName": "Delete Preview Building",
       "functionType": "Action",
+      "group": "Building",
       "name": "deletePreviewBuilding",
       "sentence": "Delete the preview among all _PARAM1_",
       "events": [

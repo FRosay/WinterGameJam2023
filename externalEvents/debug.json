@@ -746,11 +746,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
           "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [

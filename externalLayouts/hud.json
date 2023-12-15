@@ -1199,6 +1199,27 @@
           "value": 20
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 70,
+      "layer": "HUD",
+      "name": "FullscreenControl",
+      "persistentUuid": "649188bb-70ef-48bf-8ce0-4c7bdb815521",
+      "width": 70,
+      "x": 1810,
+      "y": 970,
+      "zOrder": 38,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1211,7 +1232,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6406912462476525,
+    "zoomFactor": 0.4303403802207689,
     "windowMask": false
   }
 }

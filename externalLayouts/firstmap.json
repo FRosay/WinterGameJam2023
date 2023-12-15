@@ -19,8 +19,7 @@
     },
     {
       "angle": 270,
-      "customSize": true,
-      "depth": 1,
+      "customSize": false,
       "height": 46,
       "layer": "",
       "name": "Base",
@@ -29,7 +28,12 @@
       "x": 88,
       "y": 409,
       "zOrder": 15,
-      "numberProperties": [],
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
       "stringProperties": [],
       "initialVariables": []
     },
@@ -2003,7 +2007,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.8353591827059936,
+    "zoomFactor": 1.3289726923268046,
     "windowMask": false
   }
 }

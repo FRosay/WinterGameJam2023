@@ -921,6 +921,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -936,17 +937,6 @@
                 "",
                 "Left"
               ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BuildableTiles",
-                "",
-                "",
-                ""
-              ]
             }
           ],
           "actions": [],
@@ -956,13 +946,12 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "ProjectUtils::isSelectedTileOccupied"
+                    "value": "SourisSurObjet"
                   },
                   "parameters": [
-                    "",
                     "BuildableTiles",
-                    "BuildingChoice",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -974,21 +963,14 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "AjoutObjConcern"
+                        "inverted": true,
+                        "value": "ProjectUtils::isSelectedTileOccupied"
                       },
                       "parameters": [
                         "",
-                        "BuildingChoice"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
+                        "BuildableTiles",
                         "BuildingChoice",
-                        "isPreview",
-                        "True"
+                        ""
                       ]
                     }
                   ],
@@ -999,73 +981,79 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "currency",
-                            "<",
-                            "TowerStats[BuildingChoice.name].price[0]"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ProjectUtils::createPopupOnCursor"
+                            "value": "AjoutObjConcern"
                           },
                           "parameters": [
                             "",
-                            "PopUp",
-                            "\"Pas assez de monnaie\"",
-                            ""
+                            "BuildingChoice"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
                           "type": {
-                            "value": "VarScene"
+                            "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "currency",
-                            ">=",
-                            "TowerStats[BuildingChoice.name].price[0]"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TowerBehaviour::placeTower"
-                          },
-                          "parameters": [
-                            "",
                             "BuildingChoice",
-                            "Tween",
-                            "BuildableTiles",
-                            "GridTiles",
-                            ""
+                            "isPreview",
+                            "True"
                           ]
                         }
                       ],
+                      "actions": [],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "currency",
+                                "<",
+                                "TowerStats[BuildingChoice.name].price[0]"
+                              ]
+                            }
+                          ],
                           "actions": [
                             {
                               "type": {
-                                "value": "CreateByName"
+                                "value": "ProjectUtils::createPopupOnCursor"
+                              },
+                              "parameters": [
+                                "",
+                                "PopUp",
+                                "\"Pas assez de monnaie\"",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "currency",
+                                ">=",
+                                "TowerStats[BuildingChoice.name].price[0]"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Building::placeTower"
                               },
                               "parameters": [
                                 "",
                                 "BuildingChoice",
-                                "BuildingChoice.ObjectName()",
-                                "-1000",
-                                "-1000",
+                                "Tween",
+                                "BuildableTiles",
+                                "GridTiles",
                                 ""
                               ]
                             }
@@ -1073,58 +1061,79 @@
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "PosX"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "-1000"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PosY"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "-1000"
-                                  ]
-                                }
-                              ],
+                              "conditions": [],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetObjectVariableAsBoolean"
+                                    "value": "CreateByName"
                                   },
                                   "parameters": [
+                                    "",
                                     "BuildingChoice",
-                                    "isPreview",
-                                    "True"
+                                    "BuildingChoice.ObjectName()",
+                                    "-1000",
+                                    "-1000",
+                                    ""
                                   ]
-                                },
+                                }
+                              ],
+                              "events": [
                                 {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "=",
-                                    "100"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ScalableCapability::ScalableBehavior::SetValue"
-                                  },
-                                  "parameters": [
-                                    "BuildingChoice",
-                                    "Scale",
-                                    "*",
-                                    "2"
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "PosX"
+                                      },
+                                      "parameters": [
+                                        "BuildingChoice",
+                                        "=",
+                                        "-1000"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PosY"
+                                      },
+                                      "parameters": [
+                                        "BuildingChoice",
+                                        "=",
+                                        "-1000"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "BuildingChoice",
+                                        "isPreview",
+                                        "True"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "BuildingChoice",
+                                        "=",
+                                        "100"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                                      },
+                                      "parameters": [
+                                        "BuildingChoice",
+                                        "Scale",
+                                        "*",
+                                        "2"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -1136,194 +1145,185 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
             },
-            {
-              "type": {
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"reclaim-path\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Path",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Path",
-                "initialPath",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarScene"
-              },
-              "parameters": [
-                "currency",
-                ">=",
-                "Variable(reclaimCost)"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "currency",
-                "-",
-                "Variable(reclaimCost)"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "ReclaimCost",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarSceneTxt"
-              },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"none\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "GridPart"
-              ]
-            }
-          ],
-          "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"reclaim-path\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Path",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "Grass",
-                    "isPreview",
-                    "True"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Grass",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grass",
-                    "Path.X()",
-                    "Path.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
                     "Path",
+                    "initialPath",
                     ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AjoutObjConcern"
-                  },
-                  "parameters": [
-                    "",
-                    "Grass"
                   ]
                 },
                 {
                   "type": {
-                    "value": "AjoutObjConcern"
+                    "value": "VarScene"
                   },
                   "parameters": [
-                    "",
-                    "Path"
+                    "currency",
+                    ">=",
+                    "Variable(reclaimCost)"
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "currency",
+                    "-",
+                    "Variable(reclaimCost)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ReclaimCost",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "currentState",
+                    "=",
+                    "\"none\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GridPart"
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Grass",
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Grass",
+                        "isPreview",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Grass",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "TilesGeneration::ChangeGrassSprite"
+                        "value": "Create"
                       },
                       "parameters": [
                         "",
                         "Grass",
+                        "Path.X()",
+                        "Path.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
                         "Path",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Grass"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Path"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Grass",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TilesGeneration::ChangeGrassSprite"
+                          },
+                          "parameters": [
+                            "",
+                            "Grass",
+                            "Path",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
