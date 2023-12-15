@@ -256,6 +256,17 @@
         },
         {
           "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"spawner\"",
+            ">",
+            "0"
+          ]
+        },
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": []
@@ -292,28 +303,7 @@
           "parameters": [
             "Slime",
             "=",
-            "10"
-          ]
-        },
-        {
-          "type": {
-            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "Slime",
-            "NavMeshPathfindingBehavior",
-            "Base.CenterX()",
-            "Base.CenterY()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"nextWaveTimer\""
+            "100"
           ]
         },
         {
@@ -338,6 +328,27 @@
             "=",
             "EnemyWaves[WavesSettings.currentWave-1].bossHP",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+          },
+          "parameters": [
+            "Slime",
+            "NavMeshPathfindingBehavior",
+            "Base.CenterX()",
+            "Base.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"nextWaveTimer\""
           ]
         }
       ]
@@ -476,6 +487,12 @@
                 "",
                 "yes"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [

@@ -864,6 +864,15 @@
           "actions": [
             {
               "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "RangeDisplay",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [

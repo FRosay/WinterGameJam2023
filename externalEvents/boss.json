@@ -113,7 +113,7 @@
                         "value": "PosX"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "=",
                         "GridTiles.X()+8"
                       ]
@@ -123,7 +123,7 @@
                         "value": "PosY"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "=",
                         "GridTiles.Y()+8"
                       ]
@@ -135,7 +135,7 @@
                         "value": "ModVarObjet"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "lastBossPushBackAngle",
                         "=",
                         "Slime.NavMeshPathfindingBehavior::MovementAngle()"
@@ -151,7 +151,7 @@
                             "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "BuildingChoice",
+                            "Towers",
                             "isPreview",
                             "False"
                           ]
@@ -169,7 +169,7 @@
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "BuildingChoice",
+                            "Towers",
                             "isPushbacked",
                             "True"
                           ]
@@ -180,11 +180,11 @@
                           },
                           "parameters": [
                             "",
-                            "BuildingChoice",
+                            "Towers",
                             "Tween",
                             "GridTiles",
                             "TileBehavior",
-                            "BuildingChoice.Variable(lastBossPushBackAngle)",
+                            "Towers.Variable(lastBossPushBackAngle)",
                             ""
                           ]
                         },
@@ -271,16 +271,16 @@
     },
     {
       "type": "BuiltinCommonInstructions::ForEach",
-      "object": "BuildingChoice",
+      "object": "Towers",
       "conditions": [
         {
           "type": {
             "value": "Tween::HasFinished"
           },
           "parameters": [
-            "BuildingChoice",
+            "Towers",
             "Tween",
-            "\"bossPushback\" + BuildingChoice.VariableString(customId)"
+            "\"bossPushback\" + Towers.VariableString(customId)"
           ]
         }
       ],
@@ -294,7 +294,7 @@
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "BuildingChoice",
+                "Towers",
                 "isPushbacked",
                 "True"
               ]
@@ -306,7 +306,7 @@
                 "value": "SetObjectVariableAsBoolean"
               },
               "parameters": [
-                "BuildingChoice",
+                "Towers",
                 "tmpIsDestroyed",
                 "False"
               ]
@@ -323,7 +323,7 @@
                   "parameters": [
                     "Path",
                     "=",
-                    "BuildingChoice.X()-8"
+                    "Towers.X()-8"
                   ]
                 },
                 {
@@ -333,7 +333,7 @@
                   "parameters": [
                     "Path",
                     "=",
-                    "BuildingChoice.Y()-8"
+                    "Towers.Y()-8"
                   ]
                 }
               ],
@@ -343,7 +343,7 @@
                     "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "BuildingChoice",
+                    "Towers",
                     "tmpIsDestroyed",
                     "True"
                   ]
@@ -353,7 +353,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "BuildingChoice",
+                    "Towers",
                     ""
                   ]
                 }
@@ -367,7 +367,7 @@
                     "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "BuildingChoice",
+                    "Towers",
                     "tmpIsDestroyed",
                     ""
                   ]
@@ -379,7 +379,7 @@
                   "parameters": [
                     "GridTiles",
                     "=",
-                    "BuildingChoice.X()-8"
+                    "Towers.X()-8"
                   ]
                 },
                 {
@@ -389,7 +389,7 @@
                   "parameters": [
                     "GridTiles",
                     "=",
-                    "BuildingChoice.Y()-8"
+                    "Towers.Y()-8"
                   ]
                 }
               ],
@@ -399,7 +399,7 @@
                     "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "BuildingChoice",
+                    "Towers",
                     "tmpIsTileOccupied",
                     ""
                   ]
@@ -427,11 +427,11 @@
                       },
                       "parameters": [
                         "",
-                        "BuildingChoice",
+                        "Towers",
                         "Tween",
                         "GridTiles",
                         "TileBehavior",
-                        "BuildingChoice.Variable(lastBossPushBackAngle)",
+                        "Towers.Variable(lastBossPushBackAngle)",
                         ""
                       ]
                     },
@@ -440,7 +440,7 @@
                         "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "tmpIsTileOccupied",
                         "True"
                       ]
@@ -477,7 +477,7 @@
                         "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "tmpIsTileOccupied",
                         ""
                       ]
@@ -489,7 +489,7 @@
                         "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "BuildingChoice",
+                        "Towers",
                         "isPushbacked",
                         "False"
                       ]

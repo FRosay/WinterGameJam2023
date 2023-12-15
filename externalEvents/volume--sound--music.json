@@ -1,0 +1,1282 @@
+{
+  "associatedLayout": "MainScene",
+  "lastChangeTimeStamp": 0,
+  "name": "Volume / Sound / Music",
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Sound Control",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "LoadFile"
+              },
+              "parameters": [
+                "\"VolumeSettings\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "StaticText",
+                        "customId",
+                        "=",
+                        "\"musicSliderText\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "StaticText",
+                        "customId",
+                        "=",
+                        "\"soundSliderText\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "customId",
+                        "=",
+                        "\"musicMuteButton\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "customId",
+                        "=",
+                        "\"soundMuteButton\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "VolumeSlider"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "VolumeSlider",
+                    "Tween",
+                    "\"shrinkVolumeSlider_\" + VolumeSlider.customId",
+                    "0",
+                    "\"easeInQuad\"",
+                    "0.1",
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteSlider::PanelSpriteSlider::Activate"
+                  },
+                  "parameters": [
+                    "VolumeSlider",
+                    "no",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"showVolumeSlider\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GroupExists"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"muteSound\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"soundMuteButton\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Mute\"",
+                    "\"sound\"",
+                    "SoundControl",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GroupExists"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"muteMusic\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"musicMuteButton\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectVolume::muteSoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Mute\"",
+                    "\"music\"",
+                    "SoundControl",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GroupExists"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"soundVolume\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LireFichierExp"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"soundVolume\"",
+                    "",
+                    "TmpVolume.tmpSoundVolume"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.soundVolume",
+                    "=",
+                    "TmpVolume.tmpSoundVolume"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "customId",
+                        "=",
+                        "\"soundSlider\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "=",
+                        "TmpVolume.tmpSoundVolume",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GroupExists"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"musicVolume\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LireFichierExp"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"musicVolume\"",
+                    "",
+                    "TmpVolume.tmpMusicVolume"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.musicVolume",
+                    "=",
+                    "TmpVolume.tmpMusicVolume"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "customId",
+                        "=",
+                        "\"musicSlider\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "=",
+                        "TmpVolume.tmpSoundVolume",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ProjectVolume::applySoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"sound & music\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnloadFile"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Affiche ou cache le menu de réglage du son"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "SoundControl",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "SoundControl",
+                "customId",
+                "=",
+                "\"mainButton\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ToggleObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "SoundControl",
+                "isShrinked"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "isShrinked",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween2"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "Tween",
+                    "\"expandSoundControl\"",
+                    "1",
+                    "1",
+                    "\"easeInQuad\"",
+                    "0.50",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "Tween",
+                        "\"shrinkVolumeSlider_\" + VolumeSlider.customId",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::Activate"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "no",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "SoundControl"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "customId",
+                            "=",
+                            "\"musicSliderText\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "customId",
+                            "=",
+                            "\"soundSliderText\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "SoundControl",
+                            "customId",
+                            "=",
+                            "\"musicMuteButton\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "SoundControl",
+                            "customId",
+                            "=",
+                            "\"soundMuteButton\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "StaticText",
+                        "Tween",
+                        "\"fadeOutVolumeSliderText\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "Tween",
+                        "\"fadeOutVolumeSliderMute\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "isShrinked",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween2"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "Tween",
+                    "\"shrinkSoundControl\"",
+                    "0.30",
+                    "0.30",
+                    "\"easeInQuad\"",
+                    "0.50",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "Tween",
+                        "\"expandVolumeSlider_\" + VolumeSlider.customId",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteSlider::PanelSpriteSlider::Activate"
+                      },
+                      "parameters": [
+                        "VolumeSlider",
+                        "yes",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "SoundControl"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "customId",
+                            "=",
+                            "\"musicSliderText\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "customId",
+                            "=",
+                            "\"soundSliderText\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "SoundControl",
+                            "customId",
+                            "=",
+                            "\"musicMuteButton\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "SoundControl",
+                            "customId",
+                            "=",
+                            "\"soundMuteButton\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "StaticText",
+                        "Tween",
+                        "\"fadeInVolumeSliderText\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "SoundControl",
+                        "Tween",
+                        "\"fadeInVolumeSliderMute\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.50",
+                        "0.1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Règle le volume de la musique ou du son via les deux boutons dédiés"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+              },
+              "parameters": [
+                "VolumeSlider",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "VolumeSlider",
+                    "customId",
+                    "=",
+                    "\"soundSlider\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.soundVolume",
+                    "=",
+                    "VolumeSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"soundVolume\"",
+                    "VolumeSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ProjectVolume::applySoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"sound\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "VolumeSlider",
+                    "customId",
+                    "=",
+                    "\"musicSlider\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.musicVolume",
+                    "=",
+                    "VolumeSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"VolumeSettings\"",
+                    "\"musicVolume\"",
+                    "VolumeSlider.Value()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ProjectVolume::applySoundOrMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "\"music\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Mute la musique ou le son via les deux boutons dédiés"
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "SoundControl",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::Value"
+              },
+              "parameters": [
+                "SoundControl",
+                "Opacity",
+                ">=",
+                "250"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"musicMuteButton\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"soundMuteButton\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"musicMuteButton\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ToggleGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteMusic"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteMusic",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::muteSoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Mute\"",
+                        "\"music\"",
+                        "SoundControl",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteMusic",
+                        "False"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::muteSoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Unmute\"",
+                        "\"music\"",
+                        "SoundControl",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::applySoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"music\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "SoundControl",
+                    "customId",
+                    "=",
+                    "\"soundMuteButton\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ToggleGlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.VolumeSettings.muteSound"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteSound",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::muteSoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Mute\"",
+                        "\"sound\"",
+                        "SoundControl",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "GlobalSettings.VolumeSettings.muteSound",
+                        "False"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::muteSoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Unmute\"",
+                        "\"sound\"",
+                        "SoundControl",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ProjectVolume::applySoundOrMusic"
+                      },
+                      "parameters": [
+                        "",
+                        "\"sound\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Music",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "GlobalSettings.VolumeSettings.musicIsPlaying",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "assets/music/base-slime-adventure.mp3",
+                "1",
+                "yes",
+                "ProjectVolume::getSoundOrMusicVolume(\"music\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "GlobalSettings.VolumeSettings.musicIsPlaying",
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}

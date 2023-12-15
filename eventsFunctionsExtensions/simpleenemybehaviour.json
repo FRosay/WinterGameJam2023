@@ -1339,28 +1339,6 @@
             }
           ],
           "objectGroups": []
-        },
-        {
-          "fullName": "",
-          "functionType": "Action",
-          "name": "onDestroy",
-          "sentence": "",
-          "events": [],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "Sprite",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "SimpleEnemyBehaviour::EnemyHealth",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
         }
       ],
       "propertyDescriptors": [

@@ -4,6 +4,7 @@
   "name": "Camera / Screen",
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -143,252 +144,267 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "MouseButtonReleased"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ]
-        },
-        {
-          "type": {
-            "value": "SourisSurObjet"
-          },
-          "parameters": [
-            "FullscreenControl",
-            "",
-            "",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "ToggleGlobalVariableAsBoolean"
-          },
-          "parameters": [
-            "GlobalSettings.ScreenSettings.isFullscreenOn"
-          ]
-        }
-      ],
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Toggle Fullscreen",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "GlobalSettings.ScreenSettings.isFullscreenOn",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "FullscreenControl",
-                "Tween",
-                "\"fadeOutFullscreenControl\"",
-                "0",
-                "\"easeInQuad\"",
-                "0.4",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetFullScreen"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",
-                "yes",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "FullscreenControl",
+                "",
+                "",
                 ""
               ]
             },
             {
               "type": {
-                "value": "EcrireFichierExp"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "\"ScreenSettings\"",
-                "\"isFullscreenOn\"",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "GlobalSettings.ScreenSettings.isFullscreenOn",
-                "False"
-              ]
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                "value": "ToggleGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "GlobalSettings.ScreenSettings.isFullscreenOn"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.ScreenSettings.isFullscreenOn",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Tween",
+                    "\"fadeOutFullscreenControl\"",
+                    "0",
+                    "\"easeInQuad\"",
+                    "0.4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetFullScreen"
+                  },
+                  "parameters": [
+                    "",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"ScreenSettings\"",
+                    "\"isFullscreenOn\"",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.ScreenSettings.isFullscreenOn",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Tween",
+                    "\"fadeOutFullscreenControl\"",
+                    "0",
+                    "\"easeInQuad\"",
+                    "0.4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetFullScreen"
+                  },
+                  "parameters": [
+                    "",
+                    "no",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DeleteGroupFichier"
+                  },
+                  "parameters": [
+                    "\"ScreenSettings\"",
+                    "\"isFullscreenOn\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Tween::HasFinished"
               },
               "parameters": [
                 "FullscreenControl",
                 "Tween",
-                "\"fadeOutFullscreenControl\"",
-                "0",
-                "\"easeInQuad\"",
-                "0.4",
-                ""
+                "\"fadeOutFullscreenControl\""
               ]
             },
             {
               "type": {
-                "value": "SetFullScreen"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "",
-                "no",
-                ""
+              "parameters": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.ScreenSettings.isFullscreenOn",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Animation",
+                    "=",
+                    "\"on\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Tween",
+                    "\"fadeInFullscreenControl\"",
+                    "255",
+                    "\"easeInQuad\"",
+                    "0.4",
+                    ""
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "DeleteGroupFichier"
-              },
-              "parameters": [
-                "\"ScreenSettings\"",
-                "\"isFullscreenOn\""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "GlobalSettings.ScreenSettings.isFullscreenOn",
+                    "False"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Animation",
+                    "=",
+                    "\"off\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "FullscreenControl",
+                    "Tween",
+                    "\"fadeInFullscreenControl\"",
+                    "255",
+                    "\"easeInQuad\"",
+                    "0.4",
+                    ""
+                  ]
+                }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "Tween::HasFinished"
-          },
-          "parameters": [
-            "FullscreenControl",
-            "Tween",
-            "\"fadeOutFullscreenControl\""
-          ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "GlobalSettings.ScreenSettings.isFullscreenOn",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "FullscreenControl",
-                "Animation",
-                "=",
-                "\"on\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "FullscreenControl",
-                "Tween",
-                "\"fadeInFullscreenControl\"",
-                "255",
-                "\"easeInQuad\"",
-                "0.4",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "GlobalSettings.ScreenSettings.isFullscreenOn",
-                "False"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "FullscreenControl",
-                "Animation",
-                "=",
-                "\"off\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "FullscreenControl",
-                "Tween",
-                "\"fadeInFullscreenControl\"",
-                "255",
-                "\"easeInQuad\"",
-                "0.4",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
+      "parameters": []
     }
   ]
 }

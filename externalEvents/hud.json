@@ -8,6 +8,91 @@
       "conditions": [
         {
           "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "EffectCapability::EffectBehavior::EnableEffect"
+          },
+          "parameters": [
+            "Interactibles",
+            "Effect",
+            "\"InteractionOutline\"",
+            "no"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ProjectUtils::initializeText"
+              },
+              "parameters": [
+                "",
+                "StaticText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ProjectUtils::initializeText"
+              },
+              "parameters": [
+                "",
+                "TestingText",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "HUDBackground",
+                "Wave",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Wave",
+                "=",
+                "HUDBackground.CenterX() - Wave.Width() / 2",
+                "=",
+                "HUDBackground.Y()"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "MouseButtonReleased"
           },
           "parameters": [
@@ -61,8 +146,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
-      "name": "Start Scene / Always",
+      "name": "Always",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -77,79 +161,6 @@
             "textR": 0
           },
           "comment": "Update texts"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ProjectUtils::initializeText"
-                  },
-                  "parameters": [
-                    "",
-                    "StaticText",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ProjectUtils::initializeText"
-                  },
-                  "parameters": [
-                    "",
-                    "TestingText",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "HUDBackground",
-                    "Wave",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Wave",
-                    "=",
-                    "HUDBackground.CenterX() - Wave.Width() / 2",
-                    "=",
-                    "HUDBackground.Y()"
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -249,32 +260,6 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "EffectCapability::EffectBehavior::EnableEffect"
-              },
-              "parameters": [
-                "Interactibles",
-                "Effect",
-                "\"InteractionOutline\"",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -350,984 +335,53 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Have previews follow cursor"
+          "comment": "Tower Range"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "ObjectVariableAsBoolean"
+                "value": "SourisSurObjet"
               },
               "parameters": [
-                "Grass",
-                "isPreview",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Grass",
-                "=",
-                "CursorX() - Grass.Width() / 2",
-                "=",
-                "CursorY() - Grass.Height() / 2"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "isPreview",
-                "True"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "BuildingChoice",
-                "=",
-                "CursorX() - BuildingChoice.Width() / 2",
-                "=",
-                "CursorY() - BuildingChoice.Height() / 2"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "currency",
-                    "<",
-                    "TowerStats[BuildingChoice.name].price[0]"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "\"231;18;18\""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "VarSceneTxt"
-              },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"reclaim-path\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "ReclaimCost",
-                "=",
-                "CursorX() - ReclaimCost.Width() / 2",
-                "=",
-                "CursorY() - ReclaimCost.Height() / 2"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Layer"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "\"HUD\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "=",
-                    "CursorX()+16",
-                    "=",
-                    "CursorY()+16"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Path",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "reclaimCost",
-                    "=",
-                    "4"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.X()-32"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosY"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.Y()"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "reclaimCost",
-                        "-",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.X()+32"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosY"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.Y()"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "reclaimCost",
-                        "-",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.X()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosY"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.Y()-32"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "reclaimCost",
-                        "-",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.X()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PosY"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "=",
-                        "Path.Y()+32"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "reclaimCost",
-                        "-",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "ReclaimCost",
-                        "Text",
-                        "=",
-                        "ToString(Variable(reclaimCost))"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "folded": true,
-      "name": "Stop Building, Deselect Tower",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "KeyReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Escape"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseButtonFromTextReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Right\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "RangeDisplay",
+                "Towers",
+                "",
+                "",
                 ""
               ]
             },
             {
               "type": {
-                "value": "MontreSouris"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
+                "Towers",
+                "isPreview",
+                "False"
+              ]
+            },
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "Towers",
                 ""
               ]
             }
           ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"building\""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AjoutObjConcern"
-                      },
-                      "parameters": [
-                        "",
-                        "BuildingChoice"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Building::deletePreviewBuilding"
-                      },
-                      "parameters": [
-                        "",
-                        "BuildingChoice",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"leveling\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "LevelUp",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"reclaim-path\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ReclaimCost",
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "isPreview",
-                        "True"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Grass",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"none\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "drawGridMask",
-                    "initialPath"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "folded": true,
-      "name": "Placement",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "actions": [
             {
               "type": {
-                "value": "MouseButtonReleased"
+                "value": "ProjectUtils::createTowerRangeDisplay"
               },
               "parameters": [
                 "",
-                "Left"
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BuildableTiles",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "ProjectUtils::isSelectedTileOccupied"
-                      },
-                      "parameters": [
-                        "",
-                        "BuildableTiles",
-                        "BuildingChoice",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "AjoutObjConcern"
-                          },
-                          "parameters": [
-                            "",
-                            "BuildingChoice"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ObjectVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "BuildingChoice",
-                            "isPreview",
-                            "True"
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "VarScene"
-                              },
-                              "parameters": [
-                                "currency",
-                                "<",
-                                "TowerStats[BuildingChoice.name].price[0]"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ProjectUtils::createPopupOnCursor"
-                              },
-                              "parameters": [
-                                "",
-                                "PopUp",
-                                "\"Pas assez de monnaie\"",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "VarScene"
-                              },
-                              "parameters": [
-                                "currency",
-                                ">=",
-                                "TowerStats[BuildingChoice.name].price[0]"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Building::placeTower"
-                              },
-                              "parameters": [
-                                "",
-                                "BuildingChoice",
-                                "Tween",
-                                "BuildableTiles",
-                                "GridTiles",
-                                ""
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "CreateByName"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "BuildingChoice",
-                                    "BuildingChoice.ObjectName()",
-                                    "-1000",
-                                    "-1000",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "PosX"
-                                      },
-                                      "parameters": [
-                                        "BuildingChoice",
-                                        "=",
-                                        "-1000"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "PosY"
-                                      },
-                                      "parameters": [
-                                        "BuildingChoice",
-                                        "=",
-                                        "-1000"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetObjectVariableAsBoolean"
-                                      },
-                                      "parameters": [
-                                        "BuildingChoice",
-                                        "isPreview",
-                                        "True"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ChangePlan"
-                                      },
-                                      "parameters": [
-                                        "BuildingChoice",
-                                        "=",
-                                        "100"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                                      },
-                                      "parameters": [
-                                        "BuildingChoice",
-                                        "Scale",
-                                        "*",
-                                        "2"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"reclaim-path\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Path",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Path",
-                    "initialPath",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "currency",
-                    ">=",
-                    "Variable(reclaimCost)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "currency",
-                    "-",
-                    "Variable(reclaimCost)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ReclaimCost",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "currentState",
-                    "=",
-                    "\"none\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "GridPart"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Grass",
-                        "isPreview",
-                        "True"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Grass",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "Grass",
-                        "Path.X()",
-                        "Path.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Path",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AjoutObjConcern"
-                      },
-                      "parameters": [
-                        "",
-                        "Grass"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AjoutObjConcern"
-                      },
-                      "parameters": [
-                        "",
-                        "Path"
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "Grass",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TilesGeneration::ChangeGrassSprite"
-                          },
-                          "parameters": [
-                            "",
-                            "Grass",
-                            "Path",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
+                "RangeDisplay",
+                "Towers",
+                "",
+                ""
               ]
             }
           ]
@@ -1341,7 +395,7 @@
       "colorR": 74,
       "creationTime": 0,
       "folded": true,
-      "name": "Selection",
+      "name": "Building Selection",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -1381,12 +435,10 @@
           "actions": [
             {
               "type": {
-                "value": "ModVarSceneTxt"
+                "value": "CacheSouris"
               },
               "parameters": [
-                "currentState",
-                "=",
-                "\"building\""
+                ""
               ]
             },
             {
@@ -1397,6 +449,44 @@
                 "LevelUp",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "ReclaimCostText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "BuildingChoice"
+              ]
+            },
+            {
+              "type": {
+                "value": "Building::deletePreviewBuilding"
+              },
+              "parameters": [
+                "",
+                "BuildingChoice",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "currentState",
+                "=",
+                "\"building\""
+              ]
             }
           ],
           "events": [
@@ -1405,74 +495,25 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "AjoutObjConcern"
+                    "value": "SourisSurObjet"
                   },
                   "parameters": [
+                    "BuildingChoice",
                     "",
-                    "BuildingChoice"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "isPreview",
-                    "True"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Grass",
-                    "isPreview",
-                    "True"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Grass",
+                    "",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "Layer"
                   },
                   "parameters": [
-                    "ReclaimCost",
-                    ""
+                    "BuildingChoice",
+                    "\"HUD\""
                   ]
                 }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              ],
               "actions": [
                 {
                   "type": {
@@ -1482,8 +523,8 @@
                     "",
                     "BuildingChoice",
                     "BuildingChoice.ObjectName()",
-                    "-1000",
-                    "-1000",
+                    "-5000",
+                    "-5000",
                     ""
                   ]
                 }
@@ -1499,7 +540,7 @@
                       "parameters": [
                         "BuildingChoice",
                         "=",
-                        "-1000"
+                        "-5000"
                       ]
                     },
                     {
@@ -1509,21 +550,11 @@
                       "parameters": [
                         "BuildingChoice",
                         "=",
-                        "-1000"
+                        "-5000"
                       ]
                     }
                   ],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "BuildingChoice",
-                        "isPreview",
-                        "True"
-                      ]
-                    },
                     {
                       "type": {
                         "value": "ChangePlan"
@@ -1547,6 +578,16 @@
                     },
                     {
                       "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "isPreview",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
@@ -1561,531 +602,49 @@
                       "parameters": [
                         "gridMaskRadius",
                         "=",
-                        "BuildingChoice.TowerBehaviour::Range()"
+                        "Towers.TowerBehaviour::Range()"
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "CacheSouris"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "ReclaimBrush",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarSceneTxt"
-              },
-              "parameters": [
-                "currentState",
-                "=",
-                "\"reclaim-path\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Grass",
-                "CursorX()+16",
-                "CursorY()+16",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Grass",
-                "isPreview",
-                "True"
-              ]
-            },
-            {
-              "type": {
-                "value": "ActivateBehavior"
-              },
-              "parameters": [
-                "Grass",
-                "NavMeshPathfindingObstacleBehavior",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "Grass",
-                "=",
-                "500"
-              ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "GridPart",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "ReclaimCost",
-                "CursorX()+16",
-                "CursorY()+16",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "ReclaimCost",
-                "=",
-                "500"
-              ]
-            },
-            {
-              "type": {
-                "value": "Building::deletePreviewBuilding"
-              },
-              "parameters": [
-                "",
-                "BuildingChoice",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "drawGridMask",
-                "True"
-              ]
-            },
-            {
-              "type": {
-                "value": "CacheSouris"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "folded": true,
-      "name": "Level Up",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Select tower to level up"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "",
-                    "",
-                    ""
-                  ]
                 },
-                {
-                  "type": {
-                    "value": "Layer"
-                  },
-                  "parameters": [
-                    "Towers",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "isPreview",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "currentState",
-                        "=",
-                        "\"none\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "currentState",
-                        "=",
-                        "\"leveling\""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::createLevelUpText"
-                  },
-                  "parameters": [
-                    "",
-                    "LevelUp",
-                    "Towers",
-                    "TowerBehaviour",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Level up the selected tower"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "LevelUp",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "LinkedObjects::PickObjectsLinkedTo"
-                  },
-                  "parameters": [
-                    "",
-                    "Towers",
-                    "LevelUp",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "GlobalVariableChildCount"
+                        "value": "BuiltinCommonInstructions::CompareStrings"
                       },
                       "parameters": [
-                        "TowerStats[Towers.name].price",
-                        ">",
-                        "Towers.TowerBehaviour::Level()"
+                        "BuildingChoice.ObjectName()",
+                        "=",
+                        "\"ReclaimBrush\""
                       ]
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "currency",
-                            "<",
-                            "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ProjectUtils::createPopupOnCursor"
-                          },
-                          "parameters": [
-                            "",
-                            "PopUp",
-                            "\"Pas assez de monnaie\"",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "Scale",
+                        "=",
+                        "1"
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "currency",
-                            ">=",
-                            "TowerStats[Towers.name].price[Towers.TowerBehaviour::Level()]"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TowerBehaviour::TowerBehaviour::LevelUp"
-                          },
-                          "parameters": [
-                            "Towers",
-                            "TowerBehaviour",
-                            "TowerFX",
-                            ""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "CreateByName"
-                              },
-                              "parameters": [
-                                "",
-                                "TowerFX",
-                                "Towers.ObjectName()+\"FX\"",
-                                "Towers.CenterX()",
-                                "Towers.CenterY()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreXY"
-                              },
-                              "parameters": [
-                                "TowerFX",
-                                "-",
-                                "TowerFX.Width() / 2",
-                                "-",
-                                "TowerFX.Height() / 2"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "TowerFX",
-                                "=",
-                                "100"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "LevelUp",
-                            ""
-                          ]
-                        }
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "currentState",
+                        "=",
+                        "\"reclaim-path\""
                       ]
                     }
                   ]
                 }
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Tower Range",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Towers",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Towers",
-                "isPreview",
-                "False"
-              ]
-            },
-            {
-              "type": {
-                "value": "Layer"
-              },
-              "parameters": [
-                "Towers",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "RangeDisplay",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ProjectUtils::createTowerRangeDisplay"
-              },
-              "parameters": [
-                "",
-                "RangeDisplay",
-                "Towers",
-                "",
-                ""
               ]
             }
           ]
