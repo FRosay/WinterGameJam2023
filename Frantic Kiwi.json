@@ -2202,6 +2202,79 @@
         "name": "NewSprite2",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/tower_frost_orth_attack_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\tower_frost_orth_attack_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/tower_frost_orth_attack_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\tower_frost_orth_attack_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/tower_normal_orth_attack_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\tower_normal_orth_attack_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/tower_normal_orth_attack_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\tower_normal_orth_attack_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/idle.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "idle",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Base/tower_normal_orth_idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Base\\tower_normal_orth_idle.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/towers/Frost/tower_frost_orth_idle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\towers\\Frost\\tower_frost_orth_idle.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/tower_attack.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\tower_attack.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2717,10 +2790,6 @@
     }
   ],
   "eventsFunctionsExtensions": [
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/eventsFunctionsExtensions/linktools"
-    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspriteslider"

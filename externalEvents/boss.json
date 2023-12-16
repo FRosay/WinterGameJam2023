@@ -82,6 +82,16 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Path",
+                        "=",
+                        "5"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [

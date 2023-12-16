@@ -839,11 +839,93 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::PropertycanAttack"
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Target",
+                    "customId",
+                    "=",
+                    "Object.Behavior::GetClosestTargetId(Target)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardAngle"
                   },
                   "parameters": [
                     "Object",
-                    "Behavior"
+                    "AngleBetweenPositions(Object.CenterX(), Object.CenterY(), Target.CenterX(), Target.CenterY())-90",
+                    "999",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::TowerBehaviour::PropertycanAttack"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"attack\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\sounds\\tower_attack.mp3",
+                        "1",
+                        "",
+                        "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Animation",
+                    "=",
+                    "\"attack\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Animation"
                   ]
                 }
               ],
@@ -976,6 +1058,23 @@
                         "",
                         "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"idle\""
                       ]
                     }
                   ]

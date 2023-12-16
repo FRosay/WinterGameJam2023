@@ -4,129 +4,142 @@
   "name": "Towers",
   "events": [
     {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Towers",
-      "conditions": [
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Attack",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "value": "Layer"
-          },
-          "parameters": [
-            "Towers",
-            ""
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Towers",
+          "conditions": [
+            {
+              "type": {
+                "value": "Layer"
+              },
+              "parameters": [
+                "Towers",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Towers",
+                "isPreview",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "Animation",
+                "!=",
+                "\"death\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "Towers.ObjectName()",
+                    "=",
+                    "\"BaseTower\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+                  },
+                  "parameters": [
+                    "Towers",
+                    "TowerBehaviour",
+                    "EnemySlimes",
+                    "BaseProjectile",
+                    "ProjectileBehaviour",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "Towers.ObjectName()",
+                    "=",
+                    "\"IceTower\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
+                  },
+                  "parameters": [
+                    "Towers",
+                    "TowerBehaviour",
+                    "EnemySlimes",
+                    "IceProjectile",
+                    "ProjectileBehaviour",
+                    ""
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "type": {
-            "value": "ObjectVariableAsBoolean"
-          },
-          "parameters": [
-            "Towers",
-            "isPreview",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "AnimatableCapability::AnimatableBehavior::Name"
-          },
-          "parameters": [
-            "EnemySlimes",
-            "Animation",
-            "!=",
-            "\"death\""
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Projectiles",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TowerBehaviour::ProjectileBehaviour::FindAndAttack"
+              },
+              "parameters": [
+                "Projectiles",
+                "ProjectileBehaviour",
+                "EnemySlimes",
+                "EnemyHealth",
+                ""
+              ]
+            }
           ]
         }
       ],
-      "actions": [],
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "Towers.ObjectName()",
-                "=",
-                "\"BaseTower\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
-              },
-              "parameters": [
-                "Towers",
-                "TowerBehaviour",
-                "EnemySlimes",
-                "BaseProjectile",
-                "ProjectileBehaviour",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::CompareStrings"
-              },
-              "parameters": [
-                "Towers.ObjectName()",
-                "=",
-                "\"IceTower\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TowerBehaviour::TowerBehaviour::AttackTarget"
-              },
-              "parameters": [
-                "Towers",
-                "TowerBehaviour",
-                "EnemySlimes",
-                "IceProjectile",
-                "ProjectileBehaviour",
-                ""
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Projectiles",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TowerBehaviour::ProjectileBehaviour::FindAndAttack"
-          },
-          "parameters": [
-            "Projectiles",
-            "ProjectileBehaviour",
-            "EnemySlimes",
-            "EnemyHealth",
-            ""
-          ]
-        }
-      ]
+      "parameters": []
     },
     {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Tower Range",
+      "folded": true,
+      "name": "Range",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -211,7 +224,8 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Tower Movement",
+      "folded": true,
+      "name": "Movement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -637,7 +651,8 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "name": "Tower Menu Creation & Actions",
+      "folded": true,
+      "name": "Menu Creation & Actions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
