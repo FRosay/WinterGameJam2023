@@ -558,7 +558,7 @@
               "parameters": [
                 "MenuText",
                 "=",
-                "Tower.Y() + 5"
+                "Tower.Y() + MenuText.Height() + 5"
               ]
             }
           ],

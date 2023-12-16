@@ -269,12 +269,6 @@
                     ">=",
                     "10"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -303,12 +297,6 @@
                     "<",
                     "10"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -327,6 +315,19 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "On sélectionne la grille sur laquelle est la tour à déplacer puis on sélectionne progressivement un carré d'herbe autour (ici à 3 de distance, orthogonalement et en diagonale)"
+        },
+        {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -337,6 +338,18 @@
                 "Towers",
                 "isMoving",
                 "True"
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "GridPart",
+                "Towers",
+                "",
+                "",
+                "yes"
               ]
             }
           ],
@@ -357,122 +370,199 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "SourisSurObjet"
+                    "value": "AjoutObjConcern"
                   },
                   "parameters": [
-                    "Grass",
                     "",
-                    "yes",
-                    ""
+                    "NonGridTiles"
                   ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                    "value": "CollisionNP"
                   },
                   "parameters": [
-                    "DistanceBetweenPositions(Towers.CenterX(), Towers.CenterY(), Grass.CenterX(), Grass.CenterY())",
-                    "<",
-                    "110"
+                    "NonGridTiles",
+                    "GridPart",
+                    "",
+                    "",
+                    "no"
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "drawGridMask",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "MainPainter",
-                    "=",
-                    "Towers.ZOrder()-1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::BeginFillPath"
-                  },
-                  "parameters": [
-                    "MainPainter",
-                    "Towers.CenterX()",
-                    "Towers.CenterY()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::PathLineTo"
-                  },
-                  "parameters": [
-                    "MainPainter",
-                    "Grass.CenterX()",
-                    "Grass.CenterY()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::EndFillPath"
-                  },
-                  "parameters": [
-                    "MainPainter"
-                  ]
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "MouseButtonReleased"
+                        "value": "AjoutObjConcern"
                       },
                       "parameters": [
                         "",
-                        "Left"
+                        "GridPart"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "GridPart",
+                        "NonGridTiles",
+                        "",
+                        "",
+                        "no"
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                      },
-                      "parameters": [
-                        "Towers",
-                        "Tween",
-                        "\"moveTower\" + ToString(Towers.customId)",
-                        "Grass.CenterX() - Towers.Width() / 2",
-                        "Grass.CenterY() - Towers.Height() / 2",
-                        "\"easeInQuad\"",
-                        "0.50",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Towers",
-                        "isMoving",
-                        "False"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"towerMovement\""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "NonGridTiles"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NonGridTiles",
+                            "GridPart",
+                            "",
+                            "",
+                            "no"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Grass",
+                                "",
+                                "yes",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "drawGridMask",
+                                "True"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "MainPainter",
+                                "=",
+                                "Towers.ZOrder()-1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::BeginFillPath"
+                              },
+                              "parameters": [
+                                "MainPainter",
+                                "Towers.CenterX()",
+                                "Towers.CenterY()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::PathLineTo"
+                              },
+                              "parameters": [
+                                "MainPainter",
+                                "Grass.CenterX()",
+                                "Grass.CenterY()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::EndFillPath"
+                              },
+                              "parameters": [
+                                "MainPainter"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "MouseButtonReleased"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Left"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                                  },
+                                  "parameters": [
+                                    "Towers",
+                                    "Tween",
+                                    "\"moveTower\" + ToString(Towers.customId)",
+                                    "Grass.CenterX() - Towers.Width() / 2",
+                                    "Grass.CenterY() - Towers.Height() / 2",
+                                    "\"easeInQuad\"",
+                                    "0.50",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "Towers",
+                                    "isMoving",
+                                    "False"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ResetTimer"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"towerMovement\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -527,6 +617,15 @@
                 "isMoving",
                 "False"
               ]
+            },
+            {
+              "type": {
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "drawGridMask",
+                "initialPath"
+              ]
             }
           ]
         }
@@ -538,7 +637,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Tower Menu Creation & Actions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -775,6 +873,17 @@
                         "Towers",
                         "isInteractionDisabled",
                         "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"towerMovement\"",
+                        ">=",
+                        "10"
                       ]
                     },
                     {
