@@ -125,7 +125,7 @@
                       "parameters": [
                         "Towers",
                         "=",
-                        "GridTiles.X()+8"
+                        "GridTiles.X() + ((GridTiles.Width() - Towers.Width()) / 2)"
                       ]
                     },
                     {
@@ -135,7 +135,7 @@
                       "parameters": [
                         "Towers",
                         "=",
-                        "GridTiles.Y()+8"
+                        "GridTiles.Y() + ((GridTiles.Height() - Towers.Height()) / 2)"
                       ]
                     }
                   ],
@@ -333,7 +333,7 @@
                   "parameters": [
                     "Path",
                     "=",
-                    "Towers.X()-8"
+                    "Towers.X()-7"
                   ]
                 },
                 {
@@ -343,7 +343,7 @@
                   "parameters": [
                     "Path",
                     "=",
-                    "Towers.Y()-8"
+                    "Towers.Y()-7"
                   ]
                 }
               ],
@@ -389,7 +389,7 @@
                   "parameters": [
                     "GridTiles",
                     "=",
-                    "Towers.X()-8"
+                    "Towers.X()-7"
                   ]
                 },
                 {
@@ -399,7 +399,7 @@
                   "parameters": [
                     "GridTiles",
                     "=",
-                    "Towers.Y()-8"
+                    "Towers.Y()-7"
                   ]
                 }
               ],

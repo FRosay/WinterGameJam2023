@@ -2177,6 +2177,33 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/background/HUD_border_bottom.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\background\\HUD_border_bottom.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_HUD_background_HUD_tiled.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\HUD\\background\\HUD_tiled",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/HUD/background/HUD_tiled.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\HUD\\background\\HUD_tiled.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
