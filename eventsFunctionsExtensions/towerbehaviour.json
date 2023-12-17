@@ -1280,7 +1280,7 @@
                   },
                   "parameters": [
                     "",
-                    "towerLevelUp",
+                    "assets\\sounds\\towerLevelUp.wav",
                     "1",
                     "",
                     "ProjectVolume::getSoundOrMusicVolume(\"sound\")",

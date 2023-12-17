@@ -4,7 +4,6 @@
   "name": "Camera / Screen",
   "events": [
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -48,7 +47,7 @@
               },
               "parameters": [
                 "",
-                "Center",
+                "CenterTile",
                 "",
                 "",
                 ""

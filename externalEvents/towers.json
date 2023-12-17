@@ -651,7 +651,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Menu Creation & Actions",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -707,7 +706,6 @@
                   "comment": "Level up the selected tower"
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {

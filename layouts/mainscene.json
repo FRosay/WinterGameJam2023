@@ -2068,61 +2068,6 @@
       ],
       "animations": [
         {
-          "name": "NewSprite",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "NewSprite2",
-                  "points": [
-                    {
-                      "name": "RealCenter",
-                      "x": 32,
-                      "y": 32
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 32,
-                        "y": 0
-                      },
-                      {
-                        "x": 32,
-                        "y": 32
-                      },
-                      {
-                        "x": 0,
-                        "y": 32
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "GridPart",
           "useMultipleDirections": false,
           "directions": [
@@ -2133,14 +2078,8 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "GridPart3",
-                  "points": [
-                    {
-                      "name": "RealCenter",
-                      "x": 32,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\sprites\\GridPart.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -2347,17 +2286,6 @@
           ]
         }
       ]
-    },
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Spawner",
-      "texture": "assets\\temp_spawner.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -4773,7 +4701,7 @@
       ],
       "animations": [
         {
-          "name": "range-display",
+          "name": "RangeDisplay",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -4783,7 +4711,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "range-display",
+                  "image": "assets\\sprites\\RangeDisplay.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -7214,17 +7142,6 @@
       ]
     },
     {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Center",
-      "texture": "assets\\temp_spawner.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "IceProjectile",
@@ -8569,6 +8486,126 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "CenterTile",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "CenterTile",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\CenterTile.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "EnemySpawner",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "EnemySpawner",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\EnemySpawner.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 12
+                      },
+                      {
+                        "x": 0,
+                        "y": 12
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -8587,10 +8624,13 @@
             "objectName": "Grass"
           },
           {
-            "objectName": "Spawner"
+            "objectName": "CenterTile"
           },
           {
-            "objectName": "Center"
+            "objectName": "EnemySpawner"
+          },
+          {
+            "objectName": "GridPart"
           }
         ]
       },
@@ -8708,13 +8748,16 @@
         "objectName": "Base"
       },
       {
-        "objectName": "PopUp"
-      },
-      {
-        "objectName": "GridPart"
+        "objectName": "Heart"
       },
       {
         "objectName": "Price"
+      },
+      {
+        "objectName": "PopUp"
+      },
+      {
+        "objectName": "StaticText"
       },
       {
         "objectName": "TowerMenuText"
@@ -8723,16 +8766,10 @@
         "objectName": "ReclaimCostText"
       },
       {
-        "objectName": "StaticText"
-      },
-      {
         "objectName": "GridMask"
       },
       {
         "objectName": "MainPainter"
-      },
-      {
-        "objectName": "Heart"
       }
     ]
   },
@@ -8976,7 +9013,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "Spawner"
+                "EnemySpawner"
               ]
             },
             {
@@ -8984,7 +9021,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "Center"
+                "CenterTile"
               ]
             }
           ]

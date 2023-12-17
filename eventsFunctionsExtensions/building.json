@@ -43,7 +43,7 @@
               },
               "parameters": [
                 "",
-                "towerBuildEffect",
+                "assets\\sounds\\towerBuildEffect.wav",
                 "1",
                 "",
                 "ProjectVolume::getSoundOrMusicVolume(\"sound\")",

@@ -95,30 +95,12 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/NewSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite.png\"}",
-        "name": "NewSprite",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/sprites/bosses/boss1.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\sprites\\bosses\\boss1.png",
         "smoothed": false,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/assets_temp_spawner.png.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "assets\\temp_spawner.png",
-        "smoothed": false,
-        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -135,24 +117,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\sprites\\creeps\\creep1_2.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/tower1_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\tower1_1.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/tower1_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\tower1_2.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -354,15 +318,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/range-display.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "range-display",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/tiled sprites/herb/herb_1.png",
         "kind": "image",
         "metadata": "",
@@ -385,15 +340,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/tiled sprites/hud/hud.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/tower1_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/sprites/towers/tower1_1.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -549,15 +495,6 @@
         "name": "assets/sprites/HUD/HUD_HP-16.png",
         "smoothed": false,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/towerFrost1_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets/sprites/towers/towerFrost1_1.png",
-        "smoothed": false,
-        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -1259,15 +1196,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/GridPart3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/GridPart3.png\"}",
-        "name": "GridPart3",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/tiled sprites/sand/sand_2.png",
         "kind": "image",
         "metadata": "",
@@ -1537,48 +1465,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Plus.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Plus.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/5eec26c282183f173dbe20c511a7eca37a87f90fec57286b1894f7c713ea8f3e_Plus.png",
-          "name": "Plus.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Minus.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"assets/Minus.png\",\"extension\":\".png\"}",
-        "name": "assets\\Minus.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/towerLevelUp.wav",
-        "kind": "audio",
-        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Powerup 30\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.2,\\\"sustainPunch\\\":0,\\\"decay\\\":0.16,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":460.5669421534098,\\\"frequencySweep\\\":400,\\\"frequencyDeltaSweep\\\":1500,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"sawtooth\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":700,\\\"vibratoFrequency\\\":926,\\\"squareDuty\\\":75,\\\"squareDutySweep\\\":20,\\\"flangerOffset\\\":0,\\\"flangerOffsetSweep\\\":0,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0.549612591984987,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"towerLevelUp\"}}",
-        "name": "towerLevelUp",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/towerBuildEffect.wav",
-        "kind": "audio",
-        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Jump 17\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.08,\\\"sustainPunch\\\":0,\\\"decay\\\":0.11,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":300,\\\"frequencySweep\\\":700,\\\"frequencyDeltaSweep\\\":0,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"square\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":0,\\\"vibratoFrequency\\\":10,\\\"squareDuty\\\":50,\\\"squareDutySweep\\\":-40,\\\"flangerOffset\\\":0,\\\"flangerOffsetSweep\\\":0,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":18900,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"towerBuildEffect\"}}",
-        "name": "towerBuildEffect",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/sprites/creeps/base_creep/creepNormal1_frontbis1.png",
         "kind": "image",
         "metadata": "",
@@ -1646,24 +1532,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\sprites\\creeps\\base_creep\\creepNormal1_frontbis8.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/assets_temp_spawner.png.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\assets_temp_spawner.png.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/sprites/towers/towerFrost1_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\sprites\\towers\\towerFrost1_1.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -2065,82 +1933,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Cursor-0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Cursor-0.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/90770009988a9c45bd499c424943be770109fa018babb1df270ec9d77e077ae4_Cursor-0.png",
-          "name": "Cursor-0.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Cursor-3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Cursor-3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/c19d99fdba386386d157f5303ed66d60e4ef416725bcabcccce0b57238aa2262_Cursor-3.png",
-          "name": "Cursor-3.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Black Decorated Button_Hovered.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Black Decorated Button_Hovered.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/8a9f8afaf0442f49cd7d5318d31ac6117137ec91d9086e9bdd59b052a4fa71f0_Black Decorated Button_Hovered.png",
-          "name": "Black Decorated Button_Hovered.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Black Decorated Button_Idle.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Black Decorated Button_Idle.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/6652cc81d33cb5485e0bf19ed2a92aac70b5c9fb45837762d094c8dbecc30d4d_Black Decorated Button_Idle.png",
-          "name": "Black Decorated Button_Idle.png"
-        }
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Black Decorated Button_Pressed.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Black Decorated Button_Pressed.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/61997299d1d329fff69772b1111ba7c07b6c0a96a9a17090d2bf2cc31ff08e00_Black Decorated Button_Pressed.png",
-          "name": "Black Decorated Button_Pressed.png"
-        }
-      },
-      {
-        "file": "assets/ArchitectsDaughter.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "ArchitectsDaughter.ttf",
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/ab812c7d15ad3474b6e55761235713b68f34374f3f064d1b8685ed46720df2f8_ArchitectsDaughter.ttf",
-          "name": "ArchitectsDaughter.ttf"
-        }
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/sprites/HUD/fullscreen_off.png",
         "kind": "image",
         "metadata": "",
@@ -2185,25 +1977,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/grassRegrowth.wav",
-        "kind": "audio",
-        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Powerup 19\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.08,\\\"sustainPunch\\\":10,\\\"decay\\\":0.14,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":600,\\\"frequencySweep\\\":1800,\\\"frequencyDeltaSweep\\\":400,\\\"repeatFrequency\\\":11.8,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"triangle\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":0,\\\"vibratoFrequency\\\":10,\\\"squareDuty\\\":90,\\\"squareDutySweep\\\":-30,\\\"flangerOffset\\\":0,\\\"flangerOffsetSweep\\\":0,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"grassRegrowth\"}}",
-        "name": "grassRegrowth",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/NewSprite2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite2",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
         "alwaysLoaded": false,
         "file": "assets/sprites/towers/Frost/tower_frost_orth_attack_1.png",
         "kind": "image",
@@ -2238,15 +2011,6 @@
         "name": "assets\\sprites\\towers\\Base\\tower_normal_orth_attack_2.png",
         "smoothed": false,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/idle.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "idle",
-        "smoothed": false,
-        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -2346,6 +2110,72 @@
         "metadata": "{\"localFilePath\":\"assets/tiled sprites/herb/transparent_background/herb_tbg_8.png\",\"extension\":\".png\"}",
         "name": "assets\\tiled sprites\\herb\\transparent_background\\herb_tbg_8.png",
         "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/GridPart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\GridPart.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/CenterTile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\CenterTile.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/EnemySpawner.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\EnemySpawner.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/RangeDisplay.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\RangeDisplay.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/grassRegrowth.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\grassRegrowth.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/towerBuildEffect.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\towerBuildEffect.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sounds/towerLevelUp.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\sounds\\towerLevelUp.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": true
       }
     ],

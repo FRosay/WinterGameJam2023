@@ -888,7 +888,7 @@
                       },
                       "parameters": [
                         "",
-                        "grassRegrowth",
+                        "assets\\sounds\\grassRegrowth.wav",
                         "1",
                         "",
                         "ProjectVolume::getSoundOrMusicVolume(\"sound\")",
