@@ -168,17 +168,24 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 226,
+      "height": 250,
       "layer": "HUD",
       "name": "HUDBackground",
       "persistentUuid": "42e2642e-c504-4084-993d-a09f6ab520ed",
       "width": 220,
-      "x": 120,
-      "y": 711,
-      "zOrder": 4,
+      "x": 1530,
+      "y": 770,
+      "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "detailsHUD"
+        }
+      ]
     },
     {
       "angle": 0,
@@ -295,22 +302,6 @@
           "value": 2
         }
       ],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 32,
-      "layer": "HUD",
-      "name": "BaseTower",
-      "persistentUuid": "2bdd0d70-42b9-4c98-97df-1d36b291b960",
-      "width": 32,
-      "x": 150,
-      "y": 733,
-      "zOrder": 27,
-      "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
     },
@@ -1139,7 +1130,7 @@
       "customSize": true,
       "depth": 0,
       "height": 84,
-      "layer": "HUD",
+      "layer": "TestLayer",
       "name": "Plus",
       "persistentUuid": "fb42c878-37eb-4e6f-8e71-803ad96799fa",
       "width": 84,
@@ -1220,6 +1211,120 @@
       ],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 226,
+      "layer": "HUD",
+      "name": "HUDBackground",
+      "persistentUuid": "b1f54144-7a02-4345-81b1-3776fa8ecf55",
+      "width": 220,
+      "x": 120,
+      "y": 711,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "HUD",
+      "name": "BaseTower",
+      "persistentUuid": "91e5ede5-55cb-41ba-9c5f-2953f940a77a",
+      "width": 32,
+      "x": 150,
+      "y": 733,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "DetailsHUDText",
+      "persistentUuid": "6f709f87-8587-4f1f-9735-e06227b19905",
+      "width": 0,
+      "x": 1595,
+      "y": 899,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "detailsTextOne"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "DetailsHUDText",
+      "persistentUuid": "825e1975-2f0a-44a2-a504-2f9c85ffd87e",
+      "width": 0,
+      "x": 1595,
+      "y": 936,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "detailsTextTwo"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "name": "DetailsHUDText",
+      "persistentUuid": "c3d84ee9-fc0f-428d-a54e-a4c2002383cb",
+      "width": 0,
+      "x": 1597,
+      "y": 972,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "string",
+          "value": "detailsTextThree"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 154,
+      "layer": "HUD",
+      "name": "DetailsTower",
+      "persistentUuid": "b2f2e8d2-a5a2-4267-a60f-aaf123225e27",
+      "width": 154,
+      "x": 1561,
+      "y": 786,
+      "zOrder": 39,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1232,7 +1337,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5427920802473326,
+    "zoomFactor": 0.6846283916654113,
     "windowMask": false
   }
 }

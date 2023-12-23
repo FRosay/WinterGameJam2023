@@ -2215,7 +2215,6 @@
   "objectsGroups": [],
   "variables": [
     {
-      "folded": true,
       "name": "TowerStats",
       "type": "structure",
       "children": [
