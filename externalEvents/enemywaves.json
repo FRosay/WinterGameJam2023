@@ -124,6 +124,28 @@
           },
           "parameters": [
             "",
+            "EnemyArrival",
+            "EnemySpawner.CenterX()",
+            "EnemySpawner.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "EnemyArrival",
+            "=",
+            "4"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
             "CreepSlime",
             "EnemySpawner.CenterX()",
             "EnemySpawner.CenterY()",
