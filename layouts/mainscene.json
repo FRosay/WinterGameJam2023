@@ -185,10 +185,15 @@
       "value": 1
     },
     {
-      "folded": true,
       "name": "BossPushback",
       "type": "structure",
       "children": [
+        {
+          "folded": true,
+          "name": "deletedTowerLevel",
+          "type": "number",
+          "value": 1
+        },
         {
           "name": "newTowerXPos",
           "type": "number",

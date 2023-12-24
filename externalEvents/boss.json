@@ -324,6 +324,18 @@
           ],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "If the Tower is on a Path, destroy it"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -368,6 +380,18 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Else, check if it's on an occupied Tile"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -417,6 +441,18 @@
               ],
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "If the Tower is on an already occupied GridTile, then push it"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -430,43 +466,331 @@
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "TowerBehaviour::pushbackTowerFromBoss"
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
                       },
-                      "parameters": [
-                        "",
-                        "Towers",
-                        "Tween",
-                        "GridTiles",
-                        "TileBehavior",
-                        "Towers.Variable(lastBossPushBackAngle)",
-                        ""
+                      "comment": "If the Tower is already at max lvl and can't merge, then push it"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::TowerBehaviour::Level"
+                          },
+                          "parameters": [
+                            "Towers",
+                            "TowerBehaviour",
+                            ">=",
+                            "GlobalVariableChildCount(TowerStats[Towers.name].damage)",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::pushbackTowerFromBoss"
+                          },
+                          "parameters": [
+                            "",
+                            "Towers",
+                            "Tween",
+                            "GridTiles",
+                            "TileBehavior",
+                            "Towers.Variable(lastBossPushBackAngle)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Towers",
+                            "tmpIsTileOccupied",
+                            "True"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TileSystem::TileBehavior::SetIsOccupied"
+                          },
+                          "parameters": [
+                            "GridTiles",
+                            "TileBehavior",
+                            "",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetObjectVariableAsBoolean"
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
                       },
-                      "parameters": [
-                        "Towers",
-                        "tmpIsTileOccupied",
-                        "True"
-                      ]
+                      "comment": "Else, check if the other Tower is lvl max: if it is, push the first Tower, if not merge them both"
                     },
                     {
-                      "type": {
-                        "value": "TileSystem::TileBehavior::SetIsOccupied"
-                      },
-                      "parameters": [
-                        "GridTiles",
-                        "TileBehavior",
-                        "",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "TowerBehaviour::TowerBehaviour::Level"
+                          },
+                          "parameters": [
+                            "Towers",
+                            "TowerBehaviour",
+                            "<",
+                            "GlobalVariableChildCount(TowerStats[Towers.name].damage)",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "Towers"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "Towers",
+                                "=",
+                                "GridTiles.X()+7"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "Towers",
+                                "=",
+                                "GridTiles.Y()+7"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "Towers",
+                                "isPushbacked",
+                                "False"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "TowerBehaviour::TowerBehaviour::Level"
+                                  },
+                                  "parameters": [
+                                    "Towers",
+                                    "TowerBehaviour",
+                                    ">=",
+                                    "GlobalVariableChildCount(TowerStats[Towers.name].damage)",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "AjoutObjConcern"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Towers"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "Towers",
+                                        "isPushbacked",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "TowerBehaviour::pushbackTowerFromBoss"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Towers",
+                                        "Tween",
+                                        "GridTiles",
+                                        "TileBehavior",
+                                        "Towers.Variable(lastBossPushBackAngle)",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "Towers",
+                                        "tmpIsTileOccupied",
+                                        "True"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "TileSystem::TileBehavior::SetIsOccupied"
+                                      },
+                                      "parameters": [
+                                        "GridTiles",
+                                        "TileBehavior",
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "TowerBehaviour::TowerBehaviour::Level"
+                                  },
+                                  "parameters": [
+                                    "Towers",
+                                    "TowerBehaviour",
+                                    "<",
+                                    "GlobalVariableChildCount(TowerStats[Towers.name].damage)",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "BossPushback.deletedTowerLevel",
+                                    "=",
+                                    "Towers.TowerBehaviour::Level()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Delete"
+                                  },
+                                  "parameters": [
+                                    "Towers",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "AjoutObjConcern"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Towers"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "Towers",
+                                        "isPushbacked",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Repeat",
+                                      "repeatExpression": "BossPushback.deletedTowerLevel",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "TowerBehaviour::TowerBehaviour::LevelUp"
+                                          },
+                                          "parameters": [
+                                            "Towers",
+                                            "TowerBehaviour",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Else, the Tower has a new home"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
