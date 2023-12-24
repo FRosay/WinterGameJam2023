@@ -8983,6 +8983,247 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "bbda41ebf8b316b0f9a86dc589cf06d765e28f83f9b64a103384e5ba0050d266",
+      "name": "DinoShadow",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "assets\\sprites\\creeps\\creep_landing_shadow",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\creeps\\creep_landing_shadow6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -9164,6 +9405,9 @@
       },
       {
         "objectName": "Fade"
+      },
+      {
+        "objectName": "DinoShadow"
       }
     ]
   },
@@ -9214,6 +9458,16 @@
             "",
             "=",
             "75"
+          ]
+        },
+        {
+          "type": {
+            "value": "ProjectUtils::pauseOrUnpauseGame"
+          },
+          "parameters": [
+            "",
+            "\"Pause\"",
+            ""
           ]
         }
       ],
@@ -9472,6 +9726,7 @@
       "comment": "Pausing the game"
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -9482,12 +9737,6 @@
             "",
             "p"
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [
@@ -9695,6 +9944,16 @@
           "parameters": [
             "GlobalSettings.GameSettings.isGamePaused",
             ""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "LayerVisible"
+          },
+          "parameters": [
+            "",
+            "\"Fade\""
           ]
         }
       ],

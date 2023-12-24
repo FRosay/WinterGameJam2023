@@ -2377,21 +2377,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "EnemyArrival",
-      "persistentUuid": "aed30120-d0aa-411b-9eae-f4334cc878c3",
-      "width": 0,
-      "x": 496,
-      "y": 432,
-      "zOrder": 19,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -2404,7 +2389,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.2436836988380182,
+    "zoomFactor": 1.1638682658311945,
     "windowMask": false
   }
 }

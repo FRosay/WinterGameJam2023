@@ -2226,6 +2226,82 @@
         "name": "FadeSprite",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Dino Shadow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Dino Shadow.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/24x24 Dino Characters/a7085c15d7465ad32a0bda3f11862df5988114389844775552944b0204b7dc18_Dino Shadow.png",
+          "name": "Dino Shadow.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sprites/creeps/creep_landing_shadow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow4",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow5",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\sprites\\creeps\\creep_landing_shadow6",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
