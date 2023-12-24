@@ -2217,6 +2217,15 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Particles/PixiJS/c693a024a868728da3e9e91c9d23513306582bda6ba10191afc24d6c5667dd5e_Explosion3.png",
           "name": "Explosion3.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/FadeSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "FadeSprite",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2228,6 +2237,7 @@
   "objectsGroups": [],
   "variables": [
     {
+      "folded": true,
       "name": "TowerStats",
       "type": "structure",
       "children": [
@@ -2627,6 +2637,18 @@
       "name": "GlobalSettings",
       "type": "structure",
       "children": [
+        {
+          "name": "GameSettings",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "isGamePaused",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        },
         {
           "name": "ScreenSettings",
           "type": "structure",
