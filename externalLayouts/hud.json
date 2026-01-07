@@ -1134,8 +1134,8 @@
       "name": "Plus",
       "persistentUuid": "fb42c878-37eb-4e6f-8e71-803ad96799fa",
       "width": 84,
-      "x": 1806,
-      "y": 30,
+      "x": 1815,
+      "y": 510,
       "zOrder": 36,
       "numberProperties": [],
       "stringProperties": [],
@@ -1150,8 +1150,8 @@
       "name": "Minus",
       "persistentUuid": "40207a3b-f661-4e76-88bd-c35a888c4769",
       "width": 84,
-      "x": 1806,
-      "y": 30,
+      "x": 1815,
+      "y": 510,
       "zOrder": 37,
       "numberProperties": [],
       "stringProperties": [],
@@ -1325,6 +1325,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TestText",
+      "persistentUuid": "9dfb47e0-d8c1-4438-8833-cc0c93331de6",
+      "width": 0,
+      "x": 1159,
+      "y": 47,
+      "zOrder": 40,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TestText2",
+      "persistentUuid": "13020cfb-60e2-49db-b019-84342e9de1a9",
+      "width": 0,
+      "x": 1398,
+      "y": 47,
+      "zOrder": 41,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1337,7 +1369,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.599573838911114,
+    "zoomFactor": 0.5800155239904919,
     "windowMask": false
   }
 }

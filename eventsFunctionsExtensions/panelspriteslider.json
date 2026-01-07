@@ -487,7 +487,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "Value"
         },
         {
@@ -497,7 +496,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "MinValue"
         },
         {
@@ -507,7 +505,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "MaxValue"
         },
         {
@@ -517,7 +514,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "StepSize"
         }
       ],
@@ -3534,7 +3530,6 @@
             "Label",
             "FillBar"
           ],
-          "hidden": false,
           "name": "BarLeftPadding"
         },
         {
@@ -3547,7 +3542,6 @@
             "Label",
             "FillBar"
           ],
-          "hidden": false,
           "name": "BarTopPadding"
         },
         {
@@ -3560,7 +3554,6 @@
             "Label",
             "FillBar"
           ],
-          "hidden": false,
           "name": "BarRightPadding"
         },
         {
@@ -3573,7 +3566,6 @@
             "Label",
             "FillBar"
           ],
-          "hidden": false,
           "name": "BarBottomPadding"
         },
         {
@@ -3583,7 +3575,6 @@
           "description": "",
           "group": "Label",
           "extraInformation": [],
-          "hidden": false,
           "name": "ShowLabelAtChanges"
         },
         {
@@ -3593,7 +3584,6 @@
           "description": "",
           "group": "Label",
           "extraInformation": [],
-          "hidden": false,
           "name": "LabelMargin"
         },
         {
@@ -3603,7 +3593,6 @@
           "description": "",
           "group": "Value",
           "extraInformation": [],
-          "hidden": false,
           "name": "MinValue"
         },
         {
@@ -3613,7 +3602,6 @@
           "description": "",
           "group": "Value",
           "extraInformation": [],
-          "hidden": false,
           "name": "MaxValue"
         },
         {
@@ -3623,7 +3611,6 @@
           "description": "",
           "group": "Value",
           "extraInformation": [],
-          "hidden": false,
           "name": "StepSize"
         },
         {
@@ -3633,7 +3620,6 @@
           "description": "",
           "group": "Value",
           "extraInformation": [],
-          "hidden": false,
           "name": "InitialValue"
         },
         {
@@ -3703,6 +3689,26 @@
             "b": 0,
             "g": 0,
             "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "It displays the value when it changes.",
+            "font": "",
+            "textAlignment": "",
+            "characterSize": 20,
+            "color": "0;0;0"
           }
         },
         {

@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.45985214267363433,
+    "zoomFactor": 0.7077142870146668,
     "windowMask": false
   },
   "objectsGroups": [
@@ -27,6 +27,9 @@
       "objects": [
         {
           "name": "Play"
+        },
+        {
+          "name": "LevelSelect"
         }
       ]
     }
@@ -5166,6 +5169,75 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "LevelSelect",
+      "persistentUuid": "9466bc96-b7a2-44b6-9ef0-fa25d07843c2",
+      "width": 0,
+      "x": 880,
+      "y": 752,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "LevelSelect",
+      "persistentUuid": "58a2cb68-00bc-411b-a484-c282d173eaae",
+      "width": 0,
+      "x": 640,
+      "y": 752,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "LevelSelect",
+      "persistentUuid": "920f2bc0-8c20-469b-a28a-989dfa4ee867",
+      "width": 0,
+      "x": 1118,
+      "y": 752,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 3
+        }
+      ]
     }
   ],
   "objects": [
@@ -5201,6 +5273,26 @@
         "b": 255,
         "g": 190,
         "r": 140
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "SLIME TD",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "center",
+        "characterSize": 192,
+        "color": "140;190;255"
       }
     },
     {
@@ -5235,6 +5327,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Jouer au jeu !",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 96,
+        "color": "255;255;255"
       }
     },
     {
@@ -6334,6 +6446,67 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "LevelSelect",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "224;31;57"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "string": "Level 1",
+      "font": "assets\\fonts\\Minecraft.ttf",
+      "textAlignment": "left",
+      "characterSize": 48,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Level 1",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 48,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -6344,6 +6517,9 @@
       },
       {
         "objectName": "Play"
+      },
+      {
+        "objectName": "LevelSelect"
       },
       {
         "objectName": "Grass"
@@ -6378,7 +6554,27 @@
           ]
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "LevelSelect"
+          ]
+        },
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "LevelSelect",
+            "Text",
+            "=",
+            "\"Level \" + ToString(LevelSelect.customId)"
+          ]
+        }
+      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -6583,6 +6779,61 @@
             "value": "SourisSurObjet"
           },
           "parameters": [
+            "LevelSelect",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Visible"
+          },
+          "parameters": [
+            "LevelSelect"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ModVarGlobal"
+          },
+          "parameters": [
+            "selectedLevel",
+            "=",
+            "LevelSelect.customId"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"MainScene\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonReleased"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ]
+        },
+        {
+          "type": {
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
             "Play",
             "",
             "",
@@ -6593,11 +6844,19 @@
       "actions": [
         {
           "type": {
-            "value": "Scene"
+            "value": "Delete"
           },
           "parameters": [
-            "",
-            "\"MainScene\"",
+            "Play",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "LevelSelect",
             ""
           ]
         }
@@ -6612,11 +6871,12 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
       "name": "",
-      "renderingType": "",
+      "renderingType": "2d",
       "visibility": true,
       "cameras": [
         {
@@ -6655,11 +6915,12 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
       "name": "Texts",
-      "renderingType": "",
+      "renderingType": "2d",
       "visibility": true,
       "cameras": [],
       "effects": [

@@ -951,36 +951,6 @@
         }
       ],
       "objectGroups": []
-    },
-    {
-      "description": "Setup the global pause / unpause system",
-      "fullName": "Setup the global pause / unpause system",
-      "functionType": "Action",
-      "name": "pauseOrUnpauseGame",
-      "sentence": "Setup the global pause / unpause system",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "window.addEventListener('keyup', function (event) {\r",
-            "    if (event.key === 'p') {\r",
-            "        //let isGamePaused = runtimeScene.getGame().getVariables().get('GlobalSettings.GameSettings.isGamePaused').getAsBoolean();\r",
-            "        runtimeScene.getLayer(\"Fade\").show(!runtimeScene.getGame().getVariables().get('GlobalSettings.GameSettings.isGamePaused').getAsBoolean());\r",
-            "        runtimeScene.getGame().getVariables().get('GlobalSettings.GameSettings.isGamePaused').setBoolean(!runtimeScene.getGame().getVariables().get('GlobalSettings.GameSettings.isGamePaused').getAsBoolean());\r",
-            "\r",
-            "        setTimeout(()=> {\r",
-            "            runtimeScene.getGame().pause(runtimeScene.getGame().getVariables().get('GlobalSettings.GameSettings.isGamePaused').getAsBoolean());\r",
-            "        }, 30);\r",
-            "    }\r",
-            "})"
-          ],
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        }
-      ],
-      "parameters": [],
-      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": [
@@ -1223,7 +1193,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "timeBeforeFading"
         },
         {
@@ -1238,7 +1207,6 @@
             "fast",
             "instant"
           ],
-          "hidden": false,
           "name": "fadingSpeed"
         }
       ],
@@ -1483,7 +1451,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "timeBeforeFading"
         },
         {
@@ -1498,7 +1465,6 @@
             "fast",
             "instant"
           ],
-          "hidden": false,
           "name": "fadingSpeed"
         }
       ],
@@ -1633,7 +1599,6 @@
             "medium",
             "fast"
           ],
-          "hidden": false,
           "name": "floatingSpeed"
         }
       ],

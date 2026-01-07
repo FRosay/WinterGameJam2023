@@ -1423,7 +1423,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "TotalHitPoints"
         },
         {
@@ -1443,7 +1442,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "Armor"
         },
         {
@@ -1474,7 +1472,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "InitialSpeed"
         },
         {
@@ -1485,7 +1482,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "CurrentSpeed"
         },
         {

@@ -573,7 +573,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Building Placement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -700,6 +699,8 @@
                             "Tween",
                             "BuildableTiles",
                             "GridTiles",
+                            "TileBehavior",
+                            "ComparisonTower",
                             ""
                           ]
                         }

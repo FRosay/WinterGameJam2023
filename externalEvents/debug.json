@@ -4,184 +4,327 @@
   "name": "Debug",
   "events": [
     {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Debug",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SystemInfo::IsPreview"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [],
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "Numpad0"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "DebuggerTools::EnableDebugDraw"
-              },
-              "parameters": [
-                "",
-                "no",
-                "",
-                "no",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "Numpad1"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "DebuggerTools::EnableDebugDraw"
-              },
-              "parameters": [
-                "",
-                "",
-                "yes",
-                "no",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "Numpad2"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "NavMeshPathfindingBehavior",
-                "Base.CenterX()",
-                "Base.CenterY()",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "r"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"MainScene\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Debug",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "GridTiles",
-              "conditions": [],
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "NumpadAdd"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "TimeScale()+0.1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "NumpadSubtract"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "TimeScale()-0.1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Numpad0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::EnableDebugDraw"
+                  },
+                  "parameters": [
+                    "",
+                    "no",
+                    "",
+                    "no",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Numpad1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::EnableDebugDraw"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "yes",
+                    "no",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Numpad2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "EnemySlimes",
+                    "NavMeshPathfindingBehavior",
+                    "Base.CenterX()",
+                    "Base.CenterY()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "r"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"MainScene\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Towers"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Layer"
+                  },
+                  "parameters": [
+                    "Towers",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Towers",
+                    "isPreview",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "TestText",
+                    "Text",
+                    "=",
+                    "\"Towers : \" + ToString(PickedInstancesCount(Towers))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "GridTiles"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TileSystem::TileBehavior::IsOccupied"
+                  },
+                  "parameters": [
+                    "GridTiles",
+                    "TileBehavior",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "TestText2",
+                    "Text",
+                    "=",
+                    "\"Occupied : \" + ToString(PickedInstancesCount(GridTiles))"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
               "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "TileSystem::TileBehavior::IsOccupied"
-                      },
-                      "parameters": [
-                        "GridTiles",
-                        "TileBehavior",
-                        ""
-                      ]
-                    }
-                  ],
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "GridTiles",
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
@@ -207,17 +350,6 @@
                     },
                     {
                       "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "Text",
-                        "=",
-                        "\"1\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ScalableCapability::ScalableBehavior::SetValue"
                       },
                       "parameters": [
@@ -235,6 +367,114 @@
                         "StaticText",
                         "=",
                         "500"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "TileSystem::TileBehavior::IsOccupied"
+                          },
+                          "parameters": [
+                            "GridTiles",
+                            "TileBehavior",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "Text",
+                            "=",
+                            "\"1\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "TileSystem::TileBehavior::IsOccupied"
+                          },
+                          "parameters": [
+                            "GridTiles",
+                            "TileBehavior",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "StaticText",
+                            "Text",
+                            "=",
+                            "\"0\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "GridTiles",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "StaticText",
+                    "GridTiles",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TileSystem::TileBehavior::IsOccupied"
+                      },
+                      "parameters": [
+                        "GridTiles",
+                        "TileBehavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "StaticText",
+                        "Text",
+                        "=",
+                        "\"1\""
                       ]
                     }
                   ]
@@ -257,28 +497,6 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "StaticText",
-                        "GridTiles.X()",
-                        "GridTiles.Y()",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "LinkedObjects::LinkObjects"
-                      },
-                      "parameters": [
-                        "",
-                        "StaticText",
-                        "GridTiles"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
@@ -287,64 +505,56 @@
                         "=",
                         "\"0\""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "Scale",
-                        "=",
-                        "0.35"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "=",
-                        "500"
-                      ]
                     }
                   ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
-          "disabled": true,
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "folded": true,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "GridTiles",
-          "conditions": [
-            {
-              "type": {
-                "value": "LinkedObjects::PickObjectsLinkedTo"
-              },
-              "parameters": [
-                "",
-                "StaticText",
-                "GridTiles",
-                ""
-              ]
-            }
-          ],
-          "actions": [],
+          "name": "Console de test",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Afficher / cacher la console"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Impossible de mettre l'opacité du bouton à zéro, on peut que tween"
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "TileSystem::TileBehavior::IsOccupied"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
                     ""
                   ]
                 }
@@ -352,365 +562,32 @@
               "actions": [
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "StaticText",
-                    "Text",
-                    "=",
-                    "\"1\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "TileSystem::TileBehavior::IsOccupied"
-                  },
-                  "parameters": [
-                    "GridTiles",
-                    "TileBehavior",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "StaticText",
-                    "Text",
-                    "=",
-                    "\"0\""
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "parameters": []
-    },
-    {
-      "colorB": 228,
-      "colorG": 176,
-      "colorR": 74,
-      "creationTime": 0,
-      "name": "Console de test",
-      "source": "",
-      "type": "BuiltinCommonInstructions::Group",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Afficher / cacher la console"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Impossible de mettre l'opacité du bouton à zéro, on peut que tween"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Minus",
-                "Opacity",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "TestingText",
-                "Opacity",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
-                "ApplyAllButton"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "ApplyAllButton",
-                "Tween",
-                "\"fadeOutApplyAllButton\"",
-                "0",
-                "\"easeInQuad\"",
-                "0.1",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"showApplyAllButton\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"showApplyAllButton\"",
-                ">",
-                "0.5"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "ApplyAllButton"
-              ]
-            },
-            {
-              "type": {
-                "value": "RemoveTimer"
-              },
-              "parameters": [
-                "",
-                "\"showApplyAllButton\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Plus",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
                     "Minus",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ToggleSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "Debug.showTest"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.showTest",
-                    "True"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "Plus",
-                    "Tween",
-                    "\"fadeOutPlus\"",
-                    "0",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
+                    "Opacity",
+                    "=",
+                    "0"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "Minus",
-                    "Tween",
-                    "\"fadeInMinus\"",
-                    "255",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "ApplyAllButton",
-                    "Tween",
-                    "\"fadeInApplyAllButton\"",
-                    "255",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
                     "TestingText",
-                    "Tween",
-                    "\"fadeInTestingText\"",
-                    "255",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.showTest",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "Plus",
-                    "Tween",
-                    "\"fadeInMinus\"",
-                    "255",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
+                    "Opacity",
+                    "=",
+                    "0"
                   ]
                 },
                 {
                   "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "Minus",
-                    "Tween",
-                    "\"fadeOutMinus\"",
-                    "0",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
+                    "ApplyAllButton"
                   ]
                 },
                 {
@@ -723,69 +600,26 @@
                     "\"fadeOutApplyAllButton\"",
                     "0",
                     "\"easeInQuad\"",
-                    "0.5",
+                    "0.1",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                    "value": "ResetTimer"
                   },
                   "parameters": [
-                    "TestingText",
-                    "Tween",
-                    "\"fadeOutTestingText\"",
-                    "0",
-                    "\"easeInQuad\"",
-                    "0.5",
-                    ""
+                    "",
+                    "\"showApplyAllButton\""
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "Debug.refreshTestDisplay",
-                "True"
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
                   "type": {
-                    "value": "VarObjetTxt"
+                    "value": "ShowLayer"
                   },
                   "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerLevel\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(Debug.selectedTowerLevel)"
+                    "",
+                    "\"TestLayer\""
                   ]
                 }
               ]
@@ -795,26 +629,38 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjetTxt"
+                    "value": "CompareTimer"
                   },
                   "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerName\""
+                    "",
+                    "\"showApplyAllButton\"",
+                    ">",
+                    "0.5"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                    "value": "Montre"
                   },
                   "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + Debug.selectedTowerName"
+                    "ApplyAllButton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"showApplyAllButton\""
                   ]
                 }
               ]
@@ -824,545 +670,57 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjetTxt"
+                    "value": "MouseButtonReleased"
                   },
                   "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerDamage\""
+                    "",
+                    "Left"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Plus",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Minus",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                    "value": "ToggleSceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)])"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerAttackSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)])"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerRange\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)])"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerPrice\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)])"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerEffect\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + TowerStats[VariableString(Debug.selectedTowerName)].effect"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerEffectDuration\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)])"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"freezeEffectStrength\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(AllEffects.freezeStrength)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedWaveNumber\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(Debug.selectedWaveNumber + 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossHP\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsInWave\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepSpawnDelay\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsHP\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyStats.CreepSlime.HP)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsMoveSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "Text",
-                    "=",
-                    "TestingText.initialText + ToString(EnemyStats.CreepSlime.moveSpeed)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.refreshTestDisplay",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "ApplyAllButton",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "BuildingChoice",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
-                  },
-                  "parameters": [
-                    "BuildingChoice",
-                    "TowerBehaviour",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "TestingText",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::Value"
-              },
-              "parameters": [
-                "TestingText",
-                "Opacity",
-                ">",
-                "100"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection du nom de la tour à modifier"
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerName\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.doNext",
-                    "True"
+                    "Debug.showTest"
                   ]
                 }
               ],
@@ -1372,33 +730,69 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarSceneTxt"
+                        "value": "SceneVariableAsBoolean"
                       },
                       "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"base\""
+                        "Debug.showTest",
+                        "True"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarSceneTxt"
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"ice\""
+                        "Plus",
+                        "Tween",
+                        "\"fadeOutPlus\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "SetSceneVariableAsBoolean"
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "Debug.doNext",
-                        "False"
+                        "Minus",
+                        "Tween",
+                        "\"fadeInMinus\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "ApplyAllButton",
+                        "Tween",
+                        "\"fadeInApplyAllButton\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Tween",
+                        "\"fadeInTestingText\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
                       ]
                     }
                   ]
@@ -1408,40 +802,135 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"ice\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SceneVariableAsBoolean"
                       },
                       "parameters": [
-                        "Debug.doNext",
-                        "True"
+                        "Debug.showTest",
+                        ""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarSceneTxt"
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "Debug.selectedTowerName",
+                        "Plus",
+                        "Tween",
+                        "\"fadeInMinus\"",
+                        "255",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Minus",
+                        "Tween",
+                        "\"fadeOutMinus\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "ApplyAllButton",
+                        "Tween",
+                        "\"fadeOutApplyAllButton\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Tween",
+                        "\"fadeOutTestingText\"",
+                        "0",
+                        "\"easeInQuad\"",
+                        "0.5",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Debug.refreshTestDisplay",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
                         "=",
-                        "\"base\""
+                        "\"selectedTowerLevel\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(Debug.selectedTowerLevel)"
                       ]
                     }
                   ]
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedTowerName\""
+                      ]
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -1453,92 +942,34 @@
                         "=",
                         "TestingText.initialText + Debug.selectedTowerName"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.refreshTestDisplay",
-                        "True"
-                      ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection du niveau à modifier pour la tour"
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerLevel\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.doNext",
-                    "True"
-                  ]
-                }
-              ],
-              "events": [
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
+                        "value": "VarObjetTxt"
                       },
                       "parameters": [
-                        "Debug.selectedTowerLevel",
+                        "TestingText",
+                        "customId",
                         "=",
-                        "0"
+                        "\"towerDamage\""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarScene"
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
-                        "Debug.selectedTowerLevel",
+                        "TestingText",
+                        "Text",
                         "=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "False"
+                        "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)])"
                       ]
                     }
                   ]
@@ -1548,33 +979,374 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
+                        "value": "VarObjetTxt"
                       },
                       "parameters": [
-                        "Debug.selectedTowerLevel",
+                        "TestingText",
+                        "customId",
                         "=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "True"
+                        "\"towerAttackSpeed\""
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "ModVarScene"
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
-                        "Debug.selectedTowerLevel",
+                        "TestingText",
+                        "Text",
                         "=",
-                        "0"
+                        "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)])"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerRange\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)])"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerPrice\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)])"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerEffect\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + TowerStats[VariableString(Debug.selectedTowerName)].effect"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerEffectDuration\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)])"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"freezeEffectStrength\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(AllEffects.freezeStrength)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedWaveNumber\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(Debug.selectedWaveNumber + 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsInWave\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepSpawnDelay\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyStats.CreepSlime.HP)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsMoveSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "Text",
+                        "=",
+                        "TestingText.initialText + ToString(EnemyStats.CreepSlime.moveSpeed)"
                       ]
                     }
                   ]
@@ -1585,22 +1357,11 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "TestingText",
-                        "Text",
-                        "=",
-                        "TestingText.initialText + ToString(Debug.selectedTowerLevel+1)"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
                         "Debug.refreshTestDisplay",
-                        "True"
+                        ""
                       ]
                     }
                   ]
@@ -1608,16 +1369,45 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection de la vague de creeps à modifier"
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "ApplyAllButton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "BuildingChoice",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TowerBehaviour::TowerBehaviour::UpdateStats"
+                      },
+                      "parameters": [
+                        "BuildingChoice",
+                        "TowerBehaviour",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "folded": true,
@@ -1625,40 +1415,349 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjetTxt"
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
                   },
                   "parameters": [
                     "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedWaveNumber\""
+                    "",
+                    "",
+                    ""
                   ]
-                }
-              ],
-              "actions": [
+                },
                 {
                   "type": {
-                    "value": "ModVarScene"
+                    "value": "OpacityCapability::OpacityBehavior::Value"
                   },
                   "parameters": [
-                    "Debug.selectedWaveNumber",
-                    "+",
-                    "1"
+                    "TestingText",
+                    "Opacity",
+                    ">",
+                    "100"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
+              "actions": [],
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Sélection du nom de la tour à modifier"
+                },
+                {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "VarScene"
+                        "value": "VarObjetTxt"
                       },
                       "parameters": [
-                        "Debug.selectedWaveNumber",
-                        ">",
-                        "4"
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedTowerName\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Debug.doNext",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"base\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"ice\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"ice\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"base\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + Debug.selectedTowerName"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Sélection du niveau à modifier pour la tour"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedTowerLevel\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Debug.doNext",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + ToString(Debug.selectedTowerLevel+1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Sélection de la vague de creeps à modifier"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedWaveNumber\""
                       ]
                     }
                   ],
@@ -1669,8 +1768,429 @@
                       },
                       "parameters": [
                         "Debug.selectedWaveNumber",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedWaveNumber",
+                            ">",
+                            "4"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedWaveNumber",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + ToString(Debug.selectedWaveNumber+1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
                         "=",
-                        "0"
+                        "\"towerDamage\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)]",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerAttackSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
+                        "+",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
+                        "=",
+                        "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)], 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerRange\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)]",
+                        "+",
+                        "8"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerPrice\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)]",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerEffectDuration\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
+                        "+",
+                        "0.25"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
+                        "=",
+                        "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)], 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"freezeEffectStrength\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "AllEffects.freezeStrength",
+                        "+",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "AllEffects.freezeStrength",
+                        "=",
+                        "roundTo(AllEffects.freezeStrength, 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP",
+                        "+",
+                        "5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed",
+                        "+",
+                        "5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsInWave\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepSpawnDelay\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyStats.CreepSlime.HP",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsMoveSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyStats.CreepSlime.moveSpeed",
+                        "+",
+                        "5"
                       ]
                     }
                   ]
@@ -1679,17 +2199,6 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "TestingText",
-                        "Text",
-                        "=",
-                        "TestingText.initialText + ToString(Debug.selectedWaveNumber+1)"
-                      ]
-                    },
                     {
                       "type": {
                         "value": "SetSceneVariableAsBoolean"
@@ -1704,1193 +2213,812 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "VarObjetTxt"
+                    "value": "MouseButtonReleased"
                   },
                   "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerDamage\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)]",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerAttackSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
-                    "+",
-                    "0.1"
+                    "",
+                    "Right"
                   ]
                 },
                 {
                   "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
-                    "=",
-                    "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)], 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
+                    "value": "SourisSurObjet"
                   },
                   "parameters": [
                     "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerRange\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)]",
-                    "+",
-                    "8"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerPrice\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)]",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerEffectDuration\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
-                    "+",
-                    "0.25"
+                    "",
+                    "",
+                    ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
-                    "=",
-                    "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)], 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
+                    "value": "OpacityCapability::OpacityBehavior::Value"
                   },
                   "parameters": [
                     "TestingText",
-                    "customId",
-                    "=",
-                    "\"freezeEffectStrength\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "AllEffects.freezeStrength",
-                    "+",
-                    "0.1"
+                    "Opacity",
+                    ">",
+                    "100"
                   ]
                 },
                 {
                   "type": {
-                    "value": "ModVarGlobal"
+                    "value": "BuiltinCommonInstructions::Once"
                   },
-                  "parameters": [
-                    "AllEffects.freezeStrength",
-                    "=",
-                    "roundTo(AllEffects.freezeStrength, 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossHP\""
-                  ]
+                  "parameters": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "ModVarGlobal"
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP",
-                    "+",
-                    "5"
+                  "comment": "Sélection du nom de la tour à modifier"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedTowerName\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Debug.doNext",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"base\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"ice\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"ice\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerName",
+                            "=",
+                            "\"base\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + Debug.selectedTowerName"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Sélection du niveau à modifier pour la tour"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedTowerLevel\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Debug.doNext",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.doNext",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedTowerLevel",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + ToString(Debug.selectedTowerLevel+1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Sélection de la vague de creeps à modifier"
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"selectedWaveNumber\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Debug.selectedWaveNumber",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedWaveNumber",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Debug.selectedWaveNumber",
+                            "=",
+                            "4"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "TestingText",
+                            "Text",
+                            "=",
+                            "TestingText.initialText + ToString(Debug.selectedWaveNumber+1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "Debug.refreshTestDisplay",
+                            "True"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerDamage\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)]",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerAttackSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
+                        "-",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
+                        "=",
+                        "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)], 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerRange\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)]",
+                        "-",
+                        "8"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerPrice\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)]",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"towerEffectDuration\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
+                        "-",
+                        "0.25"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
+                        "=",
+                        "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)], 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"freezeEffectStrength\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "AllEffects.freezeStrength",
+                        "-",
+                        "0.1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "AllEffects.freezeStrength",
+                        "=",
+                        "roundTo(AllEffects.freezeStrength, 1)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP",
+                        "-",
+                        "5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"bossSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed",
+                        "-",
+                        "5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsInWave\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepSpawnDelay\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsHP\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyStats.CreepSlime.HP",
+                        "-",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "TestingText",
+                        "customId",
+                        "=",
+                        "\"creepsMoveSpeed\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "EnemyStats.CreepSlime.moveSpeed",
+                        "-",
+                        "5"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Debug.refreshTestDisplay",
+                        "True"
+                      ]
+                    }
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed",
-                    "+",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsInWave\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepSpawnDelay\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsHP\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyStats.CreepSlime.HP",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsMoveSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyStats.CreepSlime.moveSpeed",
-                    "+",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.refreshTestDisplay",
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Right"
-              ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "TestingText",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::Value"
-              },
-              "parameters": [
-                "TestingText",
-                "Opacity",
-                ">",
-                "100"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection du nom de la tour à modifier"
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerName\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.doNext",
-                    "True"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"base\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarSceneTxt"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"ice\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "False"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarSceneTxt"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"ice\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "True"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarSceneTxt"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerName",
-                        "=",
-                        "\"base\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "TestingText",
-                        "Text",
-                        "=",
-                        "TestingText.initialText + Debug.selectedTowerName"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.refreshTestDisplay",
-                        "True"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection du niveau à modifier pour la tour"
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedTowerLevel\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.doNext",
-                    "True"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerLevel",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerLevel",
-                        "=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "False"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerLevel",
-                        "=",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.doNext",
-                        "True"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedTowerLevel",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "TestingText",
-                        "Text",
-                        "=",
-                        "TestingText.initialText + ToString(Debug.selectedTowerLevel+1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.refreshTestDisplay",
-                        "True"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Sélection de la vague de creeps à modifier"
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"selectedWaveNumber\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "Debug.selectedWaveNumber",
-                    "-",
-                    "1"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedWaveNumber",
-                        "<",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Debug.selectedWaveNumber",
-                        "=",
-                        "4"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "TestingText",
-                        "Text",
-                        "=",
-                        "TestingText.initialText + ToString(Debug.selectedWaveNumber+1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Debug.refreshTestDisplay",
-                        "True"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerDamage\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].damage[Variable(Debug.selectedTowerLevel)]",
-                    "-",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerAttackSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
-                    "-",
-                    "0.1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)]",
-                    "=",
-                    "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].attackPerSecond[Variable(Debug.selectedTowerLevel)], 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerRange\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].range[Variable(Debug.selectedTowerLevel)]",
-                    "-",
-                    "8"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerPrice\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].price[Variable(Debug.selectedTowerLevel)]",
-                    "-",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"towerEffectDuration\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
-                    "-",
-                    "0.25"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)]",
-                    "=",
-                    "roundTo(TowerStats[VariableString(Debug.selectedTowerName)].effectDuration[Variable(Debug.selectedTowerLevel)], 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"freezeEffectStrength\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "AllEffects.freezeStrength",
-                    "-",
-                    "0.1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "AllEffects.freezeStrength",
-                    "=",
-                    "roundTo(AllEffects.freezeStrength, 1)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossHP\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossHP",
-                    "-",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"bossSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].bossSpeed",
-                    "-",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsInWave\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].CreepSlime",
-                    "-",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepSpawnDelay\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyWaves[Variable(Debug.selectedWaveNumber)].timeBetweenSpawns",
-                    "-",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsHP\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyStats.CreepSlime.HP",
-                    "-",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "TestingText",
-                    "customId",
-                    "=",
-                    "\"creepsMoveSpeed\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "EnemyStats.CreepSlime.moveSpeed",
-                    "-",
-                    "5"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Debug.refreshTestDisplay",
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ]
+          "parameters": []
         }
-      ],
-      "parameters": []
+      ]
     }
   ]
 }

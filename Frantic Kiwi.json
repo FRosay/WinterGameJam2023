@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "MainMenu",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -2302,6 +2302,15 @@
         "name": "assets\\sprites\\creeps\\creep_landing_shadow6",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/assets_sprites_creeps_creep_landing_shadow6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\assets_sprites_creeps_creep_landing_shadow6.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2778,9 +2787,19 @@
       "name": "isGameWon",
       "type": "boolean",
       "value": true
+    },
+    {
+      "folded": true,
+      "name": "selectedLevel",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/mainmenu"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/mainscene"
@@ -2788,10 +2807,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/finalescene"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/mainmenu"
     }
   ],
   "externalEvents": [
@@ -2877,7 +2892,15 @@
   "externalLayouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/firstmap"
+      "referenceTo": "/externalLayouts/map1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/map2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/map3"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

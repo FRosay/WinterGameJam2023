@@ -162,7 +162,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "isOccupied"
         }
       ],

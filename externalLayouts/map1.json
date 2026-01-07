@@ -1,0 +1,2395 @@
+{
+  "associatedLayout": "MainScene",
+  "name": "Map1",
+  "instances": [
+    {
+      "angle": 270,
+      "customSize": false,
+      "height": 46,
+      "layer": "",
+      "name": "Base",
+      "persistentUuid": "d58dbf12-4ea6-47ad-8c9b-1002111feafa",
+      "width": 46,
+      "x": 88,
+      "y": 409,
+      "zOrder": 15,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "b5f23212-df7e-4776-9f11-e5cc7fd9b904",
+      "width": 32,
+      "x": 96,
+      "y": 384,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "9e38c2ae-fac2-49e2-94a8-641a28c6334d",
+      "width": 0,
+      "x": 224,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "82dfb437-9ce0-403e-a46b-3958bd3b300a",
+      "width": 0,
+      "x": 480,
+      "y": 448,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "aabce6b8-91f4-40ab-88c8-61d208d1b213",
+      "width": 0,
+      "x": 96,
+      "y": 224,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "47aaacc0-b8c2-4b37-8b8f-d9daa76fc7ba",
+      "width": 0,
+      "x": 128,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "28892812-0c1f-4a76-bbb9-5f53e053bf82",
+      "width": 0,
+      "x": 448,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "959a74f6-50c4-429d-adf9-a4f051c1b3f3",
+      "width": 0,
+      "x": 192,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "0a7046e3-729c-4b42-aef5-cb35e6ba26fd",
+      "width": 0,
+      "x": 512,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "0b27301c-2390-4257-961d-85bf3b30d2bd",
+      "width": 0,
+      "x": 480,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "e93452da-9fe6-4918-a15f-b3cf2919717d",
+      "width": 0,
+      "x": 96,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "79313e1f-7568-43ac-8fac-360766cfbbcb",
+      "width": 0,
+      "x": 160,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "a29d82a4-c1fa-48b0-9049-2360466a9dca",
+      "width": 0,
+      "x": 288,
+      "y": 352,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "0fc5e869-5ac9-4f7e-9f9f-2c8629f3f6c8",
+      "width": 0,
+      "x": 64,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "db447eb5-f137-4bef-937f-7a4e44269cab",
+      "width": 0,
+      "x": 256,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "787885fe-7271-4b8e-a9b0-3d2a39e41cdd",
+      "width": 0,
+      "x": 256,
+      "y": 288,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "b785fa23-92de-429c-a952-fb6d14de774e",
+      "width": 0,
+      "x": 288,
+      "y": 320,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "8d8c58a6-dab8-4384-b6aa-dec045d6b221",
+      "width": 0,
+      "x": 96,
+      "y": 128,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "8133d152-1dbf-4216-b4fb-6877726a8393",
+      "width": 32,
+      "x": 96,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "5af82eaa-f46a-4c5f-8b57-3f35743f74d9",
+      "width": 32,
+      "x": 128,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "97fd4dc1-1c7d-4b9f-a476-a95daa90dd81",
+      "width": 32,
+      "x": 96,
+      "y": 448,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "30116080-9933-46c6-9ffb-ff436d04207c",
+      "width": 0,
+      "x": 256,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "7dd8cc3f-0845-4af1-8c92-cefa6e3a70c8",
+      "width": 0,
+      "x": 256,
+      "y": 384,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "7ce71b19-607b-4bc8-a66e-20c66075c8e9",
+      "width": 0,
+      "x": 288,
+      "y": 288,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "0a0e4f90-4a75-451d-910f-ea7946dd2559",
+      "width": 0,
+      "x": 224,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "cb1f7b9a-6e30-439c-9134-328b4dc1b495",
+      "width": 0,
+      "x": 192,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "78a76256-9ee7-4d91-8a52-c571b60ff607",
+      "width": 0,
+      "x": 160,
+      "y": 416,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "2b90a9b7-fec8-4a9e-b4c2-4632bde0cecf",
+      "width": 0,
+      "x": 288,
+      "y": 384,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "5dc41a25-4029-4f57-8ba9-5db77bafcbe6",
+      "width": 0,
+      "x": 64,
+      "y": 192,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "e57af821-9411-4ad8-a64f-d631c62c8e31",
+      "width": 0,
+      "x": 64,
+      "y": 224,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "6204b846-8dbf-4b2d-a5f0-1d31eb3c4baa",
+      "width": 0,
+      "x": 64,
+      "y": 128,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "74e2e586-484d-47d9-b9ee-c1905c73591c",
+      "width": 0,
+      "x": 64,
+      "y": 160,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "203a7102-7390-4b42-af02-112605c82325",
+      "width": 0,
+      "x": 224,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "66b3fa24-3245-4937-99ab-377585f7544f",
+      "width": 0,
+      "x": 192,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "a009a98f-b0d9-4dd2-86e4-0dddc77e4573",
+      "width": 0,
+      "x": 128,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "ff39b692-4335-41d9-8be1-ab03598e0d84",
+      "width": 0,
+      "x": 256,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "829e7529-fbb6-444e-9c85-f70e786b22dc",
+      "width": 0,
+      "x": 416,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "0a67c18f-44ab-48d0-b561-4e30ca2efb24",
+      "width": 0,
+      "x": 320,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "10ac02af-9ccf-44c6-bb86-3346696dc8c0",
+      "width": 0,
+      "x": 288,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "6e2d65c0-be59-4776-9902-63b2a9274363",
+      "width": 0,
+      "x": 384,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "addbbe44-6dda-469e-9101-65e36a062423",
+      "width": 0,
+      "x": 352,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "90172831-3616-40c9-b783-4af73759a27d",
+      "width": 0,
+      "x": 160,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "e53b80b8-d991-4b20-bdd2-04d3979aefb9",
+      "width": 0,
+      "x": 480,
+      "y": 384,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "32dc69ad-1f50-4896-96f5-2199055761ae",
+      "width": 0,
+      "x": 480,
+      "y": 192,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "df7d65a1-44d3-46b1-9344-fc62d7358226",
+      "width": 0,
+      "x": 480,
+      "y": 224,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "c249396c-8cdd-4386-95f8-99de41410fae",
+      "width": 0,
+      "x": 480,
+      "y": 128,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "a7d64ff5-e3b3-4a44-86cc-fc9e83046e4d",
+      "width": 0,
+      "x": 480,
+      "y": 160,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "a6bc5eef-988a-4e58-8735-f2169a0255f6",
+      "width": 0,
+      "x": 480,
+      "y": 320,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "63a565b0-f226-4f52-977a-99bb3f0429c4",
+      "width": 0,
+      "x": 480,
+      "y": 352,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "f4963422-c27f-461e-812d-c4ac09aa2b12",
+      "width": 0,
+      "x": 480,
+      "y": 256,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "55dca6bb-3891-4dd4-b22a-9549c0be43e7",
+      "width": 0,
+      "x": 480,
+      "y": 288,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "fa6a9f2b-8f65-4877-b541-989a6df7dd13",
+      "width": 0,
+      "x": 96,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "eeb8c243-044c-411e-b38e-2693accf53ef",
+      "width": 0,
+      "x": 448,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Path",
+      "persistentUuid": "49757399-17fd-47ff-92f5-d74cbc73982c",
+      "width": 0,
+      "x": 480,
+      "y": 96,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "1802d9a8-b879-4ca8-9e5c-4428c4f66044",
+      "width": 0,
+      "x": 448,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "17d5e89d-803e-49a5-99cc-f2895cc09afa",
+      "width": 0,
+      "x": 352,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "6bc12587-09bc-40f6-9a8f-054d187b8ff8",
+      "width": 0,
+      "x": 416,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "5df03a3f-9e36-4bb0-a8c5-a9b5f8585046",
+      "width": 0,
+      "x": 384,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "5e681947-f274-4d85-a1ab-f96e79dede50",
+      "width": 0,
+      "x": -32,
+      "y": 0,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "48eb96f2-ae69-48e2-b703-ddb9ac31bc42",
+      "width": 0,
+      "x": 544,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "667c7c53-08e3-4d0d-97ae-daa40e33c225",
+      "width": 0,
+      "x": 64,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "f9980526-831e-499a-b844-7d321bdcea34",
+      "width": 0,
+      "x": -32,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 21
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "aeb05d5a-a0a2-4a36-bfb0-d7c58407fbce",
+      "width": 0,
+      "x": 32,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "090396ab-2f0e-4658-987f-dc317b61be3d",
+      "width": 0,
+      "x": 0,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "dbb529e8-d2c1-499f-9bd0-c3639f208a10",
+      "width": 0,
+      "x": 128,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "552aea94-296f-4485-86d3-3194bed335d2",
+      "width": 0,
+      "x": 96,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "4cb8a8ec-8a2b-4b3f-ad93-6363de4db058",
+      "width": 0,
+      "x": 256,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "5e3c765b-e7b9-47f4-b57d-024abeed9bf0",
+      "width": 0,
+      "x": 160,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "705bd066-66fc-4821-ab4c-12b449308fb3",
+      "width": 0,
+      "x": 224,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "e51ed088-3cad-45e5-b798-d6308b465ae7",
+      "width": 0,
+      "x": 192,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "06fb90a3-8338-41c5-878e-aead9098d226",
+      "width": 0,
+      "x": 320,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "cc85b80d-0b9a-4ffa-a05d-b27af4d86b5f",
+      "width": 0,
+      "x": 288,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "4707a24f-650d-4028-834b-71c1c0a37e47",
+      "width": 0,
+      "x": 512,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "004a8a08-4b45-4e9f-a642-65e4dac00f47",
+      "width": 0,
+      "x": 480,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "987f4b80-0add-4179-ba6f-e230b512a372",
+      "width": 0,
+      "x": 576,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 22
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "0335bf6e-71a3-4af9-8c2f-6a75cd1c095d",
+      "width": 0,
+      "x": 608,
+      "y": -32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 23
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "ee49f91b-6098-4fd0-bf4d-d0a09bc5394e",
+      "width": 0,
+      "x": 608,
+      "y": 384,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "692ea22f-5334-4927-bd2c-96bfdfb4932f",
+      "width": 0,
+      "x": 608,
+      "y": 416,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "dcd69801-58e0-44bf-93d2-2a9ab36e1291",
+      "width": 0,
+      "x": 608,
+      "y": 448,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "20afb23f-8801-436d-83e0-4231864a2207",
+      "width": 0,
+      "x": 608,
+      "y": 96,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "51dc33de-4496-4378-80ad-87d316cadecd",
+      "width": 0,
+      "x": 608,
+      "y": 0,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "fcfbb010-cec0-4a0d-b139-f4e287138b0f",
+      "width": 0,
+      "x": 608,
+      "y": 32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "942eb404-2dee-4a62-8b5a-e2b748f4f1e1",
+      "width": 0,
+      "x": 608,
+      "y": 64,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "9813c223-d680-464c-9e99-ae72d45e3907",
+      "width": 0,
+      "x": 608,
+      "y": 224,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "d22d845a-169c-4485-8d78-8a6bc84018a8",
+      "width": 0,
+      "x": 608,
+      "y": 128,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "22e98afd-6a92-4b22-8675-1b585507d0c9",
+      "width": 0,
+      "x": 608,
+      "y": 160,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "8d027b4a-4529-41aa-ad31-6a41a87c8053",
+      "width": 0,
+      "x": 608,
+      "y": 192,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "db45632b-1365-456f-a8d7-d8413f7a7fe9",
+      "width": 0,
+      "x": 608,
+      "y": 352,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "ecf0e853-9500-4be3-8663-4bda4e75acb5",
+      "width": 0,
+      "x": 608,
+      "y": 256,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "75b2828a-e8d1-4778-af67-95a99ee951f2",
+      "width": 0,
+      "x": 608,
+      "y": 288,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "a9a9dd9b-aa38-4a16-a873-5d65a36bbc44",
+      "width": 0,
+      "x": 608,
+      "y": 320,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "be0b0dc2-d8c6-4aeb-b331-4083fd16aade",
+      "width": 0,
+      "x": 608,
+      "y": 512,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "29e776cb-5fe1-4a29-9b00-e3626a6b132a",
+      "width": 0,
+      "x": 608,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 25
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "307f7d26-c197-4686-8edd-aa666ca3822b",
+      "width": 0,
+      "x": 96,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "12538440-559b-4c80-86d0-3fc1f5058a82",
+      "width": 0,
+      "x": 64,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "83511eb4-da27-45a7-bb19-e73d9f9cff80",
+      "width": 0,
+      "x": 32,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "ed231e84-caa3-4132-9a11-619e7e112246",
+      "width": 0,
+      "x": 0,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "de05cfcd-a038-45df-80cb-bdf5d38ed1e9",
+      "width": 0,
+      "x": 448,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "cb1e6146-09f7-4dea-aed9-310b76ae4b70",
+      "width": 0,
+      "x": 576,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "0c406568-c4ea-4fdc-a169-68cd9397bc6b",
+      "width": 0,
+      "x": 544,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "2dfa8109-bb5e-4037-9bbf-f14a56595799",
+      "width": 0,
+      "x": 512,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "bc6648b9-b4df-4a1b-87b1-b494e0a5f79c",
+      "width": 0,
+      "x": 480,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "03e84297-74a2-4418-ae5d-8e4c48e1e988",
+      "width": 0,
+      "x": 288,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "20b511e9-95e1-4e05-899d-cd393a7e8c61",
+      "width": 0,
+      "x": 416,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "a9781051-9c22-4cb3-9d50-90bae56cf9d0",
+      "width": 0,
+      "x": 384,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "167a73e9-b77e-4b3d-8e43-855441b131ee",
+      "width": 0,
+      "x": 352,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "6e1736be-aec2-4cc8-acba-bd30c4c3dcb2",
+      "width": 0,
+      "x": 320,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "33c34bce-839e-4375-bac2-705f366fae1d",
+      "width": 0,
+      "x": 128,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "eaaf621e-ce2c-4fa7-be54-bad896ece2b5",
+      "width": 0,
+      "x": 256,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "53ff52a2-c424-41ac-afc5-d57893f0e676",
+      "width": 0,
+      "x": 224,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "c4b424a7-ce97-445f-bc77-1786e6fce10f",
+      "width": 0,
+      "x": 192,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "330e6541-eb07-43e2-af29-6e1f38387707",
+      "width": 0,
+      "x": 160,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 26
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "874239a6-2077-42a8-b1d9-57e954b550e5",
+      "width": 0,
+      "x": -32,
+      "y": 544,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 27
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "401f1436-ab37-494e-8be8-86501aa11b8f",
+      "width": 0,
+      "x": -32,
+      "y": 96,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "67662b3c-0c28-48cb-969f-d4da40061b5c",
+      "width": 0,
+      "x": -32,
+      "y": 64,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "495de6c3-9a59-4ee4-bccc-f4443c80f1ae",
+      "width": 0,
+      "x": -32,
+      "y": 32,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "5d1faaa8-4f7f-41c2-bcd7-94d8997ebb88",
+      "width": 0,
+      "x": -32,
+      "y": 384,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "179291b7-92af-4e8d-b5f9-ff0ea240e433",
+      "width": 0,
+      "x": -32,
+      "y": 512,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "fd5eb900-2d54-4c20-a22c-5f373f618f7f",
+      "width": 0,
+      "x": -32,
+      "y": 448,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "0b0b1f0a-107f-45af-a6b2-f72ecb78e3ed",
+      "width": 0,
+      "x": -32,
+      "y": 416,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "247a2cd7-1245-4182-940a-f602e819cb7a",
+      "width": 0,
+      "x": -32,
+      "y": 256,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "6ce42697-0fa1-4448-bb96-6c4612009b0e",
+      "width": 0,
+      "x": -32,
+      "y": 352,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "09fc1c29-fb2a-424a-bd37-be46908b3f5c",
+      "width": 0,
+      "x": -32,
+      "y": 320,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "9606feff-bc79-4d6c-b1ee-90513ea62927",
+      "width": 0,
+      "x": -32,
+      "y": 288,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "876ade90-171c-4465-ad2a-dd7fb3100bba",
+      "width": 0,
+      "x": -32,
+      "y": 128,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "55a64695-425b-4d13-8814-9185ed38f598",
+      "width": 0,
+      "x": -32,
+      "y": 224,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "b44907e1-8d51-4d8e-af46-987bc799f9ae",
+      "width": 0,
+      "x": -32,
+      "y": 192,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "49552641-b65a-4500-a9de-1620cf6c78fb",
+      "width": 0,
+      "x": -32,
+      "y": 160,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "7bd2f4ac-77c7-4273-b95e-8605bd8a50a8",
+      "width": 0,
+      "x": 608,
+      "y": 480,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 24
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "Grass",
+      "persistentUuid": "69654751-535e-4067-a75d-5b9e43fabfd5",
+      "width": 0,
+      "x": -32,
+      "y": 480,
+      "zOrder": 16,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 28
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "CenterTile",
+      "persistentUuid": "29bf5a73-8807-4f46-900e-3daa710e85d7",
+      "width": 32,
+      "x": 288,
+      "y": 240,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 32,
+      "layer": "",
+      "name": "EnemySpawner",
+      "persistentUuid": "3e726572-a85d-492d-886a-3f6eb0aee780",
+      "width": 32,
+      "x": 480,
+      "y": 416,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "editionSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": true,
+    "zoomFactor": 1.0891751186210081,
+    "windowMask": false
+  }
+}

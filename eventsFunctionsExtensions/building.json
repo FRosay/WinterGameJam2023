@@ -20,7 +20,7 @@
       "functionType": "Action",
       "group": "Building",
       "name": "placeTower",
-      "sentence": "Place (build) _PARAM1_ (_PARAM2_) on _PARAM3_ / _PARAM4_",
+      "sentence": "Place (build) _PARAM1_ (_PARAM2_) and its comparator _PARAM6_ on _PARAM3_ / _PARAM4_ (_PARAM5_)",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -177,6 +177,42 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ComparisonTower",
+                    "Tower.X()",
+                    "Tower.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Tower",
+                    "ComparisonTower"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "ComparisonTower"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -238,6 +274,18 @@
         {
           "description": "The GridTile underneath",
           "name": "GridTile",
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "description": "",
+          "name": "TileBehavior",
+          "supplementaryInformation": "TileSystem::TileBehavior",
+          "type": "behavior"
+        },
+        {
+          "description": "The object which will serve as a comparator for the object Tower",
+          "name": "ComparisonTower",
           "supplementaryInformation": "Sprite",
           "type": "objectList"
         }

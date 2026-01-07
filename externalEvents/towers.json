@@ -271,7 +271,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Movement",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -686,6 +685,37 @@
               "parameters": [
                 "drawGridMask",
                 "initialPath"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "ComparisonTower",
+          "conditions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "Towers",
+                "ComparisonTower",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ComparisonTower",
+                "=",
+                "Towers.X()",
+                "=",
+                "Towers.Y()"
               ]
             }
           ]

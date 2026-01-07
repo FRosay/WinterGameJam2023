@@ -6004,7 +6004,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "Acceleration"
         },
         {
@@ -6014,7 +6013,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "MaxSpeed"
         },
         {
@@ -6024,7 +6022,6 @@
           "description": "",
           "group": "Rotation",
           "extraInformation": [],
-          "hidden": false,
           "name": "AngularMaxSpeed"
         },
         {
@@ -6034,7 +6031,6 @@
           "description": "",
           "group": "Rotation",
           "extraInformation": [],
-          "hidden": false,
           "name": "RotateObject"
         },
         {
@@ -6044,7 +6040,6 @@
           "description": "",
           "group": "Rotation",
           "extraInformation": [],
-          "hidden": false,
           "name": "AngleOffset"
         },
         {
@@ -6057,7 +6052,6 @@
             "Bounding disk",
             "Dot at center"
           ],
-          "hidden": false,
           "name": "CollisionShape"
         },
         {
@@ -6067,7 +6061,6 @@
           "description": "",
           "group": "Collision",
           "extraInformation": [],
-          "hidden": false,
           "name": "ExtraBorder"
         }
       ],
@@ -6791,7 +6784,6 @@
             "Isometry 2:1 (26.565°)",
             "True Isometry (30°)"
           ],
-          "hidden": false,
           "name": "Viewpoint"
         },
         {
@@ -6801,7 +6793,6 @@
           "description": "Cell size for obstacle collision mask rasterization.",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "CellSize"
         },
         {
@@ -6811,7 +6802,6 @@
           "description": "The left bound of the area where objects can go in the scene.",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "AreaLeftBound"
         },
         {
@@ -6821,7 +6811,6 @@
           "description": "The top bound of the area where objects can go in the scene.",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "AreaTopBound"
         },
         {
@@ -6831,7 +6820,6 @@
           "description": "The right bound of the area where objects can go in the scene (default to the game resolution).",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "AreaRightBound"
         },
         {
@@ -6841,7 +6829,6 @@
           "description": "The bottom bound of the area where objects can go in the scene (default to the game resolution).",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "AreaBottomBound"
         },
         {
@@ -7552,7 +7539,6 @@
           "extraInformation": [
             "NavMeshPathfinding::NavMeshPathfindingBehavior"
           ],
-          "hidden": false,
           "name": "NavMeshPathfinding"
         },
         {
@@ -7562,7 +7548,6 @@
           "description": "",
           "group": "Animation",
           "extraInformation": [],
-          "hidden": false,
           "name": "IsScalingAnimation"
         },
         {
@@ -7572,7 +7557,6 @@
           "description": "Animations must be called \"Walk0\", \"Walk1\"... for left, down...",
           "group": "Animation",
           "extraInformation": [],
-          "hidden": false,
           "name": "AnimationName"
         },
         {
@@ -7583,7 +7567,6 @@
           "description": "",
           "group": "Direction",
           "extraInformation": [],
-          "hidden": false,
           "name": "DirectionCount"
         },
         {
@@ -7594,7 +7577,6 @@
           "description": "Set to 90°, \"Walk0\" becomes the animation for down.",
           "group": "Direction",
           "extraInformation": [],
-          "hidden": false,
           "name": "AngleOffset"
         },
         {

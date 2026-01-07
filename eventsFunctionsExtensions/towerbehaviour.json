@@ -113,7 +113,7 @@
                 "towerToPush.X()+originalTile.Width()",
                 "towerToPush.Y()",
                 "\"easeInQuad\"",
-                "0.25",
+                "0.2",
                 ""
               ]
             }
@@ -167,7 +167,7 @@
                 "towerToPush.X()",
                 "towerToPush.Y()+originalTile.Height()",
                 "\"easeInQuad\"",
-                "0.25",
+                "0.2",
                 ""
               ]
             }
@@ -221,7 +221,7 @@
                 "towerToPush.X()-originalTile.Width()",
                 "towerToPush.Y()",
                 "\"easeInQuad\"",
-                "0.25",
+                "0.2",
                 ""
               ]
             }
@@ -275,7 +275,7 @@
                 "towerToPush.X()",
                 "towerToPush.Y()-originalTile.Height()",
                 "\"easeInQuad\"",
-                "0.25",
+                "0.2",
                 ""
               ]
             }
@@ -1234,7 +1234,7 @@
           "fullName": "Level up",
           "functionType": "Action",
           "name": "LevelUp",
-          "sentence": "Level up _PARAM0_ (_PARAM1_)",
+          "sentence": "Level up _PARAM0_ _PARAM1_ (for free: _PARAM2_)",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -1266,16 +1266,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "currency",
-                    "-",
-                    "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Level()-1])"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "PlaySoundCanal"
                   },
                   "parameters": [
@@ -1289,6 +1279,32 @@
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"FreeLevelUp\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "currency",
+                        "-",
+                        "GlobalVariable(TowerStats[Object.VariableString(name)].price[Object.Behavior::Level()-1])"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
@@ -1337,6 +1353,11 @@
               "name": "Behavior",
               "supplementaryInformation": "TowerBehaviour::TowerBehaviour",
               "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "FreeLevelUp",
+              "type": "trueorfalse"
             }
           ],
           "objectGroups": []
@@ -2059,7 +2080,6 @@
           "description": "",
           "group": "",
           "extraInformation": [],
-          "hidden": false,
           "name": "projectileName"
         }
       ],

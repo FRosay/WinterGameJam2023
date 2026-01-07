@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.3768772036750881,
+    "zoomFactor": 0.3645833333333343,
     "windowMask": false
   },
   "objectsGroups": [
@@ -201,6 +201,24 @@
         },
         {
           "name": "newTowerYPos",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "tmpOtherTowerCustomId",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "tmpTowerCustomId",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "tmpTowerLevel",
           "type": "number",
           "value": 0
         }
@@ -1027,6 +1045,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Value ?",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 48,
+        "color": "255;255;255"
       }
     },
     {
@@ -1663,6 +1701,26 @@
         "b": 0,
         "g": 0,
         "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text from PopUp",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 24,
+        "color": "0;0;0"
       }
     },
     {
@@ -2105,6 +2163,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Value ?",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 48,
+        "color": "255;255;255"
       }
     },
     {
@@ -2193,6 +2271,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Price ?",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 64,
+        "color": "255;255;255"
       }
     },
     {
@@ -3208,6 +3306,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 14,
+        "color": "255;255;255"
       }
     },
     {
@@ -3418,6 +3536,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 32,
+        "color": "255;255;255"
       }
     },
     {
@@ -3507,6 +3645,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Vague 1/5",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 52,
+        "color": "255;255;255"
       }
     },
     {
@@ -7658,6 +7816,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "-",
+        "font": "",
+        "textAlignment": "left",
+        "characterSize": 48,
+        "color": "255;255;255"
       }
     },
     {
@@ -8069,6 +8247,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "-",
+        "font": "",
+        "textAlignment": "left",
+        "characterSize": 48,
+        "color": "255;255;255"
       }
     },
     {
@@ -8131,6 +8329,26 @@
             "b": 0,
             "g": 0,
             "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Appliquer a toutes les tours",
+            "font": "assets\\fonts\\Minecraft.ttf",
+            "textAlignment": "center",
+            "characterSize": 20,
+            "color": "0;0;0"
           }
         },
         "Pressed": {
@@ -8205,6 +8423,26 @@
             "b": 221,
             "g": 221,
             "r": 221
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "It displays the value when it changes.",
+            "font": "",
+            "textAlignment": "",
+            "characterSize": 20,
+            "color": "221;221;221"
           }
         },
         "Thumb": {
@@ -8876,6 +9114,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "-",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "center",
+        "characterSize": 16,
+        "color": "255;255;255"
       }
     },
     {
@@ -8987,7 +9245,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "bbda41ebf8b316b0f9a86dc589cf06d765e28f83f9b64a103384e5ba0050d266",
-      "name": "DinoShadow",
+      "name": "EnemyShadow",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -9224,6 +9482,194 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "ComparisonTower",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "name",
+          "type": "string",
+          "value": "base"
+        },
+        {
+          "folded": true,
+          "name": "customId",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "isPreview",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "isMoving",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "displayName",
+          "type": "string",
+          "value": "Slime Slimeux"
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "TowerBehaviour",
+          "type": "TowerBehaviour::TowerBehaviour",
+          "damage": 0,
+          "attackPerSecond": 0,
+          "range": 0,
+          "effect": "\"none\"",
+          "effectDuration": 0,
+          "price": 0,
+          "level": 1,
+          "canAttack": true,
+          "projectileName": "BaseProjectile"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\sprites\\towers\\Base\\tower_normal_orth_idle.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 17,
+                        "y": 1
+                      },
+                      {
+                        "x": 17,
+                        "y": 17
+                      },
+                      {
+                        "x": 1,
+                        "y": 17
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TestText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Towers : 0",
+      "font": "assets\\fonts\\Minecraft.ttf",
+      "textAlignment": "left",
+      "characterSize": 32,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Towers : 0",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 32,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "TestText2",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Occupied : 0",
+      "font": "assets\\fonts\\Minecraft.ttf",
+      "textAlignment": "left",
+      "characterSize": 32,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Occupied : 0",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 32,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -9282,6 +9728,9 @@
           },
           {
             "objectName": "BaseTower"
+          },
+          {
+            "objectName": "ComparisonTower"
           },
           {
             "objectName": "RangeDisplay"
@@ -9407,13 +9856,18 @@
         "objectName": "Fade"
       },
       {
-        "objectName": "DinoShadow"
+        "objectName": "EnemyShadow"
+      },
+      {
+        "objectName": "TestText"
+      },
+      {
+        "objectName": "TestText2"
       }
     ]
   },
   "events": [
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -9432,7 +9886,7 @@
           },
           "parameters": [
             "",
-            "\"FirstMap\"",
+            "\"Map\" + ToString(selectedLevel)",
             "",
             "",
             ""
@@ -9458,16 +9912,6 @@
             "",
             "=",
             "75"
-          ]
-        },
-        {
-          "type": {
-            "value": "ProjectUtils::pauseOrUnpauseGame"
-          },
-          "parameters": [
-            "",
-            "\"Pause\"",
-            ""
           ]
         }
       ],
@@ -9726,7 +10170,6 @@
       "comment": "Pausing the game"
     },
     {
-      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -9737,6 +10180,12 @@
             "",
             "p"
           ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
         }
       ],
       "actions": [
@@ -9766,68 +10215,11 @@
           "actions": [
             {
               "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetMaxSpeed"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "NavMeshPathfindingBehavior",
-                "=",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
-              },
-              "parameters": [
-                "Base",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
-              },
-              "parameters": [
-                "Life",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseTimer"
+                "value": "ChangeTimeScale"
               },
               "parameters": [
                 "",
-                "\"spawner\""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseTimer"
-              },
-              "parameters": [
-                "",
-                "\"nextWaveTimer\""
-              ]
-            },
-            {
-              "type": {
-                "value": "PauseObjectTimer"
-              },
-              "parameters": [
-                "Towers",
-                "\"timeSinceLastAttack\""
+                "0"
               ]
             },
             {
@@ -9857,68 +10249,11 @@
           "actions": [
             {
               "type": {
-                "value": "NavMeshPathfinding::NavMeshPathfindingBehavior::SetMaxSpeed"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "NavMeshPathfindingBehavior",
-                "=",
-                "EnemySlimes.EnemyHealth::CurrentSpeed()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
-              },
-              "parameters": [
-                "Base",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::PlayAnimation"
-              },
-              "parameters": [
-                "Life",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "UnPauseTimer"
+                "value": "ChangeTimeScale"
               },
               "parameters": [
                 "",
-                "\"spawner\""
-              ]
-            },
-            {
-              "type": {
-                "value": "UnPauseTimer"
-              },
-              "parameters": [
-                "",
-                "\"nextWaveTimer\""
-              ]
-            },
-            {
-              "type": {
-                "value": "UnPauseObjectTimer"
-              },
-              "parameters": [
-                "Towers",
-                "\"timeSinceLastAttack\""
+                "1"
               ]
             },
             {
@@ -9935,776 +10270,117 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Camera / Screen"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Volume / Sound / Music"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Debug"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "HUD"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Building"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Towers"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Boss"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "EnemyWaves"
+    },
+    {
+      "folded": true,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "EnemySlimes",
+      "conditions": [],
+      "actions": [
         {
           "type": {
-            "value": "GlobalVariableAsBoolean"
+            "value": "SetObjectVariableAsBoolean"
           },
           "parameters": [
-            "GlobalSettings.GameSettings.isGamePaused",
+            "EnemySlimes",
+            "hasLinkedText",
             ""
           ]
         },
         {
           "type": {
-            "inverted": true,
-            "value": "LayerVisible"
+            "value": "RotateTowardAngle"
           },
           "parameters": [
-            "",
-            "\"Fade\""
+            "EnemySlimes",
+            "EnemySlimes.NavMeshPathfindingBehavior::MovementAngle()-90",
+            "999",
+            ""
           ]
         }
       ],
-      "actions": [],
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Camera / Screen"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Volume / Sound / Music"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "HUD"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Building"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Towers"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Boss"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "EnemyWaves"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Debug"
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "folded": true,
-          "name": "Ecran de détail des tours",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "customId",
-                        "=",
-                        "\"detailsHUD\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "Opacity",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Opacity",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "OpacityCapability::OpacityBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DetailsTower",
-                        "Opacity",
-                        "=",
-                        "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "DetailsTower",
-                        "=",
-                        "10"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "DetailsTower",
-                        "=",
-                        "HUDBackground.CenterX() - DetailsTower.Width() / 2",
-                        "=",
-                        "HUDBackground.Y() + 10"
-                      ]
-                    }
-                  ]
-                }
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "Heart",
+                "EnemySlimes",
+                ""
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "customId",
-                    "!=",
-                    "DetailsPanel.previewedTowerCustomId"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "isPreview",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Layer"
-                  },
-                  "parameters": [
-                    "Towers",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "DetailsPanel.isVisible",
-                    "False"
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Layer"
-                  },
-                  "parameters": [
-                    "Towers",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Towers",
-                    "isPreview",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "HUDBackground",
-                    "customId",
-                    "=",
-                    "\"detailsHUD\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "DetailsTower",
-                    "Animation",
-                    "=",
-                    "Towers.ObjectName()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "DetailsPanel.isVisible",
-                    "True"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Mise à jour de l'écran de détail"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "customId",
-                        "=",
-                        "\"detailsTextOne\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Text",
-                        "=",
-                        "Towers.VariableString(displayName) + \" lvl \" + ToString(Towers.TowerBehaviour::Level())"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "=",
-                        "HUDBackground.CenterX() - DetailsHUDText.Width() / 2",
-                        "=",
-                        "HUDBackground.Y() + DetailsTower.Height() + DetailsHUDText.Height()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "customId",
-                        "=",
-                        "\"detailsTextTwo\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Text",
-                        "=",
-                        "\"Dégats : \" + ToString(TowerStats[Towers.name].damage[Towers.TowerBehaviour::Level()-1])"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "=",
-                        "HUDBackground.CenterX() - DetailsHUDText.Width() / 2",
-                        "=",
-                        "HUDBackground.Y() + DetailsTower.Height() + DetailsHUDText.Height() * 2.5"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "customId",
-                        "=",
-                        "\"detailsTextThree\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Text",
-                        "=",
-                        "\"Portée : \" + ToString(TowerStats[Towers.name].range[Towers.TowerBehaviour::Level()-1])"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "=",
-                        "HUDBackground.CenterX() - DetailsHUDText.Width() / 2",
-                        "=",
-                        "HUDBackground.Y() + DetailsTower.Height() + DetailsHUDText.Height() * 3.5"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DetailsPanel.previewedTowerCustomId",
-                            "!=",
-                            "Towers.customId"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "DetailsPanel.previewedTowerLevel",
-                            "!=",
-                            "Towers.TowerBehaviour::Level()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SceneVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "DetailsPanel.isVisible",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": []
-                },
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "DetailsPanel.previewedTowerCustomId",
-                        "=",
-                        "Towers.customId"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "DetailsPanel.previewedTowerLevel",
-                        "=",
-                        "Towers.TowerBehaviour::Level()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Apparition de l'écran de détail"
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "DetailsPanel.isVisible",
-                    "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "DetailsTower",
-                    "Tween",
-                    "\"fadeInDetailsHUDTower\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "DetailsHUDText",
-                    "Tween",
-                    "\"fadeInDetailsHUDText\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "HUDBackground",
-                    "Tween",
-                    "\"fadeInDetailsHUDBackground\""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "customId",
-                        "=",
-                        "\"detailsHUD\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "DetailsTower",
-                        "Tween",
-                        "\"fadeOutDetailsHUDTower\"",
-                        "0",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Tween",
-                        "\"fadeOutDetailsHUDText\"",
-                        "0",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "Tween",
-                        "\"fadeOutDetailsHUDBackground\"",
-                        "0",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "DetailsPanel.isVisible",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "DetailsTower",
-                    "Tween",
-                    "\"fadeOutDetailsHUDTower\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "DetailsHUDText",
-                    "Tween",
-                    "\"fadeOutDetailsHUDText\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::RemoveTween"
-                  },
-                  "parameters": [
-                    "HUDBackground",
-                    "Tween",
-                    "\"fadeOutDetailsHUDBackground\""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "customId",
-                        "=",
-                        "\"detailsHUD\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "DetailsTower",
-                        "Tween",
-                        "\"fadeInDetailsHUDTower\"",
-                        "255",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "DetailsHUDText",
-                        "Tween",
-                        "\"fadeInDetailsHUDText\"",
-                        "255",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                      },
-                      "parameters": [
-                        "HUDBackground",
-                        "Tween",
-                        "\"fadeInDetailsHUDBackground\"",
-                        "200",
-                        "\"easeInQuad\"",
-                        "0.25",
-                        ""
-                      ]
-                    }
-                  ]
-                }
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "StaticText",
+                "EnemySlimes",
+                ""
               ]
             }
           ],
-          "parameters": []
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "EnemySlimes",
-          "conditions": [],
           "actions": [
             {
               "type": {
@@ -10713,167 +10389,50 @@
               "parameters": [
                 "EnemySlimes",
                 "hasLinkedText",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "RotateTowardAngle"
-              },
-              "parameters": [
-                "EnemySlimes",
-                "EnemySlimes.NavMeshPathfindingBehavior::MovementAngle()-90",
-                "999",
-                ""
+                "True"
               ]
             }
           ],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
                   "parameters": [
-                    "",
-                    "Heart",
                     "EnemySlimes",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "LinkedObjects::PickObjectsLinkedTo"
-                  },
-                  "parameters": [
-                    "",
-                    "StaticText",
-                    "EnemySlimes",
-                    ""
+                    "Animation",
+                    "=",
+                    "\"death\""
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetObjectVariableAsBoolean"
+                    "value": "Delete"
                   },
                   "parameters": [
-                    "EnemySlimes",
-                    "hasLinkedText",
-                    "True"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                      },
-                      "parameters": [
-                        "EnemySlimes",
-                        "Animation",
-                        "=",
-                        "\"death\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Heart",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        ""
-                      ]
-                    }
+                    "Heart",
+                    ""
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                      },
-                      "parameters": [
-                        "EnemySlimes",
-                        "Animation",
-                        "!=",
-                        "\"death\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "Text",
-                        "=",
-                        "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "=",
-                        "EnemySlimes.X() - 5",
-                        "=",
-                        "EnemySlimes.Y() - StaticText.Height()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "Heart",
-                        "=",
-                        "EnemySlimes.X() + StaticText.Width()",
-                        "=",
-                        "EnemySlimes.Y() - StaticText.Height()"
-                      ]
-                    }
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    ""
                   ]
                 }
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "EnemySlimes",
-                    "hasLinkedText",
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "AnimatableCapability::AnimatableBehavior::Name"
@@ -10886,115 +10445,40 @@
                   ]
                 }
               ],
-              "actions": [],
-              "events": [
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "StaticText",
-                        "-99999",
-                        "-99999",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "LinkedObjects::LinkObjects"
-                      },
-                      "parameters": [
-                        "",
-                        "StaticText",
-                        "EnemySlimes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "Text",
-                        "=",
-                        "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "Scale",
-                        "=",
-                        "0.20"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "StaticText",
-                        "=",
-                        "500"
-                      ]
-                    }
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "Heart",
-                        "-99999",
-                        "-99999",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "LinkedObjects::LinkObjects"
-                      },
-                      "parameters": [
-                        "",
-                        "Heart",
-                        "EnemySlimes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "Heart",
-                        "Scale",
-                        "=",
-                        "0.25"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "Heart",
-                        "=",
-                        "500"
-                      ]
-                    }
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "=",
+                    "EnemySlimes.X() - 5",
+                    "=",
+                    "EnemySlimes.Y() - StaticText.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "=",
+                    "EnemySlimes.X() + StaticText.Width()",
+                    "=",
+                    "EnemySlimes.Y() - StaticText.Height()"
                   ]
                 }
               ]
@@ -11007,12 +10491,22 @@
           "conditions": [
             {
               "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "hasLinkedText",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "AnimatableCapability::AnimatableBehavior::Name"
               },
               "parameters": [
                 "EnemySlimes",
                 "Animation",
-                "=",
+                "!=",
                 "\"death\""
               ]
             }
@@ -11021,44 +10515,173 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
-                  },
-                  "parameters": [
-                    "EnemySlimes",
-                    "Animation"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "value": "Delete"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "EnemySlimes",
+                    "",
+                    "StaticText",
+                    "-99999",
+                    "-99999",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "ProjectUtils::updateCurrency"
+                    "value": "LinkedObjects::LinkObjects"
                   },
                   "parameters": [
                     "",
-                    "EnemySlimes.valueInQuarters",
-                    "Currency",
-                    ""
+                    "StaticText",
+                    "EnemySlimes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Text",
+                    "=",
+                    "ToString(EnemySlimes.EnemyHealth::CurrentHitPoints())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "Scale",
+                    "=",
+                    "0.20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "StaticText",
+                    "=",
+                    "500"
                   ]
                 }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Heart",
+                    "-99999",
+                    "-99999",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Heart",
+                    "EnemySlimes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "Scale",
+                    "=",
+                    "0.25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Heart",
+                    "=",
+                    "500"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AnimatableCapability::AnimatableBehavior::Name"
+          },
+          "parameters": [
+            "EnemySlimes",
+            "Animation",
+            "=",
+            "\"death\""
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "EnemySlimes",
+                "Animation"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "EnemySlimes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ProjectUtils::updateCurrency"
+              },
+              "parameters": [
+                "",
+                "EnemySlimes.valueInQuarters",
+                "Currency",
+                ""
               ]
             }
           ]
@@ -11074,6 +10697,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
@@ -11106,6 +10730,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
@@ -11122,6 +10747,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
@@ -11138,6 +10764,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
@@ -11165,6 +10792,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,

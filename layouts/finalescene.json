@@ -4597,6 +4597,26 @@
         "b": 255,
         "g": 190,
         "r": 140
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Title",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 128,
+        "color": "140;190;255"
       }
     },
     {
@@ -4631,6 +4651,26 @@
         "b": 255,
         "g": 255,
         "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Retour au menu",
+        "font": "assets\\fonts\\Minecraft.ttf",
+        "textAlignment": "left",
+        "characterSize": 64,
+        "color": "255;255;255"
       }
     },
     {
@@ -5807,7 +5847,7 @@
                 "Title",
                 "Text",
                 "=",
-                "\"C'est gagne !\""
+                "\"C'est gagné !\""
               ]
             }
           ]
@@ -6096,6 +6136,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
@@ -6139,6 +6180,7 @@
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
+      "cameraType": "perspective",
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
